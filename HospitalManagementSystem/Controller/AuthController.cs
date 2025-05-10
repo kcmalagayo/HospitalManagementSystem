@@ -71,5 +71,28 @@ namespace HospitalManagementSystem.Controller
                 return cmd.ExecuteNonQuery() > 0;
             }
         }
+
+        public bool RegisterDoctor(Doctor doctor)
+        {
+            string query = @"
+                INSERT INTO Doctor (FirstName, LastName, DateOfBirth, Gender, Specialization, ContactNumber, Email, Password, Status)
+                VALUES (@FirstName, @LastName, @DateOfBirth, @Gender, @Specialization, @ContactNumber, @Email, @Password, @Status)
+            ";
+
+            using (var cmd = new SQLiteCommand(query, _db.GetConnection()))
+            {
+                cmd.Parameters.AddWithValue("@FirstName", doctor.FirstName);
+                cmd.Parameters.AddWithValue("@LastName", doctor.LastName);
+                cmd.Parameters.AddWithValue("@DateOfBirth", doctor.DateOfBirth.ToString("yyyy-MM-dd"));
+                cmd.Parameters.AddWithValue("@Gender", doctor.Gender);
+                cmd.Parameters.AddWithValue("@Specialization", doctor.Specialization);
+                cmd.Parameters.AddWithValue("@ContactNumber", doctor.ContactNumber);
+                cmd.Parameters.AddWithValue("@Email", doctor.Email);
+                cmd.Parameters.AddWithValue("@Password", doctor.Password);
+                cmd.Parameters.AddWithValue("@Status", doctor.Status ?? "Active"); // Default to "Active" if null
+
+                return cmd.ExecuteNonQuery() > 0;
+            }
+        }
     }
 }
