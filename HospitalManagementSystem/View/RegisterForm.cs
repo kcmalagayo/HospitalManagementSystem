@@ -16,5 +16,10 @@ namespace HospitalManagementSystem.View
         {
             InitializeComponent();
         }
+
+        private void RegisterForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
