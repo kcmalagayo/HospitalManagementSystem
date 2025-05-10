@@ -42,7 +42,27 @@ namespace HospitalManagementSystem.Data
                 );
             ";
 
+            string createDoctorTable = @"
+                CREATE TABLE IF NOT EXISTS Doctor (
+                    DoctorID INTEGER PRIMARY KEY AUTOINCREMENT,
+                    FirstName TEXT NOT NULL,
+                    LastName TEXT NOT NULL,
+                    DateOfBirth TEXT NOT NULL,
+                    Gender TEXT NOT NULL,
+                    Specialization TEXT,
+                    ContactNumber TEXT,
+                    Email TEXT,
+                    Password TEXT,
+                    Status TEXT DEFAULT 'Active'
+                );
+            ";
+
             using (var cmd = new SQLiteCommand(createPatientTable, connection))
+            {
+                cmd.ExecuteNonQuery();
+            }
+
+            using (var cmd = new SQLiteCommand(createDoctorTable, connection))
             {
                 cmd.ExecuteNonQuery();
             }

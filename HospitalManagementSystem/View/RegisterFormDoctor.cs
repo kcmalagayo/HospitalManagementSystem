@@ -13,50 +13,23 @@ using System.Windows.Forms;
 
 namespace HospitalManagementSystem.View
 {
-    public partial class RegisterForm : Form
+    public partial class RegisterFormDoctor : Form
     {
-  
-        public RegisterForm()
+        public RegisterFormDoctor()
         {
             InitializeComponent();
             genderComboBox.Items.Add("Male");
             genderComboBox.Items.Add("Female");
             genderComboBox.SelectedIndex = 0;
-
-
         }
 
-        private void LoadFormIntoPanel(Form form)
+        private void btnRegister_Click(object sender, EventArgs e)
         {
-            // Optional: Dispose previous form if needed
-            foreach (Control ctrl in registerPanelPatient.Controls)
-            {
-                if (ctrl is Form f)
-                    f.Close();
-            }
-
-            registerPanelPatient.Controls.Clear();        // Clear existing controls
-            form.TopLevel = false;
-            form.FormBorderStyle = FormBorderStyle.None;
-            form.Dock = DockStyle.Fill;
-            registerPanelPatient.Controls.Add(form);
-            form.Show();
-        }
-
-
-
-        private void RegisterForm_Load(object sender, EventArgs e)
-        {
-
-        }
-        private void registerBtn1_Click(object sender, EventArgs e)
-        {
-
-            string FirstName, LastName, Gender, ContactNumber, Email, Address, Password;
+            string FirstName, LastName, Gender, ContactNumber, Email, Specialization, Password;
             DateTime DateOfBirth;
 
             // 1. Collect input from form controls
-            var patient = new Patient
+            var doctor = new Doctor
             (
                 FirstName = firstNameTxt.Text,
                 LastName = lastNameTxt.Text,
@@ -64,8 +37,9 @@ namespace HospitalManagementSystem.View
                 Gender = genderComboBox.SelectedItem?.ToString() ?? "",
                 ContactNumber = contactTxt.Text,
                 Email = emailTxt.Text,
-                Address = addressTxt.Text,
+                Specialization = specializationTxt.Text,
                 Password = lastNameTxt.Text + dobPicker.Value.Year
+
             );
 
             // 2. Set up database and controller
@@ -73,7 +47,7 @@ namespace HospitalManagementSystem.View
             var authController = new AuthController(db);
 
             // 3. Attempt to register
-            bool success = authController.Register(patient);
+            bool success = authController.RegisterDoctor(doctor);
 
             if (success)
             {
@@ -89,7 +63,7 @@ namespace HospitalManagementSystem.View
 
         private void doctorBtn_Click(object sender, EventArgs e)
         {
-            LoadFormIntoPanel(new RegisterFormDoctor());
+
         }
 
         private void patientBtn_Click(object sender, EventArgs e)
