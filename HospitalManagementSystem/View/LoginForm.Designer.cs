@@ -33,17 +33,19 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(12, 28);
+            textBox1.Location = new Point(12, 66);
+            textBox1.Margin = new Padding(3, 4, 3, 4);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(142, 23);
+            textBox1.Size = new Size(354, 27);
             textBox1.TabIndex = 0;
             // 
             // LoginForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(914, 600);
             Controls.Add(textBox1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "LoginForm";
             Text = "LoginForm";
             ResumeLayout(false);

@@ -16,7 +16,8 @@ namespace HospitalManagementSystem.Model
         public string ContactNumber { get; set; }
         public string Email { get; set; }
         public string Address { get; set; }
-        public string MedicalHistory { get; set; }
+
+        public string password { get; set; }
 
         public ICollection<Appointment> Appointments { get; set; }
     }
