@@ -70,5 +70,10 @@ namespace HospitalManagementSystem.View
         {
 
         }
+
+        private void registerPanelDoctor_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

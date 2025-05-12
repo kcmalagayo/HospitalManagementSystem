@@ -13,10 +13,10 @@ using System.Windows.Forms;
 
 namespace HospitalManagementSystem.View
 {
-    public partial class RegisterForm : Form
+    public partial class RegisterDoctorForm : Form
     {
   
-        public RegisterForm()
+        public RegisterDoctorForm()
         {
             InitializeComponent();
             genderComboBox.Items.Add("Male");
