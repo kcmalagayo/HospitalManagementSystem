@@ -1,6 +1,6 @@
 ﻿namespace HospitalManagementSystem.View
 {
-    partial class RegisterForm
+    partial class RegisterFormPatient
     {
         /// <summary>
         /// Required designer variable.
@@ -60,51 +60,53 @@
             // 
             // firstNameTxt
             // 
-            firstNameTxt.Location = new Point(25, 65);
+            firstNameTxt.Location = new Point(279, 47);
+            firstNameTxt.Margin = new Padding(3, 2, 3, 2);
             firstNameTxt.Name = "firstNameTxt";
-            firstNameTxt.Size = new Size(382, 27);
+            firstNameTxt.Size = new Size(335, 23);
             firstNameTxt.TabIndex = 0;
             // 
             // lastNameTxt
             // 
-            lastNameTxt.Location = new Point(25, 125);
+            lastNameTxt.Location = new Point(279, 92);
+            lastNameTxt.Margin = new Padding(3, 2, 3, 2);
             lastNameTxt.Name = "lastNameTxt";
-            lastNameTxt.Size = new Size(382, 27);
+            lastNameTxt.Size = new Size(335, 23);
             lastNameTxt.TabIndex = 1;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(24, 39);
+            label1.Location = new Point(278, 27);
             label1.Name = "label1";
-            label1.Size = new Size(80, 20);
+            label1.Size = new Size(64, 15);
             label1.TabIndex = 4;
             label1.Text = "First Name";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(25, 95);
+            label2.Location = new Point(279, 69);
             label2.Name = "label2";
-            label2.Size = new Size(79, 20);
+            label2.Size = new Size(63, 15);
             label2.TabIndex = 5;
             label2.Text = "Last Name";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(24, 163);
+            label3.Location = new Point(278, 120);
             label3.Name = "label3";
-            label3.Size = new Size(94, 20);
+            label3.Size = new Size(73, 15);
             label3.TabIndex = 6;
             label3.Text = "Date of Birth";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(24, 217);
+            label4.Location = new Point(278, 161);
             label4.Name = "label4";
-            label4.Size = new Size(57, 20);
+            label4.Size = new Size(45, 15);
             label4.TabIndex = 7;
             label4.Text = "Gender";
             // 
@@ -119,57 +121,61 @@
             genderComboBox.Font = new Font("Segoe UI", 10F);
             genderComboBox.ForeColor = Color.FromArgb(68, 88, 112);
             genderComboBox.ItemHeight = 30;
-            genderComboBox.Location = new Point(25, 240);
+            genderComboBox.Location = new Point(279, 178);
+            genderComboBox.Margin = new Padding(3, 2, 3, 2);
             genderComboBox.Name = "genderComboBox";
             genderComboBox.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            genderComboBox.Size = new Size(382, 36);
+            genderComboBox.Size = new Size(335, 36);
             genderComboBox.TabIndex = 9;
             // 
             // contactTxt
             // 
-            contactTxt.Location = new Point(24, 299);
+            contactTxt.Location = new Point(278, 222);
+            contactTxt.Margin = new Padding(3, 2, 3, 2);
             contactTxt.Name = "contactTxt";
-            contactTxt.Size = new Size(382, 27);
+            contactTxt.Size = new Size(335, 23);
             contactTxt.TabIndex = 10;
             // 
             // emailTxt
             // 
-            emailTxt.Location = new Point(25, 343);
+            emailTxt.Location = new Point(279, 255);
+            emailTxt.Margin = new Padding(3, 2, 3, 2);
             emailTxt.Name = "emailTxt";
-            emailTxt.Size = new Size(382, 27);
+            emailTxt.Size = new Size(335, 23);
             emailTxt.TabIndex = 11;
             // 
             // addressTxt
             // 
-            addressTxt.Location = new Point(25, 392);
+            addressTxt.Location = new Point(279, 292);
+            addressTxt.Margin = new Padding(3, 2, 3, 2);
             addressTxt.Name = "addressTxt";
-            addressTxt.Size = new Size(382, 27);
+            addressTxt.Size = new Size(335, 23);
             addressTxt.TabIndex = 12;
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(24, 276);
+            label5.Location = new Point(278, 205);
             label5.Name = "label5";
-            label5.Size = new Size(87, 20);
+            label5.Size = new Size(71, 15);
             label5.TabIndex = 13;
             label5.Text = "Contact No.";
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(25, 329);
+            label6.Location = new Point(279, 245);
             label6.Name = "label6";
-            label6.Size = new Size(46, 20);
+            label6.Size = new Size(36, 15);
             label6.TabIndex = 14;
             label6.Text = "Email";
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(25, 373);
+            label7.Location = new Point(279, 278);
             label7.Name = "label7";
-            label7.Size = new Size(62, 20);
+            label7.Size = new Size(49, 15);
             label7.TabIndex = 15;
             label7.Text = "Address";
             // 
@@ -182,10 +188,11 @@
             btnRegister.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnRegister.Font = new Font("Segoe UI", 9F);
             btnRegister.ForeColor = Color.White;
-            btnRegister.Location = new Point(13, 413);
+            btnRegister.Location = new Point(11, 310);
+            btnRegister.Margin = new Padding(3, 2, 3, 2);
             btnRegister.Name = "btnRegister";
             btnRegister.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnRegister.Size = new Size(382, 56);
+            btnRegister.Size = new Size(334, 42);
             btnRegister.TabIndex = 18;
             btnRegister.Text = "Register Patient";
             btnRegister.Click += registerBtn1_Click;
@@ -193,9 +200,10 @@
             // dobPicker
             // 
             dobPicker.Format = DateTimePickerFormat.Short;
-            dobPicker.Location = new Point(25, 187);
+            dobPicker.Location = new Point(279, 138);
+            dobPicker.Margin = new Padding(3, 2, 3, 2);
             dobPicker.Name = "dobPicker";
-            dobPicker.Size = new Size(382, 27);
+            dobPicker.Size = new Size(335, 23);
             dobPicker.TabIndex = 19;
             // 
             // doctorBtn
@@ -207,10 +215,11 @@
             doctorBtn.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             doctorBtn.Font = new Font("Segoe UI", 9F);
             doctorBtn.ForeColor = Color.White;
-            doctorBtn.Location = new Point(530, 104);
+            doctorBtn.Location = new Point(45, 84);
+            doctorBtn.Margin = new Padding(3, 2, 3, 2);
             doctorBtn.Name = "doctorBtn";
             doctorBtn.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            doctorBtn.Size = new Size(225, 133);
+            doctorBtn.Size = new Size(197, 100);
             doctorBtn.TabIndex = 20;
             doctorBtn.Text = "Doctor";
             doctorBtn.Click += doctorBtn_Click;
@@ -218,9 +227,9 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(123, 9);
+            label9.Location = new Point(365, 5);
             label9.Name = "label9";
-            label9.Size = new Size(123, 20);
+            label9.Size = new Size(100, 15);
             label9.TabIndex = 22;
             label9.Text = "Account Creation";
             // 
@@ -233,10 +242,11 @@
             patientBtn.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             patientBtn.Font = new Font("Segoe UI", 9F);
             patientBtn.ForeColor = Color.White;
-            patientBtn.Location = new Point(530, 276);
+            patientBtn.Location = new Point(45, 213);
+            patientBtn.Margin = new Padding(3, 2, 3, 2);
             patientBtn.Name = "patientBtn";
             patientBtn.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            patientBtn.Size = new Size(225, 133);
+            patientBtn.Size = new Size(197, 100);
             patientBtn.TabIndex = 23;
             patientBtn.Text = "Patient";
             patientBtn.Click += patientBtn_Click;
@@ -244,16 +254,17 @@
             // registerPanelPatient
             // 
             registerPanelPatient.Controls.Add(btnRegister);
-            registerPanelPatient.Location = new Point(12, 32);
+            registerPanelPatient.Location = new Point(267, 22);
+            registerPanelPatient.Margin = new Padding(3, 2, 3, 2);
             registerPanelPatient.Name = "registerPanelPatient";
-            registerPanelPatient.Size = new Size(481, 557);
+            registerPanelPatient.Size = new Size(421, 418);
             registerPanelPatient.TabIndex = 24;
             // 
-            // RegisterForm
+            // RegisterFormPatient
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 601);
+            ClientSize = new Size(700, 451);
             Controls.Add(patientBtn);
             Controls.Add(label9);
             Controls.Add(doctorBtn);
@@ -272,8 +283,9 @@
             Controls.Add(lastNameTxt);
             Controls.Add(firstNameTxt);
             Controls.Add(registerPanelPatient);
-            Name = "RegisterForm";
-            Text = "RegisterForm";
+            Margin = new Padding(3, 2, 3, 2);
+            Name = "RegisterFormPatient";
+            Text = "RegisterFormPatient";
             Load += RegisterForm_Load;
             registerPanelPatient.ResumeLayout(false);
             ResumeLayout(false);
