@@ -32,10 +32,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             firstNameTxt = new TextBox();
             lastNameTxt = new TextBox();
             label1 = new Label();
@@ -51,33 +47,35 @@
             label7 = new Label();
             btnRegister = new Guna.UI2.WinForms.Guna2Button();
             dobPicker = new DateTimePicker();
-            doctorBtn = new Guna.UI2.WinForms.Guna2Button();
             label9 = new Label();
-            patientBtn = new Guna.UI2.WinForms.Guna2Button();
             registerPanelPatient = new Panel();
             registerPanelPatient.SuspendLayout();
             SuspendLayout();
             // 
             // firstNameTxt
             // 
-            firstNameTxt.Location = new Point(279, 47);
+            firstNameTxt.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            firstNameTxt.Location = new Point(143, 31);
             firstNameTxt.Margin = new Padding(3, 2, 3, 2);
             firstNameTxt.Name = "firstNameTxt";
-            firstNameTxt.Size = new Size(335, 23);
+            firstNameTxt.Size = new Size(403, 23);
             firstNameTxt.TabIndex = 0;
             // 
             // lastNameTxt
             // 
-            lastNameTxt.Location = new Point(279, 92);
+            lastNameTxt.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            lastNameTxt.Location = new Point(143, 77);
             lastNameTxt.Margin = new Padding(3, 2, 3, 2);
             lastNameTxt.Name = "lastNameTxt";
-            lastNameTxt.Size = new Size(335, 23);
+            lastNameTxt.Size = new Size(403, 23);
             lastNameTxt.TabIndex = 1;
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label1.AutoSize = true;
-            label1.Location = new Point(278, 27);
+            label1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(143, 14);
             label1.Name = "label1";
             label1.Size = new Size(64, 15);
             label1.TabIndex = 4;
@@ -85,8 +83,9 @@
             // 
             // label2
             // 
+            label2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label2.AutoSize = true;
-            label2.Location = new Point(279, 69);
+            label2.Location = new Point(143, 60);
             label2.Name = "label2";
             label2.Size = new Size(63, 15);
             label2.TabIndex = 5;
@@ -94,8 +93,9 @@
             // 
             // label3
             // 
+            label3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label3.AutoSize = true;
-            label3.Location = new Point(278, 120);
+            label3.Location = new Point(143, 102);
             label3.Name = "label3";
             label3.Size = new Size(73, 15);
             label3.TabIndex = 6;
@@ -103,8 +103,9 @@
             // 
             // label4
             // 
+            label4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label4.AutoSize = true;
-            label4.Location = new Point(278, 161);
+            label4.Location = new Point(143, 144);
             label4.Name = "label4";
             label4.Size = new Size(45, 15);
             label4.TabIndex = 7;
@@ -112,6 +113,7 @@
             // 
             // genderComboBox
             // 
+            genderComboBox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             genderComboBox.BackColor = Color.Transparent;
             genderComboBox.CustomizableEdges = customizableEdges1;
             genderComboBox.DrawMode = DrawMode.OwnerDrawFixed;
@@ -121,41 +123,45 @@
             genderComboBox.Font = new Font("Segoe UI", 10F);
             genderComboBox.ForeColor = Color.FromArgb(68, 88, 112);
             genderComboBox.ItemHeight = 30;
-            genderComboBox.Location = new Point(279, 178);
+            genderComboBox.Location = new Point(143, 161);
             genderComboBox.Margin = new Padding(3, 2, 3, 2);
             genderComboBox.Name = "genderComboBox";
             genderComboBox.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            genderComboBox.Size = new Size(335, 36);
+            genderComboBox.Size = new Size(403, 36);
             genderComboBox.TabIndex = 9;
             // 
             // contactTxt
             // 
-            contactTxt.Location = new Point(278, 222);
+            contactTxt.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            contactTxt.Location = new Point(143, 216);
             contactTxt.Margin = new Padding(3, 2, 3, 2);
             contactTxt.Name = "contactTxt";
-            contactTxt.Size = new Size(335, 23);
+            contactTxt.Size = new Size(403, 23);
             contactTxt.TabIndex = 10;
             // 
             // emailTxt
             // 
-            emailTxt.Location = new Point(279, 255);
+            emailTxt.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            emailTxt.Location = new Point(143, 258);
             emailTxt.Margin = new Padding(3, 2, 3, 2);
             emailTxt.Name = "emailTxt";
-            emailTxt.Size = new Size(335, 23);
+            emailTxt.Size = new Size(403, 23);
             emailTxt.TabIndex = 11;
             // 
             // addressTxt
             // 
-            addressTxt.Location = new Point(279, 292);
+            addressTxt.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            addressTxt.Location = new Point(143, 300);
             addressTxt.Margin = new Padding(3, 2, 3, 2);
             addressTxt.Name = "addressTxt";
-            addressTxt.Size = new Size(335, 23);
+            addressTxt.Size = new Size(403, 23);
             addressTxt.TabIndex = 12;
             // 
             // label5
             // 
+            label5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label5.AutoSize = true;
-            label5.Location = new Point(278, 205);
+            label5.Location = new Point(143, 199);
             label5.Name = "label5";
             label5.Size = new Size(71, 15);
             label5.TabIndex = 13;
@@ -163,8 +169,9 @@
             // 
             // label6
             // 
+            label6.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label6.AutoSize = true;
-            label6.Location = new Point(279, 245);
+            label6.Location = new Point(143, 241);
             label6.Name = "label6";
             label6.Size = new Size(36, 15);
             label6.TabIndex = 14;
@@ -172,8 +179,9 @@
             // 
             // label7
             // 
+            label7.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label7.AutoSize = true;
-            label7.Location = new Point(279, 278);
+            label7.Location = new Point(143, 283);
             label7.Name = "label7";
             label7.Size = new Size(49, 15);
             label7.TabIndex = 15;
@@ -181,113 +189,83 @@
             // 
             // btnRegister
             // 
+            btnRegister.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            btnRegister.BackColor = Color.PaleGreen;
             btnRegister.CustomizableEdges = customizableEdges3;
             btnRegister.DisabledState.BorderColor = Color.DarkGray;
             btnRegister.DisabledState.CustomBorderColor = Color.DarkGray;
             btnRegister.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnRegister.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnRegister.Font = new Font("Segoe UI", 9F);
-            btnRegister.ForeColor = Color.White;
-            btnRegister.Location = new Point(11, 310);
+            btnRegister.FillColor = Color.MediumSeaGreen;
+            btnRegister.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnRegister.ForeColor = Color.Black;
+            btnRegister.Location = new Point(170, 355);
             btnRegister.Margin = new Padding(3, 2, 3, 2);
             btnRegister.Name = "btnRegister";
             btnRegister.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnRegister.Size = new Size(334, 42);
             btnRegister.TabIndex = 18;
-            btnRegister.Text = "Register Patient";
+            btnRegister.Text = "Register";
             btnRegister.Click += registerBtn1_Click;
             // 
             // dobPicker
             // 
+            dobPicker.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dobPicker.Format = DateTimePickerFormat.Short;
-            dobPicker.Location = new Point(279, 138);
+            dobPicker.Location = new Point(143, 119);
             dobPicker.Margin = new Padding(3, 2, 3, 2);
             dobPicker.Name = "dobPicker";
-            dobPicker.Size = new Size(335, 23);
+            dobPicker.Size = new Size(403, 23);
             dobPicker.TabIndex = 19;
-            // 
-            // doctorBtn
-            // 
-            doctorBtn.CustomizableEdges = customizableEdges5;
-            doctorBtn.DisabledState.BorderColor = Color.DarkGray;
-            doctorBtn.DisabledState.CustomBorderColor = Color.DarkGray;
-            doctorBtn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            doctorBtn.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            doctorBtn.Font = new Font("Segoe UI", 9F);
-            doctorBtn.ForeColor = Color.White;
-            doctorBtn.Location = new Point(45, 84);
-            doctorBtn.Margin = new Padding(3, 2, 3, 2);
-            doctorBtn.Name = "doctorBtn";
-            doctorBtn.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            doctorBtn.Size = new Size(197, 100);
-            doctorBtn.TabIndex = 20;
-            doctorBtn.Text = "Doctor";
-            doctorBtn.Click += doctorBtn_Click;
             // 
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(365, 5);
+            label9.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label9.Location = new Point(561, 5);
             label9.Name = "label9";
-            label9.Size = new Size(100, 15);
+            label9.Size = new Size(126, 16);
             label9.TabIndex = 22;
-            label9.Text = "Account Creation";
-            // 
-            // patientBtn
-            // 
-            patientBtn.CustomizableEdges = customizableEdges7;
-            patientBtn.DisabledState.BorderColor = Color.DarkGray;
-            patientBtn.DisabledState.CustomBorderColor = Color.DarkGray;
-            patientBtn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            patientBtn.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            patientBtn.Font = new Font("Segoe UI", 9F);
-            patientBtn.ForeColor = Color.White;
-            patientBtn.Location = new Point(45, 213);
-            patientBtn.Margin = new Padding(3, 2, 3, 2);
-            patientBtn.Name = "patientBtn";
-            patientBtn.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            patientBtn.Size = new Size(197, 100);
-            patientBtn.TabIndex = 23;
-            patientBtn.Text = "Patient";
-            patientBtn.Click += patientBtn_Click;
+            label9.Text = "Register a Account";
             // 
             // registerPanelPatient
             // 
             registerPanelPatient.Controls.Add(btnRegister);
-            registerPanelPatient.Location = new Point(267, 22);
+            registerPanelPatient.Controls.Add(label1);
+            registerPanelPatient.Controls.Add(label2);
+            registerPanelPatient.Controls.Add(label3);
+            registerPanelPatient.Controls.Add(dobPicker);
+            registerPanelPatient.Controls.Add(firstNameTxt);
+            registerPanelPatient.Controls.Add(lastNameTxt);
+            registerPanelPatient.Controls.Add(addressTxt);
+            registerPanelPatient.Controls.Add(label4);
+            registerPanelPatient.Controls.Add(genderComboBox);
+            registerPanelPatient.Controls.Add(label5);
+            registerPanelPatient.Controls.Add(label6);
+            registerPanelPatient.Controls.Add(contactTxt);
+            registerPanelPatient.Controls.Add(label7);
+            registerPanelPatient.Controls.Add(emailTxt);
+            registerPanelPatient.Location = new Point(12, 22);
             registerPanelPatient.Margin = new Padding(3, 2, 3, 2);
             registerPanelPatient.Name = "registerPanelPatient";
-            registerPanelPatient.Size = new Size(421, 418);
+            registerPanelPatient.Size = new Size(676, 418);
             registerPanelPatient.TabIndex = 24;
             // 
             // RegisterFormPatient
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoScroll = true;
+            AutoSize = true;
             ClientSize = new Size(700, 451);
-            Controls.Add(patientBtn);
             Controls.Add(label9);
-            Controls.Add(doctorBtn);
-            Controls.Add(dobPicker);
-            Controls.Add(label7);
-            Controls.Add(label6);
-            Controls.Add(label5);
-            Controls.Add(addressTxt);
-            Controls.Add(emailTxt);
-            Controls.Add(contactTxt);
-            Controls.Add(genderComboBox);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(lastNameTxt);
-            Controls.Add(firstNameTxt);
             Controls.Add(registerPanelPatient);
             Margin = new Padding(3, 2, 3, 2);
             Name = "RegisterFormPatient";
             Text = "RegisterFormPatient";
             Load += RegisterForm_Load;
             registerPanelPatient.ResumeLayout(false);
+            registerPanelPatient.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -309,9 +287,7 @@
         private Label label7;
         private Guna.UI2.WinForms.Guna2Button btnRegister;
         private DateTimePicker dobPicker;
-        private Guna.UI2.WinForms.Guna2Button doctorBtn;
         private Label label9;
-        private Guna.UI2.WinForms.Guna2Button patientBtn;
         private Panel registerPanelPatient;
     }
 }
