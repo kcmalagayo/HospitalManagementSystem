@@ -56,6 +56,15 @@ namespace HospitalManagementSystem.Data
                     Status TEXT DEFAULT 'Active'
                 );
             ";
+            string createAdminTable = @"
+                CREATE TABLE IF NOT EXISTS Admin (
+                    AdminID INTEGER PRIMARY KEY AUTOINCREMENT,
+                    FirstName TEXT NOT NULL,
+                    LastName TEXT NOT NULL,
+                    Email TEXT NOT NULL,
+                    Password TEXT NOT NULL
+                );
+            ";
 
             using (var cmd = new SQLiteCommand(createPatientTable, connection))
             {
@@ -63,6 +72,10 @@ namespace HospitalManagementSystem.Data
             }
 
             using (var cmd = new SQLiteCommand(createDoctorTable, connection))
+            {
+                cmd.ExecuteNonQuery();
+            }
+            using (var cmd = new SQLiteCommand(createAdminTable, connection))
             {
                 cmd.ExecuteNonQuery();
             }
