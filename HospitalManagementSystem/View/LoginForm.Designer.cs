@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            textBox1 = new TextBox();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            emailTxt = new TextBox();
             label1 = new Label();
             label2 = new Label();
-            textBox2 = new TextBox();
+            passwordTxt = new TextBox();
             label3 = new Label();
             linkLabel1 = new LinkLabel();
             label4 = new Label();
@@ -42,13 +42,13 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // textBox1
+            // emailTxt
             // 
-            textBox1.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(21, 113);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(310, 26);
-            textBox1.TabIndex = 0;
+            emailTxt.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            emailTxt.Location = new Point(21, 113);
+            emailTxt.Name = "emailTxt";
+            emailTxt.Size = new Size(310, 26);
+            emailTxt.TabIndex = 0;
             // 
             // label1
             // 
@@ -70,13 +70,13 @@
             label2.TabIndex = 3;
             label2.Text = "Password";
             // 
-            // textBox2
+            // passwordTxt
             // 
-            textBox2.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox2.Location = new Point(20, 178);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(310, 26);
-            textBox2.TabIndex = 2;
+            passwordTxt.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            passwordTxt.Location = new Point(20, 178);
+            passwordTxt.Name = "passwordTxt";
+            passwordTxt.Size = new Size(310, 26);
+            passwordTxt.TabIndex = 2;
             // 
             // label3
             // 
@@ -108,7 +108,7 @@
             // 
             // logInButton
             // 
-            logInButton.CustomizableEdges = customizableEdges1;
+            logInButton.CustomizableEdges = customizableEdges3;
             logInButton.DisabledState.BorderColor = Color.DarkGray;
             logInButton.DisabledState.CustomBorderColor = Color.DarkGray;
             logInButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -118,7 +118,7 @@
             logInButton.ForeColor = Color.Black;
             logInButton.Location = new Point(22, 261);
             logInButton.Name = "logInButton";
-            logInButton.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            logInButton.ShadowDecoration.CustomizableEdges = customizableEdges4;
             logInButton.Size = new Size(311, 32);
             logInButton.TabIndex = 8;
             logInButton.Text = "Log In";
@@ -143,9 +143,9 @@
             Controls.Add(linkLabel1);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(textBox2);
+            Controls.Add(passwordTxt);
             Controls.Add(label1);
-            Controls.Add(textBox1);
+            Controls.Add(emailTxt);
             Name = "LoginForm";
             Text = "LoginForm";
             Load += LoginForm_Load;
@@ -156,10 +156,10 @@
 
         #endregion
 
-        private TextBox textBox1;
+        private TextBox emailTxt;
         private Label label1;
         private Label label2;
-        private TextBox textBox2;
+        private TextBox passwordTxt;
         private Label label3;
         private LinkLabel linkLabel1;
         private Label label4;

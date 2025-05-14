@@ -66,6 +66,8 @@ namespace HospitalManagementSystem.Data
                 );
             ";
 
+           
+
             using (var cmd = new SQLiteCommand(createPatientTable, connection))
             {
                 cmd.ExecuteNonQuery();

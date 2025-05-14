@@ -151,5 +151,53 @@ namespace HospitalManagementSystem.Controller
                 return cmd.ExecuteNonQuery() > 0;
             }
         }
+
+
+
+        //login validator
+        public bool ValidateLogin(string username, string password)
+        {
+            using (var conn = _db.GetConnection()) // Use the instance of Database (_db) instead of calling Database.GetConnection() statically
+            {
+                conn.Open();
+                string query = "SELECT COUNT(*) FROM users WHERE username = @username AND password = @password";
+                using (var cmd = new SQLiteCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@Email", username);
+                    cmd.Parameters.AddWithValue("@Password", password); // Ideally hash the password before comparing
+
+                    int count = Convert.ToInt32(cmd.ExecuteScalar());
+                    return count > 0;
+                }
+            }
+        }
+
+        //method to create default admin
+
+        public static void InsertDefaultAdmin()
+        {
+            using (var conn = new Database().GetConnection()) // Create an instance of Database to access GetConnection()
+            {
+                conn.Open();
+
+                // Check if admin already exists
+                string checkQuery = "SELECT COUNT(*) FROM Admin WHERE Username = 'admin'";
+                using (var checkCmd = new SQLiteCommand(checkQuery, conn))
+                {
+                    int count = Convert.ToInt32(checkCmd.ExecuteScalar());
+                    if (count > 0)
+                        return; // Admin already exists, skip
+                }
+
+                // Insert default admin
+                string insertQuery = "INSERT INTO Admin (Username, Password) VALUES (@username, @password)";
+                using (var insertCmd = new SQLiteCommand(insertQuery, conn))
+                {
+                    insertCmd.Parameters.AddWithValue("@Email", "admingmail.com");
+                    insertCmd.Parameters.AddWithValue("@Password", "admin2025"); // In real apps, hash this!
+                    insertCmd.ExecuteNonQuery();
+                }
+            }
+        }
     }
 }
