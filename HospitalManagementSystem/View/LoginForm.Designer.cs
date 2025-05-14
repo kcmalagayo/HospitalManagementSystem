@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             emailTxt = new TextBox();
             label1 = new Label();
             label2 = new Label();
@@ -100,15 +100,15 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Arial", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(83, 37);
+            label4.Location = new Point(64, 35);
             label4.Name = "label4";
-            label4.Size = new Size(172, 24);
+            label4.Size = new Size(235, 24);
             label4.TabIndex = 7;
-            label4.Text = "Hospital System";
+            label4.Text = "Hospital System Name";
             // 
             // logInButton
             // 
-            logInButton.CustomizableEdges = customizableEdges3;
+            logInButton.CustomizableEdges = customizableEdges5;
             logInButton.DisabledState.BorderColor = Color.DarkGray;
             logInButton.DisabledState.CustomBorderColor = Color.DarkGray;
             logInButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -118,7 +118,7 @@
             logInButton.ForeColor = Color.Black;
             logInButton.Location = new Point(22, 261);
             logInButton.Name = "logInButton";
-            logInButton.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            logInButton.ShadowDecoration.CustomizableEdges = customizableEdges6;
             logInButton.Size = new Size(311, 32);
             logInButton.TabIndex = 8;
             logInButton.Text = "Log In";

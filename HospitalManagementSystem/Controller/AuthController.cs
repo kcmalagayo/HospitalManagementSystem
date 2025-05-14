@@ -14,6 +14,10 @@ namespace HospitalManagementSystem.Controller
             _db = db;
         }
 
+        public AuthController()
+        {
+        }
+
         public bool Login(string email, string password, string userType, out object user)
         {         
             user = null;

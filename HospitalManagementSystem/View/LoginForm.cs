@@ -15,9 +15,12 @@ namespace HospitalManagementSystem.View
 {
     public partial class LoginForm : Form
     {
-        public LoginForm()
+        private readonly AuthController authController;
+
+        public LoginForm(AuthController authController)
         {
             InitializeComponent();
+            authController = new AuthController(); // Pass the required 'db' parameter
         }
 
         private void LoginForm_Load(object sender, EventArgs e)
@@ -27,7 +30,22 @@ namespace HospitalManagementSystem.View
 
         private void logInButton_Click(object sender, EventArgs e)
         {
+            string email = emailTxt.Text;
+            string password = passwordTxt.Text;
 
+            bool isValid = authController.ValidateLogin(email, password);
+            if (isValid)
+            {
+                MessageBox.Show("Login successful!");
+                // Proceed to main form
+                AdminForm main = new AdminForm();
+                main.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Invalid username or password.");
+            }
         }
     }
 }

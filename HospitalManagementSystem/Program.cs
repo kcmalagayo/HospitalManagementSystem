@@ -1,5 +1,10 @@
 namespace HospitalManagementSystem;
+
+using System.Data.Entity;
 using HospitalManagementSystem.View;
+using HospitalManagementSystem.Data;
+using HospitalManagementSystem.Controller;
+
 
 internal static class Program
 {
@@ -12,6 +17,11 @@ internal static class Program
         // To customize application configuration such as set high DPI settings or default font,
         // see https://aka.ms/applicationconfiguration.
         ApplicationConfiguration.Initialize();
-        Application.Run(new AdminForm());
+        Application.EnableVisualStyles();
+        Application.SetCompatibleTextRenderingDefault(false);
+
+        var authController = new AuthController();
+
+        Application.Run(new LoginForm(authController));
     }
 }
