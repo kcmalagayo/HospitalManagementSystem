@@ -155,7 +155,7 @@ namespace HospitalManagementSystem.Controller
 
 
         //login validator
-        public bool ValidateLogin(string username, string password)
+        public bool ValidateLogin(string email, string password)
         {
             using (var conn = _db.GetConnection()) // Use the instance of Database (_db) instead of calling Database.GetConnection() statically
             {
@@ -163,7 +163,7 @@ namespace HospitalManagementSystem.Controller
                 string query = "SELECT COUNT(*) FROM users WHERE username = @username AND password = @password";
                 using (var cmd = new SQLiteCommand(query, conn))
                 {
-                    cmd.Parameters.AddWithValue("@Email", username);
+                    cmd.Parameters.AddWithValue("@Email", email);
                     cmd.Parameters.AddWithValue("@Password", password); // Ideally hash the password before comparing
 
                     int count = Convert.ToInt32(cmd.ExecuteScalar());
