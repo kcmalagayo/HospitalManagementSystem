@@ -70,5 +70,20 @@ namespace HospitalManagementSystem.View
         {
 
         }
+
+        private void firstNameTxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void genderComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
