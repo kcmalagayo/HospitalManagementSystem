@@ -18,6 +18,12 @@ namespace HospitalManagementSystem.View
     {
 
         private Doctor _doctor;
+
+
+        public DoctorFields()//empty contrusctor for the form 
+        {
+            InitializeComponent();
+        }
         public DoctorFields(Doctor doctor)
         {
             InitializeComponent();
@@ -42,6 +48,11 @@ namespace HospitalManagementSystem.View
         }
 
         private void PasswordTxtBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DoctorFields_Load(object sender, EventArgs e)
         {
 
         }

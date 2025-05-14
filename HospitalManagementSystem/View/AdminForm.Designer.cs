@@ -62,6 +62,7 @@
             manageDoctorBtn.Size = new Size(180, 45);
             manageDoctorBtn.TabIndex = 0;
             manageDoctorBtn.Text = "Manage Doctor";
+            manageDoctorBtn.Click += manageDoctorBtn_Click;
             // 
             // label1
             // 
@@ -131,6 +132,7 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(704, 416);
             panel1.TabIndex = 5;
+            panel1.Paint += panel1_Paint;
             // 
             // AdminForm
             // 

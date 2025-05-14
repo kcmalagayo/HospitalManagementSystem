@@ -16,5 +16,26 @@ namespace HospitalManagementSystem.View
         {
             InitializeComponent();
         }
+
+        private void OpenFormInPanel(Form form)
+        {
+            panel1.Controls.Clear();
+            form.TopLevel = false;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
+            panel1.Controls.Add(form);
+            form.Show();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void manageDoctorBtn_Click(object sender, EventArgs e)
+        {
+            DoctorFields df = new DoctorFields();
+            OpenFormInPanel(df);
+        }
     }
 }

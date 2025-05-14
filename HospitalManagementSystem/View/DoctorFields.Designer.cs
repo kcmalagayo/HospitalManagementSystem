@@ -290,6 +290,7 @@
             Controls.Add(firstNameTxt);
             Name = "DoctorFields";
             Text = "Form1";
+            Load += DoctorFields_Load;
             ResumeLayout(false);
             PerformLayout();
         }
