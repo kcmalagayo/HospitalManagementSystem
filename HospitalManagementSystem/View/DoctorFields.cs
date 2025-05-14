@@ -18,11 +18,7 @@ namespace HospitalManagementSystem.View
     {
 
         private Doctor _doctor;
-
-
-        public DoctorFields()//empty contrusctor for the form 
-        {
-            InitializeComponent();
+eComponent();
         }
         public DoctorFields(Doctor doctor)
         {

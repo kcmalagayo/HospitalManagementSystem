@@ -147,6 +147,7 @@
             Controls.Add(manageDoctorBtn);
             Name = "AdminForm";
             Text = "AdminForm";
+            Load += AdminForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }

@@ -34,8 +34,13 @@ namespace HospitalManagementSystem.View
 
         private void manageDoctorBtn_Click(object sender, EventArgs e)
         {
-            DoctorFields df = new DoctorFields();
-            OpenFormInPanel(df);
+            ManageDoctorForm mdf = new ManageDoctorForm();
+            OpenFormInPanel(mdf);
+        }
+
+        private void AdminForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
