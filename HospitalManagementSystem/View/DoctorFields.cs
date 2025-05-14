@@ -18,8 +18,10 @@ namespace HospitalManagementSystem.View
     {
 
         private Doctor _doctor;
-eComponent();
-        }
+
+
+    
+
         public DoctorFields(Doctor doctor)
         {
             InitializeComponent();
