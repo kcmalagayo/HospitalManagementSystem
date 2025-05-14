@@ -134,5 +134,22 @@ namespace HospitalManagementSystem.Controller
                 return cmd.ExecuteNonQuery() > 0;
             }
         }
+        public bool RegisterAdmin(Admin admin)
+        {
+            string query = @"
+                INSERT INTO Admin (FirstName, LastName, Email, Password)
+                VALUES (@FirstName, @LastName, @Email, @Password)
+            ";
+
+            using (var cmd = new SQLiteCommand(query, _db.GetConnection()))
+            {
+                cmd.Parameters.AddWithValue("@FirstName", admin.FirstName);
+                cmd.Parameters.AddWithValue("@LastName", admin.LastName);
+                cmd.Parameters.AddWithValue("@Email", admin.Email);
+                cmd.Parameters.AddWithValue("@Password", admin.Password);
+
+                return cmd.ExecuteNonQuery() > 0;
+            }
+        }
     }
 }
