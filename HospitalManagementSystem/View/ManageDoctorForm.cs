@@ -76,7 +76,8 @@ namespace HospitalManagementSystem.View
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-
+            RegisterFormAdmin registerFormAdmin = new RegisterFormAdmin();
+            registerFormAdmin.Show();
         }
     }
 }

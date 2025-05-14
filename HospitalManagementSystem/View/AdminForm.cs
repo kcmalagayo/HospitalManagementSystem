@@ -22,7 +22,7 @@ namespace HospitalManagementSystem.View
             panel1.Controls.Clear();
             form.TopLevel = false;
             form.FormBorderStyle = FormBorderStyle.None;
-            form.Dock = DockStyle.Fill;
+            form.Dock = DockStyle.Left;
             panel1.Controls.Add(form);
             form.Show();
         }

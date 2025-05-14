@@ -26,7 +26,7 @@ namespace HospitalManagementSystem.Controller
                 using (var reader = cmd.ExecuteReader())
                 {
                     while (reader.Read())
-                    {
+                    {   
                         result.Add(new Doctor
                         {
                             DoctorID = Convert.ToInt32(reader["DoctorID"]),
