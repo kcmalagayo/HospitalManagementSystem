@@ -21,5 +21,10 @@ namespace HospitalManagementSystem.View
         {
 
         }
+
+        private void logInButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

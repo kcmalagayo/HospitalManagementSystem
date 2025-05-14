@@ -40,7 +40,6 @@
             // 
             // doctorSearchTxt
             // 
-            doctorSearchTxt.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             doctorSearchTxt.CustomizableEdges = customizableEdges1;
             doctorSearchTxt.DefaultText = "";
             doctorSearchTxt.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -50,18 +49,17 @@
             doctorSearchTxt.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             doctorSearchTxt.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             doctorSearchTxt.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            doctorSearchTxt.Location = new Point(104, 15);
+            doctorSearchTxt.Location = new Point(57, 15);
             doctorSearchTxt.Name = "doctorSearchTxt";
             doctorSearchTxt.PlaceholderText = "Search doctor fields";
             doctorSearchTxt.SelectedText = "";
             doctorSearchTxt.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            doctorSearchTxt.Size = new Size(519, 36);
+            doctorSearchTxt.Size = new Size(530, 36);
             doctorSearchTxt.TabIndex = 20;
             doctorSearchTxt.TextChanged += guna2TextBox1_TextChanged;
             // 
             // dataGridView1
             // 
-            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(29, 100);
             dataGridView1.Name = "dataGridView1";
@@ -71,7 +69,6 @@
             // 
             // btnRegister
             // 
-            btnRegister.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             btnRegister.BackColor = Color.PaleGreen;
             btnRegister.CustomizableEdges = customizableEdges3;
             btnRegister.DisabledState.BorderColor = Color.DarkGray;
@@ -79,15 +76,16 @@
             btnRegister.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnRegister.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnRegister.FillColor = Color.MediumSeaGreen;
-            btnRegister.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnRegister.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnRegister.ForeColor = Color.Black;
-            btnRegister.Location = new Point(642, 15);
+            btnRegister.Location = new Point(612, 15);
             btnRegister.Margin = new Padding(3, 2, 3, 2);
             btnRegister.Name = "btnRegister";
             btnRegister.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnRegister.Size = new Size(128, 36);
+            btnRegister.Size = new Size(158, 36);
             btnRegister.TabIndex = 19;
             btnRegister.Text = "Register Doctor";
+            btnRegister.Click += btnRegister_Click;
             // 
             // ManageDoctorForm
             // 

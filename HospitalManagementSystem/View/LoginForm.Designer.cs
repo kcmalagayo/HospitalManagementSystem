@@ -122,6 +122,7 @@
             logInButton.Size = new Size(311, 32);
             logInButton.TabIndex = 8;
             logInButton.Text = "Log In";
+            logInButton.Click += logInButton_Click;
             // 
             // pictureBox1
             // 

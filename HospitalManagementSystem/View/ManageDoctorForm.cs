@@ -41,7 +41,7 @@ namespace HospitalManagementSystem.View
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
-           
+
 
             if (e.RowIndex >= 0)
             {
@@ -72,6 +72,11 @@ namespace HospitalManagementSystem.View
                     MessageBox.Show("Check: " + row.Cells[1].Value?.ToString());
                 }
             }
+        }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
