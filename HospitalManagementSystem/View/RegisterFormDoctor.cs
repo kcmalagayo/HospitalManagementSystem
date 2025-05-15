@@ -85,5 +85,10 @@ namespace HospitalManagementSystem.View
         {
 
         }
+
+        private void RegisterFormDoctor_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

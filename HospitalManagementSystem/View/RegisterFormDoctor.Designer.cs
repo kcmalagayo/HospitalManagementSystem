@@ -245,8 +245,10 @@
             Controls.Add(firstNameTxt);
             Controls.Add(registerPanelDoctor);
             Margin = new Padding(3, 2, 3, 2);
+            MaximizeBox = false;
             Name = "RegisterFormDoctor";
             Text = "RegisterFormDoctor";
+            Load += RegisterFormDoctor_Load;
             ResumeLayout(false);
             PerformLayout();
         }
