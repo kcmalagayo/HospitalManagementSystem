@@ -126,6 +126,7 @@
             logOutBtn.Size = new Size(180, 45);
             logOutBtn.TabIndex = 4;
             logOutBtn.Text = "Log Out ";
+            logOutBtn.Click += logOutBtn_Click;
             // 
             // panel1
             // 
