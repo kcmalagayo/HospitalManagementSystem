@@ -15,6 +15,35 @@ namespace HospitalManagementSystem.View
         public PatientForm()
         {
             InitializeComponent();
+
+            specializaitionDropBox.Items.Add("Dermatologist");
+            specializaitionDropBox.Items.Add("Ophthalmologist");
+            specializaitionDropBox.Items.Add("Otolaryngologist (ENT)");
+        }
+
+        private void guna2ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PatientForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

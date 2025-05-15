@@ -273,6 +273,7 @@
             specializaitionDropBox.ShadowDecoration.CustomizableEdges = customizableEdges8;
             specializaitionDropBox.Size = new Size(336, 24);
             specializaitionDropBox.TabIndex = 71;
+            specializaitionDropBox.SelectedIndexChanged += specializaitionDropBox_SelectedIndexChanged;
             // 
             // DoctorFields
             // 
