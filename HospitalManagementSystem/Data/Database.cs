@@ -67,8 +67,20 @@ namespace HospitalManagementSystem.Data
                     Password TEXT NOT NULL
                 );
             ";
+            string createAppointmentTable = @"
+                 CREATE TABLE IF NOT EXISTS Appointment (
+                    AppointmentID INTEGER PRIMARY KEY AUTOINCREMENT,
+                    PatientID INTEGER,
+                    DoctorID INTEGER NOT NULL,
+                    AppointmentDateTime TEXT NOT NULL,
+                    Status TEXT NOT NULL,
+                    Notes TEXT,
+                    FOREIGN KEY(DoctorID) REFERENCES Doctor(DoctorID),
+                    FOREIGN KEY(PatientID) REFERENCES Patient(PatientID)
+                );
+            ";
 
-           
+
 
             using (var cmd = new SQLiteCommand(createPatientTable, connection))
             {
@@ -80,6 +92,10 @@ namespace HospitalManagementSystem.Data
                 cmd.ExecuteNonQuery();
             }
             using (var cmd = new SQLiteCommand(createAdminTable, connection))
+            {
+                cmd.ExecuteNonQuery();
+            }
+            using (var cmd = new SQLiteCommand(createAppointmentTable, connection))
             {
                 cmd.ExecuteNonQuery();
             }
