@@ -120,20 +120,20 @@
             genderComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
             genderComboBox.FocusedColor = Color.FromArgb(94, 148, 255);
             genderComboBox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            genderComboBox.Font = new Font("Segoe UI", 10F);
+            genderComboBox.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             genderComboBox.ForeColor = Color.FromArgb(68, 88, 112);
-            genderComboBox.ItemHeight = 30;
+            genderComboBox.ItemHeight = 18;
             genderComboBox.Location = new Point(143, 161);
             genderComboBox.Margin = new Padding(3, 2, 3, 2);
             genderComboBox.Name = "genderComboBox";
             genderComboBox.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            genderComboBox.Size = new Size(403, 36);
+            genderComboBox.Size = new Size(403, 24);
             genderComboBox.TabIndex = 9;
             // 
             // contactTxt
             // 
             contactTxt.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            contactTxt.Location = new Point(143, 216);
+            contactTxt.Location = new Point(143, 212);
             contactTxt.Margin = new Padding(3, 2, 3, 2);
             contactTxt.Name = "contactTxt";
             contactTxt.Size = new Size(403, 23);
@@ -161,7 +161,7 @@
             // 
             label5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label5.AutoSize = true;
-            label5.Location = new Point(143, 199);
+            label5.Location = new Point(143, 194);
             label5.Name = "label5";
             label5.Size = new Size(71, 15);
             label5.TabIndex = 13;
@@ -217,6 +217,7 @@
             dobPicker.Name = "dobPicker";
             dobPicker.Size = new Size(403, 23);
             dobPicker.TabIndex = 19;
+            dobPicker.ValueChanged += dobPicker_ValueChanged;
             // 
             // label9
             // 

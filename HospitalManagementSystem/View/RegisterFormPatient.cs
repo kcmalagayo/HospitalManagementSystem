@@ -15,7 +15,7 @@ namespace HospitalManagementSystem.View
 {
     public partial class RegisterFormPatient : Form
     {
-  
+
         public RegisterFormPatient()
         {
             InitializeComponent();
@@ -93,6 +93,11 @@ namespace HospitalManagementSystem.View
         }
 
         private void patientBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dobPicker_ValueChanged(object sender, EventArgs e)
         {
 
         }

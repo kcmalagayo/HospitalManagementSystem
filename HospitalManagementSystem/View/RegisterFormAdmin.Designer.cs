@@ -30,9 +30,6 @@
         {
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            backButton = new Guna.UI2.WinForms.Guna2Button();
             btnRegister = new Guna.UI2.WinForms.Guna2Button();
             label9 = new Label();
             label7 = new Label();
@@ -45,26 +42,9 @@
             registerPanelDoctor.SuspendLayout();
             SuspendLayout();
             // 
-            // backButton
-            // 
-            backButton.CustomizableEdges = customizableEdges1;
-            backButton.DisabledState.BorderColor = Color.DarkGray;
-            backButton.DisabledState.CustomBorderColor = Color.DarkGray;
-            backButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            backButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            backButton.FillColor = Color.Transparent;
-            backButton.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            backButton.ForeColor = Color.Black;
-            backButton.Location = new Point(29, 12);
-            backButton.Name = "backButton";
-            backButton.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            backButton.Size = new Size(56, 28);
-            backButton.TabIndex = 64;
-            backButton.Text = "back button";
-            // 
             // btnRegister
             // 
-            btnRegister.CustomizableEdges = customizableEdges3;
+            btnRegister.CustomizableEdges = customizableEdges1;
             btnRegister.DisabledState.BorderColor = Color.DarkGray;
             btnRegister.DisabledState.CustomBorderColor = Color.DarkGray;
             btnRegister.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -75,7 +55,7 @@
             btnRegister.Location = new Point(73, 268);
             btnRegister.Margin = new Padding(3, 2, 3, 2);
             btnRegister.Name = "btnRegister";
-            btnRegister.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnRegister.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btnRegister.Size = new Size(334, 42);
             btnRegister.TabIndex = 63;
             btnRegister.Text = "Register Admin";
@@ -90,7 +70,6 @@
             label9.Size = new Size(192, 19);
             label9.TabIndex = 61;
             label9.Text = "Register Admin Account";
-            //label9.Click += label9_Click;
             // 
             // label7
             // 
@@ -159,14 +138,12 @@
             registerPanelDoctor.Name = "registerPanelDoctor";
             registerPanelDoctor.Size = new Size(495, 348);
             registerPanelDoctor.TabIndex = 62;
-            //registerPanelDoctor.Paint += registerPanelDoctor_Paint;
             // 
             // RegisterFormAdmin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(715, 454);
-            Controls.Add(backButton);
             Controls.Add(label9);
             Controls.Add(registerPanelDoctor);
             Name = "RegisterFormAdmin";
@@ -178,8 +155,6 @@
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2Button backButton;
         private Guna.UI2.WinForms.Guna2Button btnRegister;
         private Label label9;
         private Label label7;

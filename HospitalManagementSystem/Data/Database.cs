@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data.SQLite;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace HospitalManagementSystem.Data
 {
@@ -65,6 +67,8 @@ namespace HospitalManagementSystem.Data
                     Password TEXT NOT NULL
                 );
             ";
+
+           
 
             using (var cmd = new SQLiteCommand(createPatientTable, connection))
             {

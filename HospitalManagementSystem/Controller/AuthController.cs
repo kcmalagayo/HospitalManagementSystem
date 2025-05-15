@@ -15,7 +15,7 @@ namespace HospitalManagementSystem.Controller
         }
 
         public bool Login(string email, string password, string userType, out object user)
-        {         
+        {
             user = null;
             string query = "";
 
@@ -39,56 +39,63 @@ namespace HospitalManagementSystem.Controller
             using (var cmd = new SQLiteCommand(query, _db.GetConnection()))
             {
                 cmd.Parameters.AddWithValue("@Email", email);
-                cmd.Parameters.AddWithValue("@Password", password); // Plain text — you may want to hash it
+                cmd.Parameters.AddWithValue("@Password", password); // Use hashing for production
 
                 using (var reader = cmd.ExecuteReader())
                 {
                     if (reader.Read())
                     {
-                        user = new Patient
+                        switch (userType)
                         {
-                            PatientID = Convert.ToInt32(reader["PatientID"]),
-                            FirstName = reader["FirstName"].ToString(),
-                            LastName = reader["LastName"].ToString(),
-                            DateOfBirth = DateTime.Parse(reader["DateOfBirth"].ToString()),
-                            Gender = reader["Gender"].ToString(),
-                            ContactNumber = reader["ContactNumber"].ToString(),
-                            Email = reader["Email"].ToString(),
-                            Address = reader["Address"].ToString(),
-                            password = reader["Password"].ToString()
-                        };
+                            case "Patient":
+                                user = new Patient
+                                {
+                                    PatientID = Convert.ToInt32(reader["PatientID"]),
+                                    FirstName = reader["FirstName"].ToString(),
+                                    LastName = reader["LastName"].ToString(),
+                                    DateOfBirth = DateTime.Parse(reader["DateOfBirth"].ToString()),
+                                    Gender = reader["Gender"].ToString(),
+                                    ContactNumber = reader["ContactNumber"].ToString(),
+                                    Email = reader["Email"].ToString(),
+                                    Address = reader["Address"].ToString(),
+                                    password = reader["Password"].ToString()
+                                };
+                                break;
+
+                            case "Doctor":
+                                user = new Doctor
+                                {
+                                    DoctorID = Convert.ToInt32(reader["DoctorID"]),
+                                    FirstName = reader["FirstName"].ToString(),
+                                    LastName = reader["LastName"].ToString(),
+                                    DateOfBirth = DateTime.Parse(reader["DateOfBirth"].ToString()),
+                                    Gender = reader["Gender"].ToString(),
+                                    Specialization = reader["Specialization"].ToString(),
+                                    ContactNumber = reader["ContactNumber"].ToString(),
+                                    Email = reader["Email"].ToString(),
+                                    Password = reader["Password"].ToString(),
+                                    Status = reader["Status"].ToString()
+                                };
+                                break;
+
+                            case "Admin":
+                                user = new Admin
+                                {
+                                    AdminID = Convert.ToInt32(reader["AdminID"]),
+                                    FirstName = reader["FirstName"].ToString(),
+                                    LastName = reader["LastName"].ToString(),
+                                    Email = reader["Email"].ToString(),
+                                    Password = reader["Password"].ToString()
+                                };
+                                break;
+                        }
+
+                        return true; // Valid login
                     }
-                    else if (userType == "Doctor")
-                    {
-                        user = new Doctor
-                        {
-                            DoctorID = Convert.ToInt32(reader["DoctorID"]),
-                            FirstName = reader["FirstName"].ToString(),
-                            LastName = reader["LastName"].ToString(),
-                            DateOfBirth = DateTime.Parse(reader["DateOfBirth"].ToString()),
-                            Gender = reader["Gender"].ToString(),
-                            Specialization = reader["Specialization"].ToString(),
-                            ContactNumber = reader["ContactNumber"].ToString(),
-                            Email = reader["Email"].ToString(),
-                            Password = reader["Password"].ToString(),
-                            Status = reader["Status"].ToString()
-                        };
-                    }
-                    else if (userType == "Admin")
-                    {
-                        user = new Admin
-                        {
-                            AdminID = Convert.ToInt32(reader["AdminID"]),
-                            FirstName = reader["FirstName"].ToString(),
-                            LastName = reader["LastName"].ToString(),
-                            Email = reader["Email"].ToString(),
-                            Password = reader["Password"].ToString()
-                        };
-                    }
-                    return true;
                 }
-              }
-            return false;
+            }
+
+            return false; // No matching record
         }
         public bool Register(Patient patient)
         {
