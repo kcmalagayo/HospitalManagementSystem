@@ -36,7 +36,40 @@ namespace HospitalManagementSystem.View
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex >= 0)
+            {
+                var row = dataGridView1.Rows[e.RowIndex];
 
+                try
+                {
+                    var selectedPatient = new Patient
+                    {
+                        PatientID = Convert.ToInt32(row.Cells["PatientID"].Value),
+                        FirstName = row.Cells["FirstName"].Value.ToString(),
+                        LastName = row.Cells["LastName"].Value.ToString(),
+                        DateOfBirth = DateTime.Parse(row.Cells["DateOfBirth"].Value.ToString()),
+                        Gender = row.Cells["Gender"].Value.ToString(),
+                        ContactNumber = row.Cells["ContactNumber"].Value.ToString(),
+                        Email = row.Cells["Email"].Value.ToString(),
+                        password = row.Cells["Password"].Value.ToString(),
+                        Address = row.Cells["Address"].Value.ToString()
+                    };
+
+                    var editForm = new PatientFields(selectedPatient);
+                    editForm.ShowDialog();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error loading patient: " + ex.Message);
+                    MessageBox.Show("Check: " + row.Cells[1].Value?.ToString());
+                }
+            }
+        }
+         
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            RegisterFormPatient registerFormPatient = new RegisterFormPatient();
+            registerFormPatient.Show();
         }
     }
 }

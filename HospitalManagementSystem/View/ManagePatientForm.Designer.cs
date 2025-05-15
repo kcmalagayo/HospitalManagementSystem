@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             dataGridView1 = new DataGridView();
             patientSearchTxt = new Guna.UI2.WinForms.Guna2TextBox();
             btnRegister = new Guna.UI2.WinForms.Guna2Button();
@@ -49,7 +49,7 @@
             // 
             // patientSearchTxt
             // 
-            patientSearchTxt.CustomizableEdges = customizableEdges9;
+            patientSearchTxt.CustomizableEdges = customizableEdges1;
             patientSearchTxt.DefaultText = "";
             patientSearchTxt.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             patientSearchTxt.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -62,14 +62,14 @@
             patientSearchTxt.Name = "patientSearchTxt";
             patientSearchTxt.PlaceholderText = "Search patient fields";
             patientSearchTxt.SelectedText = "";
-            patientSearchTxt.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            patientSearchTxt.ShadowDecoration.CustomizableEdges = customizableEdges2;
             patientSearchTxt.Size = new Size(530, 36);
             patientSearchTxt.TabIndex = 23;
             // 
             // btnRegister
             // 
             btnRegister.BackColor = Color.PaleGreen;
-            btnRegister.CustomizableEdges = customizableEdges11;
+            btnRegister.CustomizableEdges = customizableEdges3;
             btnRegister.DisabledState.BorderColor = Color.DarkGray;
             btnRegister.DisabledState.CustomBorderColor = Color.DarkGray;
             btnRegister.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -80,10 +80,11 @@
             btnRegister.Location = new Point(613, 28);
             btnRegister.Margin = new Padding(3, 2, 3, 2);
             btnRegister.Name = "btnRegister";
-            btnRegister.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            btnRegister.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnRegister.Size = new Size(158, 36);
             btnRegister.TabIndex = 22;
             btnRegister.Text = "Register Patient";
+            btnRegister.Click += btnRegister_Click;
             // 
             // ManagePatientForm
             // 
