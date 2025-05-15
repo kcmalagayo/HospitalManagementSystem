@@ -50,5 +50,41 @@ namespace HospitalManagementSystem.Controller
 
             return result;
         }
+        public bool UpdatePatient(Patient patient)
+        {
+            try
+            {
+                using (var cmd = new SQLiteCommand(@"
+            UPDATE Patient 
+            SET FirstName = @FirstName, 
+                LastName = @LastName, 
+                Gender = @Gender, 
+                ContactNumber = @ContactNumber, 
+                Email = @Email, 
+                Address = @Address, 
+                Password = @Password, 
+                DateOfBirth = @DateOfBirth 
+            WHERE PatientID = @PatientID", _db.GetConnection()))
+                {
+                    cmd.Parameters.AddWithValue("@FirstName", patient.FirstName);
+                    cmd.Parameters.AddWithValue("@LastName", patient.LastName);
+                    cmd.Parameters.AddWithValue("@Gender", patient.Gender);
+                    cmd.Parameters.AddWithValue("@ContactNumber", patient.ContactNumber);
+                    cmd.Parameters.AddWithValue("@Email", patient.Email);
+                    cmd.Parameters.AddWithValue("@Address", patient.Address);
+                    cmd.Parameters.AddWithValue("@Password", patient.password);
+                    cmd.Parameters.AddWithValue("@DateOfBirth", patient.DateOfBirth.ToString("yyyy-MM-dd"));
+                    cmd.Parameters.AddWithValue("@PatientID", patient.PatientID);
+
+                    int rowsAffected = cmd.ExecuteNonQuery();
+                    return rowsAffected > 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Database Error: {ex.Message}", "Error");
+                return false;
+            }
+        }
     }
 }
