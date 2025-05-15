@@ -91,6 +91,7 @@
             managePatientBtn.Size = new Size(180, 45);
             managePatientBtn.TabIndex = 2;
             managePatientBtn.Text = "Manage Patient";
+            managePatientBtn.Click += managePatientBtn_Click;
             // 
             // bookAppointmentBtn
             // 

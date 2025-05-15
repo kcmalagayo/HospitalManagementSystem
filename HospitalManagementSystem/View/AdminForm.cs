@@ -42,5 +42,11 @@ namespace HospitalManagementSystem.View
         {
 
         }
+
+        private void managePatientBtn_Click(object sender, EventArgs e)
+        {
+            ManagePatientForm mpf = new ManagePatientForm();
+            OpenFormInPanel(mpf);
+        }
     }
 }
