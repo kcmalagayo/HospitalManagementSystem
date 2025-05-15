@@ -18,21 +18,25 @@ namespace HospitalManagementSystem.View
     {
 
         private Doctor _doctor;
-
-
-    
-
         public DoctorFields(Doctor doctor)
         {
             InitializeComponent();
 
             _doctor = doctor;
 
+            genderComboBox.Items.Add("Male");
+            genderComboBox.Items.Add("Female");
+            genderComboBox.SelectedIndex = 0;
+
+            specializaitionDropBox.Items.Add("Dermatologist");
+            specializaitionDropBox.Items.Add("Ophthalmologist");
+            specializaitionDropBox.Items.Add("Otolaryngologist (ENT)");
+
             // Fill form fields
             firstNameTxt.Text = _doctor.FirstName;
             lastNameTxt.Text = _doctor.LastName;
             genderComboBox.SelectedItem = _doctor.Gender;
-            specializationTxt.Text = _doctor.Specialization;
+            specializaitionDropBox.SelectedItem = _doctor.Specialization;
             emailTxt.Text = _doctor.Email;
             PasswordTxtBox.Text = _doctor.Password;
             contactTxt.Text = _doctor.ContactNumber;

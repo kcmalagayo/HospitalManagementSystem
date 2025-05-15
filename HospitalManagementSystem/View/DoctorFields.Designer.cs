@@ -34,12 +34,13 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             dobPicker = new DateTimePicker();
             label7 = new Label();
             label6 = new Label();
             label5 = new Label();
             emailTxt = new TextBox();
-            specializationTxt = new TextBox();
             contactTxt = new TextBox();
             genderComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
             label4 = new Label();
@@ -54,12 +55,13 @@
             label9 = new Label();
             statusTxtBox = new TextBox();
             saveBtn = new Guna.UI2.WinForms.Guna2Button();
+            specializaitionDropBox = new Guna.UI2.WinForms.Guna2ComboBox();
             SuspendLayout();
             // 
             // dobPicker
             // 
             dobPicker.Format = DateTimePickerFormat.Short;
-            dobPicker.Location = new Point(206, 254);
+            dobPicker.Location = new Point(134, 254);
             dobPicker.Margin = new Padding(3, 2, 3, 2);
             dobPicker.Name = "dobPicker";
             dobPicker.Size = new Size(335, 23);
@@ -68,7 +70,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(206, 454);
+            label7.Location = new Point(134, 454);
             label7.Name = "label7";
             label7.Size = new Size(36, 15);
             label7.TabIndex = 58;
@@ -77,7 +79,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(205, 399);
+            label6.Location = new Point(133, 399);
             label6.Name = "label6";
             label6.Size = new Size(79, 15);
             label6.TabIndex = 57;
@@ -86,7 +88,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(205, 346);
+            label5.Location = new Point(133, 346);
             label5.Name = "label5";
             label5.Size = new Size(71, 15);
             label5.TabIndex = 56;
@@ -94,23 +96,15 @@
             // 
             // emailTxt
             // 
-            emailTxt.Location = new Point(205, 473);
+            emailTxt.Location = new Point(133, 473);
             emailTxt.Margin = new Padding(3, 2, 3, 2);
             emailTxt.Name = "emailTxt";
             emailTxt.Size = new Size(335, 23);
             emailTxt.TabIndex = 55;
             // 
-            // specializationTxt
-            // 
-            specializationTxt.Location = new Point(205, 418);
-            specializationTxt.Margin = new Padding(3, 2, 3, 2);
-            specializationTxt.Name = "specializationTxt";
-            specializationTxt.Size = new Size(335, 23);
-            specializationTxt.TabIndex = 54;
-            // 
             // contactTxt
             // 
-            contactTxt.Location = new Point(205, 366);
+            contactTxt.Location = new Point(133, 366);
             contactTxt.Margin = new Padding(3, 2, 3, 2);
             contactTxt.Name = "contactTxt";
             contactTxt.Size = new Size(335, 23);
@@ -127,7 +121,7 @@
             genderComboBox.Font = new Font("Segoe UI", 10F);
             genderComboBox.ForeColor = Color.FromArgb(68, 88, 112);
             genderComboBox.ItemHeight = 18;
-            genderComboBox.Location = new Point(205, 307);
+            genderComboBox.Location = new Point(133, 307);
             genderComboBox.Margin = new Padding(3, 2, 3, 2);
             genderComboBox.Name = "genderComboBox";
             genderComboBox.ShadowDecoration.CustomizableEdges = customizableEdges2;
@@ -137,7 +131,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(205, 290);
+            label4.Location = new Point(133, 290);
             label4.Name = "label4";
             label4.Size = new Size(45, 15);
             label4.TabIndex = 51;
@@ -146,7 +140,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(205, 236);
+            label3.Location = new Point(133, 236);
             label3.Name = "label3";
             label3.Size = new Size(73, 15);
             label3.TabIndex = 50;
@@ -156,7 +150,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(206, 120);
+            label2.Location = new Point(134, 120);
             label2.Name = "label2";
             label2.Size = new Size(70, 16);
             label2.TabIndex = 49;
@@ -166,7 +160,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(205, 64);
+            label1.Location = new Point(133, 64);
             label1.Name = "label1";
             label1.Size = new Size(71, 16);
             label1.TabIndex = 48;
@@ -174,7 +168,7 @@
             // 
             // lastNameTxt
             // 
-            lastNameTxt.Location = new Point(206, 139);
+            lastNameTxt.Location = new Point(134, 139);
             lastNameTxt.Margin = new Padding(3, 2, 3, 2);
             lastNameTxt.Name = "lastNameTxt";
             lastNameTxt.Size = new Size(335, 23);
@@ -182,7 +176,7 @@
             // 
             // firstNameTxt
             // 
-            firstNameTxt.Location = new Point(205, 85);
+            firstNameTxt.Location = new Point(133, 85);
             firstNameTxt.Margin = new Padding(3, 2, 3, 2);
             firstNameTxt.Name = "firstNameTxt";
             firstNameTxt.Size = new Size(335, 23);
@@ -200,17 +194,17 @@
             btnRegister.FillColor = Color.MediumSeaGreen;
             btnRegister.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnRegister.ForeColor = Color.Black;
-            btnRegister.Location = new Point(617, 11);
+            btnRegister.Location = new Point(490, 24);
             btnRegister.Margin = new Padding(3, 2, 3, 2);
             btnRegister.Name = "btnRegister";
             btnRegister.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnRegister.Size = new Size(158, 36);
+            btnRegister.Size = new Size(110, 28);
             btnRegister.TabIndex = 60;
             btnRegister.Text = "Edit Fields";
             // 
             // PasswordTxtBox
             // 
-            PasswordTxtBox.Location = new Point(206, 199);
+            PasswordTxtBox.Location = new Point(134, 199);
             PasswordTxtBox.Margin = new Padding(3, 2, 3, 2);
             PasswordTxtBox.Name = "PasswordTxtBox";
             PasswordTxtBox.Size = new Size(335, 23);
@@ -221,7 +215,7 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label8.Location = new Point(205, 181);
+            label8.Location = new Point(133, 181);
             label8.Name = "label8";
             label8.Size = new Size(64, 16);
             label8.TabIndex = 67;
@@ -230,7 +224,7 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(207, 516);
+            label9.Location = new Point(135, 516);
             label9.Name = "label9";
             label9.Size = new Size(39, 15);
             label9.TabIndex = 69;
@@ -238,7 +232,7 @@
             // 
             // statusTxtBox
             // 
-            statusTxtBox.Location = new Point(206, 535);
+            statusTxtBox.Location = new Point(134, 535);
             statusTxtBox.Margin = new Padding(3, 2, 3, 2);
             statusTxtBox.Name = "statusTxtBox";
             statusTxtBox.Size = new Size(335, 23);
@@ -255,19 +249,37 @@
             saveBtn.FillColor = Color.MediumSeaGreen;
             saveBtn.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             saveBtn.ForeColor = Color.Black;
-            saveBtn.Location = new Point(282, 594);
+            saveBtn.Location = new Point(235, 585);
             saveBtn.Margin = new Padding(3, 2, 3, 2);
             saveBtn.Name = "saveBtn";
             saveBtn.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            saveBtn.Size = new Size(158, 36);
+            saveBtn.Size = new Size(142, 29);
             saveBtn.TabIndex = 70;
             saveBtn.Text = "Save Changes";
+            // 
+            // specializaitionDropBox
+            // 
+            specializaitionDropBox.BackColor = Color.Transparent;
+            specializaitionDropBox.CustomizableEdges = customizableEdges7;
+            specializaitionDropBox.DrawMode = DrawMode.OwnerDrawFixed;
+            specializaitionDropBox.DropDownStyle = ComboBoxStyle.DropDownList;
+            specializaitionDropBox.FocusedColor = Color.FromArgb(94, 148, 255);
+            specializaitionDropBox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            specializaitionDropBox.Font = new Font("Segoe UI", 10F);
+            specializaitionDropBox.ForeColor = Color.FromArgb(68, 88, 112);
+            specializaitionDropBox.ItemHeight = 18;
+            specializaitionDropBox.Location = new Point(135, 417);
+            specializaitionDropBox.Name = "specializaitionDropBox";
+            specializaitionDropBox.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            specializaitionDropBox.Size = new Size(336, 24);
+            specializaitionDropBox.TabIndex = 71;
             // 
             // DoctorFields
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 656);
+            ClientSize = new Size(661, 656);
+            Controls.Add(specializaitionDropBox);
             Controls.Add(saveBtn);
             Controls.Add(label9);
             Controls.Add(statusTxtBox);
@@ -279,7 +291,6 @@
             Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(emailTxt);
-            Controls.Add(specializationTxt);
             Controls.Add(contactTxt);
             Controls.Add(genderComboBox);
             Controls.Add(label4);
@@ -302,7 +313,6 @@
         private Label label6;
         private Label label5;
         private TextBox emailTxt;
-        private TextBox specializationTxt;
         private TextBox contactTxt;
         private Guna.UI2.WinForms.Guna2ComboBox genderComboBox;
         private Label label4;
@@ -317,5 +327,6 @@
         private Label label9;
         private TextBox statusTxtBox;
         private Guna.UI2.WinForms.Guna2Button saveBtn;
+        private Guna.UI2.WinForms.Guna2ComboBox specializaitionDropBox;
     }
 }
