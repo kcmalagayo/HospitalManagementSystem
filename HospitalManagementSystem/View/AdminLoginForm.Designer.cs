@@ -1,6 +1,6 @@
 ﻿namespace HospitalManagementSystem.View
 {
-    partial class LoginForm
+    partial class AdminLoginForm
     {
         /// <summary>
         /// Required designer variable.
