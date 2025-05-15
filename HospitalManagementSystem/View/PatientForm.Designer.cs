@@ -32,7 +32,10 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panel1 = new Panel();
+            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             label1 = new Label();
             monthCalendar1 = new MonthCalendar();
             label6 = new Label();
@@ -45,6 +48,7 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(guna2Button1);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(monthCalendar1);
             panel1.Controls.Add(label6);
@@ -56,6 +60,24 @@
             panel1.Size = new Size(783, 431);
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
+            // 
+            // guna2Button1
+            // 
+            guna2Button1.CustomizableEdges = customizableEdges1;
+            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2Button1.FillColor = Color.MediumSeaGreen;
+            guna2Button1.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2Button1.ForeColor = Color.Black;
+            guna2Button1.Location = new Point(32, 315);
+            guna2Button1.Name = "guna2Button1";
+            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            guna2Button1.Size = new Size(180, 45);
+            guna2Button1.TabIndex = 61;
+            guna2Button1.Text = "Book Appointment";
+            guna2Button1.Click += guna2Button1_Click;
             // 
             // label1
             // 
@@ -84,7 +106,7 @@
             // 
             // doctorSearchTxt
             // 
-            doctorSearchTxt.CustomizableEdges = customizableEdges1;
+            doctorSearchTxt.CustomizableEdges = customizableEdges3;
             doctorSearchTxt.DefaultText = "";
             doctorSearchTxt.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             doctorSearchTxt.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -97,14 +119,15 @@
             doctorSearchTxt.Name = "doctorSearchTxt";
             doctorSearchTxt.PlaceholderText = "Search doctor fields";
             doctorSearchTxt.SelectedText = "";
-            doctorSearchTxt.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            doctorSearchTxt.ShadowDecoration.CustomizableEdges = customizableEdges4;
             doctorSearchTxt.Size = new Size(445, 41);
             doctorSearchTxt.TabIndex = 21;
+            doctorSearchTxt.TextChanged += doctorSearchTxt_TextChanged;
             // 
             // specializaitionDropBox
             // 
             specializaitionDropBox.BackColor = Color.MediumSeaGreen;
-            specializaitionDropBox.CustomizableEdges = customizableEdges3;
+            specializaitionDropBox.CustomizableEdges = customizableEdges5;
             specializaitionDropBox.DrawMode = DrawMode.OwnerDrawFixed;
             specializaitionDropBox.DropDownStyle = ComboBoxStyle.DropDownList;
             specializaitionDropBox.FocusedColor = Color.FromArgb(94, 148, 255);
@@ -114,9 +137,10 @@
             specializaitionDropBox.ItemHeight = 18;
             specializaitionDropBox.Location = new Point(12, 42);
             specializaitionDropBox.Name = "specializaitionDropBox";
-            specializaitionDropBox.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            specializaitionDropBox.ShadowDecoration.CustomizableEdges = customizableEdges6;
             specializaitionDropBox.Size = new Size(301, 24);
             specializaitionDropBox.TabIndex = 4;
+            specializaitionDropBox.SelectedIndexChanged += specializaitionDropBox_SelectedIndexChanged;
             // 
             // dataGridView2
             // 
@@ -150,5 +174,6 @@
         private Label label6;
         private Label label1;
         private MonthCalendar monthCalendar1;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }

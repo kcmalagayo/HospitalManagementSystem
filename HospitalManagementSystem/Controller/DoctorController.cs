@@ -2,6 +2,7 @@
 using System.Data.SQLite;
 using HospitalManagementSystem.Model;
 using HospitalManagementSystem.Data;
+using System.Data;
 
 namespace HospitalManagementSystem.Controller
 {
@@ -45,6 +46,48 @@ namespace HospitalManagementSystem.Controller
             }
 
             return result;
+        }
+        public DataTable GetAllDoctors()
+        {
+            DataTable dt = new DataTable();
+            using (var cmd = new SQLiteCommand("SELECT DoctorID, FirstName, LastName, Specialization, ContactNumber, Email FROM Doctor", _db.GetConnection()))
+            {
+                SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd);
+                adapter.Fill(dt);
+            }
+            return dt;
+        }
+        public DataTable GetDoctorsBySpecialization(string specialization)
+        {
+            DataTable dt = new DataTable();
+            string query = "SELECT DoctorID, FirstName, LastName, Specialization, ContactNumber, Email FROM Doctor WHERE Specialization = @specialization";
+            using (var cmd = new SQLiteCommand(query, _db.GetConnection()))
+            {
+                cmd.Parameters.AddWithValue("@specialization", specialization);
+                SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd);
+                adapter.Fill(dt);
+            }
+            return dt;
+        }
+        public bool SaveAppointment(int doctorId, DateTime appointmentDate)
+        {
+            try
+            {
+                using (var cmd = new SQLiteCommand("INSERT INTO Appointment (DoctorID, AppointmentDateTime, Status) VALUES (@doctorId, @appointmentDate, @status)", _db.GetConnection()))
+                {
+                    cmd.Parameters.AddWithValue("@doctorId", doctorId);
+                    cmd.Parameters.AddWithValue("@appointmentDate", appointmentDate.ToString("yyyy-MM-dd HH:mm:ss"));
+                    cmd.Parameters.AddWithValue("@status", "Scheduled");
+
+                    int rowsAffected = cmd.ExecuteNonQuery();
+                    return rowsAffected > 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Database Error: {ex.Message}");
+                return false;
+            }
         }
     }
 }
