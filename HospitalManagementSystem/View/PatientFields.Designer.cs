@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             saveBtn = new Guna.UI2.WinForms.Guna2Button();
             label9 = new Label();
             addressTxt = new TextBox();
@@ -52,12 +54,13 @@
             label1 = new Label();
             lastNameTxt = new TextBox();
             firstNameTxt = new TextBox();
+            discardbtn = new Guna.UI2.WinForms.Guna2Button();
             SuspendLayout();
             // 
             // saveBtn
             // 
             saveBtn.BackColor = Color.PaleGreen;
-            saveBtn.CustomizableEdges = customizableEdges7;
+            saveBtn.CustomizableEdges = customizableEdges1;
             saveBtn.DisabledState.BorderColor = Color.DarkGray;
             saveBtn.DisabledState.CustomBorderColor = Color.DarkGray;
             saveBtn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -65,13 +68,14 @@
             saveBtn.FillColor = Color.MediumSeaGreen;
             saveBtn.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             saveBtn.ForeColor = Color.Black;
-            saveBtn.Location = new Point(223, 563);
+            saveBtn.Location = new Point(168, 560);
             saveBtn.Margin = new Padding(3, 2, 3, 2);
             saveBtn.Name = "saveBtn";
-            saveBtn.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            saveBtn.Size = new Size(142, 29);
+            saveBtn.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            saveBtn.Size = new Size(123, 42);
             saveBtn.TabIndex = 90;
             saveBtn.Text = "Save Changes";
+            saveBtn.Click += saveBtn_Click;
             // 
             // label9
             // 
@@ -114,7 +118,7 @@
             // btnRegister
             // 
             btnRegister.BackColor = Color.PaleGreen;
-            btnRegister.CustomizableEdges = customizableEdges9;
+            btnRegister.CustomizableEdges = customizableEdges3;
             btnRegister.DisabledState.BorderColor = Color.DarkGray;
             btnRegister.DisabledState.CustomBorderColor = Color.DarkGray;
             btnRegister.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -125,10 +129,11 @@
             btnRegister.Location = new Point(489, 30);
             btnRegister.Margin = new Padding(3, 2, 3, 2);
             btnRegister.Name = "btnRegister";
-            btnRegister.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            btnRegister.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnRegister.Size = new Size(110, 28);
             btnRegister.TabIndex = 85;
             btnRegister.Text = "Edit Fields";
+            btnRegister.Click += btnRegister_Click;
             // 
             // dobPicker
             // 
@@ -179,7 +184,7 @@
             // genderComboBox
             // 
             genderComboBox.BackColor = Color.Transparent;
-            genderComboBox.CustomizableEdges = customizableEdges11;
+            genderComboBox.CustomizableEdges = customizableEdges5;
             genderComboBox.DrawMode = DrawMode.OwnerDrawFixed;
             genderComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
             genderComboBox.FocusedColor = Color.FromArgb(94, 148, 255);
@@ -190,7 +195,7 @@
             genderComboBox.Location = new Point(132, 313);
             genderComboBox.Margin = new Padding(3, 2, 3, 2);
             genderComboBox.Name = "genderComboBox";
-            genderComboBox.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            genderComboBox.ShadowDecoration.CustomizableEdges = customizableEdges6;
             genderComboBox.Size = new Size(335, 24);
             genderComboBox.TabIndex = 78;
             // 
@@ -250,11 +255,32 @@
             firstNameTxt.Size = new Size(335, 22);
             firstNameTxt.TabIndex = 72;
             // 
+            // discardbtn
+            // 
+            discardbtn.BackColor = Color.PaleGreen;
+            discardbtn.CustomizableEdges = customizableEdges7;
+            discardbtn.DisabledState.BorderColor = Color.DarkGray;
+            discardbtn.DisabledState.CustomBorderColor = Color.DarkGray;
+            discardbtn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            discardbtn.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            discardbtn.FillColor = Color.Black;
+            discardbtn.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            discardbtn.ForeColor = Color.White;
+            discardbtn.Location = new Point(321, 560);
+            discardbtn.Margin = new Padding(3, 2, 3, 2);
+            discardbtn.Name = "discardbtn";
+            discardbtn.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            discardbtn.Size = new Size(133, 42);
+            discardbtn.TabIndex = 91;
+            discardbtn.Text = "Discard Changes";
+            discardbtn.Click += discardbtn_Click;
+            // 
             // PatientFields
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(661, 620);
+            Controls.Add(discardbtn);
             Controls.Add(saveBtn);
             Controls.Add(label9);
             Controls.Add(addressTxt);
@@ -300,5 +326,6 @@
         private Label label1;
         private TextBox lastNameTxt;
         private TextBox firstNameTxt;
+        private Guna.UI2.WinForms.Guna2Button discardbtn;
     }
 }
