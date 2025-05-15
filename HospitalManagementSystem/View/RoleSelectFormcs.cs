@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace HospitalManagementSystem.View
 {
-    public partial class DoctorForm : Form
+    public partial class RoleSelectFormcs : Form
     {
-        public DoctorForm()
+        public RoleSelectFormcs()
         {
             InitializeComponent();
         }

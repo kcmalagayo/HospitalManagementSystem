@@ -1,6 +1,6 @@
 ﻿namespace HospitalManagementSystem.View
 {
-    partial class LoginForm
+    partial class RoleSelectFormcs
     {
         /// <summary>
         /// Required designer variable.
@@ -28,32 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBox1 = new TextBox();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // textBox1
+            // pictureBox1
             // 
-            textBox1.Location = new Point(12, 66);
-            textBox1.Margin = new Padding(3, 4, 3, 4);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(354, 27);
-            textBox1.TabIndex = 0;
+            pictureBox1.Location = new Point(78, 123);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(100, 50);
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
             // 
-            // LoginForm
+            // RoleSelectFormcs
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(914, 600);
-            Controls.Add(textBox1);
-            Margin = new Padding(3, 4, 3, 4);
-            Name = "LoginForm";
-            Text = "LoginForm";
+            ClientSize = new Size(800, 450);
+            Controls.Add(pictureBox1);
+            Name = "RoleSelectFormcs";
+            Text = "RoleSelectFormcs";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
-        private TextBox textBox1;
+        private PictureBox pictureBox1;
     }
 }

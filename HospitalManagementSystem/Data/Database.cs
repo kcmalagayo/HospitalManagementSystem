@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data.SQLite;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace HospitalManagementSystem.Data
 {
@@ -56,6 +58,29 @@ namespace HospitalManagementSystem.Data
                     Status TEXT DEFAULT 'Active'
                 );
             ";
+            string createAdminTable = @"
+                CREATE TABLE IF NOT EXISTS Admin (
+                    AdminID INTEGER PRIMARY KEY AUTOINCREMENT,
+                    FirstName TEXT NOT NULL,
+                    LastName TEXT NOT NULL,
+                    Email TEXT NOT NULL,
+                    Password TEXT NOT NULL
+                );
+            ";
+            string createAppointmentTable = @"
+                 CREATE TABLE IF NOT EXISTS Appointment (
+                    AppointmentID INTEGER PRIMARY KEY AUTOINCREMENT,
+                    PatientID INTEGER,
+                    DoctorID INTEGER NOT NULL,
+                    AppointmentDateTime TEXT NOT NULL,
+                    Status TEXT NOT NULL,
+                    Notes TEXT,
+                    FOREIGN KEY(DoctorID) REFERENCES Doctor(DoctorID),
+                    FOREIGN KEY(PatientID) REFERENCES Patient(PatientID)
+                );
+            ";
+
+
 
             using (var cmd = new SQLiteCommand(createPatientTable, connection))
             {
@@ -63,6 +88,14 @@ namespace HospitalManagementSystem.Data
             }
 
             using (var cmd = new SQLiteCommand(createDoctorTable, connection))
+            {
+                cmd.ExecuteNonQuery();
+            }
+            using (var cmd = new SQLiteCommand(createAdminTable, connection))
+            {
+                cmd.ExecuteNonQuery();
+            }
+            using (var cmd = new SQLiteCommand(createAppointmentTable, connection))
             {
                 cmd.ExecuteNonQuery();
             }
