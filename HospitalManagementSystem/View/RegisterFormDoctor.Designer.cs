@@ -30,6 +30,8 @@
         {
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             btnRegister = new Guna.UI2.WinForms.Guna2Button();
@@ -42,13 +44,14 @@
             label4 = new Label();
             genderComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
             contactTxt = new TextBox();
-            specializationTxt = new TextBox();
             emailTxt = new TextBox();
             label5 = new Label();
             label6 = new Label();
             label7 = new Label();
             dobPicker = new DateTimePicker();
             label9 = new Label();
+            specializaitionDropBox = new Guna.UI2.WinForms.Guna2ComboBox();
+            registerPanelDoctor.SuspendLayout();
             SuspendLayout();
             // 
             // btnRegister
@@ -72,6 +75,7 @@
             // 
             // registerPanelDoctor
             // 
+            registerPanelDoctor.Controls.Add(specializaitionDropBox);
             registerPanelDoctor.Location = new Point(79, 49);
             registerPanelDoctor.Margin = new Padding(3, 2, 3, 2);
             registerPanelDoctor.Name = "registerPanelDoctor";
@@ -135,7 +139,7 @@
             // genderComboBox
             // 
             genderComboBox.BackColor = Color.Transparent;
-            genderComboBox.CustomizableEdges = customizableEdges3;
+            genderComboBox.CustomizableEdges = customizableEdges5;
             genderComboBox.DrawMode = DrawMode.OwnerDrawFixed;
             genderComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
             genderComboBox.FocusedColor = Color.FromArgb(94, 148, 255);
@@ -146,7 +150,7 @@
             genderComboBox.Location = new Point(153, 246);
             genderComboBox.Margin = new Padding(3, 2, 3, 2);
             genderComboBox.Name = "genderComboBox";
-            genderComboBox.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            genderComboBox.ShadowDecoration.CustomizableEdges = customizableEdges6;
             genderComboBox.Size = new Size(335, 24);
             genderComboBox.TabIndex = 31;
             genderComboBox.SelectedIndexChanged += genderComboBox_SelectedIndexChanged;
@@ -158,14 +162,6 @@
             contactTxt.Name = "contactTxt";
             contactTxt.Size = new Size(335, 23);
             contactTxt.TabIndex = 32;
-            // 
-            // specializationTxt
-            // 
-            specializationTxt.Location = new Point(153, 357);
-            specializationTxt.Margin = new Padding(3, 2, 3, 2);
-            specializationTxt.Name = "specializationTxt";
-            specializationTxt.Size = new Size(335, 23);
-            specializationTxt.TabIndex = 33;
             // 
             // emailTxt
             // 
@@ -222,6 +218,23 @@
             label9.Text = "Register Doctor Account";
             label9.Click += label9_Click;
             // 
+            // specializaitionDropBox
+            // 
+            specializaitionDropBox.BackColor = Color.Transparent;
+            specializaitionDropBox.CustomizableEdges = customizableEdges3;
+            specializaitionDropBox.DrawMode = DrawMode.OwnerDrawFixed;
+            specializaitionDropBox.DropDownStyle = ComboBoxStyle.DropDownList;
+            specializaitionDropBox.FocusedColor = Color.FromArgb(94, 148, 255);
+            specializaitionDropBox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            specializaitionDropBox.Font = new Font("Segoe UI", 10F);
+            specializaitionDropBox.ForeColor = Color.FromArgb(68, 88, 112);
+            specializaitionDropBox.ItemHeight = 18;
+            specializaitionDropBox.Location = new Point(74, 305);
+            specializaitionDropBox.Name = "specializaitionDropBox";
+            specializaitionDropBox.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            specializaitionDropBox.Size = new Size(336, 24);
+            specializaitionDropBox.TabIndex = 0;
+            // 
             // RegisterFormDoctor
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -234,7 +247,6 @@
             Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(emailTxt);
-            Controls.Add(specializationTxt);
             Controls.Add(contactTxt);
             Controls.Add(genderComboBox);
             Controls.Add(label4);
@@ -249,6 +261,7 @@
             Name = "RegisterFormDoctor";
             Text = "RegisterFormDoctor";
             Load += RegisterFormDoctor_Load;
+            registerPanelDoctor.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -265,12 +278,12 @@
         private Label label4;
         private Guna.UI2.WinForms.Guna2ComboBox genderComboBox;
         private TextBox contactTxt;
-        private TextBox specializationTxt;
         private TextBox emailTxt;
         private Label label5;
         private Label label6;
         private Label label7;
         private DateTimePicker dobPicker;
         private Label label9;
+        private Guna.UI2.WinForms.Guna2ComboBox specializaitionDropBox;
     }
 }
