@@ -28,18 +28,268 @@
         /// </summary>
         private void InitializeComponent()
         {
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            saveBtn = new Guna.UI2.WinForms.Guna2Button();
+            label9 = new Label();
+            statusTxtBox = new TextBox();
+            label8 = new Label();
+            PasswordTxtBox = new TextBox();
+            btnRegister = new Guna.UI2.WinForms.Guna2Button();
+            dobPicker = new DateTimePicker();
+            label7 = new Label();
+            label5 = new Label();
+            emailTxt = new TextBox();
+            contactTxt = new TextBox();
+            genderComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
+            label4 = new Label();
+            label3 = new Label();
+            label2 = new Label();
+            label1 = new Label();
+            lastNameTxt = new TextBox();
+            firstNameTxt = new TextBox();
             SuspendLayout();
+            // 
+            // saveBtn
+            // 
+            saveBtn.BackColor = Color.PaleGreen;
+            saveBtn.CustomizableEdges = customizableEdges1;
+            saveBtn.DisabledState.BorderColor = Color.DarkGray;
+            saveBtn.DisabledState.CustomBorderColor = Color.DarkGray;
+            saveBtn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            saveBtn.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            saveBtn.FillColor = Color.MediumSeaGreen;
+            saveBtn.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            saveBtn.ForeColor = Color.Black;
+            saveBtn.Location = new Point(223, 563);
+            saveBtn.Margin = new Padding(3, 2, 3, 2);
+            saveBtn.Name = "saveBtn";
+            saveBtn.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            saveBtn.Size = new Size(142, 29);
+            saveBtn.TabIndex = 90;
+            saveBtn.Text = "Save Changes";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(132, 488);
+            label9.Name = "label9";
+            label9.Size = new Size(39, 15);
+            label9.TabIndex = 89;
+            label9.Text = "Status";
+            // 
+            // statusTxtBox
+            // 
+            statusTxtBox.Location = new Point(132, 515);
+            statusTxtBox.Margin = new Padding(3, 2, 3, 2);
+            statusTxtBox.Name = "statusTxtBox";
+            statusTxtBox.Size = new Size(335, 23);
+            statusTxtBox.TabIndex = 88;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label8.Location = new Point(132, 187);
+            label8.Name = "label8";
+            label8.Size = new Size(64, 16);
+            label8.TabIndex = 87;
+            label8.Text = "Password";
+            // 
+            // PasswordTxtBox
+            // 
+            PasswordTxtBox.Location = new Point(133, 205);
+            PasswordTxtBox.Margin = new Padding(3, 2, 3, 2);
+            PasswordTxtBox.Name = "PasswordTxtBox";
+            PasswordTxtBox.Size = new Size(335, 23);
+            PasswordTxtBox.TabIndex = 86;
+            // 
+            // btnRegister
+            // 
+            btnRegister.BackColor = Color.PaleGreen;
+            btnRegister.CustomizableEdges = customizableEdges3;
+            btnRegister.DisabledState.BorderColor = Color.DarkGray;
+            btnRegister.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnRegister.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnRegister.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnRegister.FillColor = Color.MediumSeaGreen;
+            btnRegister.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnRegister.ForeColor = Color.Black;
+            btnRegister.Location = new Point(489, 30);
+            btnRegister.Margin = new Padding(3, 2, 3, 2);
+            btnRegister.Name = "btnRegister";
+            btnRegister.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnRegister.Size = new Size(110, 28);
+            btnRegister.TabIndex = 85;
+            btnRegister.Text = "Edit Fields";
+            // 
+            // dobPicker
+            // 
+            dobPicker.Format = DateTimePickerFormat.Short;
+            dobPicker.Location = new Point(133, 260);
+            dobPicker.Margin = new Padding(3, 2, 3, 2);
+            dobPicker.Name = "dobPicker";
+            dobPicker.Size = new Size(335, 23);
+            dobPicker.TabIndex = 84;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(132, 421);
+            label7.Name = "label7";
+            label7.Size = new Size(36, 15);
+            label7.TabIndex = 83;
+            label7.Text = "Email";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(132, 352);
+            label5.Name = "label5";
+            label5.Size = new Size(71, 15);
+            label5.TabIndex = 81;
+            label5.Text = "Contact No.";
+            // 
+            // emailTxt
+            // 
+            emailTxt.Location = new Point(132, 438);
+            emailTxt.Margin = new Padding(3, 2, 3, 2);
+            emailTxt.Name = "emailTxt";
+            emailTxt.Size = new Size(335, 23);
+            emailTxt.TabIndex = 80;
+            // 
+            // contactTxt
+            // 
+            contactTxt.Location = new Point(132, 372);
+            contactTxt.Margin = new Padding(3, 2, 3, 2);
+            contactTxt.Name = "contactTxt";
+            contactTxt.Size = new Size(335, 23);
+            contactTxt.TabIndex = 79;
+            // 
+            // genderComboBox
+            // 
+            genderComboBox.BackColor = Color.Transparent;
+            genderComboBox.CustomizableEdges = customizableEdges5;
+            genderComboBox.DrawMode = DrawMode.OwnerDrawFixed;
+            genderComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+            genderComboBox.FocusedColor = Color.FromArgb(94, 148, 255);
+            genderComboBox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            genderComboBox.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            genderComboBox.ForeColor = Color.Black;
+            genderComboBox.ItemHeight = 18;
+            genderComboBox.Location = new Point(132, 313);
+            genderComboBox.Margin = new Padding(3, 2, 3, 2);
+            genderComboBox.Name = "genderComboBox";
+            genderComboBox.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            genderComboBox.Size = new Size(335, 24);
+            genderComboBox.TabIndex = 78;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(132, 296);
+            label4.Name = "label4";
+            label4.Size = new Size(45, 15);
+            label4.TabIndex = 77;
+            label4.Text = "Gender";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(132, 242);
+            label3.Name = "label3";
+            label3.Size = new Size(73, 15);
+            label3.TabIndex = 76;
+            label3.Text = "Date of Birth";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Location = new Point(133, 126);
+            label2.Name = "label2";
+            label2.Size = new Size(70, 16);
+            label2.TabIndex = 75;
+            label2.Text = "Last Name";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(132, 70);
+            label1.Name = "label1";
+            label1.Size = new Size(71, 16);
+            label1.TabIndex = 74;
+            label1.Text = "First Name";
+            // 
+            // lastNameTxt
+            // 
+            lastNameTxt.Location = new Point(133, 145);
+            lastNameTxt.Margin = new Padding(3, 2, 3, 2);
+            lastNameTxt.Name = "lastNameTxt";
+            lastNameTxt.Size = new Size(335, 23);
+            lastNameTxt.TabIndex = 73;
+            // 
+            // firstNameTxt
+            // 
+            firstNameTxt.Location = new Point(132, 91);
+            firstNameTxt.Margin = new Padding(3, 2, 3, 2);
+            firstNameTxt.Name = "firstNameTxt";
+            firstNameTxt.Size = new Size(335, 23);
+            firstNameTxt.TabIndex = 72;
             // 
             // PatientFields
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(661, 656);
+            ClientSize = new Size(661, 620);
+            Controls.Add(saveBtn);
+            Controls.Add(label9);
+            Controls.Add(statusTxtBox);
+            Controls.Add(label8);
+            Controls.Add(PasswordTxtBox);
+            Controls.Add(btnRegister);
+            Controls.Add(dobPicker);
+            Controls.Add(label7);
+            Controls.Add(label5);
+            Controls.Add(emailTxt);
+            Controls.Add(contactTxt);
+            Controls.Add(genderComboBox);
+            Controls.Add(label4);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(lastNameTxt);
+            Controls.Add(firstNameTxt);
             Name = "PatientFields";
             Text = "PatientFields";
+            Load += PatientFields_Load;
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+        private Guna.UI2.WinForms.Guna2Button saveBtn;
+        private Label label9;
+        private TextBox statusTxtBox;
+        private Label label8;
+        private TextBox PasswordTxtBox;
+        private Guna.UI2.WinForms.Guna2Button btnRegister;
+        private DateTimePicker dobPicker;
+        private Label label7;
+        private Label label5;
+        private TextBox emailTxt;
+        private TextBox contactTxt;
+        private Guna.UI2.WinForms.Guna2ComboBox genderComboBox;
+        private Label label4;
+        private Label label3;
+        private Label label2;
+        private Label label1;
+        private TextBox lastNameTxt;
+        private TextBox firstNameTxt;
     }
 }

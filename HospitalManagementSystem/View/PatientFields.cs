@@ -16,5 +16,10 @@ namespace HospitalManagementSystem.View
         {
             InitializeComponent();
         }
+
+        private void PatientFields_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
