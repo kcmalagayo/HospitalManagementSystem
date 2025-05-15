@@ -48,5 +48,12 @@ namespace HospitalManagementSystem.View
             ManagePatientForm mpf = new ManagePatientForm();
             OpenFormInPanel(mpf);
         }
+
+        private void logOutBtn_Click(object sender, EventArgs e)
+        {
+            RoleSelectFormcs logout = new RoleSelectFormcs();
+            logout.Show();
+            this.Hide();
+        }
     }
 }
