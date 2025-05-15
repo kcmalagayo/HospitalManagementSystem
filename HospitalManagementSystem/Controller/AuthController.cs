@@ -14,42 +14,89 @@ namespace HospitalManagementSystem.Controller
             _db = db;
         }
 
-        public bool Login(string email, string password, out Patient patient)
+        public bool Login(string email, string password, string userType, out object user)
         {
-            patient = null;
+            user = null;
+            string query = "";
 
-            string query = "SELECT * FROM Patient WHERE Email = @Email AND Password = @Password";
+            if (userType == "Patient")
+            {
+                query = "SELECT * FROM Patient WHERE Email = @Email AND Password = @Password";
+            }
+            else if (userType == "Doctor")
+            {
+                query = "SELECT * FROM Doctor WHERE Email = @Email AND Password = @Password";
+            }
+            else if (userType == "Admin")
+            {
+                query = "SELECT * FROM Admin WHERE Email = @Email AND Password = @Password";
+            }
+            else
+            {
+                return false; // Invalid user type
+            }
 
             using (var cmd = new SQLiteCommand(query, _db.GetConnection()))
             {
                 cmd.Parameters.AddWithValue("@Email", email);
-                cmd.Parameters.AddWithValue("@Password", password); // Plain text — you may want to hash it
+                cmd.Parameters.AddWithValue("@Password", password); // Use hashing for production
 
                 using (var reader = cmd.ExecuteReader())
                 {
                     if (reader.Read())
                     {
-                        patient = new Patient
+                        switch (userType)
                         {
-                            PatientID = Convert.ToInt32(reader["PatientID"]),
-                            FirstName = reader["FirstName"].ToString(),
-                            LastName = reader["LastName"].ToString(),
-                            DateOfBirth = DateTime.Parse(reader["DateOfBirth"].ToString()),
-                            Gender = reader["Gender"].ToString(),
-                            ContactNumber = reader["ContactNumber"].ToString(),
-                            Email = reader["Email"].ToString(),
-                            Address = reader["Address"].ToString(),
-                            password = reader["Password"].ToString()
-                        };
+                            case "Patient":
+                                user = new Patient
+                                {
+                                    PatientID = Convert.ToInt32(reader["PatientID"]),
+                                    FirstName = reader["FirstName"].ToString(),
+                                    LastName = reader["LastName"].ToString(),
+                                    DateOfBirth = DateTime.Parse(reader["DateOfBirth"].ToString()),
+                                    Gender = reader["Gender"].ToString(),
+                                    ContactNumber = reader["ContactNumber"].ToString(),
+                                    Email = reader["Email"].ToString(),
+                                    Address = reader["Address"].ToString(),
+                                    password = reader["Password"].ToString()
+                                };
+                                break;
 
-                        return true;
+                            case "Doctor":
+                                user = new Doctor
+                                {
+                                    DoctorID = Convert.ToInt32(reader["DoctorID"]),
+                                    FirstName = reader["FirstName"].ToString(),
+                                    LastName = reader["LastName"].ToString(),
+                                    DateOfBirth = DateTime.Parse(reader["DateOfBirth"].ToString()),
+                                    Gender = reader["Gender"].ToString(),
+                                    Specialization = reader["Specialization"].ToString(),
+                                    ContactNumber = reader["ContactNumber"].ToString(),
+                                    Email = reader["Email"].ToString(),
+                                    Password = reader["Password"].ToString(),
+                                    Status = reader["Status"].ToString()
+                                };
+                                break;
+
+                            case "Admin":
+                                user = new Admin
+                                {
+                                    AdminID = Convert.ToInt32(reader["AdminID"]),
+                                    FirstName = reader["FirstName"].ToString(),
+                                    LastName = reader["LastName"].ToString(),
+                                    Email = reader["Email"].ToString(),
+                                    Password = reader["Password"].ToString()
+                                };
+                                break;
+                        }
+
+                        return true; // Valid login
                     }
                 }
             }
 
-            return false;
+            return false; // No matching record
         }
-
         public bool Register(Patient patient)
         {
             string query = @"
@@ -90,6 +137,23 @@ namespace HospitalManagementSystem.Controller
                 cmd.Parameters.AddWithValue("@Email", doctor.Email);
                 cmd.Parameters.AddWithValue("@Password", doctor.Password);
                 cmd.Parameters.AddWithValue("@Status", doctor.Status ?? "Active"); // Default to "Active" if null
+
+                return cmd.ExecuteNonQuery() > 0;
+            }
+        }
+        public bool RegisterAdmin(Admin admin)
+        {
+            string query = @"
+                INSERT INTO Admin (FirstName, LastName, Email, Password)
+                VALUES (@FirstName, @LastName, @Email, @Password)
+            ";
+
+            using (var cmd = new SQLiteCommand(query, _db.GetConnection()))
+            {
+                cmd.Parameters.AddWithValue("@FirstName", admin.FirstName);
+                cmd.Parameters.AddWithValue("@LastName", admin.LastName);
+                cmd.Parameters.AddWithValue("@Email", admin.Email);
+                cmd.Parameters.AddWithValue("@Password", admin.Password);
 
                 return cmd.ExecuteNonQuery() > 0;
             }

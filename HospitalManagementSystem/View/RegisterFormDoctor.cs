@@ -21,6 +21,10 @@ namespace HospitalManagementSystem.View
             genderComboBox.Items.Add("Male");
             genderComboBox.Items.Add("Female");
             genderComboBox.SelectedIndex = 0;
+
+            specializaitionDropBox.Items.Add("Dermatologist");
+            specializaitionDropBox.Items.Add("Ophthalmologist");
+            specializaitionDropBox.Items.Add("Otolaryngologist (ENT)");
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
@@ -37,7 +41,7 @@ namespace HospitalManagementSystem.View
                 Gender = genderComboBox.SelectedItem?.ToString() ?? "",
                 ContactNumber = contactTxt.Text,
                 Email = emailTxt.Text,
-                Specialization = specializationTxt.Text,
+                Specialization = specializaitionDropBox.SelectedItem?.ToString() ?? "",
                 Password = lastNameTxt.Text + dobPicker.Value.Year
 
             );
@@ -67,6 +71,26 @@ namespace HospitalManagementSystem.View
         }
 
         private void patientBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void firstNameTxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void genderComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RegisterFormDoctor_Load(object sender, EventArgs e)
         {
 
         }
