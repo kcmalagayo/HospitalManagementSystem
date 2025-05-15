@@ -32,65 +32,134 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            btnRegister = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
+            manageDoctorBtn = new Guna.UI2.WinForms.Guna2Button();
+            label1 = new Label();
+            managePatientBtn = new Guna.UI2.WinForms.Guna2Button();
+            bookAppointmentBtn = new Guna.UI2.WinForms.Guna2Button();
+            logOutBtn = new Guna.UI2.WinForms.Guna2Button();
+            panel1 = new Panel();
             SuspendLayout();
             // 
-            // btnRegister
+            // manageDoctorBtn
             // 
-            btnRegister.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            btnRegister.BackColor = Color.PaleGreen;
-            btnRegister.CustomizableEdges = customizableEdges1;
-            btnRegister.DisabledState.BorderColor = Color.DarkGray;
-            btnRegister.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnRegister.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnRegister.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnRegister.FillColor = Color.MediumSeaGreen;
-            btnRegister.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnRegister.ForeColor = Color.Black;
-            btnRegister.Location = new Point(543, 28);
-            btnRegister.Margin = new Padding(3, 2, 3, 2);
-            btnRegister.Name = "btnRegister";
-            btnRegister.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnRegister.Size = new Size(231, 42);
-            btnRegister.TabIndex = 19;
-            btnRegister.Text = "Register Doctor";
+            manageDoctorBtn.CustomizableEdges = customizableEdges1;
+            manageDoctorBtn.DisabledState.BorderColor = Color.DarkGray;
+            manageDoctorBtn.DisabledState.CustomBorderColor = Color.DarkGray;
+            manageDoctorBtn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            manageDoctorBtn.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            manageDoctorBtn.FillColor = Color.MediumSeaGreen;
+            manageDoctorBtn.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            manageDoctorBtn.ForeColor = Color.Black;
+            manageDoctorBtn.Location = new Point(35, 127);
+            manageDoctorBtn.Name = "manageDoctorBtn";
+            manageDoctorBtn.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            manageDoctorBtn.Size = new Size(180, 45);
+            manageDoctorBtn.TabIndex = 0;
+            manageDoctorBtn.Text = "Manage Doctor";
+            manageDoctorBtn.Click += manageDoctorBtn_Click;
             // 
-            // guna2Button1
+            // label1
             // 
-            guna2Button1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            guna2Button1.BackColor = Color.PaleGreen;
-            guna2Button1.CustomizableEdges = customizableEdges3;
-            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button1.FillColor = Color.MediumSeaGreen;
-            guna2Button1.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2Button1.ForeColor = Color.Black;
-            guna2Button1.Location = new Point(593, 356);
-            guna2Button1.Margin = new Padding(3, 2, 3, 2);
-            guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2Button1.Size = new Size(152, 42);
-            guna2Button1.TabIndex = 20;
-            guna2Button1.Text = "Manage";
+            label1.AutoSize = true;
+            label1.Font = new Font("Arial", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(45, 39);
+            label1.Name = "label1";
+            label1.Size = new Size(160, 48);
+            label1.TabIndex = 1;
+            label1.Text = "Hospital Name \r\nand Logo";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // managePatientBtn
+            // 
+            managePatientBtn.CustomizableEdges = customizableEdges3;
+            managePatientBtn.DisabledState.BorderColor = Color.DarkGray;
+            managePatientBtn.DisabledState.CustomBorderColor = Color.DarkGray;
+            managePatientBtn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            managePatientBtn.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            managePatientBtn.FillColor = Color.MediumSeaGreen;
+            managePatientBtn.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            managePatientBtn.ForeColor = Color.Black;
+            managePatientBtn.Location = new Point(35, 191);
+            managePatientBtn.Name = "managePatientBtn";
+            managePatientBtn.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            managePatientBtn.Size = new Size(180, 45);
+            managePatientBtn.TabIndex = 2;
+            managePatientBtn.Text = "Manage Patient";
+            // 
+            // bookAppointmentBtn
+            // 
+            bookAppointmentBtn.CustomizableEdges = customizableEdges5;
+            bookAppointmentBtn.DisabledState.BorderColor = Color.DarkGray;
+            bookAppointmentBtn.DisabledState.CustomBorderColor = Color.DarkGray;
+            bookAppointmentBtn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            bookAppointmentBtn.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            bookAppointmentBtn.FillColor = Color.MediumSeaGreen;
+            bookAppointmentBtn.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            bookAppointmentBtn.ForeColor = Color.Black;
+            bookAppointmentBtn.Location = new Point(35, 252);
+            bookAppointmentBtn.Name = "bookAppointmentBtn";
+            bookAppointmentBtn.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            bookAppointmentBtn.Size = new Size(180, 45);
+            bookAppointmentBtn.TabIndex = 3;
+            bookAppointmentBtn.Text = "Book Appointment";
+            // 
+            // logOutBtn
+            // 
+            logOutBtn.CustomizableEdges = customizableEdges7;
+            logOutBtn.DisabledState.BorderColor = Color.DarkGray;
+            logOutBtn.DisabledState.CustomBorderColor = Color.DarkGray;
+            logOutBtn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            logOutBtn.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            logOutBtn.FillColor = Color.MediumSeaGreen;
+            logOutBtn.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            logOutBtn.ForeColor = Color.Black;
+            logOutBtn.Location = new Point(35, 316);
+            logOutBtn.Name = "logOutBtn";
+            logOutBtn.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            logOutBtn.Size = new Size(180, 45);
+            logOutBtn.TabIndex = 4;
+            logOutBtn.Text = "Log Out ";
+            // 
+            // panel1
+            // 
+            panel1.Location = new Point(254, 22);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(783, 416);
+            panel1.TabIndex = 5;
+            panel1.Paint += panel1_Paint;
             // 
             // AdminForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(guna2Button1);
-            Controls.Add(btnRegister);
+            ClientSize = new Size(1073, 493);
+            Controls.Add(panel1);
+            Controls.Add(logOutBtn);
+            Controls.Add(bookAppointmentBtn);
+            Controls.Add(managePatientBtn);
+            Controls.Add(label1);
+            Controls.Add(manageDoctorBtn);
             Name = "AdminForm";
             Text = "AdminForm";
+            Load += AdminForm_Load;
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2Button btnRegister;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker2;
+        private Guna.UI2.WinForms.Guna2Button manageDoctorBtn;
+        private Label label1;
+        private Guna.UI2.WinForms.Guna2Button managePatientBtn;
+        private Guna.UI2.WinForms.Guna2Button bookAppointmentBtn;
+        private Guna.UI2.WinForms.Guna2Button logOutBtn;
+        private Panel panel1;
     }
 }
