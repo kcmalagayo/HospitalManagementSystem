@@ -32,8 +32,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             btnRegister = new Guna.UI2.WinForms.Guna2Button();
             registerPanelDoctor = new Panel();
             firstNameTxt = new TextBox();
@@ -51,7 +49,6 @@
             label7 = new Label();
             dobPicker = new DateTimePicker();
             label9 = new Label();
-            backButton = new Guna.UI2.WinForms.Guna2Button();
             SuspendLayout();
             // 
             // btnRegister
@@ -225,29 +222,11 @@
             label9.Text = "Register Doctor Account";
             label9.Click += label9_Click;
             // 
-            // backButton
-            // 
-            backButton.CustomizableEdges = customizableEdges5;
-            backButton.DisabledState.BorderColor = Color.DarkGray;
-            backButton.DisabledState.CustomBorderColor = Color.DarkGray;
-            backButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            backButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            backButton.FillColor = Color.Transparent;
-            backButton.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            backButton.ForeColor = Color.Black;
-            backButton.Location = new Point(12, 12);
-            backButton.Name = "backButton";
-            backButton.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            backButton.Size = new Size(56, 28);
-            backButton.TabIndex = 46;
-            backButton.Text = "back button";
-            // 
             // RegisterFormDoctor
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(700, 538);
-            Controls.Add(backButton);
             Controls.Add(btnRegister);
             Controls.Add(label9);
             Controls.Add(dobPicker);
@@ -291,6 +270,5 @@
         private Label label7;
         private DateTimePicker dobPicker;
         private Label label9;
-        private Guna.UI2.WinForms.Guna2Button backButton;
     }
 }
