@@ -58,5 +58,10 @@ namespace HospitalManagementSystem.View
         {
 
         }
+
+        private void specializaitionDropBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
