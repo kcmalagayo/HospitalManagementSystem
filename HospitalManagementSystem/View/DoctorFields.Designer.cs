@@ -184,7 +184,6 @@
             firstNameTxt.Name = "firstNameTxt";
             firstNameTxt.Size = new Size(335, 23);
             firstNameTxt.TabIndex = 46;
-            //firstNameTxt.TextChanged += firstNameTxt_TextChanged;
             // 
             // btnRegister
             // 
@@ -213,7 +212,6 @@
             PasswordTxtBox.Name = "PasswordTxtBox";
             PasswordTxtBox.Size = new Size(335, 23);
             PasswordTxtBox.TabIndex = 66;
-            //PasswordTxtBox.TextChanged += PasswordTxtBox_TextChanged;
             // 
             // label8
             // 
@@ -278,7 +276,6 @@
             specializaitionDropBox.ShadowDecoration.CustomizableEdges = customizableEdges8;
             specializaitionDropBox.Size = new Size(336, 24);
             specializaitionDropBox.TabIndex = 71;
-            //specializaitionDropBox.SelectedIndexChanged += specializaitionDropBox_SelectedIndexChanged;
             // 
             // discardbtn
             // 
@@ -329,7 +326,7 @@
             MaximizeBox = false;
             Name = "DoctorFields";
             Text = "Doctor Fields";
-            //Load += DoctorFields_Load;
+            Load += DoctorFields_Load;
             ResumeLayout(false);
             PerformLayout();
         }
