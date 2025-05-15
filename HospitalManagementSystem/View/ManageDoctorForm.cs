@@ -13,6 +13,7 @@ namespace HospitalManagementSystem.View
 {
     public partial class ManageDoctorForm : Form
     {
+
         public ManageDoctorForm()
         {
             InitializeComponent();
@@ -40,15 +41,16 @@ namespace HospitalManagementSystem.View
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
-
-
             if (e.RowIndex >= 0)
             {
                 var row = dataGridView1.Rows[e.RowIndex];
 
                 try
                 {
+                    // 1️⃣ Initialize Database Connection
+                    var db = new HospitalManagementSystem.Data.Database();
+
+                    // 2️⃣ Create the Doctor Object from the Selected Row
                     var selectedDoctor = new Doctor
                     {
                         DoctorID = Convert.ToInt32(row.Cells["DoctorID"].Value),
@@ -63,13 +65,13 @@ namespace HospitalManagementSystem.View
                         Status = row.Cells["Status"].Value.ToString()
                     };
 
-                    var editForm = new DoctorFields(selectedDoctor);
+                    // 3️⃣ Pass Both Doctor and Database to the Constructor
+                    var editForm = new DoctorFields(selectedDoctor, db);
                     editForm.ShowDialog();
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Error loading doctor: " + ex.Message);
-                    MessageBox.Show("Check: " + row.Cells[1].Value?.ToString());
                 }
             }
         }

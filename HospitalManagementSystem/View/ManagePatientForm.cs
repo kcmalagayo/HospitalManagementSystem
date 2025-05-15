@@ -42,6 +42,10 @@ namespace HospitalManagementSystem.View
 
                 try
                 {
+                    //  Initialize the Database connection
+                    var db = new HospitalManagementSystem.Data.Database();
+
+                    //  Create the Patient Object from the Selected Row
                     var selectedPatient = new Patient
                     {
                         PatientID = Convert.ToInt32(row.Cells["PatientID"].Value),
@@ -55,7 +59,8 @@ namespace HospitalManagementSystem.View
                         Address = row.Cells["Address"].Value.ToString()
                     };
 
-                    var editForm = new PatientFields(selectedPatient);
+                    //  Pass both the Patient and the Database to the constructor
+                    var editForm = new PatientFields(selectedPatient, db);
                     editForm.ShowDialog();
                 }
                 catch (Exception ex)
