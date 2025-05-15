@@ -120,20 +120,20 @@
             genderComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
             genderComboBox.FocusedColor = Color.FromArgb(94, 148, 255);
             genderComboBox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            genderComboBox.Font = new Font("Segoe UI", 10F);
+            genderComboBox.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             genderComboBox.ForeColor = Color.FromArgb(68, 88, 112);
-            genderComboBox.ItemHeight = 30;
+            genderComboBox.ItemHeight = 18;
             genderComboBox.Location = new Point(143, 161);
             genderComboBox.Margin = new Padding(3, 2, 3, 2);
             genderComboBox.Name = "genderComboBox";
             genderComboBox.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            genderComboBox.Size = new Size(403, 36);
+            genderComboBox.Size = new Size(403, 24);
             genderComboBox.TabIndex = 9;
             // 
             // contactTxt
             // 
             contactTxt.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            contactTxt.Location = new Point(143, 216);
+            contactTxt.Location = new Point(143, 212);
             contactTxt.Margin = new Padding(3, 2, 3, 2);
             contactTxt.Name = "contactTxt";
             contactTxt.Size = new Size(403, 23);
@@ -161,7 +161,7 @@
             // 
             label5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label5.AutoSize = true;
-            label5.Location = new Point(143, 199);
+            label5.Location = new Point(143, 194);
             label5.Name = "label5";
             label5.Size = new Size(71, 15);
             label5.TabIndex = 13;
@@ -205,7 +205,7 @@
             btnRegister.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnRegister.Size = new Size(334, 42);
             btnRegister.TabIndex = 18;
-            btnRegister.Text = "Register";
+            btnRegister.Text = "Register Patient";
             btnRegister.Click += registerBtn1_Click;
             // 
             // dobPicker
@@ -217,16 +217,17 @@
             dobPicker.Name = "dobPicker";
             dobPicker.Size = new Size(403, 23);
             dobPicker.TabIndex = 19;
+            dobPicker.ValueChanged += dobPicker_ValueChanged;
             // 
             // label9
             // 
             label9.AutoSize = true;
-            label9.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label9.Location = new Point(561, 5);
+            label9.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label9.Location = new Point(491, 15);
             label9.Name = "label9";
-            label9.Size = new Size(126, 16);
+            label9.Size = new Size(197, 19);
             label9.TabIndex = 22;
-            label9.Text = "Register a Account";
+            label9.Text = "Register Patient Account";
             // 
             // registerPanelPatient
             // 
@@ -245,7 +246,7 @@
             registerPanelPatient.Controls.Add(contactTxt);
             registerPanelPatient.Controls.Add(label7);
             registerPanelPatient.Controls.Add(emailTxt);
-            registerPanelPatient.Location = new Point(12, 22);
+            registerPanelPatient.Location = new Point(12, 47);
             registerPanelPatient.Margin = new Padding(3, 2, 3, 2);
             registerPanelPatient.Name = "registerPanelPatient";
             registerPanelPatient.Size = new Size(676, 418);
@@ -257,7 +258,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
             AutoSize = true;
-            ClientSize = new Size(700, 451);
+            ClientSize = new Size(700, 499);
             Controls.Add(label9);
             Controls.Add(registerPanelPatient);
             Margin = new Padding(3, 2, 3, 2);
