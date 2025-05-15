@@ -7,59 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using HospitalManagementSystem.Controller;
-using HospitalManagementSystem.Model;
-using HospitalManagementSystem.Data;
-
 
 namespace HospitalManagementSystem.View
 {
-    public partial class LoginForm : Form
+    public partial class AdminLoginForm : Form
     {
-        public LoginForm()
+        public AdminLoginForm()
         {
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LoginForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void logInBtn_Click(object sender, EventArgs e)
-        {
-            string email = emailTextBox.Text.Trim();
-            string password = passwordTextBox.Text.Trim();
-
-            var db = new Database();
-            var authController = new AuthController(db);
-
-            if (authController.Login(email, password, "Admin", out object user))
-            {
-                Admin admin = user as Admin;
-                MessageBox.Show("Welcome, Admin " + admin.FirstName + "!",
-                                "Login Successful",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Information);
-
-                // Example:
-
-                AdminForm adminForm = new AdminForm();
-                adminForm.Show();
-                this.Hide(); // Hide the login form
-            }
-            else
-            {
-                MessageBox.Show("Invalid email or password!",
-                                "Login Failed",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error);
-            }
         }
     }
 }
