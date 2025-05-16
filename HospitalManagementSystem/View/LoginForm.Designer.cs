@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             label4 = new Label();
             pictureBox1 = new PictureBox();
             linkLabel1 = new LinkLabel();
@@ -39,7 +39,7 @@
             label2 = new Label();
             label1 = new Label();
             emailTextBox = new TextBox();
-            comboBox1 = new ComboBox();
+            selectRoleComboBox = new ComboBox();
             label5 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -78,7 +78,7 @@
             // loginBtn
             // 
             loginBtn.Anchor = AnchorStyles.None;
-            loginBtn.CustomizableEdges = customizableEdges1;
+            loginBtn.CustomizableEdges = customizableEdges3;
             loginBtn.DisabledState.BorderColor = Color.DarkGray;
             loginBtn.DisabledState.CustomBorderColor = Color.DarkGray;
             loginBtn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -88,7 +88,7 @@
             loginBtn.ForeColor = Color.Black;
             loginBtn.Location = new Point(70, 339);
             loginBtn.Name = "loginBtn";
-            loginBtn.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            loginBtn.ShadowDecoration.CustomizableEdges = customizableEdges4;
             loginBtn.Size = new Size(123, 30);
             loginBtn.TabIndex = 14;
             loginBtn.Text = "Login";
@@ -144,14 +144,14 @@
             emailTextBox.Size = new Size(203, 26);
             emailTextBox.TabIndex = 9;
             // 
-            // comboBox1
+            // selectRoleComboBox
             // 
-            comboBox1.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(38, 292);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(121, 26);
-            comboBox1.TabIndex = 18;
+            selectRoleComboBox.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            selectRoleComboBox.FormattingEnabled = true;
+            selectRoleComboBox.Location = new Point(38, 292);
+            selectRoleComboBox.Name = "selectRoleComboBox";
+            selectRoleComboBox.Size = new Size(121, 26);
+            selectRoleComboBox.TabIndex = 18;
             // 
             // label5
             // 
@@ -170,7 +170,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(677, 465);
             Controls.Add(label5);
-            Controls.Add(comboBox1);
+            Controls.Add(selectRoleComboBox);
             Controls.Add(label4);
             Controls.Add(pictureBox1);
             Controls.Add(linkLabel1);
@@ -199,7 +199,7 @@
         private Label label2;
         private Label label1;
         private TextBox emailTextBox;
-        private ComboBox comboBox1;
+        private ComboBox selectRoleComboBox;
         private Label label5;
     }
 }
