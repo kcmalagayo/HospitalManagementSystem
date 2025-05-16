@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             label4 = new Label();
             pictureBox1 = new PictureBox();
             linkLabel1 = new LinkLabel();
@@ -82,7 +82,7 @@
             // loginBtn
             // 
             loginBtn.Anchor = AnchorStyles.None;
-            loginBtn.CustomizableEdges = customizableEdges3;
+            loginBtn.CustomizableEdges = customizableEdges7;
             loginBtn.DisabledState.BorderColor = Color.DarkGray;
             loginBtn.DisabledState.CustomBorderColor = Color.DarkGray;
             loginBtn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -93,7 +93,7 @@
             loginBtn.Location = new Point(96, 419);
             loginBtn.Margin = new Padding(5, 4, 5, 4);
             loginBtn.Name = "loginBtn";
-            loginBtn.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            loginBtn.ShadowDecoration.CustomizableEdges = customizableEdges8;
             loginBtn.Size = new Size(139, 40);
             loginBtn.TabIndex = 14;
             loginBtn.Text = "Login";
@@ -117,7 +117,7 @@
             passwordTextBox.Location = new Point(59, 257);
             passwordTextBox.Margin = new Padding(5, 4, 5, 4);
             passwordTextBox.Name = "passwordTextBox";
-            passwordTextBox.PlaceholderText = "********";
+            passwordTextBox.PlaceholderText = "*********";
             passwordTextBox.Size = new Size(233, 27);
             passwordTextBox.TabIndex = 12;
             // 
