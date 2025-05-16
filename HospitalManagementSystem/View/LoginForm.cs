@@ -13,11 +13,16 @@ using HospitalManagementSystem.Data;
 
 namespace HospitalManagementSystem.View
 {
-    public partial class AdminFormLogin : Form
+    public partial class LoginForm : Form
     {
-        public AdminFormLogin()
+        public LoginForm()
         {
             InitializeComponent();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void loginBtn_Click(object sender, EventArgs e)
@@ -50,12 +55,7 @@ namespace HospitalManagementSystem.View
             }
         }
 
-        private void AdminFormLogin_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void passwordTextBox_TextChanged(object sender, EventArgs e)
+        private void LoginForm_Load(object sender, EventArgs e)
         {
 
         }
