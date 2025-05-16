@@ -19,7 +19,7 @@ namespace HospitalManagementSystem.View
 
         private void logOutBtn_Click(object sender, EventArgs e)
         {
-            RoleSelectFormcs logout = new RoleSelectFormcs();
+            LoginForm logout = new LoginForm();
             logout.Show();
             this.Hide();
         }
