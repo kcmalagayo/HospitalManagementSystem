@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             label4 = new Label();
             pictureBox1 = new PictureBox();
             linkLabel1 = new LinkLabel();
@@ -78,7 +78,7 @@
             // loginBtn
             // 
             loginBtn.Anchor = AnchorStyles.None;
-            loginBtn.CustomizableEdges = customizableEdges3;
+            loginBtn.CustomizableEdges = customizableEdges1;
             loginBtn.DisabledState.BorderColor = Color.DarkGray;
             loginBtn.DisabledState.CustomBorderColor = Color.DarkGray;
             loginBtn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -88,7 +88,7 @@
             loginBtn.ForeColor = Color.Black;
             loginBtn.Location = new Point(70, 339);
             loginBtn.Name = "loginBtn";
-            loginBtn.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            loginBtn.ShadowDecoration.CustomizableEdges = customizableEdges2;
             loginBtn.Size = new Size(123, 30);
             loginBtn.TabIndex = 14;
             loginBtn.Text = "Login";
@@ -180,6 +180,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(emailTextBox);
+            MaximizeBox = false;
             Name = "LoginForm";
             Text = "Login Page";
             Load += LoginForm_Load;

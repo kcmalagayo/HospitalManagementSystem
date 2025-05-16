@@ -146,6 +146,7 @@
             ClientSize = new Size(715, 454);
             Controls.Add(label9);
             Controls.Add(registerPanelDoctor);
+            MaximizeBox = false;
             Name = "RegisterFormAdmin";
             Text = "RegisterFormAdmin";
             registerPanelDoctor.ResumeLayout(false);

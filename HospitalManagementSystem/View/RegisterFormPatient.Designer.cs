@@ -262,6 +262,7 @@
             Controls.Add(label9);
             Controls.Add(registerPanelPatient);
             Margin = new Padding(3, 2, 3, 2);
+            MaximizeBox = false;
             Name = "RegisterFormPatient";
             Text = "RegisterFormPatient";
             Load += RegisterForm_Load;
