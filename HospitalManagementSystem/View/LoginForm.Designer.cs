@@ -41,13 +41,15 @@
             emailTextBox = new TextBox();
             selectRoleComboBox = new ComboBox();
             label5 = new Label();
+            showPasswordCheckBox = new CheckBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(441, 245);
+            label4.Location = new Point(441, 225);
+            label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
             label4.Size = new Size(66, 15);
             label4.TabIndex = 17;
@@ -57,7 +59,8 @@
             // pictureBox1
             // 
             pictureBox1.Anchor = AnchorStyles.None;
-            pictureBox1.Location = new Point(320, 105);
+            pictureBox1.Location = new Point(320, 79);
+            pictureBox1.Margin = new Padding(4, 3, 4, 3);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(314, 293);
             pictureBox1.TabIndex = 16;
@@ -68,7 +71,8 @@
             linkLabel1.Anchor = AnchorStyles.None;
             linkLabel1.AutoSize = true;
             linkLabel1.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            linkLabel1.Location = new Point(76, 381);
+            linkLabel1.Location = new Point(90, 356);
+            linkLabel1.Margin = new Padding(4, 0, 4, 0);
             linkLabel1.Name = "linkLabel1";
             linkLabel1.Size = new Size(112, 16);
             linkLabel1.TabIndex = 15;
@@ -86,10 +90,11 @@
             loginBtn.FillColor = Color.MediumSeaGreen;
             loginBtn.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             loginBtn.ForeColor = Color.Black;
-            loginBtn.Location = new Point(70, 339);
+            loginBtn.Location = new Point(84, 314);
+            loginBtn.Margin = new Padding(4, 3, 4, 3);
             loginBtn.Name = "loginBtn";
             loginBtn.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            loginBtn.Size = new Size(123, 30);
+            loginBtn.Size = new Size(122, 30);
             loginBtn.TabIndex = 14;
             loginBtn.Text = "Login";
             loginBtn.Click += loginBtn_Click;
@@ -99,7 +104,8 @@
             label3.Anchor = AnchorStyles.Top;
             label3.AutoSize = true;
             label3.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(39, 215);
+            label3.Location = new Point(52, 174);
+            label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
             label3.Size = new Size(64, 16);
             label3.TabIndex = 13;
@@ -108,9 +114,10 @@
             // passwordTextBox
             // 
             passwordTextBox.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            passwordTextBox.Location = new Point(38, 234);
+            passwordTextBox.Location = new Point(52, 193);
+            passwordTextBox.Margin = new Padding(4, 3, 4, 3);
             passwordTextBox.Name = "passwordTextBox";
-            passwordTextBox.Size = new Size(203, 26);
+            passwordTextBox.Size = new Size(204, 26);
             passwordTextBox.TabIndex = 12;
             // 
             // label2
@@ -118,7 +125,8 @@
             label2.Anchor = AnchorStyles.Top;
             label2.AutoSize = true;
             label2.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(38, 152);
+            label2.Location = new Point(52, 111);
+            label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
             label2.Size = new Size(40, 16);
             label2.TabIndex = 11;
@@ -129,7 +137,8 @@
             label1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label1.AutoSize = true;
             label1.Font = new Font("Arial", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(70, 79);
+            label1.Location = new Point(74, 50);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
             label1.Size = new Size(154, 24);
             label1.TabIndex = 10;
@@ -139,16 +148,18 @@
             // 
             emailTextBox.Anchor = AnchorStyles.Top;
             emailTextBox.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            emailTextBox.Location = new Point(38, 176);
+            emailTextBox.Location = new Point(52, 135);
+            emailTextBox.Margin = new Padding(4, 3, 4, 3);
             emailTextBox.Name = "emailTextBox";
-            emailTextBox.Size = new Size(203, 26);
+            emailTextBox.Size = new Size(204, 26);
             emailTextBox.TabIndex = 9;
             // 
             // selectRoleComboBox
             // 
             selectRoleComboBox.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             selectRoleComboBox.FormattingEnabled = true;
-            selectRoleComboBox.Location = new Point(38, 292);
+            selectRoleComboBox.Location = new Point(52, 267);
+            selectRoleComboBox.Margin = new Padding(4, 3, 4, 3);
             selectRoleComboBox.Name = "selectRoleComboBox";
             selectRoleComboBox.Size = new Size(121, 26);
             selectRoleComboBox.TabIndex = 18;
@@ -158,17 +169,32 @@
             label5.Anchor = AnchorStyles.Top;
             label5.AutoSize = true;
             label5.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(39, 273);
+            label5.Location = new Point(52, 248);
+            label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
             label5.Size = new Size(74, 16);
             label5.TabIndex = 19;
             label5.Text = "Select Role";
             // 
+            // showPasswordCheckBox
+            // 
+            showPasswordCheckBox.AutoSize = true;
+            showPasswordCheckBox.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            showPasswordCheckBox.Location = new Point(141, 225);
+            showPasswordCheckBox.Margin = new Padding(4, 3, 4, 3);
+            showPasswordCheckBox.Name = "showPasswordCheckBox";
+            showPasswordCheckBox.Size = new Size(115, 19);
+            showPasswordCheckBox.TabIndex = 20;
+            showPasswordCheckBox.Text = "Show password";
+            showPasswordCheckBox.UseVisualStyleBackColor = true;
+            showPasswordCheckBox.CheckedChanged += showPasswordCheckBox_CheckedChanged;
+            // 
             // LoginForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(677, 465);
+            ClientSize = new Size(677, 469);
+            Controls.Add(showPasswordCheckBox);
             Controls.Add(label5);
             Controls.Add(selectRoleComboBox);
             Controls.Add(label4);
@@ -180,6 +206,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(emailTextBox);
+            Margin = new Padding(4, 3, 4, 3);
             MaximizeBox = false;
             Name = "LoginForm";
             Text = "Login Page";
@@ -202,5 +229,6 @@
         private TextBox emailTextBox;
         private ComboBox selectRoleComboBox;
         private Label label5;
+        private CheckBox showPasswordCheckBox;
     }
 }

@@ -22,6 +22,7 @@ namespace HospitalManagementSystem.View
             selectRoleComboBox.Items.Add("Doctor");
             selectRoleComboBox.Items.Add("Admin");
             selectRoleComboBox.SelectedIndex = 0;
+            passwordTextBox.PasswordChar = '*';
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -33,6 +34,8 @@ namespace HospitalManagementSystem.View
         {
             string email = emailTextBox.Text.Trim();
             string password = passwordTextBox.Text.Trim();
+
+
 
             var db = new Database();
             var authController = new AuthController(db);
@@ -62,7 +65,8 @@ namespace HospitalManagementSystem.View
 
                 }
 
-            } else if (selectRoleComboBox.SelectedItem.ToString() == "Patient")//condition for patient role
+            }
+            else if (selectRoleComboBox.SelectedItem.ToString() == "Patient")//condition for patient role
             {
                 if (authController.Login(email, password, "Patient", out object user))
                 {
@@ -91,12 +95,26 @@ namespace HospitalManagementSystem.View
                                    "Please try other role for now",
                                    MessageBoxButtons.OK,
                                    MessageBoxIcon.Information);
-            }               
+            }
         }
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void showPasswordCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (showPasswordCheckBox.Checked)
+            {
+                // Show the password
+                passwordTextBox.PasswordChar = '\0'; // removes masking
+            }
+            else
+            {
+                // Hide the password
+                passwordTextBox.PasswordChar = '*'; // use single quotes for char
+            }
         }
     }
 }

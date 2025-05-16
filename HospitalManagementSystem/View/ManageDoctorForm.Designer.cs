@@ -95,6 +95,7 @@
             Controls.Add(dataGridView1);
             Controls.Add(doctorSearchTxt);
             Controls.Add(btnRegister);
+            MaximizeBox = false;
             Name = "ManageDoctorForm";
             Text = "AdminForm";
             Load += ManageDoctorForm_Load;
