@@ -75,6 +75,7 @@
             guna2Button1.Size = new Size(180, 45);
             guna2Button1.TabIndex = 6;
             guna2Button1.Text = "Book Appointment";
+            guna2Button1.Click += guna2Button1_Click;
             // 
             // guna2Button2
             // 
@@ -121,8 +122,10 @@
             Controls.Add(guna2Button2);
             Controls.Add(guna2Button1);
             Controls.Add(logOutBtn);
+            MaximizeBox = false;
             Name = "PatientDashboardForm";
             Text = "Patient Form";
+            Load += PatientDashboardForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }

@@ -44,17 +44,19 @@
             // 
             // emailTextBox
             // 
+            emailTextBox.Anchor = AnchorStyles.Top;
             emailTextBox.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            emailTextBox.Location = new Point(45, 188);
+            emailTextBox.Location = new Point(46, 195);
             emailTextBox.Name = "emailTextBox";
             emailTextBox.Size = new Size(187, 22);
             emailTextBox.TabIndex = 0;
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label1.AutoSize = true;
             label1.Font = new Font("Arial", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(45, 83);
+            label1.Location = new Point(46, 90);
             label1.Name = "label1";
             label1.Size = new Size(187, 24);
             label1.TabIndex = 1;
@@ -62,9 +64,10 @@
             // 
             // label2
             // 
+            label2.Anchor = AnchorStyles.Top;
             label2.AutoSize = true;
             label2.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(45, 164);
+            label2.Location = new Point(46, 171);
             label2.Name = "label2";
             label2.Size = new Size(40, 16);
             label2.TabIndex = 2;
@@ -72,9 +75,10 @@
             // 
             // label3
             // 
+            label3.Anchor = AnchorStyles.Top;
             label3.AutoSize = true;
             label3.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(46, 227);
+            label3.Location = new Point(47, 234);
             label3.Name = "label3";
             label3.Size = new Size(64, 16);
             label3.TabIndex = 4;
@@ -83,13 +87,15 @@
             // passwordTextBox
             // 
             passwordTextBox.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            passwordTextBox.Location = new Point(46, 247);
+            passwordTextBox.Location = new Point(46, 253);
             passwordTextBox.Name = "passwordTextBox";
             passwordTextBox.Size = new Size(187, 22);
             passwordTextBox.TabIndex = 3;
+            passwordTextBox.TextChanged += passwordTextBox_TextChanged;
             // 
             // loginBtn
             // 
+            loginBtn.Anchor = AnchorStyles.Bottom;
             loginBtn.CustomizableEdges = customizableEdges1;
             loginBtn.DisabledState.BorderColor = Color.DarkGray;
             loginBtn.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -98,7 +104,7 @@
             loginBtn.FillColor = Color.MediumSeaGreen;
             loginBtn.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             loginBtn.ForeColor = Color.Black;
-            loginBtn.Location = new Point(65, 285);
+            loginBtn.Location = new Point(66, 292);
             loginBtn.Name = "loginBtn";
             loginBtn.ShadowDecoration.CustomizableEdges = customizableEdges2;
             loginBtn.Size = new Size(139, 30);
@@ -108,9 +114,10 @@
             // 
             // linkLabel1
             // 
+            linkLabel1.Anchor = AnchorStyles.Bottom;
             linkLabel1.AutoSize = true;
             linkLabel1.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            linkLabel1.Location = new Point(76, 332);
+            linkLabel1.Location = new Point(77, 339);
             linkLabel1.Name = "linkLabel1";
             linkLabel1.Size = new Size(112, 16);
             linkLabel1.TabIndex = 6;
@@ -119,7 +126,8 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Location = new Point(302, 71);
+            pictureBox1.Anchor = AnchorStyles.Right;
+            pictureBox1.Location = new Point(303, 78);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(314, 293);
             pictureBox1.TabIndex = 7;
@@ -128,7 +136,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(422, 211);
+            label4.Location = new Point(424, 215);
             label4.Name = "label4";
             label4.Size = new Size(66, 15);
             label4.TabIndex = 8;

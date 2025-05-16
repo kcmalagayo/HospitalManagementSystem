@@ -94,6 +94,7 @@
             Controls.Add(dataGridView1);
             Controls.Add(patientSearchTxt);
             Controls.Add(btnRegister);
+            MaximizeBox = false;
             Name = "ManagePatientForm";
             Text = "ManagePatientForm";
             Load += ManagePatientForm_Load;
