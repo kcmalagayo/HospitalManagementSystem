@@ -64,7 +64,7 @@ namespace HospitalManagementSystem.View
 
             } else if (selectRoleComboBox.SelectedItem.ToString() == "Patient")//condition for patient role
             {
-                if (authController.Login(email, password, "Admin", out object user))
+                if (authController.Login(email, password, "Patient", out object user))
                 {
                     Patient patient = user as Patient;
                     MessageBox.Show("Welcome, Patient " + patient.FirstName + "!",
