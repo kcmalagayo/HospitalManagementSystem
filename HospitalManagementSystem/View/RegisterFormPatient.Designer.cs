@@ -221,6 +221,7 @@
             // 
             // label9
             // 
+            label9.Anchor = AnchorStyles.None;
             label9.AutoSize = true;
             label9.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label9.Location = new Point(491, 15);
@@ -231,6 +232,7 @@
             // 
             // registerPanelPatient
             // 
+            registerPanelPatient.Anchor = AnchorStyles.None;
             registerPanelPatient.Controls.Add(btnRegister);
             registerPanelPatient.Controls.Add(label1);
             registerPanelPatient.Controls.Add(label2);

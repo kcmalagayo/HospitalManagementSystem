@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             pictureBox3 = new PictureBox();
             pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
@@ -52,7 +52,8 @@
             // 
             // pictureBox3
             // 
-            pictureBox3.Location = new Point(647, 197);
+            pictureBox3.Anchor = AnchorStyles.None;
+            pictureBox3.Location = new Point(672, 197);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(211, 187);
             pictureBox3.TabIndex = 2;
@@ -60,7 +61,8 @@
             // 
             // pictureBox2
             // 
-            pictureBox2.Location = new Point(354, 197);
+            pictureBox2.Anchor = AnchorStyles.None;
+            pictureBox2.Location = new Point(379, 197);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(211, 187);
             pictureBox2.TabIndex = 1;
@@ -68,7 +70,8 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Location = new Point(58, 197);
+            pictureBox1.Anchor = AnchorStyles.None;
+            pictureBox1.Location = new Point(83, 197);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(211, 187);
             pictureBox1.TabIndex = 0;
@@ -76,8 +79,9 @@
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
-            label1.Location = new Point(124, 297);
+            label1.Location = new Point(149, 297);
             label1.Name = "label1";
             label1.Size = new Size(66, 15);
             label1.TabIndex = 3;
@@ -85,8 +89,9 @@
             // 
             // label2
             // 
+            label2.Anchor = AnchorStyles.None;
             label2.AutoSize = true;
-            label2.Location = new Point(423, 297);
+            label2.Location = new Point(448, 297);
             label2.Name = "label2";
             label2.Size = new Size(66, 15);
             label2.TabIndex = 4;
@@ -94,8 +99,9 @@
             // 
             // label3
             // 
+            label3.Anchor = AnchorStyles.None;
             label3.AutoSize = true;
-            label3.Location = new Point(725, 297);
+            label3.Location = new Point(750, 297);
             label3.Name = "label3";
             label3.Size = new Size(66, 15);
             label3.TabIndex = 5;
@@ -103,7 +109,8 @@
             // 
             // adminBtn
             // 
-            adminBtn.CustomizableEdges = customizableEdges7;
+            adminBtn.Anchor = AnchorStyles.None;
+            adminBtn.CustomizableEdges = customizableEdges1;
             adminBtn.DisabledState.BorderColor = Color.DarkGray;
             adminBtn.DisabledState.CustomBorderColor = Color.DarkGray;
             adminBtn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -111,16 +118,17 @@
             adminBtn.FillColor = Color.MediumSeaGreen;
             adminBtn.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             adminBtn.ForeColor = Color.Black;
-            adminBtn.Location = new Point(110, 406);
+            adminBtn.Location = new Point(135, 406);
             adminBtn.Name = "adminBtn";
-            adminBtn.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            adminBtn.ShadowDecoration.CustomizableEdges = customizableEdges2;
             adminBtn.Size = new Size(92, 29);
             adminBtn.TabIndex = 6;
             adminBtn.Text = "Admin";
             // 
             // patientBtn
             // 
-            patientBtn.CustomizableEdges = customizableEdges9;
+            patientBtn.Anchor = AnchorStyles.None;
+            patientBtn.CustomizableEdges = customizableEdges3;
             patientBtn.DisabledState.BorderColor = Color.DarkGray;
             patientBtn.DisabledState.CustomBorderColor = Color.DarkGray;
             patientBtn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -128,16 +136,17 @@
             patientBtn.FillColor = Color.MediumSeaGreen;
             patientBtn.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             patientBtn.ForeColor = Color.Black;
-            patientBtn.Location = new Point(410, 406);
+            patientBtn.Location = new Point(435, 406);
             patientBtn.Name = "patientBtn";
-            patientBtn.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            patientBtn.ShadowDecoration.CustomizableEdges = customizableEdges4;
             patientBtn.Size = new Size(92, 29);
             patientBtn.TabIndex = 7;
             patientBtn.Text = "Patient";
             // 
             // doctorBtn
             // 
-            doctorBtn.CustomizableEdges = customizableEdges11;
+            doctorBtn.Anchor = AnchorStyles.None;
+            doctorBtn.CustomizableEdges = customizableEdges5;
             doctorBtn.DisabledState.BorderColor = Color.DarkGray;
             doctorBtn.DisabledState.CustomBorderColor = Color.DarkGray;
             doctorBtn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -145,18 +154,19 @@
             doctorBtn.FillColor = Color.MediumSeaGreen;
             doctorBtn.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             doctorBtn.ForeColor = Color.Black;
-            doctorBtn.Location = new Point(712, 406);
+            doctorBtn.Location = new Point(737, 406);
             doctorBtn.Name = "doctorBtn";
-            doctorBtn.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            doctorBtn.ShadowDecoration.CustomizableEdges = customizableEdges6;
             doctorBtn.Size = new Size(92, 29);
             doctorBtn.TabIndex = 8;
             doctorBtn.Text = "Doctor";
             // 
             // label4
             // 
+            label4.Anchor = AnchorStyles.None;
             label4.AutoSize = true;
             label4.Font = new Font("Arial", 26.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(213, 48);
+            label4.Location = new Point(238, 48);
             label4.Name = "label4";
             label4.Size = new Size(490, 41);
             label4.TabIndex = 9;
@@ -164,9 +174,10 @@
             // 
             // label5
             // 
+            label5.Anchor = AnchorStyles.None;
             label5.AutoSize = true;
             label5.Font = new Font("Arial", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(58, 151);
+            label5.Location = new Point(83, 151);
             label5.Name = "label5";
             label5.Size = new Size(230, 24);
             label5.TabIndex = 10;

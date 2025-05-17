@@ -63,9 +63,10 @@
             // 
             // label9
             // 
+            label9.Anchor = AnchorStyles.None;
             label9.AutoSize = true;
             label9.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label9.Location = new Point(511, 17);
+            label9.Location = new Point(469, 17);
             label9.Name = "label9";
             label9.Size = new Size(192, 19);
             label9.TabIndex = 61;
@@ -126,6 +127,7 @@
             // 
             // registerPanelDoctor
             // 
+            registerPanelDoctor.Anchor = AnchorStyles.None;
             registerPanelDoctor.Controls.Add(label7);
             registerPanelDoctor.Controls.Add(btnRegister);
             registerPanelDoctor.Controls.Add(label1);
@@ -133,7 +135,7 @@
             registerPanelDoctor.Controls.Add(firstNameTxt);
             registerPanelDoctor.Controls.Add(emailTxt);
             registerPanelDoctor.Controls.Add(lastNameTxt);
-            registerPanelDoctor.Location = new Point(96, 54);
+            registerPanelDoctor.Location = new Point(54, 54);
             registerPanelDoctor.Margin = new Padding(3, 2, 3, 2);
             registerPanelDoctor.Name = "registerPanelDoctor";
             registerPanelDoctor.Size = new Size(495, 348);

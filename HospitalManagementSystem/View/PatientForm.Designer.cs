@@ -48,6 +48,7 @@
             // 
             // panel1
             // 
+            panel1.Anchor = AnchorStyles.None;
             panel1.Controls.Add(guna2Button1);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(monthCalendar1);
@@ -55,7 +56,7 @@
             panel1.Controls.Add(doctorSearchTxt);
             panel1.Controls.Add(specializaitionDropBox);
             panel1.Controls.Add(dataGridView2);
-            panel1.Location = new Point(5, 12);
+            panel1.Location = new Point(16, 12);
             panel1.Name = "panel1";
             panel1.Size = new Size(783, 431);
             panel1.TabIndex = 0;
@@ -154,7 +155,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 455);
+            ClientSize = new Size(814, 455);
             Controls.Add(panel1);
             Name = "PatientForm";
             Text = "PatientForm";
