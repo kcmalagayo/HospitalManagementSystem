@@ -46,11 +46,16 @@ namespace HospitalManagementSystem.View
                                 "Login Failed",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Error);
-             
+
             }
         }
 
         private void AdminFormLogin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void passwordTextBox_TextChanged(object sender, EventArgs e)
         {
 
         }
