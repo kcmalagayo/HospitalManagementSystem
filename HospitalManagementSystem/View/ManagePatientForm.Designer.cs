@@ -40,6 +40,7 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.Anchor = AnchorStyles.None;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(30, 113);
             dataGridView1.Name = "dataGridView1";
@@ -49,6 +50,7 @@
             // 
             // patientSearchTxt
             // 
+            patientSearchTxt.Anchor = AnchorStyles.None;
             patientSearchTxt.CustomizableEdges = customizableEdges1;
             patientSearchTxt.DefaultText = "";
             patientSearchTxt.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -68,6 +70,7 @@
             // 
             // btnRegister
             // 
+            btnRegister.Anchor = AnchorStyles.None;
             btnRegister.BackColor = Color.PaleGreen;
             btnRegister.CustomizableEdges = customizableEdges3;
             btnRegister.DisabledState.BorderColor = Color.DarkGray;

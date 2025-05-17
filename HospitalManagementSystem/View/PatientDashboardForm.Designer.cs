@@ -43,6 +43,7 @@
             // 
             // logOutBtn
             // 
+            logOutBtn.Anchor = AnchorStyles.None;
             logOutBtn.CustomizableEdges = customizableEdges1;
             logOutBtn.DisabledState.BorderColor = Color.DarkGray;
             logOutBtn.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -51,7 +52,7 @@
             logOutBtn.FillColor = Color.MediumSeaGreen;
             logOutBtn.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             logOutBtn.ForeColor = Color.Black;
-            logOutBtn.Location = new Point(28, 256);
+            logOutBtn.Location = new Point(34, 256);
             logOutBtn.Name = "logOutBtn";
             logOutBtn.ShadowDecoration.CustomizableEdges = customizableEdges2;
             logOutBtn.Size = new Size(180, 45);
@@ -61,6 +62,7 @@
             // 
             // guna2Button1
             // 
+            guna2Button1.Anchor = AnchorStyles.None;
             guna2Button1.CustomizableEdges = customizableEdges3;
             guna2Button1.DisabledState.BorderColor = Color.DarkGray;
             guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -69,7 +71,7 @@
             guna2Button1.FillColor = Color.MediumSeaGreen;
             guna2Button1.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2Button1.ForeColor = Color.Black;
-            guna2Button1.Location = new Point(28, 127);
+            guna2Button1.Location = new Point(34, 127);
             guna2Button1.Name = "guna2Button1";
             guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2Button1.Size = new Size(180, 45);
@@ -79,6 +81,7 @@
             // 
             // guna2Button2
             // 
+            guna2Button2.Anchor = AnchorStyles.None;
             guna2Button2.CustomizableEdges = customizableEdges5;
             guna2Button2.DisabledState.BorderColor = Color.DarkGray;
             guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -87,7 +90,7 @@
             guna2Button2.FillColor = Color.MediumSeaGreen;
             guna2Button2.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2Button2.ForeColor = Color.Black;
-            guna2Button2.Location = new Point(28, 193);
+            guna2Button2.Location = new Point(34, 193);
             guna2Button2.Name = "guna2Button2";
             guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges6;
             guna2Button2.Size = new Size(180, 45);
@@ -96,9 +99,10 @@
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
             label1.Font = new Font("Arial", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(39, 44);
+            label1.Location = new Point(45, 44);
             label1.Name = "label1";
             label1.Size = new Size(160, 48);
             label1.TabIndex = 8;
@@ -107,7 +111,8 @@
             // 
             // panel1
             // 
-            panel1.Location = new Point(249, 32);
+            panel1.Anchor = AnchorStyles.None;
+            panel1.Location = new Point(255, 32);
             panel1.Name = "panel1";
             panel1.Size = new Size(783, 416);
             panel1.TabIndex = 9;

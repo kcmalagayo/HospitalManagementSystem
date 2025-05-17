@@ -40,6 +40,7 @@
             // 
             // doctorSearchTxt
             // 
+            doctorSearchTxt.Anchor = AnchorStyles.None;
             doctorSearchTxt.CustomizableEdges = customizableEdges1;
             doctorSearchTxt.DefaultText = "";
             doctorSearchTxt.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -49,7 +50,7 @@
             doctorSearchTxt.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             doctorSearchTxt.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             doctorSearchTxt.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            doctorSearchTxt.Location = new Point(57, 15);
+            doctorSearchTxt.Location = new Point(58, 15);
             doctorSearchTxt.Name = "doctorSearchTxt";
             doctorSearchTxt.PlaceholderText = "Search doctor fields";
             doctorSearchTxt.SelectedText = "";
@@ -60,8 +61,9 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.Anchor = AnchorStyles.None;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(29, 100);
+            dataGridView1.Location = new Point(30, 100);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(741, 313);
             dataGridView1.TabIndex = 21;
@@ -69,6 +71,7 @@
             // 
             // btnRegister
             // 
+            btnRegister.Anchor = AnchorStyles.None;
             btnRegister.BackColor = Color.PaleGreen;
             btnRegister.CustomizableEdges = customizableEdges3;
             btnRegister.DisabledState.BorderColor = Color.DarkGray;
@@ -78,7 +81,7 @@
             btnRegister.FillColor = Color.MediumSeaGreen;
             btnRegister.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnRegister.ForeColor = Color.Black;
-            btnRegister.Location = new Point(612, 15);
+            btnRegister.Location = new Point(613, 15);
             btnRegister.Margin = new Padding(3, 2, 3, 2);
             btnRegister.Name = "btnRegister";
             btnRegister.ShadowDecoration.CustomizableEdges = customizableEdges4;
