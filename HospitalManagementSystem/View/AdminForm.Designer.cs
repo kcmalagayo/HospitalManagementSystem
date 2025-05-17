@@ -48,7 +48,7 @@
             // 
             // manageDoctorBtn
             // 
-            manageDoctorBtn.Anchor = AnchorStyles.None;
+            manageDoctorBtn.Anchor = AnchorStyles.Left;
             manageDoctorBtn.CustomizableEdges = customizableEdges1;
             manageDoctorBtn.DisabledState.BorderColor = Color.DarkGray;
             manageDoctorBtn.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -67,7 +67,7 @@
             // 
             // label1
             // 
-            label1.Anchor = AnchorStyles.None;
+            label1.Anchor = AnchorStyles.Left;
             label1.AutoSize = true;
             label1.Font = new Font("Arial", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(46, 38);
@@ -79,7 +79,7 @@
             // 
             // managePatientBtn
             // 
-            managePatientBtn.Anchor = AnchorStyles.None;
+            managePatientBtn.Anchor = AnchorStyles.Left;
             managePatientBtn.CustomizableEdges = customizableEdges3;
             managePatientBtn.DisabledState.BorderColor = Color.DarkGray;
             managePatientBtn.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -98,7 +98,7 @@
             // 
             // bookAppointmentBtn
             // 
-            bookAppointmentBtn.Anchor = AnchorStyles.None;
+            bookAppointmentBtn.Anchor = AnchorStyles.Left;
             bookAppointmentBtn.CustomizableEdges = customizableEdges5;
             bookAppointmentBtn.DisabledState.BorderColor = Color.DarkGray;
             bookAppointmentBtn.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -116,7 +116,7 @@
             // 
             // logOutBtn
             // 
-            logOutBtn.Anchor = AnchorStyles.None;
+            logOutBtn.Anchor = AnchorStyles.Left;
             logOutBtn.CustomizableEdges = customizableEdges7;
             logOutBtn.DisabledState.BorderColor = Color.DarkGray;
             logOutBtn.DisabledState.CustomBorderColor = Color.DarkGray;

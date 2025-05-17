@@ -43,7 +43,7 @@
             // 
             // logOutBtn
             // 
-            logOutBtn.Anchor = AnchorStyles.None;
+            logOutBtn.Anchor = AnchorStyles.Left;
             logOutBtn.CustomizableEdges = customizableEdges1;
             logOutBtn.DisabledState.BorderColor = Color.DarkGray;
             logOutBtn.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -52,7 +52,7 @@
             logOutBtn.FillColor = Color.MediumSeaGreen;
             logOutBtn.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             logOutBtn.ForeColor = Color.Black;
-            logOutBtn.Location = new Point(34, 256);
+            logOutBtn.Location = new Point(34, 284);
             logOutBtn.Name = "logOutBtn";
             logOutBtn.ShadowDecoration.CustomizableEdges = customizableEdges2;
             logOutBtn.Size = new Size(180, 45);
@@ -62,7 +62,7 @@
             // 
             // guna2Button1
             // 
-            guna2Button1.Anchor = AnchorStyles.None;
+            guna2Button1.Anchor = AnchorStyles.Left;
             guna2Button1.CustomizableEdges = customizableEdges3;
             guna2Button1.DisabledState.BorderColor = Color.DarkGray;
             guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -71,7 +71,7 @@
             guna2Button1.FillColor = Color.MediumSeaGreen;
             guna2Button1.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2Button1.ForeColor = Color.Black;
-            guna2Button1.Location = new Point(34, 127);
+            guna2Button1.Location = new Point(34, 155);
             guna2Button1.Name = "guna2Button1";
             guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2Button1.Size = new Size(180, 45);
@@ -81,7 +81,7 @@
             // 
             // guna2Button2
             // 
-            guna2Button2.Anchor = AnchorStyles.None;
+            guna2Button2.Anchor = AnchorStyles.Left;
             guna2Button2.CustomizableEdges = customizableEdges5;
             guna2Button2.DisabledState.BorderColor = Color.DarkGray;
             guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -90,7 +90,7 @@
             guna2Button2.FillColor = Color.MediumSeaGreen;
             guna2Button2.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2Button2.ForeColor = Color.Black;
-            guna2Button2.Location = new Point(34, 193);
+            guna2Button2.Location = new Point(34, 221);
             guna2Button2.Name = "guna2Button2";
             guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges6;
             guna2Button2.Size = new Size(180, 45);
@@ -99,10 +99,10 @@
             // 
             // label1
             // 
-            label1.Anchor = AnchorStyles.None;
+            label1.Anchor = AnchorStyles.Left;
             label1.AutoSize = true;
             label1.Font = new Font("Arial", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(45, 44);
+            label1.Location = new Point(45, 72);
             label1.Name = "label1";
             label1.Size = new Size(160, 48);
             label1.TabIndex = 8;
@@ -112,7 +112,7 @@
             // panel1
             // 
             panel1.Anchor = AnchorStyles.None;
-            panel1.Location = new Point(255, 32);
+            panel1.Location = new Point(248, 60);
             panel1.Name = "panel1";
             panel1.Size = new Size(783, 416);
             panel1.TabIndex = 9;
@@ -121,13 +121,12 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1073, 493);
+            ClientSize = new Size(1059, 548);
             Controls.Add(panel1);
             Controls.Add(label1);
             Controls.Add(guna2Button2);
             Controls.Add(guna2Button1);
             Controls.Add(logOutBtn);
-            MaximizeBox = false;
             Name = "PatientDashboardForm";
             Text = "Patient Form";
             Load += PatientDashboardForm_Load;
