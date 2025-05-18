@@ -28,11 +28,25 @@ namespace HospitalManagementSystem.View
         }
         private void logOutBtn_Click(object sender, EventArgs e)
         {
-            LoginForm logout = new LoginForm();
-            logout.Show();
-            this.Hide();
-        }
+            DialogResult result = MessageBox.Show(
+                "Are you sure you want to log out?",
+                "Logout Confirmation",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
 
+            if (result == DialogResult.Yes)
+            {
+                this.Hide();
+                var loginForm = new LoginForm();
+                loginForm.Show();
+                MessageBox.Show("You have successfully logged out.", "Logout Successful");
+            }
+            else
+            {
+                MessageBox.Show("Logout cancelled.", "Action Cancelled");
+            }
+        }
         private void guna2Button1_Click(object sender, EventArgs e)//book appointment button    
         {
             PatientForm pf = new PatientForm();
@@ -40,6 +54,11 @@ namespace HospitalManagementSystem.View
         }
 
         private void PatientDashboardForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
         {
 
         }

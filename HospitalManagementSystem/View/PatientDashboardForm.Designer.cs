@@ -96,6 +96,7 @@
             guna2Button2.Size = new Size(180, 45);
             guna2Button2.TabIndex = 7;
             guna2Button2.Text = "View Appointments";
+            guna2Button2.Click += guna2Button2_Click;
             // 
             // label1
             // 
