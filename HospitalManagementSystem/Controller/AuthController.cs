@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Data.SQLite;
 using HospitalManagementSystem.Model;
-using HospitalManagementSystem.Data;
+using AppDatabase = HospitalManagementSystem.Data.Database;
 
 namespace HospitalManagementSystem.Controller
 {
     public class AuthController
     {
-        private readonly Database _db;
+        private readonly AppDatabase _db;
 
-        public AuthController(Database db)
+        public AuthController(AppDatabase db)
         {
             _db = db;
         }
@@ -20,26 +20,18 @@ namespace HospitalManagementSystem.Controller
             string query = "";
 
             if (userType == "Patient")
-            {
                 query = "SELECT * FROM Patient WHERE Email = @Email AND Password = @Password";
-            }
             else if (userType == "Doctor")
-            {
                 query = "SELECT * FROM Doctor WHERE Email = @Email AND Password = @Password";
-            }
             else if (userType == "Admin")
-            {
                 query = "SELECT * FROM Admin WHERE Email = @Email AND Password = @Password";
-            }
             else
-            {
-                return false; // Invalid user type
-            }
+                return false;
 
             using (var cmd = new SQLiteCommand(query, _db.GetConnection()))
             {
                 cmd.Parameters.AddWithValue("@Email", email);
-                cmd.Parameters.AddWithValue("@Password", password); // Use hashing for production
+                cmd.Parameters.AddWithValue("@Password", password);
 
                 using (var reader = cmd.ExecuteReader())
                 {
@@ -61,7 +53,6 @@ namespace HospitalManagementSystem.Controller
                                     password = reader["Password"].ToString()
                                 };
                                 break;
-
                             case "Doctor":
                                 user = new Doctor
                                 {
@@ -77,7 +68,6 @@ namespace HospitalManagementSystem.Controller
                                     Status = reader["Status"].ToString()
                                 };
                                 break;
-
                             case "Admin":
                                 user = new Admin
                                 {
@@ -89,20 +79,21 @@ namespace HospitalManagementSystem.Controller
                                 };
                                 break;
                         }
-
-                        return true; // Valid login
+                        return true;
                     }
                 }
             }
 
-            return false; // No matching record
+            return false;
         }
+
         public bool Register(Patient patient)
         {
             string query = @"
-                INSERT INTO Patient (FirstName, LastName, DateOfBirth, Gender, ContactNumber, Email, Address, Password)
-                VALUES (@FirstName, @LastName, @DateOfBirth, @Gender, @ContactNumber, @Email, @Address, @Password)
-            ";
+                INSERT INTO Patient 
+                (FirstName, LastName, DateOfBirth, Gender, ContactNumber, Email, Address, Password)
+                VALUES 
+                (@FirstName, @LastName, @DateOfBirth, @Gender, @ContactNumber, @Email, @Address, @Password)";
 
             using (var cmd = new SQLiteCommand(query, _db.GetConnection()))
             {
@@ -113,7 +104,7 @@ namespace HospitalManagementSystem.Controller
                 cmd.Parameters.AddWithValue("@ContactNumber", patient.ContactNumber);
                 cmd.Parameters.AddWithValue("@Email", patient.Email);
                 cmd.Parameters.AddWithValue("@Address", patient.Address);
-                cmd.Parameters.AddWithValue("@Password", patient.password); // Again, hash this in real apps
+                cmd.Parameters.AddWithValue("@Password", patient.password);
 
                 return cmd.ExecuteNonQuery() > 0;
             }
@@ -122,9 +113,10 @@ namespace HospitalManagementSystem.Controller
         public bool RegisterDoctor(Doctor doctor)
         {
             string query = @"
-                INSERT INTO Doctor (FirstName, LastName, DateOfBirth, Gender, Specialization, ContactNumber, Email, Password, Status)
-                VALUES (@FirstName, @LastName, @DateOfBirth, @Gender, @Specialization, @ContactNumber, @Email, @Password, @Status)
-            ";
+                INSERT INTO Doctor 
+                (FirstName, LastName, DateOfBirth, Gender, Specialization, ContactNumber, Email, Password, Status) 
+                VALUES 
+                (@FirstName, @LastName, @DateOfBirth, @Gender, @Specialization, @ContactNumber, @Email, @Password, @Status)";
 
             using (var cmd = new SQLiteCommand(query, _db.GetConnection()))
             {
@@ -136,17 +128,19 @@ namespace HospitalManagementSystem.Controller
                 cmd.Parameters.AddWithValue("@ContactNumber", doctor.ContactNumber);
                 cmd.Parameters.AddWithValue("@Email", doctor.Email);
                 cmd.Parameters.AddWithValue("@Password", doctor.Password);
-                cmd.Parameters.AddWithValue("@Status", doctor.Status ?? "Active"); // Default to "Active" if null
+                cmd.Parameters.AddWithValue("@Status", doctor.Status ?? "Active");
 
                 return cmd.ExecuteNonQuery() > 0;
             }
         }
+
         public bool RegisterAdmin(Admin admin)
         {
             string query = @"
-                INSERT INTO Admin (FirstName, LastName, Email, Password)
-                VALUES (@FirstName, @LastName, @Email, @Password)
-            ";
+                INSERT INTO Admin 
+                (FirstName, LastName, Email, Password)
+                VALUES 
+                (@FirstName, @LastName, @Email, @Password)";
 
             using (var cmd = new SQLiteCommand(query, _db.GetConnection()))
             {

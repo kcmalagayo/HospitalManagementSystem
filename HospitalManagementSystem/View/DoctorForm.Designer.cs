@@ -155,6 +155,7 @@
             logOutBtn.Size = new Size(180, 45);
             logOutBtn.TabIndex = 33;
             logOutBtn.Text = "Log Out ";
+            //logOutBtn.Click += logOutBtn_Click;
             // 
             // comboBox1
             // 
@@ -179,7 +180,7 @@
             Controls.Add(logOutBtn);
             Name = "DoctorForm";
             Text = "DoctorForm";
-            Load += DoctorForm_Load;
+           // Load += DoctorForm_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();

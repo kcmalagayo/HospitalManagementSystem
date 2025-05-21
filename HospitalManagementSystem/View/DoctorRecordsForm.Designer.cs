@@ -70,6 +70,7 @@
             guna2Button1.Size = new Size(180, 45);
             guna2Button1.TabIndex = 16;
             guna2Button1.Text = "Appointment";
+            guna2Button1.Click += guna2Button1_Click;
             // 
             // logOutBtn
             // 
@@ -87,6 +88,7 @@
             logOutBtn.Size = new Size(180, 45);
             logOutBtn.TabIndex = 15;
             logOutBtn.Text = "Log Out ";
+           // logOutBtn.Click += logOutBtn_Click;
             // 
             // label2
             // 
@@ -107,7 +109,7 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(741, 313);
             dataGridView1.TabIndex = 32;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+          //  dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // AppointmentSearchTxt
             // 
@@ -143,7 +145,7 @@
             Controls.Add(logOutBtn);
             Name = "DoctorRecordsForm";
             Text = "DoctorRecordsForm";
-            Load += DoctorRecordsForm_Load;
+           // Load += DoctorRecordsForm_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();

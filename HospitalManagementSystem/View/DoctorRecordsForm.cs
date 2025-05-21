@@ -15,17 +15,25 @@ namespace HospitalManagementSystem.View
     public partial class DoctorRecordsForm : Form
     {
         private Database _db;
+
         public DoctorRecordsForm()
         {
             InitializeComponent();
-            _db = new Database();
+            _db = new Database();          
             LoadPreviousAppointments();
+
             AppointmentSearchTxt.TextChanged += AppointmentSearchTxt_TextChanged;
+            dataGridView1.ReadOnly = true;
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AllowUserToDeleteRows = false;
+            dataGridView1.AllowUserToOrderColumns = false;
+            dataGridView1.AllowUserToResizeRows = false;
         }
+
         private void LoadPreviousAppointments(string keyword = "")
         {
             string query = @"SELECT a.AppointmentID, a.PatientID, d.FirstName || ' ' || d.LastName AS DoctorName,
-                                      a.AppointmentDateTime, a.Status, a.Notes
+                                      a.AppointmentDateTime, a.Status
                              FROM Appointment a
                              JOIN Doctor d ON a.DoctorID = d.DoctorID
                              WHERE a.Status IN ('Completed', 'Cancelled', 'No Show')
@@ -40,31 +48,16 @@ namespace HospitalManagementSystem.View
                 dataGridView1.DataSource = dt;
             }
         }
-
-        private void DoctorRecordsForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void AppointmentSearchTxt_TextChanged(object sender, EventArgs e)
         {
             LoadPreviousAppointments(AppointmentSearchTxt.Text.Trim());
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void guna2Button1_Click(object sender, EventArgs e)
         {
-            if (e.RowIndex >= 0)
-            {
-                DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
-                string message = $"Appointment ID: {row.Cells["AppointmentID"].Value}\n" +
-                                 $"Patient ID: {row.Cells["PatientID"].Value}\n" +
-                                 $"Doctor Name: {row.Cells["DoctorName"].Value}\n" +
-                                 $"Date & Time: {row.Cells["AppointmentDateTime"].Value}\n" +
-                                 $"Status: {row.Cells["Status"].Value}\n" +
-                                 $"Notes: {row.Cells["Notes"].Value}";
-
-                MessageBox.Show(message, "Appointment Details", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            this.Hide();
+            DoctorForm doctorForm = new DoctorForm();
+            doctorForm.Show();
         }
     }
 }
