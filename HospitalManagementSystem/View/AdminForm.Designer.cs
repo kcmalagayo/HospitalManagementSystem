@@ -93,7 +93,7 @@
             managePatientBtn.Image = Properties.Resources.patient;
             managePatientBtn.ImageAlign = HorizontalAlignment.Left;
             managePatientBtn.ImageSize = new Size(30, 30);
-            managePatientBtn.Location = new Point(25, 227);
+            managePatientBtn.Location = new Point(25, 221);
             managePatientBtn.Name = "managePatientBtn";
             managePatientBtn.ShadowDecoration.CustomizableEdges = customizableEdges4;
             managePatientBtn.Size = new Size(202, 55);
@@ -116,7 +116,7 @@
             bookAppointmentBtn.Image = Properties.Resources.appointment;
             bookAppointmentBtn.ImageAlign = HorizontalAlignment.Left;
             bookAppointmentBtn.ImageSize = new Size(30, 30);
-            bookAppointmentBtn.Location = new Point(25, 303);
+            bookAppointmentBtn.Location = new Point(25, 282);
             bookAppointmentBtn.Name = "bookAppointmentBtn";
             bookAppointmentBtn.ShadowDecoration.CustomizableEdges = customizableEdges6;
             bookAppointmentBtn.Size = new Size(202, 52);
@@ -136,7 +136,7 @@
             logOutBtn.ForeColor = Color.Black;
             logOutBtn.Image = Properties.Resources.exit;
             logOutBtn.ImageAlign = HorizontalAlignment.Left;
-            logOutBtn.Location = new Point(25, 543);
+            logOutBtn.Location = new Point(25, 340);
             logOutBtn.Name = "logOutBtn";
             logOutBtn.ShadowDecoration.CustomizableEdges = customizableEdges8;
             logOutBtn.Size = new Size(202, 45);
