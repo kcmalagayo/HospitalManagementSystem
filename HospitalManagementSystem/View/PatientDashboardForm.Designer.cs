@@ -123,7 +123,8 @@
             // 
             // panel1
             // 
-            panel1.Anchor = AnchorStyles.None;
+            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            panel1.AutoSize = true;
             panel1.Location = new Point(318, 31);
             panel1.Name = "panel1";
             panel1.Size = new Size(922, 618);
