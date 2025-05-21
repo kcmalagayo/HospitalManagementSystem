@@ -17,7 +17,7 @@ namespace HospitalManagementSystem.View
             InitializeComponent();
         }
 
-        private void OpenFormInPanel(Form form)
+        private void OpenFormInPanel(Form form)//method to open form in panel 
         {
             panel1.Controls.Clear();
             form.TopLevel = false;
