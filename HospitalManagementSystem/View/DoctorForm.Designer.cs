@@ -38,7 +38,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             label2 = new Label();
             dataGridView1 = new DataGridView();
-            doctorSearchTxt = new Guna.UI2.WinForms.Guna2TextBox();
+            AppointmentSearchTxt = new Guna.UI2.WinForms.Guna2TextBox();
             guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             label1 = new Label();
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
@@ -68,25 +68,26 @@
             dataGridView1.Size = new Size(741, 313);
             dataGridView1.TabIndex = 39;
             // 
-            // doctorSearchTxt
+            // AppointmentSearchTxt
             // 
-            doctorSearchTxt.Anchor = AnchorStyles.None;
-            doctorSearchTxt.CustomizableEdges = customizableEdges1;
-            doctorSearchTxt.DefaultText = "";
-            doctorSearchTxt.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            doctorSearchTxt.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            doctorSearchTxt.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            doctorSearchTxt.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            doctorSearchTxt.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            doctorSearchTxt.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            doctorSearchTxt.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            doctorSearchTxt.Location = new Point(299, 98);
-            doctorSearchTxt.Name = "doctorSearchTxt";
-            doctorSearchTxt.PlaceholderText = "Search doctor fields";
-            doctorSearchTxt.SelectedText = "";
-            doctorSearchTxt.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            doctorSearchTxt.Size = new Size(530, 36);
-            doctorSearchTxt.TabIndex = 38;
+            AppointmentSearchTxt.Anchor = AnchorStyles.None;
+            AppointmentSearchTxt.CustomizableEdges = customizableEdges1;
+            AppointmentSearchTxt.DefaultText = "";
+            AppointmentSearchTxt.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            AppointmentSearchTxt.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            AppointmentSearchTxt.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            AppointmentSearchTxt.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            AppointmentSearchTxt.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            AppointmentSearchTxt.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            AppointmentSearchTxt.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            AppointmentSearchTxt.Location = new Point(299, 98);
+            AppointmentSearchTxt.Name = "AppointmentSearchTxt";
+            AppointmentSearchTxt.PlaceholderText = "Search Appointments";
+            AppointmentSearchTxt.SelectedText = "";
+            AppointmentSearchTxt.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            AppointmentSearchTxt.Size = new Size(530, 36);
+            AppointmentSearchTxt.TabIndex = 38;
+            AppointmentSearchTxt.TextChanged += AppointmentSearchTxt_TextChanged;
             // 
             // guna2Button2
             // 
@@ -107,6 +108,7 @@
             guna2Button2.Size = new Size(158, 36);
             guna2Button2.TabIndex = 37;
             guna2Button2.Text = "Update";
+            guna2Button2.Click += guna2Button2_Click;
             // 
             // label1
             // 
@@ -134,7 +136,8 @@
             guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges6;
             guna2Button1.Size = new Size(180, 45);
             guna2Button1.TabIndex = 34;
-            guna2Button1.Text = "Appointment";
+            guna2Button1.Text = "Record";
+            guna2Button1.Click += guna2Button1_Click;
             // 
             // logOutBtn
             // 
@@ -169,13 +172,14 @@
             Controls.Add(comboBox1);
             Controls.Add(label2);
             Controls.Add(dataGridView1);
-            Controls.Add(doctorSearchTxt);
+            Controls.Add(AppointmentSearchTxt);
             Controls.Add(guna2Button2);
             Controls.Add(label1);
             Controls.Add(guna2Button1);
             Controls.Add(logOutBtn);
             Name = "DoctorForm";
             Text = "DoctorForm";
+            Load += DoctorForm_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -185,7 +189,7 @@
 
         private Label label2;
         private DataGridView dataGridView1;
-        private Guna.UI2.WinForms.Guna2TextBox doctorSearchTxt;
+        private Guna.UI2.WinForms.Guna2TextBox AppointmentSearchTxt;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private Label label1;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
