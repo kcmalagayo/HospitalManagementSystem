@@ -48,97 +48,109 @@
             // 
             // manageDoctorBtn
             // 
-            manageDoctorBtn.Anchor = AnchorStyles.Left;
+            manageDoctorBtn.CustomBorderColor = Color.Gray;
             manageDoctorBtn.CustomizableEdges = customizableEdges1;
             manageDoctorBtn.DisabledState.BorderColor = Color.DarkGray;
             manageDoctorBtn.DisabledState.CustomBorderColor = Color.DarkGray;
             manageDoctorBtn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             manageDoctorBtn.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             manageDoctorBtn.FillColor = Color.MediumSeaGreen;
-            manageDoctorBtn.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            manageDoctorBtn.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             manageDoctorBtn.ForeColor = Color.Black;
-            manageDoctorBtn.Location = new Point(35, 127);
+            manageDoctorBtn.Image = Properties.Resources.doctor;
+            manageDoctorBtn.ImageAlign = HorizontalAlignment.Left;
+            manageDoctorBtn.ImageSize = new Size(30, 30);
+            manageDoctorBtn.Location = new Point(25, 157);
             manageDoctorBtn.Name = "manageDoctorBtn";
             manageDoctorBtn.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            manageDoctorBtn.Size = new Size(180, 45);
+            manageDoctorBtn.Size = new Size(202, 58);
             manageDoctorBtn.TabIndex = 0;
             manageDoctorBtn.Text = "Manage Doctor";
+            manageDoctorBtn.TextAlign = HorizontalAlignment.Right;
             manageDoctorBtn.Click += manageDoctorBtn_Click;
             // 
             // label1
             // 
-            label1.Anchor = AnchorStyles.Left;
             label1.AutoSize = true;
-            label1.Font = new Font("Arial", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(46, 38);
+            label1.Font = new Font("Arial", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(12, 41);
             label1.Name = "label1";
-            label1.Size = new Size(160, 48);
+            label1.Size = new Size(248, 74);
             label1.TabIndex = 1;
             label1.Text = "Hospital Name \r\nand Logo";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // managePatientBtn
             // 
-            managePatientBtn.Anchor = AnchorStyles.Left;
             managePatientBtn.CustomizableEdges = customizableEdges3;
             managePatientBtn.DisabledState.BorderColor = Color.DarkGray;
             managePatientBtn.DisabledState.CustomBorderColor = Color.DarkGray;
             managePatientBtn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             managePatientBtn.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             managePatientBtn.FillColor = Color.MediumSeaGreen;
-            managePatientBtn.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            managePatientBtn.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             managePatientBtn.ForeColor = Color.Black;
-            managePatientBtn.Location = new Point(35, 191);
+            managePatientBtn.Image = Properties.Resources.patient;
+            managePatientBtn.ImageAlign = HorizontalAlignment.Left;
+            managePatientBtn.ImageSize = new Size(30, 30);
+            managePatientBtn.Location = new Point(25, 221);
             managePatientBtn.Name = "managePatientBtn";
             managePatientBtn.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            managePatientBtn.Size = new Size(180, 45);
+            managePatientBtn.Size = new Size(202, 55);
             managePatientBtn.TabIndex = 2;
             managePatientBtn.Text = "Manage Patient";
+            managePatientBtn.TextAlign = HorizontalAlignment.Left;
+            managePatientBtn.TextOffset = new Point(7, 0);
             managePatientBtn.Click += managePatientBtn_Click;
             // 
             // bookAppointmentBtn
             // 
-            bookAppointmentBtn.Anchor = AnchorStyles.Left;
             bookAppointmentBtn.CustomizableEdges = customizableEdges5;
             bookAppointmentBtn.DisabledState.BorderColor = Color.DarkGray;
             bookAppointmentBtn.DisabledState.CustomBorderColor = Color.DarkGray;
             bookAppointmentBtn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             bookAppointmentBtn.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             bookAppointmentBtn.FillColor = Color.MediumSeaGreen;
-            bookAppointmentBtn.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            bookAppointmentBtn.Font = new Font("Arial", 12.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             bookAppointmentBtn.ForeColor = Color.Black;
-            bookAppointmentBtn.Location = new Point(35, 252);
+            bookAppointmentBtn.Image = Properties.Resources.appointment;
+            bookAppointmentBtn.ImageAlign = HorizontalAlignment.Left;
+            bookAppointmentBtn.ImageSize = new Size(30, 30);
+            bookAppointmentBtn.Location = new Point(25, 282);
             bookAppointmentBtn.Name = "bookAppointmentBtn";
             bookAppointmentBtn.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            bookAppointmentBtn.Size = new Size(180, 45);
+            bookAppointmentBtn.Size = new Size(202, 52);
             bookAppointmentBtn.TabIndex = 3;
             bookAppointmentBtn.Text = "Book Appointment";
+            bookAppointmentBtn.TextAlign = HorizontalAlignment.Right;
             // 
             // logOutBtn
             // 
-            logOutBtn.Anchor = AnchorStyles.Left;
             logOutBtn.CustomizableEdges = customizableEdges7;
             logOutBtn.DisabledState.BorderColor = Color.DarkGray;
             logOutBtn.DisabledState.CustomBorderColor = Color.DarkGray;
             logOutBtn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             logOutBtn.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             logOutBtn.FillColor = Color.MediumSeaGreen;
-            logOutBtn.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            logOutBtn.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             logOutBtn.ForeColor = Color.Black;
-            logOutBtn.Location = new Point(35, 316);
+            logOutBtn.Image = Properties.Resources.exit;
+            logOutBtn.ImageAlign = HorizontalAlignment.Left;
+            logOutBtn.Location = new Point(25, 340);
             logOutBtn.Name = "logOutBtn";
             logOutBtn.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            logOutBtn.Size = new Size(180, 45);
+            logOutBtn.Size = new Size(202, 45);
             logOutBtn.TabIndex = 4;
             logOutBtn.Text = "Log Out ";
+            logOutBtn.TextOffset = new Point(-15, 0);
             logOutBtn.Click += logOutBtn_Click;
             // 
             // panel1
             // 
             panel1.Anchor = AnchorStyles.None;
-            panel1.Location = new Point(254, 22);
+            panel1.Location = new Point(283, 41);
             panel1.Name = "panel1";
-            panel1.Size = new Size(783, 416);
+            panel1.Size = new Size(1035, 610);
             panel1.TabIndex = 5;
             panel1.Paint += panel1_Paint;
             // 
@@ -146,7 +158,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1073, 493);
+            ClientSize = new Size(1330, 677);
             Controls.Add(panel1);
             Controls.Add(logOutBtn);
             Controls.Add(bookAppointmentBtn);
@@ -155,7 +167,7 @@
             Controls.Add(manageDoctorBtn);
             MinimizeBox = false;
             Name = "AdminForm";
-            Text = "AdminForm";
+            Text = "   ";
             Load += AdminForm_Load;
             ResumeLayout(false);
             PerformLayout();

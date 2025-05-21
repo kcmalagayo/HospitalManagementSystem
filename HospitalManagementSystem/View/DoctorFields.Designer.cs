@@ -65,7 +65,7 @@
             // 
             dobPicker.Anchor = AnchorStyles.None;
             dobPicker.Format = DateTimePickerFormat.Short;
-            dobPicker.Location = new Point(107, 261);
+            dobPicker.Location = new Point(98, 243);
             dobPicker.Margin = new Padding(3, 2, 3, 2);
             dobPicker.Name = "dobPicker";
             dobPicker.Size = new Size(335, 23);
@@ -75,7 +75,7 @@
             // 
             label7.Anchor = AnchorStyles.None;
             label7.AutoSize = true;
-            label7.Location = new Point(107, 461);
+            label7.Location = new Point(98, 443);
             label7.Name = "label7";
             label7.Size = new Size(36, 15);
             label7.TabIndex = 58;
@@ -85,7 +85,7 @@
             // 
             label6.Anchor = AnchorStyles.None;
             label6.AutoSize = true;
-            label6.Location = new Point(106, 406);
+            label6.Location = new Point(97, 388);
             label6.Name = "label6";
             label6.Size = new Size(79, 15);
             label6.TabIndex = 57;
@@ -95,7 +95,7 @@
             // 
             label5.Anchor = AnchorStyles.None;
             label5.AutoSize = true;
-            label5.Location = new Point(106, 353);
+            label5.Location = new Point(97, 335);
             label5.Name = "label5";
             label5.Size = new Size(71, 15);
             label5.TabIndex = 56;
@@ -104,7 +104,7 @@
             // emailTxt
             // 
             emailTxt.Anchor = AnchorStyles.None;
-            emailTxt.Location = new Point(106, 480);
+            emailTxt.Location = new Point(97, 462);
             emailTxt.Margin = new Padding(3, 2, 3, 2);
             emailTxt.Name = "emailTxt";
             emailTxt.Size = new Size(335, 23);
@@ -113,7 +113,7 @@
             // contactTxt
             // 
             contactTxt.Anchor = AnchorStyles.None;
-            contactTxt.Location = new Point(106, 373);
+            contactTxt.Location = new Point(97, 355);
             contactTxt.Margin = new Padding(3, 2, 3, 2);
             contactTxt.Name = "contactTxt";
             contactTxt.Size = new Size(335, 23);
@@ -131,7 +131,7 @@
             genderComboBox.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             genderComboBox.ForeColor = Color.Black;
             genderComboBox.ItemHeight = 18;
-            genderComboBox.Location = new Point(106, 314);
+            genderComboBox.Location = new Point(97, 296);
             genderComboBox.Margin = new Padding(3, 2, 3, 2);
             genderComboBox.Name = "genderComboBox";
             genderComboBox.ShadowDecoration.CustomizableEdges = customizableEdges2;
@@ -142,7 +142,7 @@
             // 
             label4.Anchor = AnchorStyles.None;
             label4.AutoSize = true;
-            label4.Location = new Point(106, 297);
+            label4.Location = new Point(97, 279);
             label4.Name = "label4";
             label4.Size = new Size(45, 15);
             label4.TabIndex = 51;
@@ -152,7 +152,7 @@
             // 
             label3.Anchor = AnchorStyles.None;
             label3.AutoSize = true;
-            label3.Location = new Point(106, 243);
+            label3.Location = new Point(97, 225);
             label3.Name = "label3";
             label3.Size = new Size(73, 15);
             label3.TabIndex = 50;
@@ -163,7 +163,7 @@
             label2.Anchor = AnchorStyles.None;
             label2.AutoSize = true;
             label2.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(107, 127);
+            label2.Location = new Point(98, 109);
             label2.Name = "label2";
             label2.Size = new Size(70, 16);
             label2.TabIndex = 49;
@@ -174,7 +174,7 @@
             label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
             label1.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(106, 71);
+            label1.Location = new Point(97, 53);
             label1.Name = "label1";
             label1.Size = new Size(71, 16);
             label1.TabIndex = 48;
@@ -183,7 +183,7 @@
             // lastNameTxt
             // 
             lastNameTxt.Anchor = AnchorStyles.None;
-            lastNameTxt.Location = new Point(107, 146);
+            lastNameTxt.Location = new Point(98, 128);
             lastNameTxt.Margin = new Padding(3, 2, 3, 2);
             lastNameTxt.Name = "lastNameTxt";
             lastNameTxt.Size = new Size(335, 23);
@@ -192,7 +192,7 @@
             // firstNameTxt
             // 
             firstNameTxt.Anchor = AnchorStyles.None;
-            firstNameTxt.Location = new Point(106, 92);
+            firstNameTxt.Location = new Point(97, 74);
             firstNameTxt.Margin = new Padding(3, 2, 3, 2);
             firstNameTxt.Name = "firstNameTxt";
             firstNameTxt.Size = new Size(335, 23);
@@ -210,7 +210,7 @@
             btnRegister.FillColor = Color.MediumSeaGreen;
             btnRegister.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnRegister.ForeColor = Color.Black;
-            btnRegister.Location = new Point(463, 31);
+            btnRegister.Location = new Point(454, 13);
             btnRegister.Margin = new Padding(3, 2, 3, 2);
             btnRegister.Name = "btnRegister";
             btnRegister.ShadowDecoration.CustomizableEdges = customizableEdges4;
@@ -222,7 +222,7 @@
             // PasswordTxtBox
             // 
             PasswordTxtBox.Anchor = AnchorStyles.None;
-            PasswordTxtBox.Location = new Point(107, 206);
+            PasswordTxtBox.Location = new Point(98, 188);
             PasswordTxtBox.Margin = new Padding(3, 2, 3, 2);
             PasswordTxtBox.Name = "PasswordTxtBox";
             PasswordTxtBox.Size = new Size(335, 23);
@@ -233,7 +233,7 @@
             label8.Anchor = AnchorStyles.None;
             label8.AutoSize = true;
             label8.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label8.Location = new Point(106, 188);
+            label8.Location = new Point(97, 170);
             label8.Name = "label8";
             label8.Size = new Size(64, 16);
             label8.TabIndex = 67;
@@ -243,7 +243,7 @@
             // 
             label9.Anchor = AnchorStyles.None;
             label9.AutoSize = true;
-            label9.Location = new Point(108, 523);
+            label9.Location = new Point(99, 505);
             label9.Name = "label9";
             label9.Size = new Size(39, 15);
             label9.TabIndex = 69;
@@ -252,7 +252,7 @@
             // statusTxtBox
             // 
             statusTxtBox.Anchor = AnchorStyles.None;
-            statusTxtBox.Location = new Point(107, 542);
+            statusTxtBox.Location = new Point(98, 524);
             statusTxtBox.Margin = new Padding(3, 2, 3, 2);
             statusTxtBox.Name = "statusTxtBox";
             statusTxtBox.Size = new Size(335, 23);
@@ -270,7 +270,7 @@
             saveBtn.FillColor = Color.MediumSeaGreen;
             saveBtn.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             saveBtn.ForeColor = Color.Black;
-            saveBtn.Location = new Point(132, 583);
+            saveBtn.Location = new Point(123, 565);
             saveBtn.Margin = new Padding(3, 2, 3, 2);
             saveBtn.Name = "saveBtn";
             saveBtn.ShadowDecoration.CustomizableEdges = customizableEdges6;
@@ -291,7 +291,7 @@
             specializaitionDropBox.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             specializaitionDropBox.ForeColor = Color.Black;
             specializaitionDropBox.ItemHeight = 18;
-            specializaitionDropBox.Location = new Point(108, 424);
+            specializaitionDropBox.Location = new Point(99, 406);
             specializaitionDropBox.Name = "specializaitionDropBox";
             specializaitionDropBox.ShadowDecoration.CustomizableEdges = customizableEdges8;
             specializaitionDropBox.Size = new Size(336, 24);
@@ -309,7 +309,7 @@
             discardbtn.FillColor = Color.Black;
             discardbtn.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             discardbtn.ForeColor = Color.White;
-            discardbtn.Location = new Point(292, 583);
+            discardbtn.Location = new Point(283, 565);
             discardbtn.Margin = new Padding(3, 2, 3, 2);
             discardbtn.Name = "discardbtn";
             discardbtn.ShadowDecoration.CustomizableEdges = customizableEdges10;
@@ -322,7 +322,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(678, 656);
+            ClientSize = new Size(661, 620);
             Controls.Add(discardbtn);
             Controls.Add(specializaitionDropBox);
             Controls.Add(saveBtn);

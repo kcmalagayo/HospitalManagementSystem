@@ -17,12 +17,12 @@ namespace HospitalManagementSystem.View
             InitializeComponent();
         }
 
-        private void OpenFormInPanel(Form form)
+        private void OpenFormInPanel(Form form)//method to open form in panel 
         {
             panel1.Controls.Clear();
             form.TopLevel = false;
             form.FormBorderStyle = FormBorderStyle.None;
-            form.Dock = DockStyle.Left;
+            form.Dock = DockStyle.Fill;
             panel1.Controls.Add(form);
             form.Show();
         }

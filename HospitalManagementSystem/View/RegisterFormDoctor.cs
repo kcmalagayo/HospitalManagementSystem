@@ -39,9 +39,9 @@ namespace HospitalManagementSystem.View
                 LastName = lastNameTxt.Text,
                 DateOfBirth = dobPicker.Value,
                 Gender = genderComboBox.SelectedItem?.ToString() ?? "",
+                Specialization = specializaitionDropBox.SelectedItem?.ToString() ?? "",
                 ContactNumber = contactTxt.Text,
                 Email = emailTxt.Text,
-                Specialization = specializaitionDropBox.SelectedItem?.ToString() ?? "",
                 Password = lastNameTxt.Text + dobPicker.Value.Year
 
             );

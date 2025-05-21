@@ -91,10 +91,26 @@ namespace HospitalManagementSystem.View
             }
             else
             {
-                MessageBox.Show("Doctor role coming soon!. ",
-                                   "Please try other role for now",
-                                   MessageBoxButtons.OK,
-                                   MessageBoxIcon.Information);
+                if (authController.Login(email, password, "Doctor", out object user))
+                {
+                    Doctor doctor = user as Doctor;
+                    MessageBox.Show("Welcome, Doctor " + doctor.FirstName + "!",
+                                    "Login Successful",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Information);
+
+                    DoctorForm doctorForm = new DoctorForm();
+                    doctorForm.Show();
+                    this.Hide(); // Hide the login form 
+                }
+                else
+                {
+                    MessageBox.Show("Invalid email or password!",
+                                    "Login Failed",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Error);
+
+                }
             }
         }
 
@@ -115,6 +131,11 @@ namespace HospitalManagementSystem.View
                 // Hide the password
                 passwordTextBox.PasswordChar = '*'; // use single quotes for char
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
