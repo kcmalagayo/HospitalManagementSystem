@@ -116,5 +116,10 @@ namespace HospitalManagementSystem.View
                 passwordTextBox.PasswordChar = '*'; // use single quotes for char
             }
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
