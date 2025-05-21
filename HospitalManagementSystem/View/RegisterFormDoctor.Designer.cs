@@ -37,6 +37,8 @@
             btnRegister = new Guna.UI2.WinForms.Guna2Button();
             registerPanelDoctor = new Panel();
             specializaitionDropBox = new Guna.UI2.WinForms.Guna2ComboBox();
+            label5 = new Label();
+            label7 = new Label();
             firstNameTxt = new TextBox();
             lastNameTxt = new TextBox();
             label1 = new Label();
@@ -46,9 +48,7 @@
             genderComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
             contactTxt = new TextBox();
             emailTxt = new TextBox();
-            label5 = new Label();
             label6 = new Label();
-            label7 = new Label();
             dobPicker = new DateTimePicker();
             label9 = new Label();
             registerPanelDoctor.SuspendLayout();
@@ -78,6 +78,8 @@
             // 
             registerPanelDoctor.Anchor = AnchorStyles.None;
             registerPanelDoctor.Controls.Add(specializaitionDropBox);
+            registerPanelDoctor.Controls.Add(label5);
+            registerPanelDoctor.Controls.Add(label7);
             registerPanelDoctor.Location = new Point(46, 49);
             registerPanelDoctor.Margin = new Padding(3, 2, 3, 2);
             registerPanelDoctor.Name = "registerPanelDoctor";
@@ -100,6 +102,26 @@
             specializaitionDropBox.ShadowDecoration.CustomizableEdges = customizableEdges4;
             specializaitionDropBox.Size = new Size(336, 24);
             specializaitionDropBox.TabIndex = 0;
+            // 
+            // label5
+            // 
+            label5.Anchor = AnchorStyles.None;
+            label5.AutoSize = true;
+            label5.Location = new Point(74, 239);
+            label5.Name = "label5";
+            label5.Size = new Size(71, 15);
+            label5.TabIndex = 35;
+            label5.Text = "Contact No.";
+            // 
+            // label7
+            // 
+            label7.Anchor = AnchorStyles.None;
+            label7.AutoSize = true;
+            label7.Location = new Point(74, 346);
+            label7.Name = "label7";
+            label7.Size = new Size(36, 15);
+            label7.TabIndex = 37;
+            label7.Text = "Email";
             // 
             // firstNameTxt
             // 
@@ -199,16 +221,6 @@
             emailTxt.Size = new Size(335, 23);
             emailTxt.TabIndex = 34;
             // 
-            // label5
-            // 
-            label5.Anchor = AnchorStyles.None;
-            label5.AutoSize = true;
-            label5.Location = new Point(120, 285);
-            label5.Name = "label5";
-            label5.Size = new Size(71, 15);
-            label5.TabIndex = 35;
-            label5.Text = "Contact No.";
-            // 
             // label6
             // 
             label6.Anchor = AnchorStyles.None;
@@ -218,16 +230,6 @@
             label6.Size = new Size(79, 15);
             label6.TabIndex = 36;
             label6.Text = "Specialization";
-            // 
-            // label7
-            // 
-            label7.Anchor = AnchorStyles.None;
-            label7.AutoSize = true;
-            label7.Location = new Point(121, 393);
-            label7.Name = "label7";
-            label7.Size = new Size(36, 15);
-            label7.TabIndex = 37;
-            label7.Text = "Email";
             // 
             // dobPicker
             // 
@@ -259,9 +261,7 @@
             Controls.Add(btnRegister);
             Controls.Add(label9);
             Controls.Add(dobPicker);
-            Controls.Add(label7);
             Controls.Add(label6);
-            Controls.Add(label5);
             Controls.Add(emailTxt);
             Controls.Add(contactTxt);
             Controls.Add(genderComboBox);
@@ -278,6 +278,7 @@
             Text = "RegisterFormDoctor";
             Load += RegisterFormDoctor_Load;
             registerPanelDoctor.ResumeLayout(false);
+            registerPanelDoctor.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
