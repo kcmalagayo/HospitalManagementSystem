@@ -100,7 +100,7 @@
             Controls.Add(btnRegister);
             MaximizeBox = false;
             Name = "ManageDoctorForm";
-            Text = "AdminForm";
+            Text = "Admin Form";
             Load += ManageDoctorForm_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
