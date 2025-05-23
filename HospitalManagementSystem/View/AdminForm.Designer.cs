@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             manageDoctorBtn = new Guna.UI2.WinForms.Guna2Button();
@@ -44,12 +44,15 @@
             bookAppointmentBtn = new Guna.UI2.WinForms.Guna2Button();
             logOutBtn = new Guna.UI2.WinForms.Guna2Button();
             panel1 = new Panel();
+            pictureBox1 = new PictureBox();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // manageDoctorBtn
             // 
             manageDoctorBtn.CustomBorderColor = Color.Gray;
-            manageDoctorBtn.CustomizableEdges = customizableEdges1;
+            manageDoctorBtn.CustomizableEdges = customizableEdges9;
             manageDoctorBtn.DisabledState.BorderColor = Color.DarkGray;
             manageDoctorBtn.DisabledState.CustomBorderColor = Color.DarkGray;
             manageDoctorBtn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -62,7 +65,7 @@
             manageDoctorBtn.ImageSize = new Size(30, 30);
             manageDoctorBtn.Location = new Point(25, 157);
             manageDoctorBtn.Name = "manageDoctorBtn";
-            manageDoctorBtn.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            manageDoctorBtn.ShadowDecoration.CustomizableEdges = customizableEdges10;
             manageDoctorBtn.Size = new Size(202, 58);
             manageDoctorBtn.TabIndex = 0;
             manageDoctorBtn.Text = "Manage Doctor";
@@ -83,7 +86,7 @@
             // 
             // managePatientBtn
             // 
-            managePatientBtn.CustomizableEdges = customizableEdges3;
+            managePatientBtn.CustomizableEdges = customizableEdges11;
             managePatientBtn.DisabledState.BorderColor = Color.DarkGray;
             managePatientBtn.DisabledState.CustomBorderColor = Color.DarkGray;
             managePatientBtn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -96,7 +99,7 @@
             managePatientBtn.ImageSize = new Size(30, 30);
             managePatientBtn.Location = new Point(25, 221);
             managePatientBtn.Name = "managePatientBtn";
-            managePatientBtn.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            managePatientBtn.ShadowDecoration.CustomizableEdges = customizableEdges12;
             managePatientBtn.Size = new Size(202, 55);
             managePatientBtn.TabIndex = 2;
             managePatientBtn.Text = "Manage Patient";
@@ -106,7 +109,7 @@
             // 
             // bookAppointmentBtn
             // 
-            bookAppointmentBtn.CustomizableEdges = customizableEdges5;
+            bookAppointmentBtn.CustomizableEdges = customizableEdges13;
             bookAppointmentBtn.DisabledState.BorderColor = Color.DarkGray;
             bookAppointmentBtn.DisabledState.CustomBorderColor = Color.DarkGray;
             bookAppointmentBtn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -119,7 +122,7 @@
             bookAppointmentBtn.ImageSize = new Size(30, 30);
             bookAppointmentBtn.Location = new Point(25, 282);
             bookAppointmentBtn.Name = "bookAppointmentBtn";
-            bookAppointmentBtn.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            bookAppointmentBtn.ShadowDecoration.CustomizableEdges = customizableEdges14;
             bookAppointmentBtn.Size = new Size(202, 52);
             bookAppointmentBtn.TabIndex = 3;
             bookAppointmentBtn.Text = "Book Appointment";
@@ -127,7 +130,7 @@
             // 
             // logOutBtn
             // 
-            logOutBtn.CustomizableEdges = customizableEdges7;
+            logOutBtn.CustomizableEdges = customizableEdges15;
             logOutBtn.DisabledState.BorderColor = Color.DarkGray;
             logOutBtn.DisabledState.CustomBorderColor = Color.DarkGray;
             logOutBtn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -140,7 +143,7 @@
             logOutBtn.ImageOffset = new Point(4, 0);
             logOutBtn.Location = new Point(25, 340);
             logOutBtn.Name = "logOutBtn";
-            logOutBtn.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            logOutBtn.ShadowDecoration.CustomizableEdges = customizableEdges16;
             logOutBtn.Size = new Size(202, 45);
             logOutBtn.TabIndex = 4;
             logOutBtn.Text = "Log Out ";
@@ -150,11 +153,20 @@
             // panel1
             // 
             panel1.Anchor = AnchorStyles.None;
+            panel1.Controls.Add(pictureBox1);
             panel1.Location = new Point(283, 41);
             panel1.Name = "panel1";
             panel1.Size = new Size(1035, 610);
             panel1.TabIndex = 5;
             panel1.Paint += panel1_Paint;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Location = new Point(16, 16);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(1007, 576);
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
             // 
             // AdminForm
             // 
@@ -171,6 +183,8 @@
             Name = "AdminForm";
             Text = "   ";
             Load += AdminForm_Load;
+            panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -184,5 +198,6 @@
         private Guna.UI2.WinForms.Guna2Button bookAppointmentBtn;
         private Guna.UI2.WinForms.Guna2Button logOutBtn;
         private Panel panel1;
+        private PictureBox pictureBox1;
     }
 }
