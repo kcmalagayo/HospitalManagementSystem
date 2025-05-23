@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             btnRegister = new Guna.UI2.WinForms.Guna2Button();
             registerPanelDoctor = new Panel();
             specializaitionDropBox = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -57,7 +57,7 @@
             // btnRegister
             // 
             btnRegister.Anchor = AnchorStyles.None;
-            btnRegister.CustomizableEdges = customizableEdges1;
+            btnRegister.CustomizableEdges = customizableEdges7;
             btnRegister.DisabledState.BorderColor = Color.DarkGray;
             btnRegister.DisabledState.CustomBorderColor = Color.DarkGray;
             btnRegister.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -65,10 +65,10 @@
             btnRegister.FillColor = Color.MediumSeaGreen;
             btnRegister.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnRegister.ForeColor = Color.Black;
-            btnRegister.Location = new Point(122, 450);
+            btnRegister.Location = new Point(88, 452);
             btnRegister.Margin = new Padding(3, 2, 3, 2);
             btnRegister.Name = "btnRegister";
-            btnRegister.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnRegister.ShadowDecoration.CustomizableEdges = customizableEdges8;
             btnRegister.Size = new Size(334, 42);
             btnRegister.TabIndex = 45;
             btnRegister.Text = "Register Doctor";
@@ -80,7 +80,7 @@
             registerPanelDoctor.Controls.Add(specializaitionDropBox);
             registerPanelDoctor.Controls.Add(label5);
             registerPanelDoctor.Controls.Add(label7);
-            registerPanelDoctor.Location = new Point(46, 49);
+            registerPanelDoctor.Location = new Point(12, 51);
             registerPanelDoctor.Margin = new Padding(3, 2, 3, 2);
             registerPanelDoctor.Name = "registerPanelDoctor";
             registerPanelDoctor.Size = new Size(495, 462);
@@ -89,7 +89,7 @@
             // specializaitionDropBox
             // 
             specializaitionDropBox.BackColor = Color.Transparent;
-            specializaitionDropBox.CustomizableEdges = customizableEdges3;
+            specializaitionDropBox.CustomizableEdges = customizableEdges9;
             specializaitionDropBox.DrawMode = DrawMode.OwnerDrawFixed;
             specializaitionDropBox.DropDownStyle = ComboBoxStyle.DropDownList;
             specializaitionDropBox.FocusedColor = Color.FromArgb(94, 148, 255);
@@ -99,7 +99,7 @@
             specializaitionDropBox.ItemHeight = 18;
             specializaitionDropBox.Location = new Point(74, 305);
             specializaitionDropBox.Name = "specializaitionDropBox";
-            specializaitionDropBox.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            specializaitionDropBox.ShadowDecoration.CustomizableEdges = customizableEdges10;
             specializaitionDropBox.Size = new Size(336, 24);
             specializaitionDropBox.TabIndex = 0;
             // 
@@ -126,7 +126,7 @@
             // firstNameTxt
             // 
             firstNameTxt.Anchor = AnchorStyles.None;
-            firstNameTxt.Location = new Point(120, 87);
+            firstNameTxt.Location = new Point(86, 89);
             firstNameTxt.Margin = new Padding(3, 2, 3, 2);
             firstNameTxt.Name = "firstNameTxt";
             firstNameTxt.Size = new Size(335, 23);
@@ -135,7 +135,7 @@
             // lastNameTxt
             // 
             lastNameTxt.Anchor = AnchorStyles.None;
-            lastNameTxt.Location = new Point(121, 141);
+            lastNameTxt.Location = new Point(87, 143);
             lastNameTxt.Margin = new Padding(3, 2, 3, 2);
             lastNameTxt.Name = "lastNameTxt";
             lastNameTxt.Size = new Size(335, 23);
@@ -146,7 +146,7 @@
             label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
             label1.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(120, 66);
+            label1.Location = new Point(86, 68);
             label1.Name = "label1";
             label1.Size = new Size(71, 16);
             label1.TabIndex = 27;
@@ -157,7 +157,7 @@
             label2.Anchor = AnchorStyles.None;
             label2.AutoSize = true;
             label2.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(121, 122);
+            label2.Location = new Point(87, 124);
             label2.Name = "label2";
             label2.Size = new Size(70, 16);
             label2.TabIndex = 28;
@@ -167,7 +167,7 @@
             // 
             label3.Anchor = AnchorStyles.None;
             label3.AutoSize = true;
-            label3.Location = new Point(120, 175);
+            label3.Location = new Point(86, 177);
             label3.Name = "label3";
             label3.Size = new Size(73, 15);
             label3.TabIndex = 29;
@@ -177,7 +177,7 @@
             // 
             label4.Anchor = AnchorStyles.None;
             label4.AutoSize = true;
-            label4.Location = new Point(120, 229);
+            label4.Location = new Point(86, 231);
             label4.Name = "label4";
             label4.Size = new Size(45, 15);
             label4.TabIndex = 30;
@@ -187,7 +187,7 @@
             // 
             genderComboBox.Anchor = AnchorStyles.None;
             genderComboBox.BackColor = Color.Transparent;
-            genderComboBox.CustomizableEdges = customizableEdges5;
+            genderComboBox.CustomizableEdges = customizableEdges11;
             genderComboBox.DrawMode = DrawMode.OwnerDrawFixed;
             genderComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
             genderComboBox.FocusedColor = Color.FromArgb(94, 148, 255);
@@ -195,10 +195,10 @@
             genderComboBox.Font = new Font("Segoe UI", 10F);
             genderComboBox.ForeColor = Color.FromArgb(68, 88, 112);
             genderComboBox.ItemHeight = 18;
-            genderComboBox.Location = new Point(120, 246);
+            genderComboBox.Location = new Point(86, 248);
             genderComboBox.Margin = new Padding(3, 2, 3, 2);
             genderComboBox.Name = "genderComboBox";
-            genderComboBox.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            genderComboBox.ShadowDecoration.CustomizableEdges = customizableEdges12;
             genderComboBox.Size = new Size(335, 24);
             genderComboBox.TabIndex = 31;
             genderComboBox.SelectedIndexChanged += genderComboBox_SelectedIndexChanged;
@@ -206,7 +206,7 @@
             // contactTxt
             // 
             contactTxt.Anchor = AnchorStyles.None;
-            contactTxt.Location = new Point(120, 305);
+            contactTxt.Location = new Point(86, 307);
             contactTxt.Margin = new Padding(3, 2, 3, 2);
             contactTxt.Name = "contactTxt";
             contactTxt.Size = new Size(335, 23);
@@ -215,7 +215,7 @@
             // emailTxt
             // 
             emailTxt.Anchor = AnchorStyles.None;
-            emailTxt.Location = new Point(120, 412);
+            emailTxt.Location = new Point(86, 414);
             emailTxt.Margin = new Padding(3, 2, 3, 2);
             emailTxt.Name = "emailTxt";
             emailTxt.Size = new Size(335, 23);
@@ -225,7 +225,7 @@
             // 
             label6.Anchor = AnchorStyles.None;
             label6.AutoSize = true;
-            label6.Location = new Point(120, 338);
+            label6.Location = new Point(86, 340);
             label6.Name = "label6";
             label6.Size = new Size(79, 15);
             label6.TabIndex = 36;
@@ -235,7 +235,7 @@
             // 
             dobPicker.Anchor = AnchorStyles.None;
             dobPicker.Format = DateTimePickerFormat.Short;
-            dobPicker.Location = new Point(121, 193);
+            dobPicker.Location = new Point(87, 195);
             dobPicker.Margin = new Padding(3, 2, 3, 2);
             dobPicker.Name = "dobPicker";
             dobPicker.Size = new Size(335, 23);
@@ -246,7 +246,7 @@
             label9.Anchor = AnchorStyles.None;
             label9.AutoSize = true;
             label9.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label9.Location = new Point(3, 9);
+            label9.Location = new Point(12, 21);
             label9.Name = "label9";
             label9.Size = new Size(196, 19);
             label9.TabIndex = 42;
@@ -257,7 +257,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(700, 538);
+            ClientSize = new Size(517, 538);
             Controls.Add(btnRegister);
             Controls.Add(label9);
             Controls.Add(dobPicker);
