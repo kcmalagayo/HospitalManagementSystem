@@ -43,10 +43,10 @@
             // 
             label2.Anchor = AnchorStyles.None;
             label2.AutoSize = true;
-            label2.Font = new Font("Arial", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(30, 34);
+            label2.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(34, 34);
             label2.Name = "label2";
-            label2.Size = new Size(152, 24);
+            label2.Size = new Size(214, 35);
             label2.TabIndex = 41;
             label2.Text = "Appointments";
             label2.TextAlign = ContentAlignment.MiddleCenter;
@@ -55,9 +55,11 @@
             // 
             dataGridView1.Anchor = AnchorStyles.None;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(30, 134);
+            dataGridView1.Location = new Point(34, 179);
+            dataGridView1.Margin = new Padding(3, 4, 3, 4);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(741, 313);
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.Size = new Size(847, 417);
             dataGridView1.TabIndex = 44;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -73,12 +75,13 @@
             AppointmentSearchTxt.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             AppointmentSearchTxt.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             AppointmentSearchTxt.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            AppointmentSearchTxt.Location = new Point(30, 72);
+            AppointmentSearchTxt.Location = new Point(34, 96);
+            AppointmentSearchTxt.Margin = new Padding(3, 5, 3, 5);
             AppointmentSearchTxt.Name = "AppointmentSearchTxt";
             AppointmentSearchTxt.PlaceholderText = "Search Appointments";
             AppointmentSearchTxt.SelectedText = "";
             AppointmentSearchTxt.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            AppointmentSearchTxt.Size = new Size(530, 36);
+            AppointmentSearchTxt.Size = new Size(606, 48);
             AppointmentSearchTxt.TabIndex = 43;
             AppointmentSearchTxt.TextChanged += AppointmentSearchTxt_TextChanged;
             // 
@@ -92,28 +95,28 @@
             guna2Button2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             guna2Button2.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             guna2Button2.FillColor = Color.MediumSeaGreen;
-            guna2Button2.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2Button2.Font = new Font("Arial", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2Button2.ForeColor = Color.Black;
-            guna2Button2.Location = new Point(585, 72);
-            guna2Button2.Margin = new Padding(3, 2, 3, 2);
+            guna2Button2.Location = new Point(700, 96);
             guna2Button2.Name = "guna2Button2";
             guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2Button2.Size = new Size(158, 36);
+            guna2Button2.Size = new Size(181, 48);
             guna2Button2.TabIndex = 42;
             guna2Button2.Text = "Record";
             guna2Button2.Click += guna2Button2_Click;
             // 
             // PatientViewAppointment
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 455);
+            ClientSize = new Size(914, 607);
             Controls.Add(label2);
             Controls.Add(dataGridView1);
             Controls.Add(AppointmentSearchTxt);
             Controls.Add(guna2Button2);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "PatientViewAppointment";
-            Text = "PatientViewAppointment";
+            Text = "Appointments";
             Load += PatientViewAppointment_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
