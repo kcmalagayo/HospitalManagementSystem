@@ -89,7 +89,7 @@ namespace HospitalManagementSystem.View
 
                 }
             }
-            else
+            else if (selectRoleComboBox.SelectedItem.ToString() == "Doctor")//condition for doctor role
             {
                 if (authController.Login(email, password, "Doctor", out object user))
                 {

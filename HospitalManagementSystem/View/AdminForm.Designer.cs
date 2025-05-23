@@ -44,6 +44,9 @@
             bookAppointmentBtn = new Guna.UI2.WinForms.Guna2Button();
             logOutBtn = new Guna.UI2.WinForms.Guna2Button();
             panel1 = new Panel();
+            pictureBox1 = new PictureBox();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // manageDoctorBtn
@@ -55,7 +58,7 @@
             manageDoctorBtn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             manageDoctorBtn.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             manageDoctorBtn.FillColor = Color.MediumSeaGreen;
-            manageDoctorBtn.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            manageDoctorBtn.Font = new Font("Arial", 12.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             manageDoctorBtn.ForeColor = Color.Black;
             manageDoctorBtn.Image = Properties.Resources.doctor;
             manageDoctorBtn.ImageAlign = HorizontalAlignment.Left;
@@ -67,6 +70,7 @@
             manageDoctorBtn.TabIndex = 0;
             manageDoctorBtn.Text = "Manage Doctor";
             manageDoctorBtn.TextAlign = HorizontalAlignment.Right;
+            manageDoctorBtn.TextOffset = new Point(-9, 0);
             manageDoctorBtn.Click += manageDoctorBtn_Click;
             // 
             // label1
@@ -88,7 +92,7 @@
             managePatientBtn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             managePatientBtn.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             managePatientBtn.FillColor = Color.MediumSeaGreen;
-            managePatientBtn.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            managePatientBtn.Font = new Font("Arial", 12.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             managePatientBtn.ForeColor = Color.Black;
             managePatientBtn.Image = Properties.Resources.patient;
             managePatientBtn.ImageAlign = HorizontalAlignment.Left;
@@ -100,7 +104,7 @@
             managePatientBtn.TabIndex = 2;
             managePatientBtn.Text = "Manage Patient";
             managePatientBtn.TextAlign = HorizontalAlignment.Left;
-            managePatientBtn.TextOffset = new Point(7, 0);
+            managePatientBtn.TextOffset = new Point(8, 0);
             managePatientBtn.Click += managePatientBtn_Click;
             // 
             // bookAppointmentBtn
@@ -132,27 +136,39 @@
             logOutBtn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             logOutBtn.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             logOutBtn.FillColor = Color.MediumSeaGreen;
-            logOutBtn.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            logOutBtn.Font = new Font("Arial", 12.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             logOutBtn.ForeColor = Color.Black;
             logOutBtn.Image = Properties.Resources.exit;
             logOutBtn.ImageAlign = HorizontalAlignment.Left;
+            logOutBtn.ImageOffset = new Point(4, 0);
             logOutBtn.Location = new Point(25, 340);
             logOutBtn.Name = "logOutBtn";
             logOutBtn.ShadowDecoration.CustomizableEdges = customizableEdges8;
             logOutBtn.Size = new Size(202, 45);
             logOutBtn.TabIndex = 4;
             logOutBtn.Text = "Log Out ";
-            logOutBtn.TextOffset = new Point(-15, 0);
+            logOutBtn.TextOffset = new Point(-13, 0);
             logOutBtn.Click += logOutBtn_Click;
             // 
             // panel1
             // 
             panel1.Anchor = AnchorStyles.None;
+            panel1.Controls.Add(pictureBox1);
             panel1.Location = new Point(283, 41);
             panel1.Name = "panel1";
             panel1.Size = new Size(1035, 610);
             panel1.TabIndex = 5;
             panel1.Paint += panel1_Paint;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.Work_time_amico;
+            pictureBox1.Location = new Point(16, 16);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(1007, 576);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
             // 
             // AdminForm
             // 
@@ -169,6 +185,8 @@
             Name = "AdminForm";
             Text = "   ";
             Load += AdminForm_Load;
+            panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -182,5 +200,6 @@
         private Guna.UI2.WinForms.Guna2Button bookAppointmentBtn;
         private Guna.UI2.WinForms.Guna2Button logOutBtn;
         private Panel panel1;
+        private PictureBox pictureBox1;
     }
 }

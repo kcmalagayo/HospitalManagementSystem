@@ -149,13 +149,13 @@
             logOutBtn.FillColor = Color.MediumSeaGreen;
             logOutBtn.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             logOutBtn.ForeColor = Color.Black;
-            logOutBtn.Location = new Point(31, 303);
+            logOutBtn.Location = new Point(31, 251);
             logOutBtn.Name = "logOutBtn";
             logOutBtn.ShadowDecoration.CustomizableEdges = customizableEdges8;
             logOutBtn.Size = new Size(180, 45);
             logOutBtn.TabIndex = 33;
             logOutBtn.Text = "Log Out ";
-            //logOutBtn.Click += logOutBtn_Click;
+            logOutBtn.Click += logOutBtn_Click;
             // 
             // comboBox1
             // 
@@ -180,7 +180,6 @@
             Controls.Add(logOutBtn);
             Name = "DoctorForm";
             Text = "DoctorForm";
-           // Load += DoctorForm_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();

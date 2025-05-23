@@ -246,7 +246,7 @@
             label9.Anchor = AnchorStyles.None;
             label9.AutoSize = true;
             label9.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label9.Location = new Point(459, 13);
+            label9.Location = new Point(3, 9);
             label9.Name = "label9";
             label9.Size = new Size(196, 19);
             label9.TabIndex = 42;
