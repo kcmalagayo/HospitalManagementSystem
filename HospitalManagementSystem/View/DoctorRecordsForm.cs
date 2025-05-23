@@ -19,7 +19,7 @@ namespace HospitalManagementSystem.View
         public DoctorRecordsForm()
         {
             InitializeComponent();
-            _db = new Database();          
+            _db = new Database();
             LoadPreviousAppointments();
 
             AppointmentSearchTxt.TextChanged += AppointmentSearchTxt_TextChanged;
@@ -58,6 +58,11 @@ namespace HospitalManagementSystem.View
             this.Hide();
             DoctorForm doctorForm = new DoctorForm();
             doctorForm.Show();
+        }
+
+        private void logOutBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

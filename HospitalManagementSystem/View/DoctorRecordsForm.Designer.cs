@@ -82,19 +82,19 @@
             logOutBtn.FillColor = Color.MediumSeaGreen;
             logOutBtn.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             logOutBtn.ForeColor = Color.Black;
-            logOutBtn.Location = new Point(27, 302);
+            logOutBtn.Location = new Point(27, 242);
             logOutBtn.Name = "logOutBtn";
             logOutBtn.ShadowDecoration.CustomizableEdges = customizableEdges4;
             logOutBtn.Size = new Size(180, 45);
             logOutBtn.TabIndex = 15;
             logOutBtn.Text = "Log Out ";
-           // logOutBtn.Click += logOutBtn_Click;
+            logOutBtn.Click += logOutBtn_Click;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Arial", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(267, 55);
+            label2.Location = new Point(267, 22);
             label2.Name = "label2";
             label2.Size = new Size(231, 24);
             label2.TabIndex = 29;
@@ -109,7 +109,6 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(741, 313);
             dataGridView1.TabIndex = 32;
-          //  dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // AppointmentSearchTxt
             // 
@@ -123,12 +122,12 @@
             AppointmentSearchTxt.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             AppointmentSearchTxt.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             AppointmentSearchTxt.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            AppointmentSearchTxt.Location = new Point(295, 97);
+            AppointmentSearchTxt.Location = new Point(267, 108);
             AppointmentSearchTxt.Name = "AppointmentSearchTxt";
             AppointmentSearchTxt.PlaceholderText = "Search Appointment";
             AppointmentSearchTxt.SelectedText = "";
             AppointmentSearchTxt.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            AppointmentSearchTxt.Size = new Size(530, 36);
+            AppointmentSearchTxt.Size = new Size(514, 36);
             AppointmentSearchTxt.TabIndex = 31;
             AppointmentSearchTxt.TextChanged += AppointmentSearchTxt_TextChanged;
             // 
@@ -145,7 +144,6 @@
             Controls.Add(logOutBtn);
             Name = "DoctorRecordsForm";
             Text = "DoctorRecordsForm";
-           // Load += DoctorRecordsForm_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
