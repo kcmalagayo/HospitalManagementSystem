@@ -55,7 +55,7 @@
             manageDoctorBtn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             manageDoctorBtn.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             manageDoctorBtn.FillColor = Color.MediumSeaGreen;
-            manageDoctorBtn.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            manageDoctorBtn.Font = new Font("Arial", 12.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             manageDoctorBtn.ForeColor = Color.Black;
             manageDoctorBtn.Image = Properties.Resources.doctor;
             manageDoctorBtn.ImageAlign = HorizontalAlignment.Left;
@@ -67,6 +67,7 @@
             manageDoctorBtn.TabIndex = 0;
             manageDoctorBtn.Text = "Manage Doctor";
             manageDoctorBtn.TextAlign = HorizontalAlignment.Right;
+            manageDoctorBtn.TextOffset = new Point(-9, 0);
             manageDoctorBtn.Click += manageDoctorBtn_Click;
             // 
             // label1
@@ -88,7 +89,7 @@
             managePatientBtn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             managePatientBtn.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             managePatientBtn.FillColor = Color.MediumSeaGreen;
-            managePatientBtn.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            managePatientBtn.Font = new Font("Arial", 12.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             managePatientBtn.ForeColor = Color.Black;
             managePatientBtn.Image = Properties.Resources.patient;
             managePatientBtn.ImageAlign = HorizontalAlignment.Left;
@@ -100,7 +101,7 @@
             managePatientBtn.TabIndex = 2;
             managePatientBtn.Text = "Manage Patient";
             managePatientBtn.TextAlign = HorizontalAlignment.Left;
-            managePatientBtn.TextOffset = new Point(7, 0);
+            managePatientBtn.TextOffset = new Point(8, 0);
             managePatientBtn.Click += managePatientBtn_Click;
             // 
             // bookAppointmentBtn
@@ -132,17 +133,18 @@
             logOutBtn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             logOutBtn.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             logOutBtn.FillColor = Color.MediumSeaGreen;
-            logOutBtn.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            logOutBtn.Font = new Font("Arial", 12.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             logOutBtn.ForeColor = Color.Black;
             logOutBtn.Image = Properties.Resources.exit;
             logOutBtn.ImageAlign = HorizontalAlignment.Left;
+            logOutBtn.ImageOffset = new Point(4, 0);
             logOutBtn.Location = new Point(25, 340);
             logOutBtn.Name = "logOutBtn";
             logOutBtn.ShadowDecoration.CustomizableEdges = customizableEdges8;
             logOutBtn.Size = new Size(202, 45);
             logOutBtn.TabIndex = 4;
             logOutBtn.Text = "Log Out ";
-            logOutBtn.TextOffset = new Point(-15, 0);
+            logOutBtn.TextOffset = new Point(-13, 0);
             logOutBtn.Click += logOutBtn_Click;
             // 
             // panel1
