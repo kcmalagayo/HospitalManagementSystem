@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HospitalManagementSystem.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,12 @@ namespace HospitalManagementSystem.View
         public AdminForm()
         {
             InitializeComponent();
+            MessageBox.Show("Welcome, Admin !",
+                            "Login Successful",
+                             MessageBoxButtons.OK,
+                             MessageBoxIcon.Information);
+
+
         }
 
         private void OpenFormInPanel(Form form)//method to open form in panel 
