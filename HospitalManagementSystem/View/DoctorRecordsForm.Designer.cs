@@ -120,6 +120,7 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(741, 313);
             dataGridView1.TabIndex = 32;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // AppointmentSearchTxt
             // 

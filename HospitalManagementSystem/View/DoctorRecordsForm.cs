@@ -81,5 +81,10 @@ namespace HospitalManagementSystem.View
                 MessageBox.Show("Logout cancelled.", "Action Cancelled");
             }
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
