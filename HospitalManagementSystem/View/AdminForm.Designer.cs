@@ -45,6 +45,7 @@
             logOutBtn = new Guna.UI2.WinForms.Guna2Button();
             panel1 = new Panel();
             pictureBox1 = new PictureBox();
+            panel2 = new Panel();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -152,23 +153,32 @@
             // 
             // panel1
             // 
-            panel1.Anchor = AnchorStyles.None;
             panel1.Controls.Add(pictureBox1);
-            panel1.Location = new Point(283, 41);
+            panel1.Dock = DockStyle.Fill;
+            panel1.Location = new Point(289, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1035, 610);
+            panel1.Size = new Size(1041, 677);
             panel1.TabIndex = 5;
             panel1.Paint += panel1_Paint;
             // 
             // pictureBox1
             // 
+            pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             pictureBox1.Image = Properties.Resources.Work_time_amico;
             pictureBox1.Location = new Point(16, 16);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(1007, 576);
+            pictureBox1.Size = new Size(1013, 576);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
+            // 
+            // panel2
+            // 
+            panel2.Dock = DockStyle.Left;
+            panel2.Location = new Point(0, 0);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(289, 677);
+            panel2.TabIndex = 6;
             // 
             // AdminForm
             // 
@@ -181,6 +191,7 @@
             Controls.Add(managePatientBtn);
             Controls.Add(label1);
             Controls.Add(manageDoctorBtn);
+            Controls.Add(panel2);
             MinimizeBox = false;
             Name = "AdminForm";
             Text = "   ";
@@ -201,5 +212,6 @@
         private Guna.UI2.WinForms.Guna2Button logOutBtn;
         private Panel panel1;
         private PictureBox pictureBox1;
+        private Panel panel2;
     }
 }

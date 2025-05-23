@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             label1 = new Label();
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             logOutBtn = new Guna.UI2.WinForms.Guna2Button();
@@ -56,7 +56,7 @@
             // 
             // guna2Button1
             // 
-            guna2Button1.CustomizableEdges = customizableEdges1;
+            guna2Button1.CustomizableEdges = customizableEdges7;
             guna2Button1.DisabledState.BorderColor = Color.DarkGray;
             guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
             guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -69,7 +69,7 @@
             guna2Button1.ImageSize = new Size(30, 30);
             guna2Button1.Location = new Point(31, 237);
             guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges8;
             guna2Button1.Size = new Size(180, 45);
             guna2Button1.TabIndex = 16;
             guna2Button1.Text = "Appointment";
@@ -79,7 +79,7 @@
             // 
             // logOutBtn
             // 
-            logOutBtn.CustomizableEdges = customizableEdges3;
+            logOutBtn.CustomizableEdges = customizableEdges9;
             logOutBtn.DisabledState.BorderColor = Color.DarkGray;
             logOutBtn.DisabledState.CustomBorderColor = Color.DarkGray;
             logOutBtn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -93,7 +93,7 @@
             logOutBtn.ImageSize = new Size(30, 30);
             logOutBtn.Location = new Point(31, 297);
             logOutBtn.Name = "logOutBtn";
-            logOutBtn.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            logOutBtn.ShadowDecoration.CustomizableEdges = customizableEdges10;
             logOutBtn.Size = new Size(180, 45);
             logOutBtn.TabIndex = 15;
             logOutBtn.Text = "Log Out ";
@@ -105,7 +105,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Arial", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(273, 31);
+            label2.Location = new Point(273, 47);
             label2.Name = "label2";
             label2.Size = new Size(231, 24);
             label2.TabIndex = 29;
@@ -116,15 +116,15 @@
             // 
             dataGridView1.Anchor = AnchorStyles.None;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(273, 179);
+            dataGridView1.Location = new Point(273, 170);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(741, 313);
+            dataGridView1.Size = new Size(741, 346);
             dataGridView1.TabIndex = 32;
             // 
             // AppointmentSearchTxt
             // 
             AppointmentSearchTxt.Anchor = AnchorStyles.None;
-            AppointmentSearchTxt.CustomizableEdges = customizableEdges5;
+            AppointmentSearchTxt.CustomizableEdges = customizableEdges11;
             AppointmentSearchTxt.DefaultText = "";
             AppointmentSearchTxt.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             AppointmentSearchTxt.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -137,7 +137,7 @@
             AppointmentSearchTxt.Name = "AppointmentSearchTxt";
             AppointmentSearchTxt.PlaceholderText = "Search Appointment";
             AppointmentSearchTxt.SelectedText = "";
-            AppointmentSearchTxt.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            AppointmentSearchTxt.ShadowDecoration.CustomizableEdges = customizableEdges12;
             AppointmentSearchTxt.Size = new Size(741, 36);
             AppointmentSearchTxt.TabIndex = 31;
             AppointmentSearchTxt.TextChanged += AppointmentSearchTxt_TextChanged;
