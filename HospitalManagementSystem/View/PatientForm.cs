@@ -19,14 +19,51 @@ namespace HospitalManagementSystem.View
     {
         private HospitalManagementSystem.Data.Database database;
         private readonly DoctorController doctorController;
+        private System.Windows.Forms.ComboBox timeSlotDropDown;
+
         public PatientForm()
         {
             InitializeComponent();
             var database = new Database();
             doctorController = new DoctorController(database);
-
+            timeSlotDropDown = new ComboBox();
+            timeSlotDropDown.DropDownStyle = ComboBoxStyle.DropDownList;
+            timeSlotDropDown.Font = new Font("Segoe UI", 9F);
+            timeSlotDropDown.Location = new Point(12, 185);  // Adjust position if needed
+            timeSlotDropDown.Name = "timeSlotDropDown";
+            timeSlotDropDown.Size = new Size(301, 25);
+            panel1.Controls.Add(timeSlotDropDown);
             LoadSpecializations();
             LoadDoctors();
+        }
+        private void LoadTimeSlots()
+        {
+            timeSlotDropDown.Items.Clear();
+
+            for (int hour = 8; hour <= 18; hour++) // 8 AM to 6 PM
+            {
+                timeSlotDropDown.Items.Add($"{hour:00}:00");
+                timeSlotDropDown.Items.Add($"{hour:00}:30");
+            }
+
+            timeSlotDropDown.SelectedIndex = 0;
+        }
+        private bool IsAppointmentSlotTaken(int doctorId, DateTime appointmentDateTime)
+        {
+            var db = new Database();
+            var conn = db.GetConnection();
+
+            string query = @"SELECT COUNT(*) FROM Appointment 
+                     WHERE DoctorID = @DoctorID AND AppointmentDateTime = @AppointmentDateTime";
+
+            using (var cmd = new SQLiteCommand(query, conn))
+            {
+                cmd.Parameters.AddWithValue("@DoctorID", doctorId);
+                cmd.Parameters.AddWithValue("@AppointmentDateTime", appointmentDateTime.ToString("yyyy-MM-dd HH:mm:ss"));
+
+                int count = Convert.ToInt32(cmd.ExecuteScalar());
+                return count > 0;
+            }
         }
         private void LoadSpecializations()
         {
@@ -56,19 +93,17 @@ namespace HospitalManagementSystem.View
 
         private void PatientForm_Load(object sender, EventArgs e)
         {
+            guna2DateTimePicker1.Format = DateTimePickerFormat.Custom;
+            guna2DateTimePicker1.CustomFormat = "MM/dd/yyyy";
+            guna2DateTimePicker1.ShowUpDown = false;
 
+            LoadTimeSlots();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
-        }
-
-        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
-        {
-
-        }
-
+        }       
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -76,29 +111,53 @@ namespace HospitalManagementSystem.View
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            if (dataGridView2.SelectedRows.Count > 0)
+            if (dataGridView2.SelectedRows.Count == 0)
             {
-                var selectedRow = dataGridView2.SelectedRows[0];
-                int doctorId = Convert.ToInt32(selectedRow.Cells["DoctorID"].Value);
-                string firstName = selectedRow.Cells["FirstName"].Value.ToString();
-                string lastName = selectedRow.Cells["LastName"].Value.ToString();
-                DateTime selectedDate = monthCalendar1.SelectionStart;
-
-                // Call Controller to Save
-                bool isSaved = doctorController.SaveAppointment(doctorId, selectedDate);
-
-                if (isSaved)
-                {
-                    MessageBox.Show($"You have booked an appointment with Dr. {firstName} {lastName} on {selectedDate}.", "Booking Confirmed");
-                }
-                else
-                {
-                    MessageBox.Show("Failed to save the appointment. Please try again.", "Error");
-                }
+                MessageBox.Show("Please select a doctor before booking.");
+                return;
             }
-            else
+
+            if (timeSlotDropDown.SelectedItem == null)
             {
-                MessageBox.Show("Please select a doctor to book an appointment.", "Error");
+                MessageBox.Show("Please select a time slot.");
+                return;
+            }
+
+            int doctorId = Convert.ToInt32(dataGridView2.SelectedRows[0].Cells["DoctorID"].Value);
+            DateTime selectedDate = guna2DateTimePicker1.Value.Date;
+            TimeSpan selectedTime = TimeSpan.Parse(timeSlotDropDown.SelectedItem.ToString());
+            DateTime appointmentDateTime = selectedDate + selectedTime;
+
+            // Prevent double booking
+            if (IsAppointmentSlotTaken(doctorId, appointmentDateTime))
+            {
+                MessageBox.Show("This time slot is already booked. Please choose another.");
+                return;
+            }
+
+            try
+            {
+                var db = new Database();
+                var conn = db.GetConnection();
+
+                string query = @"INSERT INTO Appointment (PatientID, DoctorID, AppointmentDateTime, Status)
+                         VALUES (@PatientID, @DoctorID, @AppointmentDateTime, @Status)";
+
+                using (var cmd = new SQLiteCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@PatientID", 1); // Replace with actual patient ID
+                    cmd.Parameters.AddWithValue("@DoctorID", doctorId);
+                    cmd.Parameters.AddWithValue("@AppointmentDateTime", appointmentDateTime.ToString("yyyy-MM-dd HH:mm:ss"));
+                    cmd.Parameters.AddWithValue("@Status", "Pending");
+
+                    cmd.ExecuteNonQuery();
+                }
+
+                MessageBox.Show("Appointment booked successfully!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
             }
         }
 

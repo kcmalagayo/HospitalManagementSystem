@@ -49,14 +49,20 @@
             logOutBtn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             logOutBtn.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             logOutBtn.FillColor = Color.MediumSeaGreen;
-            logOutBtn.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            logOutBtn.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             logOutBtn.ForeColor = Color.Black;
-            logOutBtn.Location = new Point(28, 256);
+            logOutBtn.Image = Properties.Resources.exit;
+            logOutBtn.ImageAlign = HorizontalAlignment.Left;
+            logOutBtn.ImageOffset = new Point(5, 0);
+            logOutBtn.ImageSize = new Size(25, 25);
+            logOutBtn.Location = new Point(34, 357);
             logOutBtn.Name = "logOutBtn";
             logOutBtn.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            logOutBtn.Size = new Size(180, 45);
+            logOutBtn.Size = new Size(199, 45);
             logOutBtn.TabIndex = 5;
             logOutBtn.Text = "Log Out ";
+            logOutBtn.TextAlign = HorizontalAlignment.Right;
+            logOutBtn.TextOffset = new Point(-28, 0);
             logOutBtn.Click += logOutBtn_Click;
             // 
             // guna2Button1
@@ -67,14 +73,18 @@
             guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             guna2Button1.FillColor = Color.MediumSeaGreen;
-            guna2Button1.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2Button1.Font = new Font("Arial", 12.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2Button1.ForeColor = Color.Black;
-            guna2Button1.Location = new Point(28, 127);
+            guna2Button1.Image = Properties.Resources.appointment;
+            guna2Button1.ImageAlign = HorizontalAlignment.Left;
+            guna2Button1.ImageSize = new Size(30, 30);
+            guna2Button1.Location = new Point(34, 228);
             guna2Button1.Name = "guna2Button1";
             guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2Button1.Size = new Size(180, 45);
+            guna2Button1.Size = new Size(199, 49);
             guna2Button1.TabIndex = 6;
             guna2Button1.Text = "Book Appointment";
+            guna2Button1.TextAlign = HorizontalAlignment.Right;
             guna2Button1.Click += guna2Button1_Click;
             // 
             // guna2Button2
@@ -85,44 +95,51 @@
             guna2Button2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             guna2Button2.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             guna2Button2.FillColor = Color.MediumSeaGreen;
-            guna2Button2.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2Button2.Font = new Font("Arial", 12.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2Button2.ForeColor = Color.Black;
-            guna2Button2.Location = new Point(28, 193);
+            guna2Button2.Image = Properties.Resources.clipboard;
+            guna2Button2.ImageAlign = HorizontalAlignment.Left;
+            guna2Button2.ImageSize = new Size(30, 30);
+            guna2Button2.Location = new Point(34, 293);
             guna2Button2.Name = "guna2Button2";
             guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2Button2.Size = new Size(180, 45);
+            guna2Button2.Size = new Size(199, 45);
             guna2Button2.TabIndex = 7;
             guna2Button2.Text = "View Appointments";
+            guna2Button2.TextAlign = HorizontalAlignment.Right;
+            guna2Button2.TextOffset = new Point(3, 0);
+            guna2Button2.Click += guna2Button2_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Arial", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(39, 44);
+            label1.Font = new Font("Arial", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(24, 91);
             label1.Name = "label1";
-            label1.Size = new Size(160, 48);
+            label1.Size = new Size(248, 74);
             label1.TabIndex = 8;
             label1.Text = "Hospital Name \r\nand Logo";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // panel1
             // 
-            panel1.Location = new Point(249, 32);
+            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            panel1.AutoSize = true;
+            panel1.Location = new Point(318, 31);
             panel1.Name = "panel1";
-            panel1.Size = new Size(783, 416);
+            panel1.Size = new Size(922, 618);
             panel1.TabIndex = 9;
             // 
             // PatientDashboardForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1073, 493);
+            ClientSize = new Size(1296, 701);
             Controls.Add(panel1);
             Controls.Add(label1);
             Controls.Add(guna2Button2);
             Controls.Add(guna2Button1);
             Controls.Add(logOutBtn);
-            MaximizeBox = false;
             Name = "PatientDashboardForm";
             Text = "Patient Form";
             Load += PatientDashboardForm_Load;

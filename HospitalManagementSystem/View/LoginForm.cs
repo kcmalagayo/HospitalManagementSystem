@@ -10,11 +10,14 @@ using System.Windows.Forms;
 using HospitalManagementSystem.Controller;
 using HospitalManagementSystem.Model;
 using HospitalManagementSystem.Data;
+using HospitalManagementSystem.View;
+
 
 namespace HospitalManagementSystem.View
 {
     public partial class LoginForm : Form
     {
+        
         public LoginForm()
         {
             InitializeComponent();
@@ -35,15 +38,11 @@ namespace HospitalManagementSystem.View
             string email = emailTextBox.Text.Trim();
             string password = passwordTextBox.Text.Trim();
 
-
-
             var db = new Database();
             var authController = new AuthController(db);
 
-
-            if (selectRoleComboBox.SelectedItem.ToString() == "Admin")//condition for admin role
+            if (selectRoleComboBox.SelectedItem.ToString() == "Admin")
             {
-
                 if (authController.Login(email, password, "Admin", out object user))
                 {
                     Admin admin = user as Admin;
@@ -54,7 +53,7 @@ namespace HospitalManagementSystem.View
 
                     AdminForm adminForm = new AdminForm();
                     adminForm.Show();
-                    this.Hide(); // Hide the login form 
+                    this.Hide();
                 }
                 else
                 {
@@ -62,23 +61,24 @@ namespace HospitalManagementSystem.View
                                     "Login Failed",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Error);
-
                 }
-
             }
-            else if (selectRoleComboBox.SelectedItem.ToString() == "Patient")//condition for patient role
+            else if (selectRoleComboBox.SelectedItem.ToString() == "Patient")
             {
                 if (authController.Login(email, password, "Patient", out object user))
                 {
                     Patient patient = user as Patient;
+                    int patientId = patient.PatientID;
+
                     MessageBox.Show("Welcome, Patient " + patient.FirstName + "!",
                                     "Login Successful",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Information);
 
-                    PatientDashboardForm patientDashForm = new PatientDashboardForm();
-                    patientDashForm.Show();
-                    this.Hide(); // Hide the login form 
+                    //  Open the PatientViewAppointments screen with the correct ID
+                    PatientDashboardForm viewForm = new PatientDashboardForm(patientId);
+                    viewForm.Show();
+                    this.Hide();
                 }
                 else
                 {
@@ -86,15 +86,29 @@ namespace HospitalManagementSystem.View
                                     "Login Failed",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Error);
-
                 }
             }
-            else
+            else if (selectRoleComboBox.SelectedItem.ToString() == "Doctor")
             {
-                MessageBox.Show("Doctor role coming soon!. ",
-                                   "Please try other role for now",
-                                   MessageBoxButtons.OK,
-                                   MessageBoxIcon.Information);
+                if (authController.Login(email, password, "Doctor", out object user))
+                {
+                    Doctor doctor = user as Doctor;
+                    MessageBox.Show("Welcome, Doctor " + doctor.FirstName + "!",
+                                    "Login Successful",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Information);
+
+                    DoctorForm doctorForm = new DoctorForm();
+                    doctorForm.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Invalid email or password!",
+                                    "Login Failed",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -105,16 +119,17 @@ namespace HospitalManagementSystem.View
 
         private void showPasswordCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            if (showPasswordCheckBox.Checked)
-            {
-                // Show the password
-                passwordTextBox.PasswordChar = '\0'; // removes masking
-            }
-            else
-            {
-                // Hide the password
-                passwordTextBox.PasswordChar = '*'; // use single quotes for char
-            }
+            passwordTextBox.PasswordChar = showPasswordCheckBox.Checked ? '\0' : '*';
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

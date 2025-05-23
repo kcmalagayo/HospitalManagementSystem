@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             btnRegister = new Guna.UI2.WinForms.Guna2Button();
             label9 = new Label();
             label7 = new Label();
@@ -44,7 +44,7 @@
             // 
             // btnRegister
             // 
-            btnRegister.CustomizableEdges = customizableEdges1;
+            btnRegister.CustomizableEdges = customizableEdges3;
             btnRegister.DisabledState.BorderColor = Color.DarkGray;
             btnRegister.DisabledState.CustomBorderColor = Color.DarkGray;
             btnRegister.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -55,7 +55,7 @@
             btnRegister.Location = new Point(73, 268);
             btnRegister.Margin = new Padding(3, 2, 3, 2);
             btnRegister.Name = "btnRegister";
-            btnRegister.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnRegister.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnRegister.Size = new Size(334, 42);
             btnRegister.TabIndex = 63;
             btnRegister.Text = "Register Admin";
@@ -63,9 +63,10 @@
             // 
             // label9
             // 
+            label9.Anchor = AnchorStyles.None;
             label9.AutoSize = true;
             label9.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label9.Location = new Point(511, 17);
+            label9.Location = new Point(15, 23);
             label9.Name = "label9";
             label9.Size = new Size(192, 19);
             label9.TabIndex = 61;
@@ -126,6 +127,7 @@
             // 
             // registerPanelDoctor
             // 
+            registerPanelDoctor.Anchor = AnchorStyles.None;
             registerPanelDoctor.Controls.Add(label7);
             registerPanelDoctor.Controls.Add(btnRegister);
             registerPanelDoctor.Controls.Add(label1);
@@ -133,7 +135,7 @@
             registerPanelDoctor.Controls.Add(firstNameTxt);
             registerPanelDoctor.Controls.Add(emailTxt);
             registerPanelDoctor.Controls.Add(lastNameTxt);
-            registerPanelDoctor.Location = new Point(96, 54);
+            registerPanelDoctor.Location = new Point(15, 65);
             registerPanelDoctor.Margin = new Padding(3, 2, 3, 2);
             registerPanelDoctor.Name = "registerPanelDoctor";
             registerPanelDoctor.Size = new Size(495, 348);
@@ -143,7 +145,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(715, 454);
+            ClientSize = new Size(531, 454);
             Controls.Add(label9);
             Controls.Add(registerPanelDoctor);
             MaximizeBox = false;
