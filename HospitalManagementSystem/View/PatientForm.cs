@@ -62,13 +62,7 @@ namespace HospitalManagementSystem.View
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
-        }
-
-        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
-        {
-
-        }
-
+        }       
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -76,30 +70,7 @@ namespace HospitalManagementSystem.View
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            if (dataGridView2.SelectedRows.Count > 0)
-            {
-                var selectedRow = dataGridView2.SelectedRows[0];
-                int doctorId = Convert.ToInt32(selectedRow.Cells["DoctorID"].Value);
-                string firstName = selectedRow.Cells["FirstName"].Value.ToString();
-                string lastName = selectedRow.Cells["LastName"].Value.ToString();
-                DateTime selectedDate = monthCalendar1.SelectionStart;
-
-                // Call Controller to Save
-                bool isSaved = doctorController.SaveAppointment(doctorId, selectedDate);
-
-                if (isSaved)
-                {
-                    MessageBox.Show($"You have booked an appointment with Dr. {firstName} {lastName} on {selectedDate}.", "Booking Confirmed");
-                }
-                else
-                {
-                    MessageBox.Show("Failed to save the appointment. Please try again.", "Error");
-                }
-            }
-            else
-            {
-                MessageBox.Show("Please select a doctor to book an appointment.", "Error");
-            }
+            
         }
 
         private void doctorSearchTxt_TextChanged(object sender, EventArgs e)
