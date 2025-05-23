@@ -7,14 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using HospitalManagementSystem.Model;
 
 namespace HospitalManagementSystem.View
 {
     public partial class PatientDashboardForm : Form
     {
-        public PatientDashboardForm()
+        private int _patientId;
+        public PatientDashboardForm(int patientId)
         {
             InitializeComponent();
+            _patientId = patientId;
+
         }
 
         private void OpenFormInPanel(Form form)
@@ -60,7 +64,8 @@ namespace HospitalManagementSystem.View
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
-
+            PatientViewAppointment va = new PatientViewAppointment(_patientId);
+            OpenFormInPanel(va);
         }
     }
 }
