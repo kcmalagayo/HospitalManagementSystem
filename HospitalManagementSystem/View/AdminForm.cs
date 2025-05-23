@@ -36,6 +36,7 @@ namespace HospitalManagementSystem.View
         {
             ManageDoctorForm mdf = new ManageDoctorForm();
             OpenFormInPanel(mdf);
+            pictureBox1.Hide();
         }
 
         private void AdminForm_Load(object sender, EventArgs e)
