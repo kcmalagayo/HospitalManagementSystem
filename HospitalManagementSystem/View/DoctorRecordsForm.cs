@@ -62,7 +62,24 @@ namespace HospitalManagementSystem.View
 
         private void logOutBtn_Click(object sender, EventArgs e)
         {
+            DialogResult result = MessageBox.Show(
+               "Are you sure you want to log out?",
+               "Logout Confirmation",
+               MessageBoxButtons.YesNo,
+               MessageBoxIcon.Question
+           );
 
+            if (result == DialogResult.Yes)
+            {
+                this.Hide();
+                var loginForm = new LoginForm();
+                loginForm.Show();
+                MessageBox.Show("You have successfully logged out.", "Logout Successful");
+            }
+            else
+            {
+                MessageBox.Show("Logout cancelled.", "Action Cancelled");
+            }
         }
     }
 }
