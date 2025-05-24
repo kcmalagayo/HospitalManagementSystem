@@ -28,22 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panel1 = new Panel();
+            guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             label1 = new Label();
             label6 = new Label();
             doctorSearchTxt = new Guna.UI2.WinForms.Guna2TextBox();
             specializaitionDropBox = new Guna.UI2.WinForms.Guna2ComboBox();
             dataGridView2 = new DataGridView();
-            guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             SuspendLayout();
@@ -58,11 +58,29 @@
             panel1.Controls.Add(doctorSearchTxt);
             panel1.Controls.Add(specializaitionDropBox);
             panel1.Controls.Add(dataGridView2);
-            panel1.Location = new Point(16, 12);
+            panel1.Location = new Point(18, 16);
+            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(783, 431);
+            panel1.Size = new Size(895, 575);
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
+            // 
+            // guna2DateTimePicker1
+            // 
+            guna2DateTimePicker1.Checked = true;
+            guna2DateTimePicker1.CustomizableEdges = customizableEdges1;
+            guna2DateTimePicker1.FillColor = Color.Honeydew;
+            guna2DateTimePicker1.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            guna2DateTimePicker1.Format = DateTimePickerFormat.Long;
+            guna2DateTimePicker1.Location = new Point(13, 142);
+            guna2DateTimePicker1.Margin = new Padding(3, 4, 3, 4);
+            guna2DateTimePicker1.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
+            guna2DateTimePicker1.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
+            guna2DateTimePicker1.Name = "guna2DateTimePicker1";
+            guna2DateTimePicker1.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            guna2DateTimePicker1.Size = new Size(344, 48);
+            guna2DateTimePicker1.TabIndex = 62;
+            guna2DateTimePicker1.Value = new DateTime(2025, 5, 23, 22, 21, 41, 396);
             // 
             // guna2Button1
             // 
@@ -72,12 +90,13 @@
             guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             guna2Button1.FillColor = Color.MediumSeaGreen;
-            guna2Button1.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2Button1.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2Button1.ForeColor = Color.Black;
-            guna2Button1.Location = new Point(69, 316);
+            guna2Button1.Location = new Point(70, 338);
+            guna2Button1.Margin = new Padding(3, 4, 3, 4);
             guna2Button1.Name = "guna2Button1";
             guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2Button1.Size = new Size(180, 45);
+            guna2Button1.Size = new Size(206, 43);
             guna2Button1.TabIndex = 61;
             guna2Button1.Text = "Book Appointment";
             guna2Button1.Click += guna2Button1_Click;
@@ -85,9 +104,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(12, 119);
+            label1.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(14, 118);
             label1.Name = "label1";
-            label1.Size = new Size(83, 15);
+            label1.Size = new Size(97, 17);
             label1.TabIndex = 60;
             label1.Text = "Appointments";
             label1.Click += label1_Click;
@@ -95,14 +115,16 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(12, 24);
+            label6.Font = new Font("Arial Narrow", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label6.Location = new Point(14, 32);
             label6.Name = "label6";
-            label6.Size = new Size(79, 15);
+            label6.Size = new Size(86, 20);
             label6.TabIndex = 58;
             label6.Text = "Specialization";
             // 
             // doctorSearchTxt
             // 
+            doctorSearchTxt.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             doctorSearchTxt.CustomizableEdges = customizableEdges5;
             doctorSearchTxt.DefaultText = "";
             doctorSearchTxt.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -112,12 +134,13 @@
             doctorSearchTxt.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             doctorSearchTxt.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             doctorSearchTxt.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            doctorSearchTxt.Location = new Point(325, 25);
+            doctorSearchTxt.Location = new Point(371, 33);
+            doctorSearchTxt.Margin = new Padding(3, 5, 3, 5);
             doctorSearchTxt.Name = "doctorSearchTxt";
             doctorSearchTxt.PlaceholderText = "Search doctor fields";
             doctorSearchTxt.SelectedText = "";
             doctorSearchTxt.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            doctorSearchTxt.Size = new Size(445, 41);
+            doctorSearchTxt.Size = new Size(509, 55);
             doctorSearchTxt.TabIndex = 21;
             doctorSearchTxt.TextChanged += doctorSearchTxt_TextChanged;
             // 
@@ -132,45 +155,34 @@
             specializaitionDropBox.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             specializaitionDropBox.ForeColor = Color.FromArgb(68, 88, 112);
             specializaitionDropBox.ItemHeight = 18;
-            specializaitionDropBox.Location = new Point(12, 42);
+            specializaitionDropBox.Location = new Point(14, 56);
+            specializaitionDropBox.Margin = new Padding(3, 4, 3, 4);
             specializaitionDropBox.Name = "specializaitionDropBox";
             specializaitionDropBox.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            specializaitionDropBox.Size = new Size(301, 24);
+            specializaitionDropBox.Size = new Size(343, 24);
             specializaitionDropBox.TabIndex = 4;
             specializaitionDropBox.SelectedIndexChanged += specializaitionDropBox_SelectedIndexChanged;
             // 
             // dataGridView2
             // 
+            dataGridView2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Location = new Point(325, 74);
+            dataGridView2.Location = new Point(371, 99);
+            dataGridView2.Margin = new Padding(3, 4, 3, 4);
             dataGridView2.Name = "dataGridView2";
-            dataGridView2.Size = new Size(445, 333);
+            dataGridView2.RowHeadersWidth = 51;
+            dataGridView2.Size = new Size(509, 444);
             dataGridView2.TabIndex = 3;
-            // 
-            // guna2DateTimePicker1
-            // 
-            guna2DateTimePicker1.Checked = true;
-            guna2DateTimePicker1.CustomizableEdges = customizableEdges1;
-            guna2DateTimePicker1.FillColor = Color.Honeydew;
-            guna2DateTimePicker1.Font = new Font("Segoe UI", 9F);
-            guna2DateTimePicker1.Format = DateTimePickerFormat.Long;
-            guna2DateTimePicker1.Location = new Point(12, 137);
-            guna2DateTimePicker1.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
-            guna2DateTimePicker1.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
-            guna2DateTimePicker1.Name = "guna2DateTimePicker1";
-            guna2DateTimePicker1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2DateTimePicker1.Size = new Size(301, 36);
-            guna2DateTimePicker1.TabIndex = 62;
-            guna2DateTimePicker1.Value = new DateTime(2025, 5, 23, 22, 21, 41, 396);
             // 
             // PatientForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(814, 455);
+            ClientSize = new Size(930, 607);
             Controls.Add(panel1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "PatientForm";
-            Text = "PatientForm";
+            Text = "Book Appointment";
             Load += PatientForm_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

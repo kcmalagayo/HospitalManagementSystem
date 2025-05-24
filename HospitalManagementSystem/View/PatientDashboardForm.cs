@@ -55,6 +55,7 @@ namespace HospitalManagementSystem.View
         {
             PatientForm pf = new PatientForm();
             OpenFormInPanel(pf);
+            pictureBox1.Hide();
         }
 
         private void PatientDashboardForm_Load(object sender, EventArgs e)

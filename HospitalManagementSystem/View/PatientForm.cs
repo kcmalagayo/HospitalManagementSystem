@@ -28,7 +28,7 @@ namespace HospitalManagementSystem.View
             doctorController = new DoctorController(database);
             timeSlotDropDown = new ComboBox();
             timeSlotDropDown.DropDownStyle = ComboBoxStyle.DropDownList;
-            timeSlotDropDown.Font = new Font("Segoe UI", 9F);
+            timeSlotDropDown.Font = new Font("Arial", 9F);
             timeSlotDropDown.Location = new Point(12, 185);  // Adjust position if needed
             timeSlotDropDown.Name = "timeSlotDropDown";
             timeSlotDropDown.Size = new Size(301, 25);
