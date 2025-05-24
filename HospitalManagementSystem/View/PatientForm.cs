@@ -29,9 +29,10 @@ namespace HospitalManagementSystem.View
             timeSlotDropDown = new ComboBox();
             timeSlotDropDown.DropDownStyle = ComboBoxStyle.DropDownList;
             timeSlotDropDown.Font = new Font("Arial", 9F);
-            timeSlotDropDown.Location = new Point(12, 185);  // Adjust position if needed
+            timeSlotDropDown.Location = new Point(12, 200);  // Adjust position if needed
             timeSlotDropDown.Name = "timeSlotDropDown";
-            timeSlotDropDown.Size = new Size(301, 25);
+            timeSlotDropDown.Size = new Size(225, 44);
+            timeSlotDropDown.Anchor = AnchorStyles.Top | AnchorStyles.Left;
             panel1.Controls.Add(timeSlotDropDown);
             LoadSpecializations();
             LoadDoctors();
@@ -103,7 +104,7 @@ namespace HospitalManagementSystem.View
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
-        }       
+        }
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -174,6 +175,10 @@ namespace HospitalManagementSystem.View
             LoadDoctors(selectedSpecialization == "All" ? null : selectedSpecialization);
         }
 
+        private void guna2DateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
