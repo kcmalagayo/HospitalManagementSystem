@@ -64,10 +64,11 @@
             manageDoctorBtn.Image = Properties.Resources.doctor;
             manageDoctorBtn.ImageAlign = HorizontalAlignment.Left;
             manageDoctorBtn.ImageSize = new Size(30, 30);
-            manageDoctorBtn.Location = new Point(25, 157);
+            manageDoctorBtn.Location = new Point(29, 209);
+            manageDoctorBtn.Margin = new Padding(3, 4, 3, 4);
             manageDoctorBtn.Name = "manageDoctorBtn";
             manageDoctorBtn.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            manageDoctorBtn.Size = new Size(202, 58);
+            manageDoctorBtn.Size = new Size(231, 77);
             manageDoctorBtn.TabIndex = 0;
             manageDoctorBtn.Text = "Manage Doctor";
             manageDoctorBtn.TextAlign = HorizontalAlignment.Right;
@@ -78,9 +79,9 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Arial", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(12, 41);
+            label1.Location = new Point(14, 55);
             label1.Name = "label1";
-            label1.Size = new Size(248, 74);
+            label1.Size = new Size(307, 92);
             label1.TabIndex = 1;
             label1.Text = "Hospital Name \r\nand Logo";
             label1.TextAlign = ContentAlignment.MiddleCenter;
@@ -98,10 +99,11 @@
             managePatientBtn.Image = Properties.Resources.patient;
             managePatientBtn.ImageAlign = HorizontalAlignment.Left;
             managePatientBtn.ImageSize = new Size(30, 30);
-            managePatientBtn.Location = new Point(25, 221);
+            managePatientBtn.Location = new Point(29, 295);
+            managePatientBtn.Margin = new Padding(3, 4, 3, 4);
             managePatientBtn.Name = "managePatientBtn";
             managePatientBtn.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            managePatientBtn.Size = new Size(202, 55);
+            managePatientBtn.Size = new Size(231, 73);
             managePatientBtn.TabIndex = 2;
             managePatientBtn.Text = "Manage Patient";
             managePatientBtn.TextAlign = HorizontalAlignment.Left;
@@ -121,10 +123,11 @@
             bookAppointmentBtn.Image = Properties.Resources.appointment;
             bookAppointmentBtn.ImageAlign = HorizontalAlignment.Left;
             bookAppointmentBtn.ImageSize = new Size(30, 30);
-            bookAppointmentBtn.Location = new Point(25, 282);
+            bookAppointmentBtn.Location = new Point(29, 376);
+            bookAppointmentBtn.Margin = new Padding(3, 4, 3, 4);
             bookAppointmentBtn.Name = "bookAppointmentBtn";
             bookAppointmentBtn.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            bookAppointmentBtn.Size = new Size(202, 52);
+            bookAppointmentBtn.Size = new Size(231, 69);
             bookAppointmentBtn.TabIndex = 3;
             bookAppointmentBtn.Text = "Book Appointment";
             bookAppointmentBtn.TextAlign = HorizontalAlignment.Right;
@@ -142,10 +145,11 @@
             logOutBtn.Image = Properties.Resources.exit;
             logOutBtn.ImageAlign = HorizontalAlignment.Left;
             logOutBtn.ImageOffset = new Point(4, 0);
-            logOutBtn.Location = new Point(25, 340);
+            logOutBtn.Location = new Point(29, 453);
+            logOutBtn.Margin = new Padding(3, 4, 3, 4);
             logOutBtn.Name = "logOutBtn";
             logOutBtn.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            logOutBtn.Size = new Size(202, 45);
+            logOutBtn.Size = new Size(231, 60);
             logOutBtn.TabIndex = 4;
             logOutBtn.Text = "Log Out ";
             logOutBtn.TextOffset = new Point(-13, 0);
@@ -155,9 +159,10 @@
             // 
             panel1.Controls.Add(pictureBox1);
             panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(289, 0);
+            panel1.Location = new Point(330, 0);
+            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1041, 677);
+            panel1.Size = new Size(1190, 903);
             panel1.TabIndex = 5;
             panel1.Paint += panel1_Paint;
             // 
@@ -165,9 +170,10 @@
             // 
             pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             pictureBox1.Image = Properties.Resources.Work_time_amico;
-            pictureBox1.Location = new Point(16, 16);
+            pictureBox1.Location = new Point(18, 21);
+            pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(1013, 576);
+            pictureBox1.Size = new Size(1158, 768);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
@@ -176,15 +182,16 @@
             // 
             panel2.Dock = DockStyle.Left;
             panel2.Location = new Point(0, 0);
+            panel2.Margin = new Padding(3, 4, 3, 4);
             panel2.Name = "panel2";
-            panel2.Size = new Size(289, 677);
+            panel2.Size = new Size(330, 903);
             panel2.TabIndex = 6;
             // 
             // AdminForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1330, 677);
+            ClientSize = new Size(1520, 903);
             Controls.Add(panel1);
             Controls.Add(logOutBtn);
             Controls.Add(bookAppointmentBtn);
@@ -192,6 +199,7 @@
             Controls.Add(label1);
             Controls.Add(manageDoctorBtn);
             Controls.Add(panel2);
+            Margin = new Padding(3, 4, 3, 4);
             MinimizeBox = false;
             Name = "AdminForm";
             Text = "   ";

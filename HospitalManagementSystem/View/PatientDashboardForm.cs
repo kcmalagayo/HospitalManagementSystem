@@ -26,7 +26,7 @@ namespace HospitalManagementSystem.View
             panel1.Controls.Clear();
             form.TopLevel = false;
             form.FormBorderStyle = FormBorderStyle.None;
-            form.Dock = DockStyle.Left;
+            form.Dock = DockStyle.Fill;
             panel1.Controls.Add(form);
             form.Show();
         }
@@ -55,6 +55,7 @@ namespace HospitalManagementSystem.View
         {
             PatientForm pf = new PatientForm();
             OpenFormInPanel(pf);
+            pictureBox1.Hide();
         }
 
         private void PatientDashboardForm_Load(object sender, EventArgs e)
@@ -66,6 +67,17 @@ namespace HospitalManagementSystem.View
         {
             PatientViewAppointment va = new PatientViewAppointment(_patientId);
             OpenFormInPanel(va);
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            PatientViewRecord vr = new PatientViewRecord(_patientId);
+            OpenFormInPanel(vr);
         }
     }
 }

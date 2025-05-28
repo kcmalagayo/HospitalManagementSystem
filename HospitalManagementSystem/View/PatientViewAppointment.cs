@@ -39,7 +39,7 @@ namespace HospitalManagementSystem.View
         WHERE a.PatientID = @patientId
           AND a.AppointmentDateTime >= CURRENT_TIMESTAMP      
           AND (d.FirstName || ' ' || d.LastName LIKE @keyword)
-        ORDER BY a.AppointmentDateTime ASC";                  
+        ORDER BY a.AppointmentDateTime ASC";
 
             using (var cmd = new SQLiteCommand(query, _db.GetConnection()))
             {
@@ -75,6 +75,11 @@ namespace HospitalManagementSystem.View
         }
 
         private void PatientViewAppointment_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }
