@@ -99,9 +99,9 @@ namespace HospitalManagementSystem.View
                                     "Login Successful",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Information);
-
-                    DoctorForm doctorForm = new DoctorForm();
-                    doctorForm.Show();
+                    //open the DoctorDashboardForm with the correct DoctorID
+                    DoctorDashboardForm ddF = new DoctorDashboardForm();
+                    ddF.Show();
                     this.Hide();
                 }
                 else
