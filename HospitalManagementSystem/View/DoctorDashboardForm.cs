@@ -43,7 +43,7 @@ namespace HospitalManagementSystem.View
                 var loginForm = new LoginForm();
                 loginForm.Show();
                 MessageBox.Show("You have successfully logged out.", "Logout Successful");
-                Application.Exit(); // Close the application
+                //Application.Exit(); // Close the application
             }
             else
             {
@@ -59,6 +59,13 @@ namespace HospitalManagementSystem.View
         private void DoctorDashboardForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            DoctorForm dF = new DoctorForm();
+            OpenFormInPanel(dF);
+            pictureBox1.Hide();
         }
     }
 }

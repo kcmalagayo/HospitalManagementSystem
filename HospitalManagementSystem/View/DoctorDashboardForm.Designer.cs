@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             label1 = new Label();
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
@@ -50,7 +50,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Arial", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(20, 17);
+            label1.Location = new Point(23, 17);
             label1.Name = "label1";
             label1.Size = new Size(248, 74);
             label1.TabIndex = 19;
@@ -59,7 +59,7 @@
             // 
             // guna2Button1
             // 
-            guna2Button1.CustomizableEdges = customizableEdges25;
+            guna2Button1.CustomizableEdges = customizableEdges1;
             guna2Button1.DisabledState.BorderColor = Color.DarkGray;
             guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
             guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -70,9 +70,9 @@
             guna2Button1.Image = Properties.Resources.folder1;
             guna2Button1.ImageAlign = HorizontalAlignment.Left;
             guna2Button1.ImageSize = new Size(30, 30);
-            guna2Button1.Location = new Point(36, 170);
+            guna2Button1.Location = new Point(39, 160);
             guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2Button1.Size = new Size(205, 45);
             guna2Button1.TabIndex = 35;
             guna2Button1.Text = "Record";
@@ -81,7 +81,7 @@
             // 
             // guna2Button2
             // 
-            guna2Button2.CustomizableEdges = customizableEdges27;
+            guna2Button2.CustomizableEdges = customizableEdges3;
             guna2Button2.DisabledState.BorderColor = Color.DarkGray;
             guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray;
             guna2Button2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -92,18 +92,19 @@
             guna2Button2.Image = Properties.Resources.clipboard1;
             guna2Button2.ImageAlign = HorizontalAlignment.Left;
             guna2Button2.ImageSize = new Size(30, 30);
-            guna2Button2.Location = new Point(36, 119);
+            guna2Button2.Location = new Point(39, 109);
             guna2Button2.Name = "guna2Button2";
-            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges28;
+            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2Button2.Size = new Size(205, 45);
             guna2Button2.TabIndex = 36;
             guna2Button2.Text = "Appointments";
             guna2Button2.TextAlign = HorizontalAlignment.Right;
             guna2Button2.TextOffset = new Point(-15, 0);
+            guna2Button2.Click += guna2Button2_Click;
             // 
             // guna2Button3
             // 
-            guna2Button3.CustomizableEdges = customizableEdges29;
+            guna2Button3.CustomizableEdges = customizableEdges5;
             guna2Button3.DisabledState.BorderColor = Color.DarkGray;
             guna2Button3.DisabledState.CustomBorderColor = Color.DarkGray;
             guna2Button3.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -114,9 +115,9 @@
             guna2Button3.Image = Properties.Resources.exit1;
             guna2Button3.ImageAlign = HorizontalAlignment.Left;
             guna2Button3.ImageSize = new Size(30, 30);
-            guna2Button3.Location = new Point(36, 221);
+            guna2Button3.Location = new Point(39, 211);
             guna2Button3.Name = "guna2Button3";
-            guna2Button3.ShadowDecoration.CustomizableEdges = customizableEdges30;
+            guna2Button3.ShadowDecoration.CustomizableEdges = customizableEdges6;
             guna2Button3.Size = new Size(205, 45);
             guna2Button3.TabIndex = 37;
             guna2Button3.Text = "Logout";
@@ -130,7 +131,7 @@
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(937, 521);
+            panel1.Size = new Size(969, 521);
             panel1.TabIndex = 38;
             panel1.Paint += panel1_Paint;
             // 
@@ -140,7 +141,7 @@
             pictureBox1.Image = Properties.Resources.Doctor_amico;
             pictureBox1.Location = new Point(382, 17);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(429, 463);
+            pictureBox1.Size = new Size(461, 463);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
@@ -161,7 +162,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(937, 521);
+            ClientSize = new Size(969, 521);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "DoctorDashboardForm";
