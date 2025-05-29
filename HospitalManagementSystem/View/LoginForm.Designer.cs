@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             label4 = new Label();
             label3 = new Label();
             passwordTextBox = new TextBox();
@@ -97,17 +97,17 @@
             label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
             label1.Font = new Font("Arial", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(79, 77);
+            label1.Location = new Point(61, 71);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(239, 37);
+            label1.Size = new Size(277, 37);
             label1.TabIndex = 10;
-            label1.Text = "Hospital Name";
+            label1.Text = "Amico's Hospital";
             // 
             // loginBtn
             // 
             loginBtn.Anchor = AnchorStyles.None;
-            loginBtn.CustomizableEdges = customizableEdges1;
+            loginBtn.CustomizableEdges = customizableEdges3;
             loginBtn.DisabledState.BorderColor = Color.DarkGray;
             loginBtn.DisabledState.CustomBorderColor = Color.DarkGray;
             loginBtn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -118,7 +118,7 @@
             loginBtn.Location = new Point(120, 385);
             loginBtn.Margin = new Padding(4, 3, 4, 3);
             loginBtn.Name = "loginBtn";
-            loginBtn.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            loginBtn.ShadowDecoration.CustomizableEdges = customizableEdges4;
             loginBtn.Size = new Size(132, 36);
             loginBtn.TabIndex = 14;
             loginBtn.Text = "Login";

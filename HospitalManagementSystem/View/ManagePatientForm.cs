@@ -27,6 +27,7 @@ namespace HospitalManagementSystem.View
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = results;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            this.WindowState = FormWindowState.Maximized;
         }
 
         private void ManagePatientForm_Load(object sender, EventArgs e)

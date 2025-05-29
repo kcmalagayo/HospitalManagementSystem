@@ -17,6 +17,7 @@ namespace HospitalManagementSystem.View
         public ManageDoctorForm()
         {
             InitializeComponent();
+            this.WindowState = FormWindowState.Maximized;
         }
 
         private void guna2TextBox1_TextChanged(object sender, EventArgs e)
@@ -78,6 +79,7 @@ namespace HospitalManagementSystem.View
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
+            //open register form 
             RegisterFormDoctor registerFormDoctor = new RegisterFormDoctor();
             registerFormDoctor.Show();
         }
