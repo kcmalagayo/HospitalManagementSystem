@@ -26,6 +26,7 @@ namespace HospitalManagementSystem.View
             selectRoleComboBox.Items.Add("Admin");
             selectRoleComboBox.SelectedIndex = 0;
             passwordTextBox.PasswordChar = '*';
+            this.WindowState = FormWindowState.Maximized;
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -133,6 +134,11 @@ namespace HospitalManagementSystem.View
         }
 
         private void panel2_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
         {
 
         }

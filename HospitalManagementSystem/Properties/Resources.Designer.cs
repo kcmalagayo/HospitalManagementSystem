@@ -113,9 +113,29 @@ namespace HospitalManagementSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap folder {
+            get {
+                object obj = ResourceManager.GetObject("folder", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap hospital_bed_concept_illustration_114360_8239 {
             get {
                 object obj = ResourceManager.GetObject("hospital-bed-concept-illustration_114360-8239", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hospital_bed_concept_illustration_114360_82391 {
+            get {
+                object obj = ResourceManager.GetObject("hospital-bed-concept-illustration_114360-82391", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
