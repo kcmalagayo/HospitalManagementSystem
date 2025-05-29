@@ -79,6 +79,11 @@ namespace HospitalManagementSystem.View
                 MessageBox.Show("Logout cancelled.", "Action Cancelled");
             }
         }
+
+        private void bookAppointmentBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
  

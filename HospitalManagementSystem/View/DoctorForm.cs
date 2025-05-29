@@ -147,5 +147,10 @@ namespace HospitalManagementSystem.View
                 MessageBox.Show("Logout cancelled.", "Action Cancelled");
             }
         }
+
+        private void DoctorForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
