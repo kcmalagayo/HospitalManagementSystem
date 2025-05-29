@@ -28,6 +28,7 @@ namespace HospitalManagementSystem.View
             AppointmentSearchTxt.TextChanged += AppointmentSearchTxt_TextChanged;
             guna2Button2.Click += guna2Button2_Click; // Update button
             dataGridView1.SelectionChanged += DataGridView1_SelectionChanged;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         // Overloaded constructor to pass patient ID
@@ -146,6 +147,11 @@ namespace HospitalManagementSystem.View
             {
                 MessageBox.Show("Logout cancelled.", "Action Cancelled");
             }
+        }
+
+        private void DoctorForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

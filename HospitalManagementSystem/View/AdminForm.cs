@@ -72,12 +72,17 @@ namespace HospitalManagementSystem.View
                 var loginForm = new LoginForm();
                 loginForm.Show();
                 MessageBox.Show("You have successfully logged out.", "Logout Successful");
-                Application.Exit(); // Close the application
+                //Application.Exit(); // Close the application
             }
             else
             {
                 MessageBox.Show("Logout cancelled.", "Action Cancelled");
             }
+        }
+
+        private void bookAppointmentBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
