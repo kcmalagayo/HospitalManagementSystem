@@ -49,7 +49,7 @@ namespace HospitalManagementSystem.View
             }
             else
             {
-                MessageBox.Show("Logout cancelled.", "Action Cancelled");
+                //MessageBox.Show("Logout cancelled.", "Action Cancelled");
             }
         }
         private void guna2Button1_Click(object sender, EventArgs e)//book appointment button    

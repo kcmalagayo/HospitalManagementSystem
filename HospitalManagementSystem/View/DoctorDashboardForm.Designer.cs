@@ -75,9 +75,10 @@
             guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2Button1.Size = new Size(205, 45);
             guna2Button1.TabIndex = 35;
-            guna2Button1.Text = "Record";
+            guna2Button1.Text = "Records";
             guna2Button1.TextAlign = HorizontalAlignment.Right;
             guna2Button1.TextOffset = new Point(-38, 0);
+            guna2Button1.Click += guna2Button1_Click;
             // 
             // guna2Button2
             // 
@@ -129,9 +130,9 @@
             // 
             panel1.Controls.Add(pictureBox1);
             panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(0, 0);
+            panel1.Location = new Point(300, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(969, 521);
+            panel1.Size = new Size(669, 521);
             panel1.TabIndex = 38;
             panel1.Paint += panel1_Paint;
             // 
@@ -139,9 +140,9 @@
             // 
             pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             pictureBox1.Image = Properties.Resources.Doctor_amico;
-            pictureBox1.Location = new Point(382, 17);
+            pictureBox1.Location = new Point(112, 31);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(461, 463);
+            pictureBox1.Size = new Size(451, 463);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
@@ -155,7 +156,7 @@
             panel2.Dock = DockStyle.Left;
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(292, 521);
+            panel2.Size = new Size(300, 521);
             panel2.TabIndex = 39;
             // 
             // DoctorDashboardForm
@@ -163,10 +164,10 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(969, 521);
-            Controls.Add(panel2);
             Controls.Add(panel1);
+            Controls.Add(panel2);
             Name = "DoctorDashboardForm";
-            Text = "DoctorDashboardForm";
+            Text = "Doctor Page";
             Load += DoctorDashboardForm_Load;
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
