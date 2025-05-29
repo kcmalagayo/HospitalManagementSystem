@@ -67,7 +67,7 @@
             guna2Button1.FillColor = Color.MediumSeaGreen;
             guna2Button1.Font = new Font("Arial", 12.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2Button1.ForeColor = Color.Black;
-            guna2Button1.Image = Properties.Resources.folder1;
+            guna2Button1.Image = Properties.Resources.folder;
             guna2Button1.ImageAlign = HorizontalAlignment.Left;
             guna2Button1.ImageSize = new Size(30, 30);
             guna2Button1.Location = new Point(39, 160);
@@ -90,7 +90,7 @@
             guna2Button2.FillColor = Color.MediumSeaGreen;
             guna2Button2.Font = new Font("Arial", 12.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2Button2.ForeColor = Color.Black;
-            guna2Button2.Image = Properties.Resources.clipboard1;
+            guna2Button2.Image = Properties.Resources.clipboard;
             guna2Button2.ImageAlign = HorizontalAlignment.Left;
             guna2Button2.ImageSize = new Size(30, 30);
             guna2Button2.Location = new Point(39, 109);
@@ -113,7 +113,7 @@
             guna2Button3.FillColor = Color.MediumSeaGreen;
             guna2Button3.Font = new Font("Arial", 12.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2Button3.ForeColor = Color.Black;
-            guna2Button3.Image = Properties.Resources.exit1;
+            guna2Button3.Image = Properties.Resources.exit;
             guna2Button3.ImageAlign = HorizontalAlignment.Left;
             guna2Button3.ImageSize = new Size(30, 30);
             guna2Button3.Location = new Point(39, 211);
