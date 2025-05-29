@@ -63,15 +63,14 @@
             logOutBtn.ImageAlign = HorizontalAlignment.Left;
             logOutBtn.ImageOffset = new Point(5, 0);
             logOutBtn.ImageSize = new Size(25, 25);
-            logOutBtn.Location = new Point(52, 347);
-            logOutBtn.Margin = new Padding(3, 4, 3, 4);
+            logOutBtn.Location = new Point(46, 260);
             logOutBtn.Name = "logOutBtn";
             logOutBtn.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            logOutBtn.Size = new Size(227, 60);
+            logOutBtn.Size = new Size(199, 45);
             logOutBtn.TabIndex = 5;
             logOutBtn.Text = "Log Out ";
             logOutBtn.TextAlign = HorizontalAlignment.Right;
-            logOutBtn.TextOffset = new Point(-42, 0);
+            logOutBtn.TextOffset = new Point(-35, 0);
             logOutBtn.Click += logOutBtn_Click;
             // 
             // guna2Button1
@@ -87,11 +86,10 @@
             guna2Button1.Image = Properties.Resources.appointment;
             guna2Button1.ImageAlign = HorizontalAlignment.Left;
             guna2Button1.ImageSize = new Size(30, 30);
-            guna2Button1.Location = new Point(52, 138);
-            guna2Button1.Margin = new Padding(3, 4, 3, 4);
+            guna2Button1.Location = new Point(46, 104);
             guna2Button1.Name = "guna2Button1";
             guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2Button1.Size = new Size(227, 65);
+            guna2Button1.Size = new Size(199, 49);
             guna2Button1.TabIndex = 6;
             guna2Button1.Text = "Book Appointment";
             guna2Button1.TextAlign = HorizontalAlignment.Right;
@@ -110,11 +108,10 @@
             guna2Button2.Image = Properties.Resources.clipboard;
             guna2Button2.ImageAlign = HorizontalAlignment.Left;
             guna2Button2.ImageSize = new Size(30, 30);
-            guna2Button2.Location = new Point(52, 211);
-            guna2Button2.Margin = new Padding(3, 4, 3, 4);
+            guna2Button2.Location = new Point(46, 158);
             guna2Button2.Name = "guna2Button2";
             guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2Button2.Size = new Size(227, 60);
+            guna2Button2.Size = new Size(199, 45);
             guna2Button2.TabIndex = 7;
             guna2Button2.Text = "View Appointments";
             guna2Button2.TextAlign = HorizontalAlignment.Right;
@@ -126,9 +123,9 @@
             label1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             label1.AutoSize = true;
             label1.Font = new Font("Arial", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(23, 24);
+            label1.Location = new Point(34, 18);
             label1.Name = "label1";
-            label1.Size = new Size(307, 92);
+            label1.Size = new Size(248, 74);
             label1.TabIndex = 8;
             label1.Text = "Hospital Name \r\nand Logo";
             label1.TextAlign = ContentAlignment.MiddleCenter;
@@ -138,19 +135,19 @@
             panel1.AutoSize = true;
             panel1.Controls.Add(pictureBox1);
             panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(347, 0);
-            panel1.Margin = new Padding(3, 4, 3, 4);
+            panel1.Location = new Point(304, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1327, 935);
+            panel1.Size = new Size(1161, 701);
             panel1.TabIndex = 9;
             // 
             // pictureBox1
             // 
             pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             pictureBox1.Image = Properties.Resources.Ophthalmologist_bro;
-            pictureBox1.Location = new Point(6, 12);
+            pictureBox1.Location = new Point(5, 9);
+            pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(1309, 923);
+            pictureBox1.Size = new Size(1145, 692);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
@@ -164,8 +161,9 @@
             panel2.Controls.Add(guna2Button1);
             panel2.Dock = DockStyle.Left;
             panel2.Location = new Point(0, 0);
+            panel2.Margin = new Padding(3, 2, 3, 2);
             panel2.Name = "panel2";
-            panel2.Size = new Size(347, 935);
+            panel2.Size = new Size(304, 701);
             panel2.TabIndex = 10;
             panel2.Paint += panel2_Paint;
             // 
@@ -179,28 +177,26 @@
             guna2Button3.FillColor = Color.MediumSeaGreen;
             guna2Button3.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2Button3.ForeColor = Color.Black;
-            guna2Button3.Image = Properties.Resources.clipboard;
+            guna2Button3.Image = Properties.Resources.folder;
             guna2Button3.ImageAlign = HorizontalAlignment.Left;
             guna2Button3.ImageSize = new Size(30, 30);
-            guna2Button3.Location = new Point(52, 279);
-            guna2Button3.Margin = new Padding(3, 4, 3, 4);
+            guna2Button3.Location = new Point(46, 209);
             guna2Button3.Name = "guna2Button3";
             guna2Button3.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2Button3.Size = new Size(227, 60);
+            guna2Button3.Size = new Size(199, 45);
             guna2Button3.TabIndex = 9;
             guna2Button3.Text = "View Records";
             guna2Button3.TextAlign = HorizontalAlignment.Right;
-            guna2Button3.TextOffset = new Point(-19, 0);
+            guna2Button3.TextOffset = new Point(-15, 0);
             guna2Button3.Click += guna2Button3_Click;
             // 
             // PatientDashboardForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1674, 935);
+            ClientSize = new Size(1465, 701);
             Controls.Add(panel1);
             Controls.Add(panel2);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "PatientDashboardForm";
             Text = "Patient Page";
             Load += PatientDashboardForm_Load;

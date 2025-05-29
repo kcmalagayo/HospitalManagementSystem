@@ -80,12 +80,12 @@
             AppointmentSearchTxt.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             AppointmentSearchTxt.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             AppointmentSearchTxt.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            AppointmentSearchTxt.Location = new Point(299, 98);
+            AppointmentSearchTxt.Location = new Point(271, 98);
             AppointmentSearchTxt.Name = "AppointmentSearchTxt";
             AppointmentSearchTxt.PlaceholderText = "Search Appointments";
             AppointmentSearchTxt.SelectedText = "";
             AppointmentSearchTxt.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            AppointmentSearchTxt.Size = new Size(530, 36);
+            AppointmentSearchTxt.Size = new Size(558, 36);
             AppointmentSearchTxt.TabIndex = 38;
             AppointmentSearchTxt.TextChanged += AppointmentSearchTxt_TextChanged;
             // 
