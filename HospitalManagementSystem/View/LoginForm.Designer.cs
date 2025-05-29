@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             label4 = new Label();
             label3 = new Label();
             passwordTextBox = new TextBox();
@@ -107,7 +107,8 @@
             // loginBtn
             // 
             loginBtn.Anchor = AnchorStyles.None;
-            loginBtn.CustomizableEdges = customizableEdges3;
+            loginBtn.CheckedState.CustomBorderColor = Color.Gray;
+            loginBtn.CustomizableEdges = customizableEdges1;
             loginBtn.DisabledState.BorderColor = Color.DarkGray;
             loginBtn.DisabledState.CustomBorderColor = Color.DarkGray;
             loginBtn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -118,7 +119,7 @@
             loginBtn.Location = new Point(120, 385);
             loginBtn.Margin = new Padding(4, 3, 4, 3);
             loginBtn.Name = "loginBtn";
-            loginBtn.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            loginBtn.ShadowDecoration.CustomizableEdges = customizableEdges2;
             loginBtn.Size = new Size(132, 36);
             loginBtn.TabIndex = 14;
             loginBtn.Text = "Login";

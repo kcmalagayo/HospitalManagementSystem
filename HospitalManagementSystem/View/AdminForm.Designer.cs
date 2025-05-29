@@ -53,6 +53,7 @@
             // 
             // manageDoctorBtn
             // 
+            manageDoctorBtn.CheckedState.BorderColor = Color.Black;
             manageDoctorBtn.CustomBorderColor = Color.Gray;
             manageDoctorBtn.CustomizableEdges = customizableEdges1;
             manageDoctorBtn.DisabledState.BorderColor = Color.DarkGray;
@@ -167,7 +168,7 @@
             // 
             pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             pictureBox1.Image = Properties.Resources.Work_time_amico;
-            pictureBox1.Location = new Point(16, 16);
+            pictureBox1.Location = new Point(16, 52);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(1013, 576);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;

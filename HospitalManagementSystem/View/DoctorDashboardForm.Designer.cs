@@ -77,7 +77,7 @@
             guna2Button1.TabIndex = 35;
             guna2Button1.Text = "Records";
             guna2Button1.TextAlign = HorizontalAlignment.Right;
-            guna2Button1.TextOffset = new Point(-38, 0);
+            guna2Button1.TextOffset = new Point(-33, 0);
             guna2Button1.Click += guna2Button1_Click;
             // 
             // guna2Button2
@@ -100,7 +100,7 @@
             guna2Button2.TabIndex = 36;
             guna2Button2.Text = "Appointments";
             guna2Button2.TextAlign = HorizontalAlignment.Right;
-            guna2Button2.TextOffset = new Point(-15, 0);
+            guna2Button2.TextOffset = new Point(-14, 0);
             guna2Button2.Click += guna2Button2_Click;
             // 
             // guna2Button3
