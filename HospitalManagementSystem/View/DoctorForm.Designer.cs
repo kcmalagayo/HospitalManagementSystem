@@ -37,6 +37,7 @@
             AppointmentSearchTxt = new Guna.UI2.WinForms.Guna2TextBox();
             guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             comboBox1 = new ComboBox();
+            panel1 = new Panel();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -97,7 +98,7 @@
             guna2Button2.Margin = new Padding(3, 2, 3, 2);
             guna2Button2.Name = "guna2Button2";
             guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2Button2.Size = new Size(135, 23);
+            guna2Button2.Size = new Size(84, 23);
             guna2Button2.TabIndex = 37;
             guna2Button2.Text = "Update";
             guna2Button2.Click += guna2Button2_Click;
@@ -110,6 +111,14 @@
             comboBox1.Size = new Size(121, 23);
             comboBox1.TabIndex = 40;
             // 
+            // panel1
+            // 
+            panel1.Dock = DockStyle.Fill;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(800, 541);
+            panel1.TabIndex = 41;
+            // 
             // DoctorForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -120,6 +129,7 @@
             Controls.Add(dataGridView1);
             Controls.Add(AppointmentSearchTxt);
             Controls.Add(guna2Button2);
+            Controls.Add(panel1);
             Name = "DoctorForm";
             Text = "DoctorForm";
             Load += DoctorForm_Load;
@@ -135,5 +145,6 @@
         private Guna.UI2.WinForms.Guna2TextBox AppointmentSearchTxt;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private ComboBox comboBox1;
+        private Panel panel1;
     }
 }

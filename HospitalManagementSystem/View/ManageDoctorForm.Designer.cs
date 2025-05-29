@@ -35,6 +35,7 @@
             doctorSearchTxt = new Guna.UI2.WinForms.Guna2TextBox();
             dataGridView1 = new DataGridView();
             btnRegister = new Guna.UI2.WinForms.Guna2Button();
+            label2 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -50,7 +51,7 @@
             doctorSearchTxt.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             doctorSearchTxt.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             doctorSearchTxt.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            doctorSearchTxt.Location = new Point(28, 12);
+            doctorSearchTxt.Location = new Point(27, 95);
             doctorSearchTxt.Name = "doctorSearchTxt";
             doctorSearchTxt.PlaceholderText = "Search doctor fields";
             doctorSearchTxt.SelectedText = "";
@@ -63,9 +64,9 @@
             // 
             dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(28, 80);
+            dataGridView1.Location = new Point(27, 153);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(745, 327);
+            dataGridView1.Size = new Size(745, 374);
             dataGridView1.TabIndex = 21;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -81,7 +82,7 @@
             btnRegister.FillColor = Color.MediumSeaGreen;
             btnRegister.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnRegister.ForeColor = Color.Black;
-            btnRegister.Location = new Point(622, 12);
+            btnRegister.Location = new Point(621, 95);
             btnRegister.Margin = new Padding(3, 2, 3, 2);
             btnRegister.Name = "btnRegister";
             btnRegister.ShadowDecoration.CustomizableEdges = customizableEdges4;
@@ -90,11 +91,23 @@
             btnRegister.Text = "Register Doctor";
             btnRegister.Click += btnRegister_Click;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Arial", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(27, 22);
+            label2.Name = "label2";
+            label2.Size = new Size(181, 24);
+            label2.TabIndex = 30;
+            label2.Text = "Manage Doctors ";
+            label2.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // ManageDoctorForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 455);
+            ClientSize = new Size(800, 539);
+            Controls.Add(label2);
             Controls.Add(dataGridView1);
             Controls.Add(doctorSearchTxt);
             Controls.Add(btnRegister);
@@ -103,11 +116,13 @@
             Load += ManageDoctorForm_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
         private Guna.UI2.WinForms.Guna2TextBox doctorSearchTxt;
         private DataGridView dataGridView1;
         private Guna.UI2.WinForms.Guna2Button btnRegister;
+        private Label label2;
     }
 }

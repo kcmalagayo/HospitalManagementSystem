@@ -20,6 +20,7 @@ namespace HospitalManagementSystem.View
 
         public LoginForm()
         {
+            //select role to login as patient, doctor or admin  
             InitializeComponent();
             selectRoleComboBox.Items.Add("Patient");
             selectRoleComboBox.Items.Add("Doctor");
@@ -29,12 +30,12 @@ namespace HospitalManagementSystem.View
             this.WindowState = FormWindowState.Maximized;
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        private void label4_Click(object sender, EventArgs e)//misclicked this label, so I left it empty
         {
 
         }
 
-        private void loginBtn_Click(object sender, EventArgs e)
+        private void loginBtn_Click(object sender, EventArgs e)//login button 
         {
             string email = emailTextBox.Text.Trim();
             string password = passwordTextBox.Text.Trim();
@@ -42,7 +43,7 @@ namespace HospitalManagementSystem.View
             var db = new Database();
             var authController = new AuthController(db);
 
-            if (selectRoleComboBox.SelectedItem.ToString() == "Admin")
+            if (selectRoleComboBox.SelectedItem.ToString() == "Admin")//condition for admin role 
             {
                 if (authController.Login(email, password, "Admin", out object user))
                 {
@@ -64,7 +65,7 @@ namespace HospitalManagementSystem.View
                                     MessageBoxIcon.Error);
                 }
             }
-            else if (selectRoleComboBox.SelectedItem.ToString() == "Patient")
+            else if (selectRoleComboBox.SelectedItem.ToString() == "Patient")//condition for patient role
             {
                 if (authController.Login(email, password, "Patient", out object user))
                 {
@@ -89,7 +90,7 @@ namespace HospitalManagementSystem.View
                                     MessageBoxIcon.Error);
                 }
             }
-            else if (selectRoleComboBox.SelectedItem.ToString() == "Doctor")
+            else if (selectRoleComboBox.SelectedItem.ToString() == "Doctor")//condition for doctor role
             {
                 if (authController.Login(email, password, "Doctor", out object user))
                 {
@@ -113,7 +114,7 @@ namespace HospitalManagementSystem.View
             }
         }
 
-        private void LoginForm_Load(object sender, EventArgs e)
+        private void LoginForm_Load(object sender, EventArgs e)//misclicked this method, so I left it empty
         {
 
         }
@@ -123,22 +124,22 @@ namespace HospitalManagementSystem.View
             passwordTextBox.PasswordChar = showPasswordCheckBox.Checked ? '\0' : '*';
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)//misclicked this picture box, so I left it empty
+        {
+        }
+    
+
+        private void panel2_Paint(object sender, PaintEventArgs e)//misclicked this panel, so I left it empty
         {
 
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
+        private void panel2_Paint_1(object sender, PaintEventArgs e)//misclicked this panel, so I left it empty
         {
 
         }
 
-        private void panel2_Paint_1(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
+        private void label5_Click(object sender, EventArgs e)// misclicked this label, so I left it empty
         {
 
         }
