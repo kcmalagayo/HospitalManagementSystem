@@ -72,6 +72,7 @@ namespace HospitalManagementSystem.View
                 var loginForm = new LoginForm();
                 loginForm.Show();
                 MessageBox.Show("You have successfully logged out.", "Logout Successful");
+                Application.Exit(); // Close the application
             }
             else
             {
