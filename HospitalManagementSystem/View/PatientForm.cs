@@ -98,7 +98,8 @@ namespace HospitalManagementSystem.View
             guna2DateTimePicker1.Format = DateTimePickerFormat.Custom;
             guna2DateTimePicker1.CustomFormat = "MM/dd/yyyy";
             guna2DateTimePicker1.ShowUpDown = false;
-
+            guna2DateTimePicker1.MinDate = DateTime.Today;
+            guna2DateTimePicker1.MaxDate = new DateTime(2050, 12, 31);
             LoadTimeSlots();
         }
 
@@ -125,12 +126,19 @@ namespace HospitalManagementSystem.View
                 return;
             }
 
-            int doctorId = Convert.ToInt32(dataGridView2.SelectedRows[0].Cells["DoctorID"].Value);
             DateTime selectedDate = guna2DateTimePicker1.Value.Date;
+
+            // 🔒 Enforce date logic in case of any UI bypass
+            if (selectedDate < DateTime.Today || selectedDate > new DateTime(2050, 12, 31))
+            {
+                MessageBox.Show("Invalid date. Please select today or a future date before 2051.");
+                return;
+            }
+
+            int doctorId = Convert.ToInt32(dataGridView2.SelectedRows[0].Cells["DoctorID"].Value);
             TimeSpan selectedTime = TimeSpan.Parse(timeSlotDropDown.SelectedItem.ToString());
             DateTime appointmentDateTime = selectedDate + selectedTime;
 
-            // Prevent double booking
             if (IsAppointmentSlotTaken(doctorId, appointmentDateTime))
             {
                 MessageBox.Show("This time slot is already booked. Please choose another.");
