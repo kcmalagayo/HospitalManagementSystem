@@ -28,12 +28,47 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "NotificationForm";
+            NOTIFPANEL = new FlowLayoutPanel();
+            notifLabel = new Label();
+            SuspendLayout();
+            // 
+            // NOTIFPANEL
+            // 
+            NOTIFPANEL.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            NOTIFPANEL.AutoScroll = true;
+            NOTIFPANEL.FlowDirection = FlowDirection.TopDown;
+            NOTIFPANEL.Location = new Point(0, 67);
+            NOTIFPANEL.Name = "NOTIFPANEL";
+            NOTIFPANEL.Size = new Size(1142, 705);
+            NOTIFPANEL.TabIndex = 0;
+            NOTIFPANEL.WrapContents = false;
+            // 
+            // notifLabel
+            // 
+            notifLabel.AutoSize = true;
+            notifLabel.Font = new Font("Segoe UI", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            notifLabel.Location = new Point(12, 9);
+            notifLabel.Name = "notifLabel";
+            notifLabel.Size = new Size(202, 41);
+            notifLabel.TabIndex = 1;
+            notifLabel.Text = "Notifications";
+            // 
+            // NotificationForm
+            // 
+            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1142, 772);
+            Controls.Add(notifLabel);
+            Controls.Add(NOTIFPANEL);
+            Name = "NotificationForm";
+            Text = "NotificationForm";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private FlowLayoutPanel NOTIFPANEL;
+        private Label notifLabel;
     }
 }

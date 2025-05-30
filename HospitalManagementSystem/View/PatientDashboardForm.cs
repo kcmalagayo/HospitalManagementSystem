@@ -58,6 +58,12 @@ namespace HospitalManagementSystem.View
             OpenFormInPanel(pf);
             pictureBox1.Hide();
         }
+        private void notifBtn_Click(object sender, EventArgs e)
+        {
+            NotificationForm notifForm = new NotificationForm(_patientId);
+            OpenFormInPanel(notifForm);
+            pictureBox1.Hide();
+        }
 
         private void PatientDashboardForm_Load(object sender, EventArgs e)
         {
