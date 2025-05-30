@@ -14,8 +14,7 @@ namespace HospitalManagementSystem.Controller
         {
             _db = db;
         }
-
-        public List<Doctor> SearchDoctors(string keyword)
+        public List<Doctor> SearchDoctors(string keyword)//method to search for doctors by name in doctor fields form
         {
             List<Doctor> result = new List<Doctor>();
             string query = "SELECT * FROM Doctor WHERE FirstName || ' ' || LastName LIKE @keyword";
@@ -47,7 +46,7 @@ namespace HospitalManagementSystem.Controller
 
             return result;
         }
-        public DataTable GetAllDoctors()
+        public DataTable GetAllDoctors()//method to get all doctors in book appointment form
         {
             DataTable dt = new DataTable();
             using (var cmd = new SQLiteCommand("SELECT DoctorID, FirstName, LastName, Specialization, ContactNumber, Email FROM Doctor", _db.GetConnection()))
@@ -58,7 +57,7 @@ namespace HospitalManagementSystem.Controller
             return dt;
         }
 
-        public DataTable GetDoctorsBySpecialization(string specialization)
+        public DataTable GetDoctorsBySpecialization(string specialization)//method to get doctors by specialization in book appointment form
         {
             DataTable dt = new DataTable();
             string query = "SELECT DoctorID, FirstName, LastName, Specialization, ContactNumber, Email FROM Doctor WHERE Specialization = @specialization";
@@ -71,7 +70,7 @@ namespace HospitalManagementSystem.Controller
             return dt;
         }
 
-        public Doctor GetDoctorById(int doctorId)
+        public Doctor GetDoctorById(int doctorId)//method to get doctor by id in book appointment form
         {
             Doctor doctor = null;
             string query = "SELECT * FROM Doctor WHERE DoctorID = @DoctorID";
@@ -104,7 +103,7 @@ namespace HospitalManagementSystem.Controller
             return doctor;
         }
 
-        public bool SaveAppointment(int doctorId, DateTime appointmentDate)
+        public bool SaveAppointment(int doctorId, DateTime appointmentDate)//method to save appointment in book appointment form
         {
             try
             {
@@ -124,7 +123,7 @@ namespace HospitalManagementSystem.Controller
                 return false;
             }
         }
-        public bool UpdateDoctor(Doctor doctor)
+        public bool UpdateDoctor(Doctor doctor)//method to update doctor details in doctor fields form
         {
             try
             {

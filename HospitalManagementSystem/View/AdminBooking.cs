@@ -142,7 +142,7 @@ namespace HospitalManagementSystem.View
                 MessageBox.Show("Error: " + ex.Message);
             }
         }
-        
+
         private void doctorSearchTxt_TextChanged(object sender, EventArgs e)
         {
             string searchValue = doctorSearchTxt.Text;
@@ -152,6 +152,11 @@ namespace HospitalManagementSystem.View
         {
             string selectedSpecialization = specializaitionDropBox.SelectedItem.ToString();
             LoadDoctors(selectedSpecialization == "All" ? null : selectedSpecialization);
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
