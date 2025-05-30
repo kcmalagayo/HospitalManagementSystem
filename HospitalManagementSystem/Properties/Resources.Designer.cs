@@ -93,6 +93,16 @@ namespace HospitalManagementSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap book_appointment_white1 {
+            get {
+                object obj = ResourceManager.GetObject("book_appointment_white1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap clipboard {
             get {
                 object obj = ResourceManager.GetObject("clipboard", resourceCulture);
@@ -243,6 +253,66 @@ namespace HospitalManagementSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap logout_white1 {
+            get {
+                object obj = ResourceManager.GetObject("logout_white1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mage__checklist_note {
+            get {
+                object obj = ResourceManager.GetObject("mage--checklist-note", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mage__checklist_note1 {
+            get {
+                object obj = ResourceManager.GetObject("mage--checklist-note1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mage__checklist_note2 {
+            get {
+                object obj = ResourceManager.GetObject("mage--checklist-note2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mage__checklist_note3 {
+            get {
+                object obj = ResourceManager.GetObject("mage--checklist-note3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mingcute__notification_line {
+            get {
+                object obj = ResourceManager.GetObject("mingcute--notification-line", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Ophthalmologist_bro {
             get {
                 object obj = ResourceManager.GetObject("Ophthalmologist-bro", resourceCulture);
@@ -276,6 +346,36 @@ namespace HospitalManagementSystem.Properties {
         internal static System.Drawing.Bitmap physician {
             get {
                 object obj = ResourceManager.GetObject("physician", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap solar__folder_outline {
+            get {
+                object obj = ResourceManager.GetObject("solar--folder-outline", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap uil__transaction {
+            get {
+                object obj = ResourceManager.GetObject("uil--transaction", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap uil__transaction1 {
+            get {
+                object obj = ResourceManager.GetObject("uil--transaction1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

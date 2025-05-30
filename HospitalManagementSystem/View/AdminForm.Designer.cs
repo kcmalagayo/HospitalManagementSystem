@@ -36,10 +36,10 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             manageDoctorBtn = new Guna.UI2.WinForms.Guna2Button();
@@ -49,10 +49,10 @@
             panel1 = new Panel();
             pictureBox1 = new PictureBox();
             panel2 = new Panel();
+            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             paymentBtn = new Guna.UI2.WinForms.Guna2Button();
             label2 = new Label();
             pictureBox2 = new PictureBox();
-            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
@@ -195,6 +195,29 @@
             panel2.Size = new Size(298, 747);
             panel2.TabIndex = 6;
             // 
+            // guna2Button1
+            // 
+            guna2Button1.AutoRoundedCorners = true;
+            guna2Button1.CustomizableEdges = customizableEdges9;
+            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2Button1.FillColor = Color.MediumSeaGreen;
+            guna2Button1.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
+            guna2Button1.ForeColor = Color.WhiteSmoke;
+            guna2Button1.Image = Properties.Resources.mage__checklist_note2;
+            guna2Button1.ImageAlign = HorizontalAlignment.Left;
+            guna2Button1.ImageSize = new Size(30, 30);
+            guna2Button1.Location = new Point(39, 526);
+            guna2Button1.Name = "guna2Button1";
+            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            guna2Button1.Size = new Size(204, 56);
+            guna2Button1.TabIndex = 9;
+            guna2Button1.Text = "View Appointments";
+            guna2Button1.TextAlign = HorizontalAlignment.Right;
+            guna2Button1.Click += guna2Button1_Click;
+            // 
             // paymentBtn
             // 
             paymentBtn.AutoRoundedCorners = true;
@@ -206,7 +229,7 @@
             paymentBtn.FillColor = Color.MediumSeaGreen;
             paymentBtn.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
             paymentBtn.ForeColor = Color.WhiteSmoke;
-            paymentBtn.Image = Properties.Resources.book_appointment_white;
+            paymentBtn.Image = Properties.Resources.uil__transaction;
             paymentBtn.ImageAlign = HorizontalAlignment.Left;
             paymentBtn.ImageSize = new Size(30, 30);
             paymentBtn.Location = new Point(39, 599);
@@ -238,29 +261,6 @@
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 5;
             pictureBox2.TabStop = false;
-            // 
-            // guna2Button1
-            // 
-            guna2Button1.AutoRoundedCorners = true;
-            guna2Button1.CustomizableEdges = customizableEdges9;
-            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button1.FillColor = Color.MediumSeaGreen;
-            guna2Button1.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
-            guna2Button1.ForeColor = Color.WhiteSmoke;
-            guna2Button1.Image = Properties.Resources.book_appointment_white;
-            guna2Button1.ImageAlign = HorizontalAlignment.Left;
-            guna2Button1.ImageSize = new Size(30, 30);
-            guna2Button1.Location = new Point(39, 526);
-            guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            guna2Button1.Size = new Size(204, 56);
-            guna2Button1.TabIndex = 9;
-            guna2Button1.Text = "View Appointments";
-            guna2Button1.TextAlign = HorizontalAlignment.Right;
-            guna2Button1.Click += guna2Button1_Click;
             // 
             // AdminForm
             // 

@@ -40,8 +40,8 @@
             panel1 = new Panel();
             pictureBox1 = new PictureBox();
             panel2 = new Panel();
-            pictureBox2 = new PictureBox();
             label2 = new Label();
+            pictureBox2 = new PictureBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
@@ -85,7 +85,7 @@
             guna2Button2.FillColor = Color.MediumSeaGreen;
             guna2Button2.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
             guna2Button2.ForeColor = Color.WhiteSmoke;
-            guna2Button2.Image = Properties.Resources.clipboard;
+            guna2Button2.Image = Properties.Resources.mage__checklist_note1;
             guna2Button2.ImageAlign = HorizontalAlignment.Left;
             guna2Button2.ImageSize = new Size(30, 30);
             guna2Button2.Location = new Point(44, 275);
@@ -157,17 +157,6 @@
             panel2.Size = new Size(300, 521);
             panel2.TabIndex = 39;
             // 
-            // pictureBox2
-            // 
-            pictureBox2.BackColor = Color.White;
-            pictureBox2.Image = Properties.Resources.Hospital_logo2png;
-            pictureBox2.Location = new Point(-64, -69);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(435, 407);
-            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox2.TabIndex = 38;
-            pictureBox2.TabStop = false;
-            // 
             // label2
             // 
             label2.AutoSize = true;
@@ -178,6 +167,17 @@
             label2.Size = new Size(151, 20);
             label2.TabIndex = 39;
             label2.Text = "DOCTOR CONTROLS";
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.BackColor = Color.White;
+            pictureBox2.Image = Properties.Resources.Hospital_logo2png;
+            pictureBox2.Location = new Point(-64, -69);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(435, 407);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 38;
+            pictureBox2.TabStop = false;
             // 
             // DoctorDashboardForm
             // 

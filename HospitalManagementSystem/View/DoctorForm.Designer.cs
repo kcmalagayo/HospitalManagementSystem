@@ -39,6 +39,7 @@
             comboBox1 = new ComboBox();
             panel1 = new Panel();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // label2
@@ -95,7 +96,7 @@
             guna2Button2.FillColor = Color.MediumSeaGreen;
             guna2Button2.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2Button2.ForeColor = Color.WhiteSmoke;
-            guna2Button2.Location = new Point(155, 108);
+            guna2Button2.Location = new Point(155, 109);
             guna2Button2.Margin = new Padding(3, 2, 3, 2);
             guna2Button2.Name = "guna2Button2";
             guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges4;
@@ -114,6 +115,7 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(guna2Button2);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
@@ -129,11 +131,11 @@
             Controls.Add(label2);
             Controls.Add(dataGridView1);
             Controls.Add(AppointmentSearchTxt);
-            Controls.Add(guna2Button2);
             Controls.Add(panel1);
             Name = "DoctorForm";
             Text = "DoctorForm";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            panel1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
