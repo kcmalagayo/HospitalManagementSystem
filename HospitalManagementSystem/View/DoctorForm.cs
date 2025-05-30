@@ -2,6 +2,7 @@
 using System.Data;
 using System.Data.SQLite;
 using System.Windows.Forms;
+using HospitalManagementSystem.Controller;
 using HospitalManagementSystem.Data;
 
 namespace HospitalManagementSystem.View
@@ -82,13 +83,17 @@ namespace HospitalManagementSystem.View
 
                 int appointmentId = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["AppointmentID"].Value);
                 string newStatus = comboBox1.SelectedItem.ToString();
-
+                int patientId = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["PatientID"].Value); // ✅ GET PATIENT ID HERE
                 using (var cmd = new SQLiteCommand("UPDATE Appointment SET Status = @status WHERE AppointmentID = @id", _db.GetConnection()))
                 {
                     cmd.Parameters.AddWithValue("@status", newStatus);
                     cmd.Parameters.AddWithValue("@id", appointmentId);
                     cmd.ExecuteNonQuery();
                 }
+                AuthController controller = new AuthController(_db);
+
+                bool success = controller.InsertNotification(patientId, "Your appointment status has been changed to: " + newStatus + ".", "Online");
+
 
                 MessageBox.Show("Appointment status updated.", "Success");
                 LoadAppointments(AppointmentSearchTxt.Text.Trim());

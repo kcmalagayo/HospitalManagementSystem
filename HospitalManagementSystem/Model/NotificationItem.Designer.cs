@@ -46,20 +46,23 @@
             // 
             dateTimeLb.AutoSize = true;
             dateTimeLb.Font = new Font("Segoe UI", 10F);
-            dateTimeLb.Location = new Point(897, 160);
+            dateTimeLb.Location = new Point(938, 163);
             dateTimeLb.Name = "dateTimeLb";
             dateTimeLb.Size = new Size(176, 28);
             dateTimeLb.TabIndex = 1;
             dateTimeLb.Text = "DATE + TIME HERE";
+            dateTimeLb.Click += dateTimeLb_Click;
             // 
             // NotificationItem
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ButtonShadow;
             Controls.Add(dateTimeLb);
             Controls.Add(messageLb);
+            Margin = new Padding(20);
             Name = "NotificationItem";
-            Size = new Size(1088, 200);
+            Size = new Size(1210, 200);
             ResumeLayout(false);
             PerformLayout();
         }
