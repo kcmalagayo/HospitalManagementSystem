@@ -24,14 +24,17 @@ namespace HospitalManagementSystem.View
             database = new Database();
             doctorController = new DoctorController(database);
             timeSlotDropDown = new ComboBox();
+            timeSlotDropDown.BringToFront();
             timeSlotDropDown.DropDownStyle = ComboBoxStyle.DropDownList;
             timeSlotDropDown.Font = new Font("Arial", 9F);
-            timeSlotDropDown.ItemHeight = 20;
-            timeSlotDropDown.Location = new Point(12, 160);  // Adjust position if needed
+            timeSlotDropDown.IntegralHeight = true;
+            timeSlotDropDown.ItemHeight = 40;
+            timeSlotDropDown.Location = new Point(240, 310);  // Adjust position if needed
             timeSlotDropDown.Name = "timeSlotDropDown";
             timeSlotDropDown.Size = new Size(197, 33);
-            timeSlotDropDown.Anchor = AnchorStyles.Top | AnchorStyles.Left;
-            panel1.Controls.Add(timeSlotDropDown);
+            //timeSlotDropDown.Anchor = AnchorStyles.Right;
+            timeSlotDropDown.Visible = true;
+            panel2.Controls.Add(timeSlotDropDown);
             LoadSpecializations();
             LoadDoctors();
         }
