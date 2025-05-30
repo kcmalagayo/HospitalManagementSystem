@@ -77,7 +77,8 @@ namespace HospitalManagementSystem.View
 
         private void bookAppointmentBtn_Click(object sender, EventArgs e)
         {
-
+            AdminBooking ab = new AdminBooking();
+            OpenFormInPanel(ab);
         }
     }
 }
