@@ -57,6 +57,7 @@ namespace HospitalManagementSystem.Controller
             }
             return dt;
         }
+
         public DataTable GetDoctorsBySpecialization(string specialization)
         {
             DataTable dt = new DataTable();
@@ -69,6 +70,40 @@ namespace HospitalManagementSystem.Controller
             }
             return dt;
         }
+
+        public Doctor GetDoctorById(int doctorId)
+        {
+            Doctor doctor = null;
+            string query = "SELECT * FROM Doctor WHERE DoctorID = @DoctorID";
+
+            using (var cmd = new SQLiteCommand(query, _db.GetConnection()))
+            {
+                cmd.Parameters.AddWithValue("@DoctorID", doctorId);
+
+                using (var reader = cmd.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        doctor = new Doctor
+                        {
+                            DoctorID = Convert.ToInt32(reader["DoctorID"]),
+                            FirstName = reader["FirstName"].ToString(),
+                            LastName = reader["LastName"].ToString(),
+                            DateOfBirth = DateTime.Parse(reader["DateOfBirth"].ToString()),
+                            Gender = reader["Gender"].ToString(),
+                            Specialization = reader["Specialization"].ToString(),
+                            ContactNumber = reader["ContactNumber"].ToString(),
+                            Email = reader["Email"].ToString(),
+                            Password = reader["Password"].ToString(),
+                            Status = reader["Status"].ToString()
+                        };
+                    }
+                }
+            }
+
+            return doctor;
+        }
+
         public bool SaveAppointment(int doctorId, DateTime appointmentDate)
         {
             try
