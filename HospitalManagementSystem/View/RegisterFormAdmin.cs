@@ -21,7 +21,7 @@ namespace HospitalManagementSystem.View
             string email = emailTxt.Text.Trim();
             string password = firstName + lastName;
 
-            var admin = new Admin
+            var admin = new Admin//admin model instance
             {
                 FirstName = firstName,
                 LastName = lastName,
