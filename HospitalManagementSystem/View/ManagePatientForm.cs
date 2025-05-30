@@ -17,6 +17,13 @@ namespace HospitalManagementSystem.View
         public ManagePatientForm()
         {
             InitializeComponent();
+            this.WindowState = FormWindowState.Maximized;
+
+            LoadPatientData();
+        }
+
+        private void LoadPatientData()
+        {
             string keyword = patientSearchTxt.Text.Trim();
 
             var db = new HospitalManagementSystem.Data.Database();
@@ -27,26 +34,28 @@ namespace HospitalManagementSystem.View
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = results;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            this.WindowState = FormWindowState.Maximized;
+
+            // Hide sensitive columns
+            if (dataGridView1.Columns.Contains("Password"))
+                dataGridView1.Columns["Password"].Visible = false;
+
+            if (dataGridView1.Columns.Contains("Appointment"))
+                dataGridView1.Columns["Appointment"].Visible = false;
         }
 
         private void ManagePatientForm_Load(object sender, EventArgs e)
         {
-
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
                 var row = dataGridView1.Rows[e.RowIndex];
-
                 try
                 {
-                    //  Initialize the Database connection
                     var db = new HospitalManagementSystem.Data.Database();
 
-                    //  Create the Patient Object from the Selected Row
                     var selectedPatient = new Patient
                     {
                         PatientID = Convert.ToInt32(row.Cells["PatientID"].Value),
@@ -60,18 +69,16 @@ namespace HospitalManagementSystem.View
                         Address = row.Cells["Address"].Value.ToString()
                     };
 
-                    //  Pass both the Patient and the Database to the constructor
                     var editForm = new PatientFields(selectedPatient, db);
                     editForm.ShowDialog();
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Error loading patient: " + ex.Message);
-                    MessageBox.Show("Check: " + row.Cells[1].Value?.ToString());
                 }
             }
         }
-         
+
         private void btnRegister_Click(object sender, EventArgs e)
         {
             RegisterFormPatient registerFormPatient = new RegisterFormPatient();
