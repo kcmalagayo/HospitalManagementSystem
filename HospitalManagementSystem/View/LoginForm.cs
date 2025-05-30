@@ -90,18 +90,20 @@ namespace HospitalManagementSystem.View
                                     MessageBoxIcon.Error);
                 }
             }
-            else if (selectRoleComboBox.SelectedItem.ToString() == "Doctor")//condition for doctor role
+            else if (selectRoleComboBox.SelectedItem.ToString() == "Doctor")
             {
                 if (authController.Login(email, password, "Doctor", out object user))
                 {
                     Doctor doctor = user as Doctor;
+                    int doctorId = doctor.DoctorID;
+
                     MessageBox.Show("Welcome, Doctor " + doctor.FirstName + "!",
                                     "Login Successful",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Information);
-                    //open the DoctorDashboardForm with the correct DoctorID
-                    DoctorDashboardForm ddF = new DoctorDashboardForm();
-                    ddF.Show();
+
+                    DoctorForm doctorForm = new DoctorForm(doctorId); // pass doctorId
+                    doctorForm.Show();
                     this.Hide();
                 }
                 else
@@ -112,6 +114,7 @@ namespace HospitalManagementSystem.View
                                     MessageBoxIcon.Error);
                 }
             }
+
         }
 
         private void LoginForm_Load(object sender, EventArgs e)//misclicked this method, so I left it empty

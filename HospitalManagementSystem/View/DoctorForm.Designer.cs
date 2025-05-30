@@ -132,7 +132,7 @@
             Controls.Add(panel1);
             Name = "DoctorForm";
             Text = "DoctorForm";
-            Load += DoctorForm_Load;
+            //Load += DoctorForm_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
