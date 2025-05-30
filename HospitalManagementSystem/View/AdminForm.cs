@@ -95,6 +95,13 @@ namespace HospitalManagementSystem.View
         {
 
         }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            AdminViewAppointmentscs avA= new AdminViewAppointmentscs();
+            OpenFormInPanel(avA);
+            pictureBox1.Hide();
+        }
     }
 }
  
