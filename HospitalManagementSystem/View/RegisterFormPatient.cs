@@ -72,6 +72,13 @@ namespace HospitalManagementSystem.View
             var db = new Database();  // assumes default "hospital_db.sqlite"
             var authController = new AuthController(db);
 
+            if (authController.EmailExistsInAnyRole(patient.Email))
+            {
+                MessageBox.Show("This email is already registered to an account.");
+                db.Close();
+                return;
+            }
+
             // 3. Attempt to register
             bool success = authController.Register(patient);
 

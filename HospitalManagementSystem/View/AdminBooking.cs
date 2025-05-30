@@ -211,8 +211,7 @@ namespace HospitalManagementSystem.View
         {
 
         }
-
-        private void patientSearchTxt_TextChanged_1(object sender, EventArgs e)
+        private void patientSearchTxt_TextChanged_2(object sender, EventArgs e)
         {
 
         }
