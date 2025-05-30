@@ -110,14 +110,16 @@
             // adminBtn
             // 
             adminBtn.Anchor = AnchorStyles.None;
+            adminBtn.AutoRoundedCorners = true;
+            adminBtn.BackColor = Color.Transparent;
             adminBtn.CustomizableEdges = customizableEdges1;
             adminBtn.DisabledState.BorderColor = Color.DarkGray;
             adminBtn.DisabledState.CustomBorderColor = Color.DarkGray;
             adminBtn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             adminBtn.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             adminBtn.FillColor = Color.MediumSeaGreen;
-            adminBtn.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            adminBtn.ForeColor = Color.Black;
+            adminBtn.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
+            adminBtn.ForeColor = Color.WhiteSmoke;
             adminBtn.Location = new Point(135, 406);
             adminBtn.Name = "adminBtn";
             adminBtn.ShadowDecoration.CustomizableEdges = customizableEdges2;
@@ -128,14 +130,16 @@
             // patientBtn
             // 
             patientBtn.Anchor = AnchorStyles.None;
+            patientBtn.AutoRoundedCorners = true;
+            patientBtn.BackColor = Color.Transparent;
             patientBtn.CustomizableEdges = customizableEdges3;
             patientBtn.DisabledState.BorderColor = Color.DarkGray;
             patientBtn.DisabledState.CustomBorderColor = Color.DarkGray;
             patientBtn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             patientBtn.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             patientBtn.FillColor = Color.MediumSeaGreen;
-            patientBtn.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            patientBtn.ForeColor = Color.Black;
+            patientBtn.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
+            patientBtn.ForeColor = Color.WhiteSmoke;
             patientBtn.Location = new Point(435, 406);
             patientBtn.Name = "patientBtn";
             patientBtn.ShadowDecoration.CustomizableEdges = customizableEdges4;
@@ -146,14 +150,16 @@
             // doctorBtn
             // 
             doctorBtn.Anchor = AnchorStyles.None;
+            doctorBtn.AutoRoundedCorners = true;
+            doctorBtn.BackColor = Color.Transparent;
             doctorBtn.CustomizableEdges = customizableEdges5;
             doctorBtn.DisabledState.BorderColor = Color.DarkGray;
             doctorBtn.DisabledState.CustomBorderColor = Color.DarkGray;
             doctorBtn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             doctorBtn.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             doctorBtn.FillColor = Color.MediumSeaGreen;
-            doctorBtn.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            doctorBtn.ForeColor = Color.Black;
+            doctorBtn.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
+            doctorBtn.ForeColor = Color.WhiteSmoke;
             doctorBtn.Location = new Point(737, 406);
             doctorBtn.Name = "doctorBtn";
             doctorBtn.ShadowDecoration.CustomizableEdges = customizableEdges6;

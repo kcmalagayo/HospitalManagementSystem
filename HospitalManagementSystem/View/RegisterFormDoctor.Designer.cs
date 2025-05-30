@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             btnRegister = new Guna.UI2.WinForms.Guna2Button();
             registerPanelDoctor = new Panel();
             specializaitionDropBox = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -57,18 +57,21 @@
             // btnRegister
             // 
             btnRegister.Anchor = AnchorStyles.None;
-            btnRegister.CustomizableEdges = customizableEdges7;
+            btnRegister.AutoRoundedCorners = true;
+            btnRegister.BackColor = Color.Transparent;
+            btnRegister.CustomizableEdges = customizableEdges1;
             btnRegister.DisabledState.BorderColor = Color.DarkGray;
             btnRegister.DisabledState.CustomBorderColor = Color.DarkGray;
             btnRegister.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnRegister.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnRegister.FillColor = Color.MediumSeaGreen;
-            btnRegister.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnRegister.ForeColor = Color.Black;
+            btnRegister.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
+            btnRegister.ForeColor = Color.WhiteSmoke;
             btnRegister.Location = new Point(88, 452);
             btnRegister.Margin = new Padding(3, 2, 3, 2);
             btnRegister.Name = "btnRegister";
-            btnRegister.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            btnRegister.PressedColor = Color.MediumSeaGreen;
+            btnRegister.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btnRegister.Size = new Size(334, 42);
             btnRegister.TabIndex = 45;
             btnRegister.Text = "Register Doctor";
@@ -89,7 +92,7 @@
             // specializaitionDropBox
             // 
             specializaitionDropBox.BackColor = Color.Transparent;
-            specializaitionDropBox.CustomizableEdges = customizableEdges9;
+            specializaitionDropBox.CustomizableEdges = customizableEdges3;
             specializaitionDropBox.DrawMode = DrawMode.OwnerDrawFixed;
             specializaitionDropBox.DropDownStyle = ComboBoxStyle.DropDownList;
             specializaitionDropBox.FocusedColor = Color.FromArgb(94, 148, 255);
@@ -99,7 +102,7 @@
             specializaitionDropBox.ItemHeight = 18;
             specializaitionDropBox.Location = new Point(74, 305);
             specializaitionDropBox.Name = "specializaitionDropBox";
-            specializaitionDropBox.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            specializaitionDropBox.ShadowDecoration.CustomizableEdges = customizableEdges4;
             specializaitionDropBox.Size = new Size(336, 24);
             specializaitionDropBox.TabIndex = 0;
             // 
@@ -187,7 +190,7 @@
             // 
             genderComboBox.Anchor = AnchorStyles.None;
             genderComboBox.BackColor = Color.Transparent;
-            genderComboBox.CustomizableEdges = customizableEdges11;
+            genderComboBox.CustomizableEdges = customizableEdges5;
             genderComboBox.DrawMode = DrawMode.OwnerDrawFixed;
             genderComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
             genderComboBox.FocusedColor = Color.FromArgb(94, 148, 255);
@@ -198,7 +201,7 @@
             genderComboBox.Location = new Point(86, 248);
             genderComboBox.Margin = new Padding(3, 2, 3, 2);
             genderComboBox.Name = "genderComboBox";
-            genderComboBox.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            genderComboBox.ShadowDecoration.CustomizableEdges = customizableEdges6;
             genderComboBox.Size = new Size(335, 24);
             genderComboBox.TabIndex = 31;
             genderComboBox.SelectedIndexChanged += genderComboBox_SelectedIndexChanged;
