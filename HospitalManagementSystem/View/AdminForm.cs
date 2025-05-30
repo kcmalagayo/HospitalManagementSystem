@@ -69,7 +69,7 @@ namespace HospitalManagementSystem.View
                 var loginForm = new LoginForm();
                 loginForm.Show();
                 MessageBox.Show("You have successfully logged out.", "Logout Successful");
-               
+
             }
             else
             {
@@ -81,6 +81,13 @@ namespace HospitalManagementSystem.View
         {
             AdminBooking ab = new AdminBooking();
             OpenFormInPanel(ab);
+            pictureBox1.Hide();
+        }
+
+        private void paymentBtn_Click(object sender, EventArgs e)
+        {
+            TransactionHistoryForm tf = new TransactionHistoryForm();
+            OpenFormInPanel(tf);
             pictureBox1.Hide();
         }
     }

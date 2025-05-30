@@ -110,6 +110,40 @@ namespace HospitalManagementSystem.Controller
             }
         }
 
+        // pang get ng patient by id
+
+        public Patient GetPatientById(int patientId)
+        {
+            string query = "SELECT * FROM Patient WHERE PatientID = @PatientID";
+
+            using (var cmd = new SQLiteCommand(query, _db.GetConnection()))
+            {
+                cmd.Parameters.AddWithValue("@PatientID", patientId);
+
+                using (var reader = cmd.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        return new Patient
+                        {
+                            PatientID = Convert.ToInt32(reader["PatientID"]),
+                            FirstName = reader["FirstName"].ToString(),
+                            LastName = reader["LastName"].ToString(),
+                            DateOfBirth = DateTime.Parse(reader["DateOfBirth"].ToString()),
+                            Gender = reader["Gender"].ToString(),
+                            ContactNumber = reader["ContactNumber"].ToString(),
+                            Email = reader["Email"].ToString(),
+                            Address = reader["Address"].ToString(),
+                            password = reader["Password"].ToString()
+                        };
+                    }
+                }
+            }
+
+            return null; // Patient not found
+        }
+
+
         // pang insert ng notification
         public bool InsertNotification(int patientId, string message, string type)
         {
