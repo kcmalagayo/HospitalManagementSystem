@@ -269,10 +269,6 @@ namespace HospitalManagementSystem.Controller
         }
 
 
-
-
-
-
         public bool RegisterDoctor(Doctor doctor)
         {
             string query = @"

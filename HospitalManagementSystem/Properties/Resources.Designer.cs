@@ -263,6 +263,16 @@ namespace HospitalManagementSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap logout_white2 {
+            get {
+                object obj = ResourceManager.GetObject("logout_white2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap mage__checklist_note {
             get {
                 object obj = ResourceManager.GetObject("mage--checklist-note", resourceCulture);
@@ -356,6 +366,16 @@ namespace HospitalManagementSystem.Properties {
         internal static System.Drawing.Bitmap solar__folder_outline {
             get {
                 object obj = ResourceManager.GetObject("solar--folder-outline", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap solar__folder_outline1 {
+            get {
+                object obj = ResourceManager.GetObject("solar--folder-outline1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

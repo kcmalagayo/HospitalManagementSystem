@@ -60,7 +60,7 @@
             guna2Button1.FillColor = Color.MediumSeaGreen;
             guna2Button1.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
             guna2Button1.ForeColor = Color.WhiteSmoke;
-            guna2Button1.Image = Properties.Resources.folder;
+            guna2Button1.Image = Properties.Resources.solar__folder_outline1;
             guna2Button1.ImageAlign = HorizontalAlignment.Left;
             guna2Button1.ImageSize = new Size(30, 30);
             guna2Button1.Location = new Point(44, 338);
@@ -70,7 +70,7 @@
             guna2Button1.TabIndex = 35;
             guna2Button1.Text = "Records";
             guna2Button1.TextAlign = HorizontalAlignment.Right;
-            guna2Button1.TextOffset = new Point(-33, 0);
+            guna2Button1.TextOffset = new Point(-36, 0);
             guna2Button1.Click += guna2Button1_Click;
             // 
             // guna2Button2
@@ -110,7 +110,7 @@
             guna2Button3.FillColor = Color.MediumSeaGreen;
             guna2Button3.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
             guna2Button3.ForeColor = Color.WhiteSmoke;
-            guna2Button3.Image = Properties.Resources.exit;
+            guna2Button3.Image = Properties.Resources.logout_white2;
             guna2Button3.ImageAlign = HorizontalAlignment.Left;
             guna2Button3.ImageSize = new Size(30, 30);
             guna2Button3.Location = new Point(44, 401);
