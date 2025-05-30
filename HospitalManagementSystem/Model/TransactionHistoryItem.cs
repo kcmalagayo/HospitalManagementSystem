@@ -33,7 +33,7 @@ namespace HospitalManagementSystem.Model
             double price = 500.00;
             string patientName = patient.FirstName + " " + patient.LastName;
             string paymentMethod = transacHistory.PaymentMethod;
-            string datetime = transacHistory.AppointmentDate.ToString("yyyy/mm/dd HH:mm:ss");
+            string datetime = transacHistory.AppointmentDate.ToString("yyyy-MM-dd HH:mm:ss");
             string type = transacHistory.AppointmentType;
             doctorNameLb.Text = doctorName;
             specializationLb.Text = specialization;
