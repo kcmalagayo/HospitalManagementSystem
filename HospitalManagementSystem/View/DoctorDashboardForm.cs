@@ -17,6 +17,7 @@ namespace HospitalManagementSystem.View
         public DoctorDashboardForm(int doctorId)
         {
             InitializeComponent();
+            this.WindowState = FormWindowState.Maximized;
             _doctorId = doctorId;
         }
 

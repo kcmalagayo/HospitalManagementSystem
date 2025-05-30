@@ -83,6 +83,16 @@ namespace HospitalManagementSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap book_appointment_white {
+            get {
+                object obj = ResourceManager.GetObject("book_appointment_white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap clipboard {
             get {
                 object obj = ResourceManager.GetObject("clipboard", resourceCulture);
@@ -116,6 +126,16 @@ namespace HospitalManagementSystem.Properties {
         internal static System.Drawing.Bitmap Doctor_amico {
             get {
                 object obj = ResourceManager.GetObject("Doctor-amico", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap doctor_white {
+            get {
+                object obj = ResourceManager.GetObject("doctor_white", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -183,6 +203,46 @@ namespace HospitalManagementSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Hospital_logo {
+            get {
+                object obj = ResourceManager.GetObject("Hospital_logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Hospital_logo1 {
+            get {
+                object obj = ResourceManager.GetObject("Hospital_logo1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Hospital_logo2png {
+            get {
+                object obj = ResourceManager.GetObject("Hospital_logo2png", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logout_white {
+            get {
+                object obj = ResourceManager.GetObject("logout_white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Ophthalmologist_bro {
             get {
                 object obj = ResourceManager.GetObject("Ophthalmologist-bro", resourceCulture);
@@ -196,6 +256,16 @@ namespace HospitalManagementSystem.Properties {
         internal static System.Drawing.Bitmap patient {
             get {
                 object obj = ResourceManager.GetObject("patient", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap patient_white_icon {
+            get {
+                object obj = ResourceManager.GetObject("patient_white_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

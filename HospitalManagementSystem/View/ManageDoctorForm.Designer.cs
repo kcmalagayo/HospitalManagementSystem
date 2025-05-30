@@ -63,6 +63,7 @@
             // dataGridView1
             // 
             dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dataGridView1.BackgroundColor = SystemColors.ActiveBorder;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(27, 153);
             dataGridView1.Name = "dataGridView1";
@@ -73,15 +74,16 @@
             // btnRegister
             // 
             btnRegister.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnRegister.BackColor = Color.PaleGreen;
+            btnRegister.AutoRoundedCorners = true;
+            btnRegister.BackColor = Color.Transparent;
             btnRegister.CustomizableEdges = customizableEdges3;
             btnRegister.DisabledState.BorderColor = Color.DarkGray;
             btnRegister.DisabledState.CustomBorderColor = Color.DarkGray;
             btnRegister.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnRegister.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnRegister.FillColor = Color.MediumSeaGreen;
-            btnRegister.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnRegister.ForeColor = Color.Black;
+            btnRegister.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnRegister.ForeColor = Color.WhiteSmoke;
             btnRegister.Location = new Point(621, 95);
             btnRegister.Margin = new Padding(3, 2, 3, 2);
             btnRegister.Name = "btnRegister";

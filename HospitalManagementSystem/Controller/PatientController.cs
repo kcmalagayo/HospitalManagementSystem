@@ -19,7 +19,7 @@ namespace HospitalManagementSystem.Controller
             _db = db;
         }
 
-        public List<Patient> SearchPatient(string keyword)
+        public List<Patient> SearchPatient(string keyword)//method to search for a patient by name
         {
             List<Patient> result = new List<Patient>();
             string query = "SELECT * FROM Patient WHERE FirstName || ' ' || LastName LIKE @keyword";
@@ -60,7 +60,7 @@ namespace HospitalManagementSystem.Controller
                 LastName = @LastName, 
                 Gender = @Gender, 
                 ContactNumber = @ContactNumber, 
-                Email = @Email, 
+        Email = @Email, 
                 Address = @Address, 
                 Password = @Password, 
                 DateOfBirth = @DateOfBirth 

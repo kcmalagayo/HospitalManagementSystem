@@ -54,11 +54,10 @@
             dataGridView2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Location = new Point(371, 132);
-            dataGridView2.Margin = new Padding(4, 5, 4, 5);
+            dataGridView2.Location = new Point(260, 79);
             dataGridView2.Name = "dataGridView2";
             dataGridView2.RowHeadersWidth = 51;
-            dataGridView2.Size = new Size(1009, 595);
+            dataGridView2.Size = new Size(706, 357);
             dataGridView2.TabIndex = 3;
             // 
             // specializaitionDropBox
@@ -72,11 +71,10 @@
             specializaitionDropBox.Font = new Font("Arial", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point, 0);
             specializaitionDropBox.ForeColor = Color.FromArgb(68, 88, 112);
             specializaitionDropBox.ItemHeight = 25;
-            specializaitionDropBox.Location = new Point(17, 77);
-            specializaitionDropBox.Margin = new Padding(4, 5, 4, 5);
+            specializaitionDropBox.Location = new Point(12, 46);
             specializaitionDropBox.Name = "specializaitionDropBox";
             specializaitionDropBox.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            specializaitionDropBox.Size = new Size(280, 31);
+            specializaitionDropBox.Size = new Size(197, 31);
             specializaitionDropBox.TabIndex = 4;
             specializaitionDropBox.SelectedIndexChanged += specializaitionDropBox_SelectedIndexChanged;
             // 
@@ -92,13 +90,13 @@
             doctorSearchTxt.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             doctorSearchTxt.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             doctorSearchTxt.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            doctorSearchTxt.Location = new Point(371, 52);
-            doctorSearchTxt.Margin = new Padding(4, 7, 4, 7);
+            doctorSearchTxt.Location = new Point(260, 31);
+            doctorSearchTxt.Margin = new Padding(3, 4, 3, 4);
             doctorSearchTxt.Name = "doctorSearchTxt";
             doctorSearchTxt.PlaceholderText = "Search for doctor ";
             doctorSearchTxt.SelectedText = "";
             doctorSearchTxt.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            doctorSearchTxt.Size = new Size(1009, 57);
+            doctorSearchTxt.Size = new Size(706, 34);
             doctorSearchTxt.TabIndex = 21;
             doctorSearchTxt.TextChanged += doctorSearchTxt_TextChanged;
             // 
@@ -106,10 +104,9 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Arial", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(14, 42);
-            label6.Margin = new Padding(4, 0, 4, 0);
+            label6.Location = new Point(10, 25);
             label6.Name = "label6";
-            label6.Size = new Size(181, 32);
+            label6.Size = new Size(120, 21);
             label6.TabIndex = 58;
             label6.Text = "Specialization";
             // 
@@ -117,29 +114,29 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Arial", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(16, 143);
-            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Location = new Point(11, 86);
             label1.Name = "label1";
-            label1.Size = new Size(180, 32);
+            label1.Size = new Size(118, 21);
             label1.TabIndex = 60;
             label1.Text = "Appointments";
             label1.Click += label1_Click;
             // 
             // guna2Button1
             // 
+            guna2Button1.AutoRoundedCorners = true;
+            guna2Button1.BackColor = Color.Transparent;
             guna2Button1.CustomizableEdges = customizableEdges5;
             guna2Button1.DisabledState.BorderColor = Color.DarkGray;
             guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
             guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             guna2Button1.FillColor = Color.MediumSeaGreen;
-            guna2Button1.Font = new Font("Arial", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            guna2Button1.ForeColor = Color.Black;
-            guna2Button1.Location = new Point(13, 369);
-            guna2Button1.Margin = new Padding(4, 5, 4, 5);
+            guna2Button1.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
+            guna2Button1.ForeColor = Color.WhiteSmoke;
+            guna2Button1.Location = new Point(9, 221);
             guna2Button1.Name = "guna2Button1";
             guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2Button1.Size = new Size(281, 53);
+            guna2Button1.Size = new Size(197, 32);
             guna2Button1.TabIndex = 61;
             guna2Button1.Text = "Book Appointment";
             guna2Button1.Click += guna2Button1_Click;
@@ -151,13 +148,12 @@
             guna2DateTimePicker1.FillColor = Color.Honeydew;
             guna2DateTimePicker1.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2DateTimePicker1.Format = DateTimePickerFormat.Long;
-            guna2DateTimePicker1.Location = new Point(16, 198);
-            guna2DateTimePicker1.Margin = new Padding(4, 5, 4, 5);
+            guna2DateTimePicker1.Location = new Point(11, 119);
             guna2DateTimePicker1.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             guna2DateTimePicker1.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             guna2DateTimePicker1.Name = "guna2DateTimePicker1";
             guna2DateTimePicker1.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2DateTimePicker1.Size = new Size(281, 55);
+            guna2DateTimePicker1.Size = new Size(197, 33);
             guna2DateTimePicker1.TabIndex = 62;
             guna2DateTimePicker1.Value = new DateTime(2025, 5, 23, 22, 21, 41, 396);
             guna2DateTimePicker1.ValueChanged += guna2DateTimePicker1_ValueChanged;
@@ -174,28 +170,26 @@
             panel1.Controls.Add(panel2);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
-            panel1.Margin = new Padding(4, 5, 4, 5);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1399, 758);
+            panel1.Size = new Size(979, 455);
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
             // 
             // panel2
             // 
             panel2.Dock = DockStyle.Right;
-            panel2.Location = new Point(328, 0);
-            panel2.Margin = new Padding(4, 3, 4, 3);
+            panel2.Location = new Point(229, 0);
+            panel2.Margin = new Padding(3, 2, 3, 2);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1071, 758);
+            panel2.Size = new Size(750, 455);
             panel2.TabIndex = 63;
             // 
             // PatientForm
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1399, 758);
+            ClientSize = new Size(979, 455);
             Controls.Add(panel1);
-            Margin = new Padding(4, 5, 4, 5);
             Name = "PatientForm";
             Text = "Book Appointment";
             Load += PatientForm_Load;

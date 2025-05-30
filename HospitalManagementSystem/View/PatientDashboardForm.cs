@@ -18,6 +18,7 @@ namespace HospitalManagementSystem.View
         {
             InitializeComponent();
             _patientId = patientId;
+            this.WindowState = FormWindowState.Maximized;
 
         }
 
@@ -45,7 +46,7 @@ namespace HospitalManagementSystem.View
                 var loginForm = new LoginForm();
                 loginForm.Show();
                 MessageBox.Show("You have successfully logged out.", "Logout Successful");
-                Application.Exit(); // Close the application
+                //Application.Exit(); // Close the application
             }
             else
             {
@@ -54,8 +55,14 @@ namespace HospitalManagementSystem.View
         }
         private void guna2Button1_Click(object sender, EventArgs e)//book appointment button    
         {
-            PatientForm pf = new PatientForm();
+            PatientForm pf = new PatientForm(_patientId);
             OpenFormInPanel(pf);
+            pictureBox1.Hide();
+        }
+        private void notifBtn_Click(object sender, EventArgs e)
+        {
+            NotificationForm notifForm = new NotificationForm(_patientId);
+            OpenFormInPanel(notifForm);
             pictureBox1.Hide();
         }
 
@@ -79,6 +86,11 @@ namespace HospitalManagementSystem.View
         {
             PatientViewRecord vr = new PatientViewRecord(_patientId);
             OpenFormInPanel(vr);
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

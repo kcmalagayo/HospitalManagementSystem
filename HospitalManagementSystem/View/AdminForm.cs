@@ -17,6 +17,7 @@ namespace HospitalManagementSystem.View
         {
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
+            //panel1.Controls.Add(label1);
         }
 
         private void OpenFormInPanel(Form form)//method to open form in panel 
@@ -50,6 +51,7 @@ namespace HospitalManagementSystem.View
         {
             ManagePatientForm mpf = new ManagePatientForm();
             OpenFormInPanel(mpf);
+            pictureBox1.Hide();
         }
 
         private void logOutBtn_Click(object sender, EventArgs e)
@@ -67,7 +69,7 @@ namespace HospitalManagementSystem.View
                 var loginForm = new LoginForm();
                 loginForm.Show();
                 MessageBox.Show("You have successfully logged out.", "Logout Successful");
-               
+
             }
             else
             {
@@ -79,6 +81,26 @@ namespace HospitalManagementSystem.View
         {
             AdminBooking ab = new AdminBooking();
             OpenFormInPanel(ab);
+            pictureBox1.Hide();
+        }
+
+        private void paymentBtn_Click(object sender, EventArgs e)
+        {
+            TransactionHistoryForm tf = new TransactionHistoryForm();
+            OpenFormInPanel(tf);
+            pictureBox1.Hide();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            AdminViewAppointmentscs avA= new AdminViewAppointmentscs();
+            OpenFormInPanel(avA);
+            pictureBox1.Hide();
         }
     }
 }

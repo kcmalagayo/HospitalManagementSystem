@@ -15,6 +15,9 @@ namespace HospitalManagementSystem.View
 {
     public partial class AdminBooking : Form
     {
+
+        private int selectedPatientId;
+
         private HospitalManagementSystem.Data.Database database;
         private readonly DoctorController doctorController;
         private System.Windows.Forms.ComboBox timeSlotDropDown;
@@ -24,17 +27,59 @@ namespace HospitalManagementSystem.View
             database = new Database();
             doctorController = new DoctorController(database);
             timeSlotDropDown = new ComboBox();
+            patientSearchTxt.TextChanged += patientSearchTxt_TextChanged;
+            dataGridView1.CellClick += dataGridView1_CellClick;
+            timeSlotDropDown.BringToFront();
             timeSlotDropDown.DropDownStyle = ComboBoxStyle.DropDownList;
             timeSlotDropDown.Font = new Font("Arial", 9F);
-            timeSlotDropDown.ItemHeight = 20;
-            timeSlotDropDown.Location = new Point(12, 160);  // Adjust position if needed
+            timeSlotDropDown.IntegralHeight = true;
+            timeSlotDropDown.ItemHeight = 40;
+            timeSlotDropDown.Location = new Point(240, 400);  // Adjust position if needed
             timeSlotDropDown.Name = "timeSlotDropDown";
             timeSlotDropDown.Size = new Size(197, 33);
-            timeSlotDropDown.Anchor = AnchorStyles.Top | AnchorStyles.Left;
-            panel1.Controls.Add(timeSlotDropDown);
+            //timeSlotDropDown.Anchor = AnchorStyles.Right;
+            timeSlotDropDown.Visible = true;
+            panel2.Controls.Add(timeSlotDropDown);
+            panel2.Enabled = false; // Disable doctor panel initially
             LoadSpecializations();
             LoadDoctors();
         }
+
+        private void LoadPatients()
+        {
+            string keyword = patientSearchTxt.Text.Trim();
+            var controller = new PatientController(database);
+            var results = controller.SearchPatient(keyword);
+
+            dataGridView1.DataSource = results;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            if (dataGridView1.Columns.Contains("Password"))
+                dataGridView1.Columns["Password"].Visible = false;
+
+            if (dataGridView1.Columns.Contains("Appointments"))
+                dataGridView1.Columns["Appointments"].Visible = false;
+        }
+
+        private void patientSearchTxt_TextChanged(object sender, EventArgs e)
+        {
+            LoadPatients();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                var row = dataGridView1.Rows[e.RowIndex];
+                selectedPatientId = Convert.ToInt32(row.Cells["PatientID"].Value);
+
+                string patientName = $"{row.Cells["FirstName"].Value} {row.Cells["LastName"].Value}";
+                label3.Text = $"Selected Patient: {patientName}";
+
+                panel2.Enabled = true; // Enable doctor panel
+            }
+        }
+
         private void LoadTimeSlots()
         {
             // timeSlotDropDown.Items.Clear();
@@ -64,6 +109,8 @@ namespace HospitalManagementSystem.View
                 return count > 0;
             }
         }
+
+
         private void LoadSpecializations()
         {
             specializaitionDropBox.Items.Clear();
@@ -75,14 +122,18 @@ namespace HospitalManagementSystem.View
         }
         private void LoadDoctors(string specialization = null)
         {
+            DataTable dt;
+
             if (specialization == null || specialization == "All")
             {
-                dataGridView2.DataSource = doctorController.GetAllDoctors();
+                dt = doctorController.GetAllDoctors(); // Should return DataTable
             }
             else
             {
-                dataGridView2.DataSource = doctorController.GetDoctorsBySpecialization(specialization);
+                dt = doctorController.GetDoctorsBySpecialization(specialization); // Should return DataTable
             }
+
+            dataGridView2.DataSource = dt;
         }
         private void AdminBooking_Load(object sender, EventArgs e)
         {
@@ -129,7 +180,7 @@ namespace HospitalManagementSystem.View
 
             try
             {
-                PaymentForm paymentForm = new PaymentForm(doctorId, appointmentDateTime);
+                PaymentForm paymentForm = new PaymentForm(doctorId, selectedPatientId, appointmentDateTime, "Admin");
                 paymentForm.ShowDialog();
 
 
@@ -139,7 +190,7 @@ namespace HospitalManagementSystem.View
                 MessageBox.Show("Error: " + ex.Message);
             }
         }
-        
+
         private void doctorSearchTxt_TextChanged(object sender, EventArgs e)
         {
             string searchValue = doctorSearchTxt.Text;
@@ -149,6 +200,21 @@ namespace HospitalManagementSystem.View
         {
             string selectedSpecialization = specializaitionDropBox.SelectedItem.ToString();
             LoadDoctors(selectedSpecialization == "All" ? null : selectedSpecialization);
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void patientSearchTxt_TextChanged_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
