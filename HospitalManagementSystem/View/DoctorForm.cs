@@ -30,17 +30,15 @@ namespace HospitalManagementSystem.View
         private void LoadAppointments(string keyword = "")
         {
             string query = @"SELECT a.AppointmentID, 
-                        a.PatientID,
-                        p.FirstName || ' ' || p.LastName AS PatientName,
-                        d.FirstName || ' ' || d.LastName AS DoctorName,
-                        a.AppointmentDateTime,
-                        a.Status
-                 FROM Appointment a
-                 JOIN Doctor d ON a.DoctorID = d.DoctorID
-                 JOIN Patient p ON a.PatientID = p.PatientID
-                 WHERE a.DoctorID = @doctorId
-                   AND (p.FirstName || ' ' || p.LastName LIKE @keyword 
-                        OR d.FirstName || ' ' || d.LastName LIKE @keyword)";
+                                    a.PatientID,
+                                    p.FirstName || ' ' || p.LastName AS PatientName,
+                                    a.AppointmentDateTime,
+                                    a.Status
+                             FROM Appointment a
+                             JOIN Doctor d ON a.DoctorID = d.DoctorID
+                             JOIN Patient p ON a.PatientID = p.PatientID
+                             WHERE a.DoctorID = @doctorId
+                               AND (p.FirstName || ' ' || p.LastName LIKE @keyword)";
 
             using (var cmd = new SQLiteCommand(query, _db.GetConnection()))
             {
@@ -83,21 +81,21 @@ namespace HospitalManagementSystem.View
 
                 int appointmentId = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["AppointmentID"].Value);
                 string newStatus = comboBox1.SelectedItem.ToString();
-                int patientId = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["PatientID"].Value); // ✅ GET PATIENT ID HERE
+                int patientId = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["PatientID"].Value);
                 using (var cmd = new SQLiteCommand("UPDATE Appointment SET Status = @status WHERE AppointmentID = @id", _db.GetConnection()))
                 {
                     cmd.Parameters.AddWithValue("@status", newStatus);
                     cmd.Parameters.AddWithValue("@id", appointmentId);
                     cmd.ExecuteNonQuery();
                 }
+
                 AuthController controller = new AuthController(_db);
 
-                bool success = controller.InsertNotification(
-    patientId,
-    $"Your appointment (ID: {appointmentId}) status has been changed to: {newStatus}.",
-    "Online");
-
-
+                controller.InsertNotification(
+                    patientId,
+                    $"Your appointment (ID: {appointmentId}) status has been changed to: {newStatus}.",
+                    "Online"
+                );
 
                 MessageBox.Show("Appointment status updated.", "Success");
                 LoadAppointments(AppointmentSearchTxt.Text.Trim());
@@ -111,7 +109,7 @@ namespace HospitalManagementSystem.View
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            DoctorRecordsForm recordsForm = new DoctorRecordsForm(_doctorId); // Optional: pass _doctorId if filtering needed
+            DoctorRecordsForm recordsForm = new DoctorRecordsForm(_doctorId);
             recordsForm.Show();
         }
 

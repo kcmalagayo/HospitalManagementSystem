@@ -30,18 +30,17 @@ namespace HospitalManagementSystem.View
         private void LoadPreviousAppointments(string keyword = "")
         {
             string query = @"SELECT a.AppointmentID, 
-                        a.PatientID,
-                        p.FirstName || ' ' || p.LastName AS PatientName,
-                        d.FirstName || ' ' || d.LastName AS DoctorName,
-                        a.AppointmentDateTime,
-                        a.Status
-                 FROM Appointment a
-                 JOIN Doctor d ON a.DoctorID = d.DoctorID
-                 JOIN Patient p ON a.PatientID = p.PatientID
-                 WHERE a.DoctorID = @doctorId
-                   AND a.Status IN ('Completed', 'Cancelled', 'No Show')
-                   AND (p.FirstName || ' ' || p.LastName LIKE @keyword 
-                        OR d.FirstName || ' ' || d.LastName LIKE @keyword)";
+                                    a.PatientID,
+                                    p.FirstName || ' ' || p.LastName AS PatientName,
+                                    a.AppointmentDateTime,
+                                    a.Status
+                             FROM Appointment a
+                             JOIN Doctor d ON a.DoctorID = d.DoctorID
+                             JOIN Patient p ON a.PatientID = p.PatientID
+                             WHERE a.DoctorID = @doctorId
+                               AND a.Status IN ('Completed', 'Cancelled', 'No Show')
+                               AND (p.FirstName || ' ' || p.LastName LIKE @keyword)";
+
             using (var cmd = new SQLiteCommand(query, _db.GetConnection()))
             {
                 cmd.Parameters.AddWithValue("@doctorId", _doctorId);
@@ -62,7 +61,7 @@ namespace HospitalManagementSystem.View
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            DoctorForm doctorForm = new DoctorForm(_doctorId); // Pass back the doctorId
+            DoctorForm doctorForm = new DoctorForm(_doctorId);
             doctorForm.Show();
         }
 
