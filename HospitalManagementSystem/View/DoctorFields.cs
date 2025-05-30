@@ -16,7 +16,7 @@ namespace HospitalManagementSystem.View
         {
             InitializeComponent();
 
-            _doctor = doctor ?? new Doctor(); // ✅ Null check, initialize if null
+            _doctor = doctor ?? new Doctor(); //  Null check, initialize if null
             _doctorController = new DoctorController(db);
 
             genderComboBox.Items.Add("Male");

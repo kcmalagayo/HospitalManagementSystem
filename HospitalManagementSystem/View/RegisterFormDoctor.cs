@@ -65,22 +65,24 @@ namespace HospitalManagementSystem.View
             }
         }
 
-        private void doctorBtn_Click(object sender, EventArgs e)
+        private void doctorBtn_Click(object sender, EventArgs e)//misclicked this button, so I left it empty
         {
 
         }
 
-        private void patientBtn_Click(object sender, EventArgs e)
+        private void patientBtn_Click(object sender, EventArgs e)// misclicked this button, so I left it empty
         {
 
         }
 
-        private void firstNameTxt_TextChanged(object sender, EventArgs e)
+        private void firstNameTxt_TextChanged(object sender, EventArgs e)// misclicked this textbox, so I left it empty
+    
         {
 
         }
 
-        private void genderComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void genderComboBox_SelectedIndexChanged(object sender, EventArgs e)// misclicked this combobox, so I left it empty
+    
         {
 
         }

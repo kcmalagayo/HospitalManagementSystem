@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             label2 = new Label();
             panel2 = new Panel();
             label6 = new Label();
@@ -48,8 +48,8 @@
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             dataGridView2 = new DataGridView();
             panel1 = new Panel();
-            patientSearchTxt = new Guna.UI2.WinForms.Guna2TextBox();
             dataGridView1 = new DataGridView();
+            patientSearchTxt = new Guna.UI2.WinForms.Guna2TextBox();
             panel3 = new Panel();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
@@ -107,7 +107,7 @@
             // 
             specializaitionDropBox.Anchor = AnchorStyles.Right;
             specializaitionDropBox.BackColor = Color.MediumSeaGreen;
-            specializaitionDropBox.CustomizableEdges = customizableEdges11;
+            specializaitionDropBox.CustomizableEdges = customizableEdges1;
             specializaitionDropBox.DrawMode = DrawMode.OwnerDrawFixed;
             specializaitionDropBox.DropDownStyle = ComboBoxStyle.DropDownList;
             specializaitionDropBox.FocusedColor = Color.FromArgb(94, 148, 255);
@@ -117,7 +117,7 @@
             specializaitionDropBox.ItemHeight = 28;
             specializaitionDropBox.Location = new Point(589, 66);
             specializaitionDropBox.Name = "specializaitionDropBox";
-            specializaitionDropBox.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            specializaitionDropBox.ShadowDecoration.CustomizableEdges = customizableEdges2;
             specializaitionDropBox.Size = new Size(207, 34);
             specializaitionDropBox.TabIndex = 4;
             // 
@@ -125,7 +125,7 @@
             // 
             guna2DateTimePicker1.Anchor = AnchorStyles.Left;
             guna2DateTimePicker1.Checked = true;
-            guna2DateTimePicker1.CustomizableEdges = customizableEdges13;
+            guna2DateTimePicker1.CustomizableEdges = customizableEdges3;
             guna2DateTimePicker1.FillColor = Color.Honeydew;
             guna2DateTimePicker1.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2DateTimePicker1.Format = DateTimePickerFormat.Long;
@@ -133,7 +133,7 @@
             guna2DateTimePicker1.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             guna2DateTimePicker1.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             guna2DateTimePicker1.Name = "guna2DateTimePicker1";
-            guna2DateTimePicker1.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            guna2DateTimePicker1.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2DateTimePicker1.Size = new Size(211, 33);
             guna2DateTimePicker1.TabIndex = 62;
             guna2DateTimePicker1.Value = new DateTime(2025, 5, 23, 22, 21, 41, 396);
@@ -141,7 +141,7 @@
             // doctorSearchTxt
             // 
             doctorSearchTxt.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            doctorSearchTxt.CustomizableEdges = customizableEdges15;
+            doctorSearchTxt.CustomizableEdges = customizableEdges5;
             doctorSearchTxt.DefaultText = "";
             doctorSearchTxt.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             doctorSearchTxt.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -155,7 +155,7 @@
             doctorSearchTxt.Name = "doctorSearchTxt";
             doctorSearchTxt.PlaceholderText = "Search for doctor ";
             doctorSearchTxt.SelectedText = "";
-            doctorSearchTxt.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            doctorSearchTxt.ShadowDecoration.CustomizableEdges = customizableEdges6;
             doctorSearchTxt.Size = new Size(546, 34);
             doctorSearchTxt.TabIndex = 21;
             doctorSearchTxt.TextChanged += doctorSearchTxt_TextChanged;
@@ -163,7 +163,7 @@
             // guna2Button1
             // 
             guna2Button1.Anchor = AnchorStyles.Left;
-            guna2Button1.CustomizableEdges = customizableEdges17;
+            guna2Button1.CustomizableEdges = customizableEdges7;
             guna2Button1.DisabledState.BorderColor = Color.DarkGray;
             guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
             guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -173,7 +173,7 @@
             guna2Button1.ForeColor = Color.Black;
             guna2Button1.Location = new Point(27, 379);
             guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges8;
             guna2Button1.Size = new Size(197, 32);
             guna2Button1.TabIndex = 61;
             guna2Button1.Text = "Book Appointment";
@@ -202,10 +202,20 @@
             panel1.Size = new Size(846, 786);
             panel1.TabIndex = 1;
             // 
+            // dataGridView1
+            // 
+            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(32, 126);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(764, 202);
+            dataGridView1.TabIndex = 66;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            // 
             // patientSearchTxt
             // 
             patientSearchTxt.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            patientSearchTxt.CustomizableEdges = customizableEdges19;
+            patientSearchTxt.CustomizableEdges = customizableEdges9;
             patientSearchTxt.DefaultText = "";
             patientSearchTxt.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             patientSearchTxt.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -218,18 +228,9 @@
             patientSearchTxt.Name = "patientSearchTxt";
             patientSearchTxt.PlaceholderText = "Search patient fields";
             patientSearchTxt.SelectedText = "";
-            patientSearchTxt.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            patientSearchTxt.ShadowDecoration.CustomizableEdges = customizableEdges10;
             patientSearchTxt.Size = new Size(764, 36);
             patientSearchTxt.TabIndex = 65;
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(32, 126);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(764, 202);
-            dataGridView1.TabIndex = 66;
             // 
             // panel3
             // 
