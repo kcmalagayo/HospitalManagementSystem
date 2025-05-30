@@ -107,6 +107,8 @@
             // loginBtn
             // 
             loginBtn.Anchor = AnchorStyles.None;
+            loginBtn.AutoRoundedCorners = true;
+            loginBtn.BackColor = Color.Transparent;
             loginBtn.CheckedState.CustomBorderColor = Color.Gray;
             loginBtn.CustomizableEdges = customizableEdges1;
             loginBtn.DisabledState.BorderColor = Color.DarkGray;
@@ -114,8 +116,8 @@
             loginBtn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             loginBtn.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             loginBtn.FillColor = Color.MediumSeaGreen;
-            loginBtn.Font = new Font("Arial", 12.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            loginBtn.ForeColor = Color.Black;
+            loginBtn.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            loginBtn.ForeColor = Color.WhiteSmoke;
             loginBtn.Location = new Point(120, 385);
             loginBtn.Margin = new Padding(4, 3, 4, 3);
             loginBtn.Name = "loginBtn";

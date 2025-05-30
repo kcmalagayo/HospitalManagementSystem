@@ -201,20 +201,21 @@
             // btnRegister
             // 
             btnRegister.Anchor = AnchorStyles.None;
-            btnRegister.BackColor = Color.PaleGreen;
+            btnRegister.AutoRoundedCorners = true;
+            btnRegister.BackColor = Color.Transparent;
             btnRegister.CustomizableEdges = customizableEdges3;
             btnRegister.DisabledState.BorderColor = Color.DarkGray;
             btnRegister.DisabledState.CustomBorderColor = Color.DarkGray;
             btnRegister.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnRegister.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnRegister.FillColor = Color.MediumSeaGreen;
-            btnRegister.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnRegister.ForeColor = Color.Black;
+            btnRegister.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnRegister.ForeColor = Color.WhiteSmoke;
             btnRegister.Location = new Point(475, 39);
             btnRegister.Margin = new Padding(3, 2, 3, 2);
             btnRegister.Name = "btnRegister";
             btnRegister.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnRegister.Size = new Size(110, 28);
+            btnRegister.Size = new Size(131, 32);
             btnRegister.TabIndex = 60;
             btnRegister.Text = "Edit Fields";
             btnRegister.Click += btnRegister_Click;
@@ -261,15 +262,16 @@
             // saveBtn
             // 
             saveBtn.Anchor = AnchorStyles.None;
-            saveBtn.BackColor = Color.PaleGreen;
+            saveBtn.AutoRoundedCorners = true;
+            saveBtn.BackColor = Color.Transparent;
             saveBtn.CustomizableEdges = customizableEdges5;
             saveBtn.DisabledState.BorderColor = Color.DarkGray;
             saveBtn.DisabledState.CustomBorderColor = Color.DarkGray;
             saveBtn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             saveBtn.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             saveBtn.FillColor = Color.MediumSeaGreen;
-            saveBtn.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            saveBtn.ForeColor = Color.Black;
+            saveBtn.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            saveBtn.ForeColor = Color.WhiteSmoke;
             saveBtn.Location = new Point(143, 591);
             saveBtn.Margin = new Padding(3, 2, 3, 2);
             saveBtn.Name = "saveBtn";
@@ -300,14 +302,15 @@
             // discardbtn
             // 
             discardbtn.Anchor = AnchorStyles.None;
-            discardbtn.BackColor = Color.PaleGreen;
+            discardbtn.AutoRoundedCorners = true;
+            discardbtn.BackColor = Color.Transparent;
             discardbtn.CustomizableEdges = customizableEdges9;
             discardbtn.DisabledState.BorderColor = Color.DarkGray;
             discardbtn.DisabledState.CustomBorderColor = Color.DarkGray;
             discardbtn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             discardbtn.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             discardbtn.FillColor = Color.Black;
-            discardbtn.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            discardbtn.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             discardbtn.ForeColor = Color.White;
             discardbtn.Location = new Point(290, 591);
             discardbtn.Margin = new Padding(3, 2, 3, 2);

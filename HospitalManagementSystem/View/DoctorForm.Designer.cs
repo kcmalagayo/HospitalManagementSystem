@@ -85,15 +85,16 @@
             // 
             // guna2Button2
             // 
-            guna2Button2.BackColor = Color.PaleGreen;
+            guna2Button2.AutoRoundedCorners = true;
+            guna2Button2.BackColor = Color.Transparent;
             guna2Button2.CustomizableEdges = customizableEdges3;
             guna2Button2.DisabledState.BorderColor = Color.DarkGray;
             guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray;
             guna2Button2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             guna2Button2.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             guna2Button2.FillColor = Color.MediumSeaGreen;
-            guna2Button2.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            guna2Button2.ForeColor = Color.Black;
+            guna2Button2.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2Button2.ForeColor = Color.WhiteSmoke;
             guna2Button2.Location = new Point(155, 108);
             guna2Button2.Margin = new Padding(3, 2, 3, 2);
             guna2Button2.Name = "guna2Button2";
@@ -132,7 +133,6 @@
             Controls.Add(panel1);
             Name = "DoctorForm";
             Text = "DoctorForm";
-            //Load += DoctorForm_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
