@@ -110,6 +110,169 @@ namespace HospitalManagementSystem.Controller
             }
         }
 
+        // pang get ng patient by id
+
+        public Patient GetPatientById(int patientId)
+        {
+            string query = "SELECT * FROM Patient WHERE PatientID = @PatientID";
+
+            using (var cmd = new SQLiteCommand(query, _db.GetConnection()))
+            {
+                cmd.Parameters.AddWithValue("@PatientID", patientId);
+
+                using (var reader = cmd.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        return new Patient
+                        {
+                            PatientID = Convert.ToInt32(reader["PatientID"]),
+                            FirstName = reader["FirstName"].ToString(),
+                            LastName = reader["LastName"].ToString(),
+                            DateOfBirth = DateTime.Parse(reader["DateOfBirth"].ToString()),
+                            Gender = reader["Gender"].ToString(),
+                            ContactNumber = reader["ContactNumber"].ToString(),
+                            Email = reader["Email"].ToString(),
+                            Address = reader["Address"].ToString(),
+                            password = reader["Password"].ToString()
+                        };
+                    }
+                }
+            }
+
+            return null; // Patient not found
+        }
+
+
+        // pang insert ng notification
+        public bool InsertNotification(int patientId, string message, string type)
+        {
+            string query = @"
+        INSERT INTO Notification (PatientID, Message, CreatedAt, Type)
+        VALUES (@PatientID, @Message, datetime('now'), @Type)";
+
+            using (var cmd = new SQLiteCommand(query, _db.GetConnection()))
+            {
+                cmd.Parameters.AddWithValue("@PatientID", patientId);
+                cmd.Parameters.AddWithValue("@Message", message);
+                cmd.Parameters.AddWithValue("@Type", type);
+                return cmd.ExecuteNonQuery() > 0;
+            }
+        }
+        // pang get ng notification by patient id
+        public List<Notification> GetNotificationsByPatientId(int patientId)
+        {
+            var notifications = new List<Notification>();
+            string query = "SELECT * FROM Notification WHERE PatientID = @PatientID ORDER BY CreatedAt DESC";
+
+            using (var cmd = new SQLiteCommand(query, _db.GetConnection()))
+            {
+                cmd.Parameters.AddWithValue("@PatientID", patientId);
+
+                using (var reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        notifications.Add(new Notification
+                        {
+                            PatientID = Convert.ToInt32(reader["PatientID"]),
+                            Message = reader.GetString(reader.GetOrdinal("Message")),
+                            CreatedAt = DateTime.Parse(reader["CreatedAt"].ToString()),
+                            Type = reader.GetString(reader.GetOrdinal("Type"))
+                        });
+                    }
+                }
+            }
+
+            return notifications;
+        }
+        // insert transactions
+        public bool InsertTransaction(TransactionHistory transaction)
+        {
+            string query = @"
+        INSERT INTO TransactionHistory (PatientID, DoctorID, TotalAmount, PaymentMethod, AppointmentType, AppointmentDate,CreatedAt)
+        VALUES (@PatientId, @DoctorId, @TotalAmount, @PaymentMethod, @AppointmentType, @AppointmentDate, @CreatedAt)";
+
+            using (var cmd = new SQLiteCommand(query, _db.GetConnection()))
+            {
+                cmd.Parameters.AddWithValue("@PatientId", transaction.PatientID);
+                cmd.Parameters.AddWithValue("@DoctorId", transaction.DoctorID);
+                cmd.Parameters.AddWithValue("@TotalAmount", transaction.TotalAmount);
+                cmd.Parameters.AddWithValue("@PaymentMethod", transaction.PaymentMethod);
+                cmd.Parameters.AddWithValue("@AppointmentType", transaction.AppointmentType);
+                cmd.Parameters.AddWithValue("@AppointmentDate", transaction.AppointmentDate.ToString("yyyy-MM-dd HH:mm:ss"));
+                cmd.Parameters.AddWithValue("@CreatedAt", transaction.CreatedAt.ToString("yyyy-MM-dd HH:mm:ss"));
+
+                return cmd.ExecuteNonQuery() > 0;
+            }
+        }
+
+        // get all transactions
+
+        public List<TransactionHistory> GetAllTransactions()
+        {
+            var transactions = new List<TransactionHistory>();
+            string query = "SELECT * FROM TransactionHistory ORDER BY CreatedAt DESC";
+
+            using (var cmd = new SQLiteCommand(query, _db.GetConnection()))
+            using (var reader = cmd.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    transactions.Add(new TransactionHistory
+                    {
+                        TransactionId = Convert.ToInt32(reader["TransactionId"]),
+                        PatientID = Convert.ToInt32(reader["PatientID"]),
+                        DoctorID = Convert.ToInt32(reader["DoctorID"]),
+                        TotalAmount = Convert.ToDecimal(reader["TotalAmount"]),
+                        PaymentMethod = reader["PaymentMethod"].ToString(),
+                        AppointmentType = reader["AppointmentType"].ToString(),
+                        AppointmentDate = DateTime.Parse(reader["AppointmentDate"].ToString()),
+                        CreatedAt = DateTime.Parse(reader["CreatedAt"].ToString())
+                    });
+                }
+            }
+
+            return transactions;
+        }
+
+        // get transactions by patientid
+        public List<TransactionHistory> GetTransactionsByPatientId(int patientId)
+        {
+            var transactions = new List<TransactionHistory>();
+            string query = "SELECT * FROM TransactionHistory WHERE PatientID = @PatientID ORDER BY CreatedAt DESC";
+
+            using (var cmd = new SQLiteCommand(query, _db.GetConnection()))
+            {
+                cmd.Parameters.AddWithValue("@PatientId", patientId);
+
+                using (var reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        transactions.Add(new TransactionHistory
+                        {
+                            TransactionId = Convert.ToInt32(reader["TransactionId"]),
+                            PatientID = Convert.ToInt32(reader["PatientID"]),
+                            DoctorID = Convert.ToInt32(reader["DoctorID"]),
+                            TotalAmount = Convert.ToDecimal(reader["TotalAmount"]),
+                            PaymentMethod = reader["PaymentMethod"].ToString(),
+                            AppointmentType = reader["AppointmentType"].ToString(),
+                            AppointmentDate = DateTime.Parse(reader["AppointmentDate"].ToString()),
+                            CreatedAt = DateTime.Parse(reader["CreatedAt"].ToString())
+                        });
+                    }
+                }
+            }
+
+            return transactions;
+        }
+
+
+
+
+
+
         public bool RegisterDoctor(Doctor doctor)
         {
             string query = @"

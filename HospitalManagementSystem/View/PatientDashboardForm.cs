@@ -54,8 +54,14 @@ namespace HospitalManagementSystem.View
         }
         private void guna2Button1_Click(object sender, EventArgs e)//book appointment button    
         {
-            PatientForm pf = new PatientForm();
+            PatientForm pf = new PatientForm(_patientId);
             OpenFormInPanel(pf);
+            pictureBox1.Hide();
+        }
+        private void notifBtn_Click(object sender, EventArgs e)
+        {
+            NotificationForm notifForm = new NotificationForm(_patientId);
+            OpenFormInPanel(notifForm);
             pictureBox1.Hide();
         }
 
