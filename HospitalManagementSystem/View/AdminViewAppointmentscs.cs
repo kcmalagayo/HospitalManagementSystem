@@ -24,13 +24,12 @@ namespace HospitalManagementSystem.View
         private Database _db;
         public AdminViewAppointmentscs()
         {
-            InitializeComponent();
-
-
+          
             InitializeComponent();
             _db = new Database();
 
             LoadAppointments();
+            AppointmentSearchTxt.TextChanged += AppointmentSearchTxt_TextChanged;
 
             dataGridView1.ReadOnly = true;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
