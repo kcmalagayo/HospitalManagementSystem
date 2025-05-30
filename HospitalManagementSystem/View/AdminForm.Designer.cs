@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             manageDoctorBtn = new Guna.UI2.WinForms.Guna2Button();
@@ -61,7 +61,7 @@
             manageDoctorBtn.AutoRoundedCorners = true;
             manageDoctorBtn.CheckedState.BorderColor = Color.Black;
             manageDoctorBtn.CustomBorderColor = Color.Gray;
-            manageDoctorBtn.CustomizableEdges = customizableEdges1;
+            manageDoctorBtn.CustomizableEdges = customizableEdges11;
             manageDoctorBtn.DisabledState.BorderColor = Color.DarkGray;
             manageDoctorBtn.DisabledState.CustomBorderColor = Color.DarkGray;
             manageDoctorBtn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -74,7 +74,7 @@
             manageDoctorBtn.ImageSize = new Size(40, 40);
             manageDoctorBtn.Location = new Point(39, 300);
             manageDoctorBtn.Name = "manageDoctorBtn";
-            manageDoctorBtn.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            manageDoctorBtn.ShadowDecoration.CustomizableEdges = customizableEdges12;
             manageDoctorBtn.Size = new Size(204, 57);
             manageDoctorBtn.TabIndex = 0;
             manageDoctorBtn.Text = "Manage Doctor";
@@ -85,7 +85,7 @@
             // managePatientBtn
             // 
             managePatientBtn.AutoRoundedCorners = true;
-            managePatientBtn.CustomizableEdges = customizableEdges3;
+            managePatientBtn.CustomizableEdges = customizableEdges13;
             managePatientBtn.DisabledState.BorderColor = Color.DarkGray;
             managePatientBtn.DisabledState.CustomBorderColor = Color.DarkGray;
             managePatientBtn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -99,7 +99,7 @@
             managePatientBtn.ImageSize = new Size(45, 45);
             managePatientBtn.Location = new Point(41, 364);
             managePatientBtn.Name = "managePatientBtn";
-            managePatientBtn.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            managePatientBtn.ShadowDecoration.CustomizableEdges = customizableEdges14;
             managePatientBtn.Size = new Size(204, 59);
             managePatientBtn.TabIndex = 2;
             managePatientBtn.Text = "Manage Patient";
@@ -110,7 +110,7 @@
             // bookAppointmentBtn
             // 
             bookAppointmentBtn.AutoRoundedCorners = true;
-            bookAppointmentBtn.CustomizableEdges = customizableEdges5;
+            bookAppointmentBtn.CustomizableEdges = customizableEdges15;
             bookAppointmentBtn.DisabledState.BorderColor = Color.DarkGray;
             bookAppointmentBtn.DisabledState.CustomBorderColor = Color.DarkGray;
             bookAppointmentBtn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -123,7 +123,7 @@
             bookAppointmentBtn.ImageSize = new Size(30, 30);
             bookAppointmentBtn.Location = new Point(42, 439);
             bookAppointmentBtn.Name = "bookAppointmentBtn";
-            bookAppointmentBtn.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            bookAppointmentBtn.ShadowDecoration.CustomizableEdges = customizableEdges16;
             bookAppointmentBtn.Size = new Size(204, 56);
             bookAppointmentBtn.TabIndex = 3;
             bookAppointmentBtn.Text = "Book Appointment";
@@ -133,7 +133,7 @@
             // logOutBtn
             // 
             logOutBtn.AutoRoundedCorners = true;
-            logOutBtn.CustomizableEdges = customizableEdges7;
+            logOutBtn.CustomizableEdges = customizableEdges17;
             logOutBtn.DisabledState.BorderColor = Color.DarkGray;
             logOutBtn.DisabledState.CustomBorderColor = Color.DarkGray;
             logOutBtn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -146,7 +146,7 @@
             logOutBtn.ImageSize = new Size(40, 40);
             logOutBtn.Location = new Point(41, 562);
             logOutBtn.Name = "logOutBtn";
-            logOutBtn.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            logOutBtn.ShadowDecoration.CustomizableEdges = customizableEdges18;
             logOutBtn.Size = new Size(204, 54);
             logOutBtn.TabIndex = 4;
             logOutBtn.Text = "Log Out ";
@@ -194,7 +194,7 @@
             // paymentBtn
             // 
             paymentBtn.AutoRoundedCorners = true;
-            paymentBtn.CustomizableEdges = customizableEdges9;
+            paymentBtn.CustomizableEdges = customizableEdges19;
             paymentBtn.DisabledState.BorderColor = Color.DarkGray;
             paymentBtn.DisabledState.CustomBorderColor = Color.DarkGray;
             paymentBtn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -207,7 +207,7 @@
             paymentBtn.ImageSize = new Size(30, 30);
             paymentBtn.Location = new Point(39, 500);
             paymentBtn.Name = "paymentBtn";
-            paymentBtn.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            paymentBtn.ShadowDecoration.CustomizableEdges = customizableEdges20;
             paymentBtn.Size = new Size(204, 56);
             paymentBtn.TabIndex = 8;
             paymentBtn.Text = "     Payment History";
@@ -223,11 +223,12 @@
             label2.Size = new Size(144, 20);
             label2.TabIndex = 7;
             label2.Text = "ADMIN CONTROLS";
+            label2.Click += label2_Click;
             // 
             // pictureBox2
             // 
             pictureBox2.Image = Properties.Resources.Hospital_logo2png;
-            pictureBox2.Location = new Point(-72, -58);
+            pictureBox2.Location = new Point(-64, -69);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(435, 407);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;

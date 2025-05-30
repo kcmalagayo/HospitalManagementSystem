@@ -90,6 +90,11 @@ namespace HospitalManagementSystem.View
             OpenFormInPanel(tf);
             pictureBox1.Hide();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
  
