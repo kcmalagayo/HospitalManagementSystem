@@ -267,12 +267,6 @@ namespace HospitalManagementSystem.Controller
 
             return transactions;
         }
-
-
-
-
-
-
         public bool RegisterDoctor(Doctor doctor)
         {
             string query = @"
@@ -313,6 +307,25 @@ namespace HospitalManagementSystem.Controller
                 cmd.Parameters.AddWithValue("@Password", admin.Password);
 
                 return cmd.ExecuteNonQuery() > 0;
+            }
+        }
+        public bool EmailExistsInAnyRole(string email)
+        {
+            string query = @"
+                SELECT 1 FROM Admin WHERE Email = @Email
+                UNION
+                SELECT 1 FROM Doctor WHERE Email = @Email
+                UNION
+                SELECT 1 FROM Patient WHERE Email = @Email
+                LIMIT 1;";
+
+            using (var cmd = new SQLiteCommand(query, _db.GetConnection()))
+            {
+                cmd.Parameters.AddWithValue("@Email", email);
+                using (var reader = cmd.ExecuteReader())
+                {
+                    return reader.Read(); // If any record exists, email already exists
+                }
             }
         }
     }

@@ -43,6 +43,12 @@ namespace HospitalManagementSystem.View
             var db = new Database();  
             var authController = new AuthController(db);
 
+            if (authController.EmailExistsInAnyRole(email))
+            {
+                MessageBox.Show("This email is already registered to an account.");
+                db.Close();
+                return;
+            }
             // 4. Attempt to register the admin
             bool success = authController.RegisterAdmin(admin);
 
