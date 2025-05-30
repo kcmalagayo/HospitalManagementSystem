@@ -46,7 +46,6 @@ namespace HospitalManagementSystem.View
             lastNameTxt.Enabled = isEnabled;
             genderComboBox.Enabled = isEnabled;
             emailTxt.Enabled = isEnabled;
-            passwordTxtBox.Enabled = isEnabled;
             contactTxt.Enabled = isEnabled;
             dobPicker.Enabled = isEnabled;
             addressTxt.Enabled = isEnabled;
@@ -67,7 +66,6 @@ namespace HospitalManagementSystem.View
             lastNameTxt.Text = _patient.LastName ?? string.Empty;
             genderComboBox.SelectedItem = string.IsNullOrEmpty(_patient.Gender) ? "Male" : _patient.Gender;
             emailTxt.Text = _patient.Email ?? string.Empty;
-            passwordTxtBox.Text = _patient.password ?? string.Empty;
             contactTxt.Text = _patient.ContactNumber ?? string.Empty;
             addressTxt.Text = _patient.Address ?? string.Empty;
 
@@ -86,7 +84,6 @@ namespace HospitalManagementSystem.View
             _patient.LastName = lastNameTxt.Text ?? string.Empty;
             _patient.Gender = genderComboBox.SelectedItem?.ToString() ?? "Male";
             _patient.Email = emailTxt.Text ?? string.Empty;
-            _patient.password = passwordTxtBox.Text ?? string.Empty;
             _patient.ContactNumber = contactTxt.Text ?? string.Empty;
             _patient.DateOfBirth = dobPicker.Value;
             _patient.Address = addressTxt.Text ?? string.Empty;
