@@ -60,7 +60,7 @@ namespace HospitalManagementSystem.Controller
                 LastName = @LastName, 
                 Gender = @Gender, 
                 ContactNumber = @ContactNumber, 
-                Email = @Email, 
+        Email = @Email, 
                 Address = @Address, 
                 Password = @Password, 
                 DateOfBirth = @DateOfBirth 

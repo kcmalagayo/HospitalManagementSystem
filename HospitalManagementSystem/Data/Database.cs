@@ -79,6 +79,31 @@ namespace HospitalManagementSystem.Data
                     FOREIGN KEY(PatientID) REFERENCES Patient(PatientID)
                 );
             ";
+            string createNotificationTable = @"
+            CREATE TABLE IF NOT EXISTS Notification (
+                NotificationID INTEGER PRIMARY KEY AUTOINCREMENT,
+                PatientID INTEGER NOT NULL,
+                Message TEXT NOT NULL,
+                CreatedAt TEXT NOT NULL DEFAULT (datetime('now')),
+                Type TEXT,
+                FOREIGN KEY(PatientID) REFERENCES Patient(PatientID)
+            );
+            ";
+            string createTransactionHistoryTable = @"
+            CREATE TABLE IF NOT EXISTS TransactionHistory (
+                TransactionId INTEGER PRIMARY KEY AUTOINCREMENT,
+                PatientID INTEGER NOT NULL,
+                DoctorID INTEGER NOT NULL,
+                TotalAmount REAL NOT NULL,
+                PaymentMethod TEXT NOT NULL,
+                AppointmentType TEXT NOT NULL,
+                AppointmentDate TEXT NOT NULL DEFAULT (datetime('now')),
+                CreatedAt TEXT NOT NULL DEFAULT (datetime('now')),
+                FOREIGN KEY(PatientID) REFERENCES Patient(PatientID),
+                FOREIGN KEY(DoctorID) REFERENCES Doctor(DoctorID)
+            );
+            ";
+
 
 
 
@@ -96,6 +121,14 @@ namespace HospitalManagementSystem.Data
                 cmd.ExecuteNonQuery();
             }
             using (var cmd = new SQLiteCommand(createAppointmentTable, connection))
+            {
+                cmd.ExecuteNonQuery();
+            }
+            using (var cmd = new SQLiteCommand(createNotificationTable, connection))
+            {
+                cmd.ExecuteNonQuery();
+            }
+            using (var cmd = new SQLiteCommand(createTransactionHistoryTable, connection))
             {
                 cmd.ExecuteNonQuery();
             }
