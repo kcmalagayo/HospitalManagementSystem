@@ -20,9 +20,11 @@ namespace HospitalManagementSystem.View
         private HospitalManagementSystem.Data.Database database;
         private readonly DoctorController doctorController;
         private System.Windows.Forms.ComboBox timeSlotDropDown;
+        private int patientId;
 
-        public PatientForm()
+        public PatientForm(int id)
         {
+            patientId = id;
             InitializeComponent();
             database = new Database();
             doctorController = new DoctorController(database);
@@ -147,7 +149,7 @@ namespace HospitalManagementSystem.View
 
             try
             {
-                PaymentForm paymentForm = new PaymentForm(doctorId, appointmentDateTime);
+                PaymentForm paymentForm = new PaymentForm(doctorId, patientId, appointmentDateTime);
                 paymentForm.ShowDialog();
 
             
