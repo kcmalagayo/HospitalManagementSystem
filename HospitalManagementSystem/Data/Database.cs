@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data.SQLite;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace HospitalManagementSystem.Data
 {
@@ -65,6 +67,45 @@ namespace HospitalManagementSystem.Data
                     Password TEXT NOT NULL
                 );
             ";
+            string createAppointmentTable = @"
+                 CREATE TABLE IF NOT EXISTS Appointment (
+                    AppointmentID INTEGER PRIMARY KEY AUTOINCREMENT,
+                    PatientID INTEGER,
+                    DoctorID INTEGER NOT NULL,
+                    AppointmentDateTime TEXT NOT NULL,
+                    Status TEXT NOT NULL,
+                    Notes TEXT,
+                    FOREIGN KEY(DoctorID) REFERENCES Doctor(DoctorID),
+                    FOREIGN KEY(PatientID) REFERENCES Patient(PatientID)
+                );
+            ";
+            string createNotificationTable = @"
+            CREATE TABLE IF NOT EXISTS Notification (
+                NotificationID INTEGER PRIMARY KEY AUTOINCREMENT,
+                PatientID INTEGER NOT NULL,
+                Message TEXT NOT NULL,
+                CreatedAt TEXT NOT NULL DEFAULT (datetime('now')),
+                Type TEXT,
+                FOREIGN KEY(PatientID) REFERENCES Patient(PatientID)
+            );
+            ";
+            string createTransactionHistoryTable = @"
+            CREATE TABLE IF NOT EXISTS TransactionHistory (
+                TransactionId INTEGER PRIMARY KEY AUTOINCREMENT,
+                PatientID INTEGER NOT NULL,
+                DoctorID INTEGER NOT NULL,
+                TotalAmount REAL NOT NULL,
+                PaymentMethod TEXT NOT NULL,
+                AppointmentType TEXT NOT NULL,
+                AppointmentDate TEXT NOT NULL DEFAULT (datetime('now')),
+                CreatedAt TEXT NOT NULL DEFAULT (datetime('now')),
+                FOREIGN KEY(PatientID) REFERENCES Patient(PatientID),
+                FOREIGN KEY(DoctorID) REFERENCES Doctor(DoctorID)
+            );
+            ";
+
+
+
 
             using (var cmd = new SQLiteCommand(createPatientTable, connection))
             {
@@ -76,6 +117,18 @@ namespace HospitalManagementSystem.Data
                 cmd.ExecuteNonQuery();
             }
             using (var cmd = new SQLiteCommand(createAdminTable, connection))
+            {
+                cmd.ExecuteNonQuery();
+            }
+            using (var cmd = new SQLiteCommand(createAppointmentTable, connection))
+            {
+                cmd.ExecuteNonQuery();
+            }
+            using (var cmd = new SQLiteCommand(createNotificationTable, connection))
+            {
+                cmd.ExecuteNonQuery();
+            }
+            using (var cmd = new SQLiteCommand(createTransactionHistoryTable, connection))
             {
                 cmd.ExecuteNonQuery();
             }

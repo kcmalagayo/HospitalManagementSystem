@@ -28,11 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            backButton = new Guna.UI2.WinForms.Guna2Button();
             btnRegister = new Guna.UI2.WinForms.Guna2Button();
             label9 = new Label();
             label7 = new Label();
@@ -44,23 +41,6 @@
             registerPanelDoctor = new Panel();
             registerPanelDoctor.SuspendLayout();
             SuspendLayout();
-            // 
-            // backButton
-            // 
-            backButton.CustomizableEdges = customizableEdges1;
-            backButton.DisabledState.BorderColor = Color.DarkGray;
-            backButton.DisabledState.CustomBorderColor = Color.DarkGray;
-            backButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            backButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            backButton.FillColor = Color.Transparent;
-            backButton.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            backButton.ForeColor = Color.Black;
-            backButton.Location = new Point(29, 12);
-            backButton.Name = "backButton";
-            backButton.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            backButton.Size = new Size(56, 28);
-            backButton.TabIndex = 64;
-            backButton.Text = "back button";
             // 
             // btnRegister
             // 
@@ -83,14 +63,14 @@
             // 
             // label9
             // 
+            label9.Anchor = AnchorStyles.None;
             label9.AutoSize = true;
             label9.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label9.Location = new Point(511, 17);
+            label9.Location = new Point(15, 23);
             label9.Name = "label9";
             label9.Size = new Size(192, 19);
             label9.TabIndex = 61;
             label9.Text = "Register Admin Account";
-            //label9.Click += label9_Click;
             // 
             // label7
             // 
@@ -147,6 +127,7 @@
             // 
             // registerPanelDoctor
             // 
+            registerPanelDoctor.Anchor = AnchorStyles.None;
             registerPanelDoctor.Controls.Add(label7);
             registerPanelDoctor.Controls.Add(btnRegister);
             registerPanelDoctor.Controls.Add(label1);
@@ -154,21 +135,20 @@
             registerPanelDoctor.Controls.Add(firstNameTxt);
             registerPanelDoctor.Controls.Add(emailTxt);
             registerPanelDoctor.Controls.Add(lastNameTxt);
-            registerPanelDoctor.Location = new Point(96, 54);
+            registerPanelDoctor.Location = new Point(15, 65);
             registerPanelDoctor.Margin = new Padding(3, 2, 3, 2);
             registerPanelDoctor.Name = "registerPanelDoctor";
             registerPanelDoctor.Size = new Size(495, 348);
             registerPanelDoctor.TabIndex = 62;
-            //registerPanelDoctor.Paint += registerPanelDoctor_Paint;
             // 
             // RegisterFormAdmin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(715, 454);
-            Controls.Add(backButton);
+            ClientSize = new Size(531, 454);
             Controls.Add(label9);
             Controls.Add(registerPanelDoctor);
+            MaximizeBox = false;
             Name = "RegisterFormAdmin";
             Text = "RegisterFormAdmin";
             registerPanelDoctor.ResumeLayout(false);
@@ -178,8 +158,6 @@
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2Button backButton;
         private Guna.UI2.WinForms.Guna2Button btnRegister;
         private Label label9;
         private Label label7;
