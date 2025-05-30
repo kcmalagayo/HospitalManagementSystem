@@ -32,10 +32,10 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panel1 = new Panel();
             guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
@@ -47,6 +47,7 @@
             panel2 = new Panel();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -55,9 +56,7 @@
             panel1.Controls.Add(guna2Button1);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(label6);
-            panel1.Controls.Add(doctorSearchTxt);
             panel1.Controls.Add(specializaitionDropBox);
-            panel1.Controls.Add(dataGridView2);
             panel1.Controls.Add(panel2);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
@@ -122,7 +121,7 @@
             // doctorSearchTxt
             // 
             doctorSearchTxt.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            doctorSearchTxt.CustomizableEdges = customizableEdges5;
+            doctorSearchTxt.CustomizableEdges = customizableEdges7;
             doctorSearchTxt.DefaultText = "";
             doctorSearchTxt.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             doctorSearchTxt.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -131,20 +130,20 @@
             doctorSearchTxt.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             doctorSearchTxt.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             doctorSearchTxt.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            doctorSearchTxt.Location = new Point(260, 31);
+            doctorSearchTxt.Location = new Point(31, 25);
             doctorSearchTxt.Margin = new Padding(3, 4, 3, 4);
             doctorSearchTxt.Name = "doctorSearchTxt";
             doctorSearchTxt.PlaceholderText = "Search for doctor ";
             doctorSearchTxt.SelectedText = "";
-            doctorSearchTxt.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            doctorSearchTxt.Size = new Size(1485, 34);
+            doctorSearchTxt.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            doctorSearchTxt.Size = new Size(707, 34);
             doctorSearchTxt.TabIndex = 21;
             doctorSearchTxt.TextChanged += doctorSearchTxt_TextChanged;
             // 
             // specializaitionDropBox
             // 
             specializaitionDropBox.BackColor = Color.MediumSeaGreen;
-            specializaitionDropBox.CustomizableEdges = customizableEdges7;
+            specializaitionDropBox.CustomizableEdges = customizableEdges5;
             specializaitionDropBox.DrawMode = DrawMode.OwnerDrawFixed;
             specializaitionDropBox.DropDownStyle = ComboBoxStyle.DropDownList;
             specializaitionDropBox.FocusedColor = Color.FromArgb(94, 148, 255);
@@ -154,7 +153,7 @@
             specializaitionDropBox.ItemHeight = 25;
             specializaitionDropBox.Location = new Point(12, 46);
             specializaitionDropBox.Name = "specializaitionDropBox";
-            specializaitionDropBox.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            specializaitionDropBox.ShadowDecoration.CustomizableEdges = customizableEdges6;
             specializaitionDropBox.Size = new Size(197, 31);
             specializaitionDropBox.TabIndex = 4;
             // 
@@ -163,14 +162,16 @@
             dataGridView2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Location = new Point(260, 79);
+            dataGridView2.Location = new Point(31, 72);
             dataGridView2.Name = "dataGridView2";
             dataGridView2.RowHeadersWidth = 51;
-            dataGridView2.Size = new Size(1485, 712);
+            dataGridView2.Size = new Size(707, 371);
             dataGridView2.TabIndex = 3;
             // 
             // panel2
             // 
+            panel2.Controls.Add(dataGridView2);
+            panel2.Controls.Add(doctorSearchTxt);
             panel2.Dock = DockStyle.Right;
             panel2.Location = new Point(229, 0);
             panel2.Margin = new Padding(3, 2, 3, 2);
@@ -190,6 +191,7 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
+            panel2.ResumeLayout(false);
             ResumeLayout(false);
         }
 
