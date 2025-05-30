@@ -128,5 +128,10 @@ namespace HospitalManagementSystem.View
             PopulateFields();
             MessageBox.Show("Changes have been discarded.", "Action Undone");
         }
+
+        private void DoctorFields_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

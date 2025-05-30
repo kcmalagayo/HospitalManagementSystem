@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HospitalManagementSystem.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,14 +16,15 @@ namespace HospitalManagementSystem.View
         public AdminForm()
         {
             InitializeComponent();
+            this.WindowState = FormWindowState.Maximized;
         }
 
-        private void OpenFormInPanel(Form form)
+        private void OpenFormInPanel(Form form)//method to open form in panel 
         {
             panel1.Controls.Clear();
             form.TopLevel = false;
             form.FormBorderStyle = FormBorderStyle.None;
-            form.Dock = DockStyle.Left;
+            form.Dock = DockStyle.Fill;
             panel1.Controls.Add(form);
             form.Show();
         }
@@ -36,11 +38,48 @@ namespace HospitalManagementSystem.View
         {
             ManageDoctorForm mdf = new ManageDoctorForm();
             OpenFormInPanel(mdf);
+            pictureBox1.Hide();
         }
 
         private void AdminForm_Load(object sender, EventArgs e)
         {
 
         }
+
+        private void managePatientBtn_Click(object sender, EventArgs e)
+        {
+            ManagePatientForm mpf = new ManagePatientForm();
+            OpenFormInPanel(mpf);
+        }
+
+        private void logOutBtn_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+                "Are you sure you want to log out?",
+                "Logout Confirmation",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
+
+            if (result == DialogResult.Yes)
+            {
+                this.Hide();
+                var loginForm = new LoginForm();
+                loginForm.Show();
+                MessageBox.Show("You have successfully logged out.", "Logout Successful");
+               
+            }
+            else
+            {
+                //MessageBox.Show("Logout cancelled.", "Action Cancelled");
+            }
+        }
+
+        private void bookAppointmentBtn_Click(object sender, EventArgs e)
+        {
+            AdminBooking ab = new AdminBooking();
+            OpenFormInPanel(ab);
+        }
     }
 }
+ 
