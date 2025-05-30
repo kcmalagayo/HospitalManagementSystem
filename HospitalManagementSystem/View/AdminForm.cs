@@ -51,6 +51,7 @@ namespace HospitalManagementSystem.View
         {
             ManagePatientForm mpf = new ManagePatientForm();
             OpenFormInPanel(mpf);
+            pictureBox1.Hide();
         }
 
         private void logOutBtn_Click(object sender, EventArgs e)
@@ -80,6 +81,7 @@ namespace HospitalManagementSystem.View
         {
             AdminBooking ab = new AdminBooking();
             OpenFormInPanel(ab);
+            pictureBox1.Hide();
         }
     }
 }
