@@ -40,7 +40,9 @@ namespace HospitalManagementSystem.View
             //timeSlotDropDown.Anchor = AnchorStyles.Right;
             timeSlotDropDown.Visible = true;
             panel2.Controls.Add(timeSlotDropDown);
-            panel2.Enabled = false; // Disable doctor panel initially
+            //panel2.Enabled = false; // Disable doctor panel initially
+
+            specializaitionDropBox.SelectedIndexChanged += specializaitionDropBox_SelectedIndexChanged;
             LoadSpecializations();
             LoadDoctors();
         }
@@ -76,7 +78,7 @@ namespace HospitalManagementSystem.View
                 string patientName = $"{row.Cells["FirstName"].Value} {row.Cells["LastName"].Value}";
                 label3.Text = $"Selected Patient: {patientName}";
 
-                panel2.Enabled = true; // Enable doctor panel
+                //panel2.Enabled = true; // Enable doctor panel
             }
         }
 
@@ -122,18 +124,14 @@ namespace HospitalManagementSystem.View
         }
         private void LoadDoctors(string specialization = null)
         {
-            DataTable dt;
-
             if (specialization == null || specialization == "All")
             {
-                dt = doctorController.GetAllDoctors(); // Should return DataTable
+                dataGridView2.DataSource = doctorController.GetAllDoctors();
             }
             else
             {
-                dt = doctorController.GetDoctorsBySpecialization(specialization); // Should return DataTable
+                dataGridView2.DataSource = doctorController.GetDoctorsBySpecialization(specialization);
             }
-
-            dataGridView2.DataSource = dt;
         }
         private void AdminBooking_Load(object sender, EventArgs e)
         {
@@ -147,6 +145,12 @@ namespace HospitalManagementSystem.View
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
+
+            if (dataGridView1.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Please select a patient before booking.");
+                return;
+            }
             if (dataGridView2.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Please select a doctor before booking.");
@@ -159,6 +163,7 @@ namespace HospitalManagementSystem.View
                 return;
             }
 
+         
             DateTime selectedDate = guna2DateTimePicker1.Value.Date;
 
             // 🔒 Enforce date logic in case of any UI bypass
