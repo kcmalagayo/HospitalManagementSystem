@@ -18,6 +18,7 @@ namespace HospitalManagementSystem.View
         {
             InitializeComponent();
             _patientId = patientId;
+            this.WindowState = FormWindowState.Maximized;
 
         }
 
