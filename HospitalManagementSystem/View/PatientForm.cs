@@ -19,17 +19,18 @@ namespace HospitalManagementSystem.View
     {
         private HospitalManagementSystem.Data.Database database;
         private readonly DoctorController doctorController;
-        private System.Windows.Forms.ComboBox timeSlotDropDown;
+       private System.Windows.Forms.ComboBox timeSlotDropDown;
 
         public PatientForm()
         {
             InitializeComponent();
-            var database = new Database();
+            database = new Database();
             doctorController = new DoctorController(database);
             timeSlotDropDown = new ComboBox();
             timeSlotDropDown.DropDownStyle = ComboBoxStyle.DropDownList;
             timeSlotDropDown.Font = new Font("Arial", 9F);
-            timeSlotDropDown.Location = new Point(12, 200);  // Adjust position if needed
+            timeSlotDropDown.ItemHeight = 20;
+            timeSlotDropDown.Location = new Point(12, 280);  // Adjust position if needed
             timeSlotDropDown.Name = "timeSlotDropDown";
             timeSlotDropDown.Size = new Size(225, 44);
             timeSlotDropDown.Anchor = AnchorStyles.Top | AnchorStyles.Left;
@@ -39,7 +40,7 @@ namespace HospitalManagementSystem.View
         }
         private void LoadTimeSlots()
         {
-            timeSlotDropDown.Items.Clear();
+           // timeSlotDropDown.Items.Clear();
 
             for (int hour = 8; hour <= 18; hour++) // 8 AM to 6 PM
             {
@@ -146,23 +147,10 @@ namespace HospitalManagementSystem.View
 
             try
             {
-                var db = new Database();
-                var conn = db.GetConnection();
+                PaymentForm paymentForm = new PaymentForm(doctorId, appointmentDateTime);
+                paymentForm.ShowDialog();
 
-                string query = @"INSERT INTO Appointment (PatientID, DoctorID, AppointmentDateTime, Status)
-                         VALUES (@PatientID, @DoctorID, @AppointmentDateTime, @Status)";
-
-                using (var cmd = new SQLiteCommand(query, conn))
-                {
-                    cmd.Parameters.AddWithValue("@PatientID", 1); // TODO: Replace with actual patient ID
-                    cmd.Parameters.AddWithValue("@DoctorID", doctorId);
-                    cmd.Parameters.AddWithValue("@AppointmentDateTime", appointmentDateTime.ToString("yyyy-MM-dd HH:mm:ss"));
-                    cmd.Parameters.AddWithValue("@Status", "Pending");
-
-                    cmd.ExecuteNonQuery();
-                }
-
-                MessageBox.Show("Appointment booked successfully!");
+            
             }
             catch (Exception ex)
             {

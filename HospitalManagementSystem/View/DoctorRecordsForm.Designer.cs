@@ -40,7 +40,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Arial", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(24, 25);
+            label2.Location = new Point(30, 25);
             label2.Name = "label2";
             label2.Size = new Size(231, 24);
             label2.TabIndex = 29;
@@ -49,9 +49,9 @@
             // 
             // dataGridView1
             // 
-            dataGridView1.Anchor = AnchorStyles.None;
+            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(24, 130);
+            dataGridView1.Location = new Point(30, 130);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(741, 395);
             dataGridView1.TabIndex = 32;
@@ -59,7 +59,7 @@
             // 
             // AppointmentSearchTxt
             // 
-            AppointmentSearchTxt.Anchor = AnchorStyles.None;
+            AppointmentSearchTxt.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             AppointmentSearchTxt.CustomizableEdges = customizableEdges1;
             AppointmentSearchTxt.DefaultText = "";
             AppointmentSearchTxt.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -69,7 +69,7 @@
             AppointmentSearchTxt.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             AppointmentSearchTxt.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             AppointmentSearchTxt.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            AppointmentSearchTxt.Location = new Point(24, 73);
+            AppointmentSearchTxt.Location = new Point(30, 73);
             AppointmentSearchTxt.Name = "AppointmentSearchTxt";
             AppointmentSearchTxt.PlaceholderText = "Search Appointment";
             AppointmentSearchTxt.SelectedText = "";

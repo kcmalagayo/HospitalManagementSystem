@@ -47,7 +47,7 @@ namespace HospitalManagementSystem.View
             }
             else
             {
-                MessageBox.Show("Logout cancelled.", "Action Cancelled");
+                //MessageBox.Show("Logout cancelled.", "Action Cancelled");
             }
         }
 
@@ -64,6 +64,13 @@ namespace HospitalManagementSystem.View
         private void guna2Button2_Click(object sender, EventArgs e)
         {
             DoctorForm dF = new DoctorForm();
+            OpenFormInPanel(dF);
+            pictureBox1.Hide();
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            DoctorRecordsForm dF = new DoctorRecordsForm();
             OpenFormInPanel(dF);
             pictureBox1.Hide();
         }

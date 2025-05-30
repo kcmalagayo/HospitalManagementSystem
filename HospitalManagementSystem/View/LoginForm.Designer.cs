@@ -97,16 +97,17 @@
             label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
             label1.Font = new Font("Arial", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(79, 77);
+            label1.Location = new Point(61, 71);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(239, 37);
+            label1.Size = new Size(277, 37);
             label1.TabIndex = 10;
-            label1.Text = "Hospital Name";
+            label1.Text = "Amico's Hospital";
             // 
             // loginBtn
             // 
             loginBtn.Anchor = AnchorStyles.None;
+            loginBtn.CheckedState.CustomBorderColor = Color.Gray;
             loginBtn.CustomizableEdges = customizableEdges1;
             loginBtn.DisabledState.BorderColor = Color.DarkGray;
             loginBtn.DisabledState.CustomBorderColor = Color.DarkGray;

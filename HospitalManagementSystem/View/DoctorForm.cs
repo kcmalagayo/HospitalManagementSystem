@@ -28,7 +28,6 @@ namespace HospitalManagementSystem.View
             AppointmentSearchTxt.TextChanged += AppointmentSearchTxt_TextChanged;
             guna2Button2.Click += guna2Button2_Click; // Update button
             dataGridView1.SelectionChanged += DataGridView1_SelectionChanged;
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         // Overloaded constructor to pass patient ID

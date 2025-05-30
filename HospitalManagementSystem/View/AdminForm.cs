@@ -16,12 +16,7 @@ namespace HospitalManagementSystem.View
         public AdminForm()
         {
             InitializeComponent();
-            MessageBox.Show("Welcome, Admin !",
-                            "Login Successful",
-                             MessageBoxButtons.OK,
-                             MessageBoxIcon.Information);
-
-
+            this.WindowState = FormWindowState.Maximized;
         }
 
         private void OpenFormInPanel(Form form)//method to open form in panel 
@@ -72,11 +67,11 @@ namespace HospitalManagementSystem.View
                 var loginForm = new LoginForm();
                 loginForm.Show();
                 MessageBox.Show("You have successfully logged out.", "Logout Successful");
-                //Application.Exit(); // Close the application
+               
             }
             else
             {
-                MessageBox.Show("Logout cancelled.", "Action Cancelled");
+                //MessageBox.Show("Logout cancelled.", "Action Cancelled");
             }
         }
 
