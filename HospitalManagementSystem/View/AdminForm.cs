@@ -17,6 +17,7 @@ namespace HospitalManagementSystem.View
         {
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
+            //panel1.Controls.Add(label1);
         }
 
         private void OpenFormInPanel(Form form)//method to open form in panel 

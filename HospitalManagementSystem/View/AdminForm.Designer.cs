@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             manageDoctorBtn = new Guna.UI2.WinForms.Guna2Button();
@@ -43,11 +43,10 @@
             bookAppointmentBtn = new Guna.UI2.WinForms.Guna2Button();
             logOutBtn = new Guna.UI2.WinForms.Guna2Button();
             panel1 = new Panel();
-            label1 = new Label();
             pictureBox1 = new PictureBox();
             panel2 = new Panel();
-            pictureBox2 = new PictureBox();
             label2 = new Label();
+            pictureBox2 = new PictureBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
@@ -59,7 +58,7 @@
             manageDoctorBtn.AutoRoundedCorners = true;
             manageDoctorBtn.CheckedState.BorderColor = Color.Black;
             manageDoctorBtn.CustomBorderColor = Color.Gray;
-            manageDoctorBtn.CustomizableEdges = customizableEdges9;
+            manageDoctorBtn.CustomizableEdges = customizableEdges1;
             manageDoctorBtn.DisabledState.BorderColor = Color.DarkGray;
             manageDoctorBtn.DisabledState.CustomBorderColor = Color.DarkGray;
             manageDoctorBtn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -67,12 +66,12 @@
             manageDoctorBtn.FillColor = Color.MediumSeaGreen;
             manageDoctorBtn.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
             manageDoctorBtn.ForeColor = Color.WhiteSmoke;
-            manageDoctorBtn.Image = Properties.Resources.doctor;
+            manageDoctorBtn.Image = Properties.Resources.doctor_white;
             manageDoctorBtn.ImageAlign = HorizontalAlignment.Left;
-            manageDoctorBtn.ImageSize = new Size(30, 30);
-            manageDoctorBtn.Location = new Point(55, 252);
+            manageDoctorBtn.ImageSize = new Size(40, 40);
+            manageDoctorBtn.Location = new Point(39, 337);
             manageDoctorBtn.Name = "manageDoctorBtn";
-            manageDoctorBtn.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            manageDoctorBtn.ShadowDecoration.CustomizableEdges = customizableEdges2;
             manageDoctorBtn.Size = new Size(204, 57);
             manageDoctorBtn.TabIndex = 0;
             manageDoctorBtn.Text = "Manage Doctor";
@@ -83,7 +82,7 @@
             // managePatientBtn
             // 
             managePatientBtn.AutoRoundedCorners = true;
-            managePatientBtn.CustomizableEdges = customizableEdges11;
+            managePatientBtn.CustomizableEdges = customizableEdges3;
             managePatientBtn.DisabledState.BorderColor = Color.DarkGray;
             managePatientBtn.DisabledState.CustomBorderColor = Color.DarkGray;
             managePatientBtn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -91,23 +90,24 @@
             managePatientBtn.FillColor = Color.MediumSeaGreen;
             managePatientBtn.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
             managePatientBtn.ForeColor = Color.WhiteSmoke;
-            managePatientBtn.Image = Properties.Resources.patient;
+            managePatientBtn.Image = Properties.Resources.patient_white_icon;
             managePatientBtn.ImageAlign = HorizontalAlignment.Left;
-            managePatientBtn.ImageSize = new Size(30, 30);
-            managePatientBtn.Location = new Point(55, 323);
+            managePatientBtn.ImageOffset = new Point(-5, 0);
+            managePatientBtn.ImageSize = new Size(45, 45);
+            managePatientBtn.Location = new Point(41, 412);
             managePatientBtn.Name = "managePatientBtn";
-            managePatientBtn.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            managePatientBtn.ShadowDecoration.CustomizableEdges = customizableEdges4;
             managePatientBtn.Size = new Size(204, 59);
             managePatientBtn.TabIndex = 2;
             managePatientBtn.Text = "Manage Patient";
             managePatientBtn.TextAlign = HorizontalAlignment.Left;
-            managePatientBtn.TextOffset = new Point(8, 0);
+            managePatientBtn.TextOffset = new Point(-5, 0);
             managePatientBtn.Click += managePatientBtn_Click;
             // 
             // bookAppointmentBtn
             // 
             bookAppointmentBtn.AutoRoundedCorners = true;
-            bookAppointmentBtn.CustomizableEdges = customizableEdges13;
+            bookAppointmentBtn.CustomizableEdges = customizableEdges5;
             bookAppointmentBtn.DisabledState.BorderColor = Color.DarkGray;
             bookAppointmentBtn.DisabledState.CustomBorderColor = Color.DarkGray;
             bookAppointmentBtn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -115,12 +115,12 @@
             bookAppointmentBtn.FillColor = Color.MediumSeaGreen;
             bookAppointmentBtn.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
             bookAppointmentBtn.ForeColor = Color.WhiteSmoke;
-            bookAppointmentBtn.Image = Properties.Resources.appointment;
+            bookAppointmentBtn.Image = Properties.Resources.book_appointment_white;
             bookAppointmentBtn.ImageAlign = HorizontalAlignment.Left;
             bookAppointmentBtn.ImageSize = new Size(30, 30);
-            bookAppointmentBtn.Location = new Point(55, 397);
+            bookAppointmentBtn.Location = new Point(42, 487);
             bookAppointmentBtn.Name = "bookAppointmentBtn";
-            bookAppointmentBtn.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            bookAppointmentBtn.ShadowDecoration.CustomizableEdges = customizableEdges6;
             bookAppointmentBtn.Size = new Size(204, 56);
             bookAppointmentBtn.TabIndex = 3;
             bookAppointmentBtn.Text = "Book Appointment";
@@ -130,7 +130,7 @@
             // logOutBtn
             // 
             logOutBtn.AutoRoundedCorners = true;
-            logOutBtn.CustomizableEdges = customizableEdges15;
+            logOutBtn.CustomizableEdges = customizableEdges7;
             logOutBtn.DisabledState.BorderColor = Color.DarkGray;
             logOutBtn.DisabledState.CustomBorderColor = Color.DarkGray;
             logOutBtn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -138,12 +138,12 @@
             logOutBtn.FillColor = Color.MediumSeaGreen;
             logOutBtn.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
             logOutBtn.ForeColor = Color.WhiteSmoke;
-            logOutBtn.Image = Properties.Resources.exit;
+            logOutBtn.Image = Properties.Resources.logout_white;
             logOutBtn.ImageAlign = HorizontalAlignment.Left;
-            logOutBtn.ImageOffset = new Point(4, 0);
-            logOutBtn.Location = new Point(55, 467);
+            logOutBtn.ImageSize = new Size(40, 40);
+            logOutBtn.Location = new Point(41, 562);
             logOutBtn.Name = "logOutBtn";
-            logOutBtn.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            logOutBtn.ShadowDecoration.CustomizableEdges = customizableEdges8;
             logOutBtn.Size = new Size(204, 54);
             logOutBtn.TabIndex = 4;
             logOutBtn.Text = "Log Out ";
@@ -153,7 +153,6 @@
             // panel1
             // 
             panel1.BackColor = Color.WhiteSmoke;
-            panel1.Controls.Add(label1);
             panel1.Controls.Add(pictureBox1);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(298, 0);
@@ -162,24 +161,13 @@
             panel1.TabIndex = 5;
             panel1.Paint += panel1_Paint;
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Sitka Display", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = SystemColors.WindowFrame;
-            label1.Location = new Point(381, 6);
-            label1.Name = "label1";
-            label1.Size = new Size(319, 53);
-            label1.TabIndex = 1;
-            label1.Text = "WELCOME ADMIN";
-            // 
             // pictureBox1
             // 
             pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             pictureBox1.Image = Properties.Resources.Work_time_amico;
-            pictureBox1.Location = new Point(-56, 44);
+            pictureBox1.Location = new Point(52, 27);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(1109, 632);
+            pictureBox1.Size = new Size(940, 627);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
@@ -188,8 +176,8 @@
             // 
             panel2.BackColor = SystemColors.ButtonHighlight;
             panel2.Controls.Add(label2);
-            panel2.Controls.Add(pictureBox2);
             panel2.Controls.Add(manageDoctorBtn);
+            panel2.Controls.Add(pictureBox2);
             panel2.Controls.Add(managePatientBtn);
             panel2.Controls.Add(bookAppointmentBtn);
             panel2.Controls.Add(logOutBtn);
@@ -199,24 +187,26 @@
             panel2.Size = new Size(298, 677);
             panel2.TabIndex = 6;
             // 
-            // pictureBox2
-            // 
-            pictureBox2.Location = new Point(68, 23);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(175, 142);
-            pictureBox2.TabIndex = 5;
-            pictureBox2.TabStop = false;
-            // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = SystemColors.WindowFrame;
-            label2.Location = new Point(84, 223);
+            label2.Location = new Point(75, 302);
             label2.Name = "label2";
             label2.Size = new Size(144, 20);
             label2.TabIndex = 7;
             label2.Text = "ADMIN CONTROLS";
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = Properties.Resources.Hospital_logo2png;
+            pictureBox2.Location = new Point(-72, -58);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(435, 407);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 5;
+            pictureBox2.TabStop = false;
             // 
             // AdminForm
             // 
@@ -230,7 +220,6 @@
             Text = " Admin Page";
             Load += AdminForm_Load;
             panel1.ResumeLayout(false);
-            panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
@@ -248,7 +237,6 @@
         private Panel panel1;
         private PictureBox pictureBox1;
         private Panel panel2;
-        private Label label1;
         private PictureBox pictureBox2;
         private Label label2;
     }

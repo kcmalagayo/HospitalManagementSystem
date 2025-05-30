@@ -18,7 +18,7 @@ namespace HospitalManagementSystem.Controller
         {
             user = null;
             string query = "";
-
+            // Determine the query based on user type
             if (userType == "Patient")
                 query = "SELECT * FROM Patient WHERE Email = @Email AND Password = @Password";
             else if (userType == "Doctor")
@@ -86,7 +86,7 @@ namespace HospitalManagementSystem.Controller
 
             return false;
         }
-
+        // Register methods for each user type
         public bool Register(Patient patient)
         {
             string query = @"
