@@ -102,8 +102,8 @@ namespace HospitalManagementSystem.View
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Information);
 
-                    DoctorForm doctorForm = new DoctorForm(doctorId); // pass doctorId
-                    doctorForm.Show();
+                    DoctorDashboardForm DoctorDashboardForm = new DoctorDashboardForm(doctorId); // pass doctorId
+                    DoctorDashboardForm.Show();
                     this.Hide();
                 }
                 else

@@ -29,15 +29,19 @@ namespace HospitalManagementSystem.View
 
         private void LoadPreviousAppointments(string keyword = "")
         {
-            string query = @"SELECT a.AppointmentID, a.PatientID,
-                                    d.FirstName || ' ' || d.LastName AS DoctorName,
-                                    a.AppointmentDateTime, a.Status
-                             FROM Appointment a
-                             JOIN Doctor d ON a.DoctorID = d.DoctorID
-                             WHERE a.DoctorID = @doctorId
-                               AND a.Status IN ('Completed', 'Cancelled', 'No Show')
-                               AND (d.FirstName || ' ' || d.LastName LIKE @keyword)";
-
+            string query = @"SELECT a.AppointmentID, 
+                        a.PatientID,
+                        p.FirstName || ' ' || p.LastName AS PatientName,
+                        d.FirstName || ' ' || d.LastName AS DoctorName,
+                        a.AppointmentDateTime,
+                        a.Status
+                 FROM Appointment a
+                 JOIN Doctor d ON a.DoctorID = d.DoctorID
+                 JOIN Patient p ON a.PatientID = p.PatientID
+                 WHERE a.DoctorID = @doctorId
+                   AND a.Status IN ('Completed', 'Cancelled', 'No Show')
+                   AND (p.FirstName || ' ' || p.LastName LIKE @keyword 
+                        OR d.FirstName || ' ' || d.LastName LIKE @keyword)";
             using (var cmd = new SQLiteCommand(query, _db.GetConnection()))
             {
                 cmd.Parameters.AddWithValue("@doctorId", _doctorId);
