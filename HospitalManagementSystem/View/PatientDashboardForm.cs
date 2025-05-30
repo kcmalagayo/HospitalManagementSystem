@@ -87,5 +87,10 @@ namespace HospitalManagementSystem.View
             PatientViewRecord vr = new PatientViewRecord(_patientId);
             OpenFormInPanel(vr);
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

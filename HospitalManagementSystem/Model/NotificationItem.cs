@@ -21,7 +21,7 @@ namespace HospitalManagementSystem.Model
         public void setNotificationData(Notification notification)
         {
             notif = notification;
-            string datetime = notification.CreatedAt.ToString("yyyy/mm/dd Hh:mm:ss");
+            string datetime = notification.CreatedAt.ToString("yyyy-MM-dd HH:mm:ss");
 
             messageLb.Text = notification.Message;
             dateTimeLb.Text = datetime;
