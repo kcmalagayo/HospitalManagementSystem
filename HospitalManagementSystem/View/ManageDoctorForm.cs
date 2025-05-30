@@ -17,12 +17,12 @@ namespace HospitalManagementSystem.View
         public ManageDoctorForm()
         {
             InitializeComponent();
-            this.WindowState = FormWindowState.Maximized;
+            this.WindowState = FormWindowState.Maximized;//set the form to maximized state
 
             LoadDoctorData();
         }
 
-        private void LoadDoctorData()
+        private void LoadDoctorData()//metod to load doctor data into the DataGridView
         {
             string keyword = doctorSearchTxt.Text.Trim();
 
@@ -48,11 +48,11 @@ namespace HospitalManagementSystem.View
             LoadDoctorData();
         }
 
-        private void ManageDoctorForm_Load(object sender, EventArgs e)
+        private void ManageDoctorForm_Load(object sender, EventArgs e)//misclicked this method, so I left it empty
         {
         }
 
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)//method to handle cell clicks in the DataGridView
         {
             if (e.RowIndex >= 0)
             {
