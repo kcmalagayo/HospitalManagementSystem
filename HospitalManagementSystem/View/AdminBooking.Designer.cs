@@ -240,9 +240,9 @@
             label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.Location = new Point(27, 309);
             label3.Name = "label3";
-            label3.Size = new Size(40, 15);
+            label3.Size = new Size(105, 15);
             label3.TabIndex = 67;
-            label3.Text = "label3";
+            label3.Text = "Selected Patient: ";
             // 
             // AdminBooking
             // 
