@@ -42,7 +42,6 @@ namespace HospitalManagementSystem.View
             genderComboBox.Enabled = isEnabled;
             specializaitionDropBox.Enabled = isEnabled;
             emailTxt.Enabled = isEnabled;
-            PasswordTxtBox.Enabled = isEnabled;
             contactTxt.Enabled = isEnabled;
             dobPicker.Enabled = isEnabled;
             statusTxtBox.Enabled = isEnabled;
@@ -67,7 +66,6 @@ namespace HospitalManagementSystem.View
             specializaitionDropBox.SelectedItem = string.IsNullOrEmpty(_doctor.Specialization) ? "Dermatologist" : _doctor.Specialization;
 
             emailTxt.Text = _doctor.Email ?? string.Empty;
-            PasswordTxtBox.Text = _doctor.Password ?? string.Empty;
             contactTxt.Text = _doctor.ContactNumber ?? string.Empty;
             statusTxtBox.Text = _doctor.Status ?? "Active";
 
@@ -101,7 +99,6 @@ namespace HospitalManagementSystem.View
             _doctor.Gender = genderComboBox.SelectedItem?.ToString() ?? "Male";
             _doctor.Specialization = specializaitionDropBox.SelectedItem?.ToString() ?? "Dermatologist";
             _doctor.Email = emailTxt.Text ?? string.Empty;
-            _doctor.Password = PasswordTxtBox.Text ?? string.Empty;
             _doctor.ContactNumber = contactTxt.Text ?? string.Empty;
             _doctor.DateOfBirth = dobPicker.Value;
             _doctor.Status = statusTxtBox.Text ?? "Active";

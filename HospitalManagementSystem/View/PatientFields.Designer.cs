@@ -39,8 +39,6 @@
             saveBtn = new Guna.UI2.WinForms.Guna2Button();
             label9 = new Label();
             addressTxt = new TextBox();
-            label8 = new Label();
-            passwordTxtBox = new TextBox();
             btnRegister = new Guna.UI2.WinForms.Guna2Button();
             dobPicker = new DateTimePicker();
             label7 = new Label();
@@ -84,42 +82,21 @@
             label9.Anchor = AnchorStyles.None;
             label9.AutoSize = true;
             label9.Font = new Font("Arial Narrow", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label9.Location = new Point(119, 489);
+            label9.Location = new Point(119, 431);
             label9.Name = "label9";
-            label9.Size = new Size(40, 16);
+            label9.Size = new Size(46, 16);
             label9.TabIndex = 89;
-            label9.Text = "Adress";
+            label9.Text = "Address";
             // 
             // addressTxt
             // 
             addressTxt.Anchor = AnchorStyles.None;
             addressTxt.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            addressTxt.Location = new Point(119, 506);
+            addressTxt.Location = new Point(119, 448);
             addressTxt.Margin = new Padding(3, 2, 3, 2);
             addressTxt.Name = "addressTxt";
             addressTxt.Size = new Size(335, 22);
             addressTxt.TabIndex = 88;
-            // 
-            // label8
-            // 
-            label8.Anchor = AnchorStyles.None;
-            label8.AutoSize = true;
-            label8.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label8.Location = new Point(119, 188);
-            label8.Name = "label8";
-            label8.Size = new Size(64, 16);
-            label8.TabIndex = 87;
-            label8.Text = "Password";
-            // 
-            // passwordTxtBox
-            // 
-            passwordTxtBox.Anchor = AnchorStyles.None;
-            passwordTxtBox.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            passwordTxtBox.Location = new Point(120, 206);
-            passwordTxtBox.Margin = new Padding(3, 2, 3, 2);
-            passwordTxtBox.Name = "passwordTxtBox";
-            passwordTxtBox.Size = new Size(335, 22);
-            passwordTxtBox.TabIndex = 86;
             // 
             // btnRegister
             // 
@@ -148,7 +125,7 @@
             dobPicker.Anchor = AnchorStyles.None;
             dobPicker.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dobPicker.Format = DateTimePickerFormat.Short;
-            dobPicker.Location = new Point(120, 261);
+            dobPicker.Location = new Point(120, 203);
             dobPicker.Margin = new Padding(3, 2, 3, 2);
             dobPicker.Name = "dobPicker";
             dobPicker.Size = new Size(335, 22);
@@ -158,7 +135,7 @@
             // 
             label7.Anchor = AnchorStyles.None;
             label7.AutoSize = true;
-            label7.Location = new Point(119, 422);
+            label7.Location = new Point(119, 364);
             label7.Name = "label7";
             label7.Size = new Size(36, 15);
             label7.TabIndex = 83;
@@ -168,7 +145,7 @@
             // 
             label5.Anchor = AnchorStyles.None;
             label5.AutoSize = true;
-            label5.Location = new Point(119, 353);
+            label5.Location = new Point(119, 295);
             label5.Name = "label5";
             label5.Size = new Size(71, 15);
             label5.TabIndex = 81;
@@ -178,7 +155,7 @@
             // 
             emailTxt.Anchor = AnchorStyles.None;
             emailTxt.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            emailTxt.Location = new Point(119, 439);
+            emailTxt.Location = new Point(119, 381);
             emailTxt.Margin = new Padding(3, 2, 3, 2);
             emailTxt.Name = "emailTxt";
             emailTxt.Size = new Size(335, 21);
@@ -188,7 +165,7 @@
             // 
             contactTxt.Anchor = AnchorStyles.None;
             contactTxt.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            contactTxt.Location = new Point(119, 373);
+            contactTxt.Location = new Point(119, 315);
             contactTxt.Margin = new Padding(3, 2, 3, 2);
             contactTxt.Name = "contactTxt";
             contactTxt.Size = new Size(335, 22);
@@ -206,7 +183,7 @@
             genderComboBox.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             genderComboBox.ForeColor = Color.Black;
             genderComboBox.ItemHeight = 18;
-            genderComboBox.Location = new Point(119, 314);
+            genderComboBox.Location = new Point(119, 256);
             genderComboBox.Margin = new Padding(3, 2, 3, 2);
             genderComboBox.Name = "genderComboBox";
             genderComboBox.ShadowDecoration.CustomizableEdges = customizableEdges6;
@@ -217,7 +194,7 @@
             // 
             label4.Anchor = AnchorStyles.None;
             label4.AutoSize = true;
-            label4.Location = new Point(119, 297);
+            label4.Location = new Point(119, 239);
             label4.Name = "label4";
             label4.Size = new Size(45, 15);
             label4.TabIndex = 77;
@@ -227,7 +204,7 @@
             // 
             label3.Anchor = AnchorStyles.None;
             label3.AutoSize = true;
-            label3.Location = new Point(119, 243);
+            label3.Location = new Point(119, 185);
             label3.Name = "label3";
             label3.Size = new Size(73, 15);
             label3.TabIndex = 76;
@@ -306,8 +283,6 @@
             Controls.Add(saveBtn);
             Controls.Add(label9);
             Controls.Add(addressTxt);
-            Controls.Add(label8);
-            Controls.Add(passwordTxtBox);
             Controls.Add(btnRegister);
             Controls.Add(dobPicker);
             Controls.Add(label7);
@@ -333,8 +308,6 @@
         private Guna.UI2.WinForms.Guna2Button saveBtn;
         private Label label9;
         private TextBox addressTxt;
-        private Label label8;
-        private TextBox passwordTxtBox;
         private Guna.UI2.WinForms.Guna2Button btnRegister;
         private DateTimePicker dobPicker;
         private Label label7;
