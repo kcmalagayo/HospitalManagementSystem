@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SQLite;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using HospitalManagementSystem.Data;
 
@@ -15,61 +9,53 @@ namespace HospitalManagementSystem.View
     public partial class DoctorForm : Form
     {
         private Database _db;
-        private int _patientId = -1; // Patient ID to filter appointments
-        private DoctorForm _doctorForm;
+        private int _doctorId = -1;
 
-        public DoctorForm()
+        public DoctorForm(int doctorId)
         {
             InitializeComponent();
             _db = new Database();
+            _doctorId = doctorId;
+
             comboBox1.Items.AddRange(new string[] { "Completed", "Cancelled", "No Show" });
+
             LoadAppointments();
 
             AppointmentSearchTxt.TextChanged += AppointmentSearchTxt_TextChanged;
-            guna2Button2.Click += guna2Button2_Click; // Update button
+            guna2Button2.Click += guna2Button2_Click;
             dataGridView1.SelectionChanged += DataGridView1_SelectionChanged;
-        }
-
-        // Overloaded constructor to pass patient ID
-        public DoctorForm(int patientId) : this()
-        {
-            _patientId = patientId;
-        }
-
-        public static void RedirectToDoctorFormAfterBooking(Form currentForm, int patientId)
-        {
-            MessageBox.Show("Appointment booked successfully!", "Success");
-            DoctorForm form = new DoctorForm(patientId);
-            form.Show();
-            currentForm.Hide();
         }
 
         private void LoadAppointments(string keyword = "")
         {
-            string query = @"SELECT a.AppointmentID, a.PatientID,
-                                      d.FirstName || ' ' || d.LastName AS DoctorName,
-                                      a.AppointmentDateTime, a.Status
-                             FROM Appointment a
-                             JOIN Doctor d ON a.DoctorID = d.DoctorID
-                             WHERE (d.FirstName || ' ' || d.LastName LIKE @keyword)";
-
-            if (_patientId > 0)
-            {
-                query += " AND a.PatientID = @patientId";
-            }
+            string query = @"SELECT a.AppointmentID, 
+                        a.PatientID,
+                        p.FirstName || ' ' || p.LastName AS PatientName,
+                        d.FirstName || ' ' || d.LastName AS DoctorName,
+                        a.AppointmentDateTime,
+                        a.Status
+                 FROM Appointment a
+                 JOIN Doctor d ON a.DoctorID = d.DoctorID
+                 JOIN Patient p ON a.PatientID = p.PatientID
+                 WHERE a.DoctorID = @doctorId
+                   AND (p.FirstName || ' ' || p.LastName LIKE @keyword 
+                        OR d.FirstName || ' ' || d.LastName LIKE @keyword)";
 
             using (var cmd = new SQLiteCommand(query, _db.GetConnection()))
             {
+                cmd.Parameters.AddWithValue("@doctorId", _doctorId);
                 cmd.Parameters.AddWithValue("@keyword", "%" + keyword + "%");
-                if (_patientId > 0)
-                {
-                    cmd.Parameters.AddWithValue("@patientId", _patientId);
-                }
+
                 SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
                 dataGridView1.DataSource = dt;
             }
+        }
+
+        private void AppointmentSearchTxt_TextChanged(object sender, EventArgs e)
+        {
+            LoadAppointments(AppointmentSearchTxt.Text.Trim());
         }
 
         private void DataGridView1_SelectionChanged(object sender, EventArgs e)
@@ -113,15 +99,10 @@ namespace HospitalManagementSystem.View
             }
         }
 
-        private void AppointmentSearchTxt_TextChanged(object sender, EventArgs e)
-        {
-            LoadAppointments(AppointmentSearchTxt.Text.Trim());
-        }
-
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            DoctorRecordsForm recordsForm = new DoctorRecordsForm();
+            DoctorRecordsForm recordsForm = new DoctorRecordsForm(_doctorId); // Optional: pass _doctorId if filtering needed
             recordsForm.Show();
         }
 
@@ -140,17 +121,12 @@ namespace HospitalManagementSystem.View
                 var loginForm = new LoginForm();
                 loginForm.Show();
                 MessageBox.Show("You have successfully logged out.", "Logout Successful");
-                Application.Exit(); // Close the application    
+                Application.Exit();
             }
             else
             {
                 MessageBox.Show("Logout cancelled.", "Action Cancelled");
             }
-        }
-
-        private void DoctorForm_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

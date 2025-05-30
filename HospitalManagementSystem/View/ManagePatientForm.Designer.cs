@@ -47,7 +47,7 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(741, 396);
             dataGridView1.TabIndex = 24;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            dataGridView1.CellClick += dataGridView1_CellClick;
             // 
             // patientSearchTxt
             // 

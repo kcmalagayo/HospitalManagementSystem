@@ -11,17 +11,14 @@ using System.Windows.Forms;
 using HospitalManagementSystem.Controller;
 using HospitalManagementSystem.Data;
 
-
 namespace HospitalManagementSystem.View
 {
-
-    public partial class PatientForm : Form
+    public partial class AdminBooking : Form
     {
         private HospitalManagementSystem.Data.Database database;
         private readonly DoctorController doctorController;
         private System.Windows.Forms.ComboBox timeSlotDropDown;
-
-        public PatientForm()
+        public AdminBooking()
         {
             InitializeComponent();
             database = new Database();
@@ -40,7 +37,7 @@ namespace HospitalManagementSystem.View
         }
         private void LoadTimeSlots()
         {
-           // timeSlotDropDown.Items.Clear();
+            // timeSlotDropDown.Items.Clear();
 
             for (int hour = 8; hour <= 18; hour++) // 8 AM to 6 PM
             {
@@ -87,13 +84,7 @@ namespace HospitalManagementSystem.View
                 dataGridView2.DataSource = doctorController.GetDoctorsBySpecialization(specialization);
             }
         }
-
-        private void guna2ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void PatientForm_Load(object sender, EventArgs e)
+        private void AdminBooking_Load(object sender, EventArgs e)
         {
             guna2DateTimePicker1.Format = DateTimePickerFormat.Custom;
             guna2DateTimePicker1.CustomFormat = "MM/dd/yyyy";
@@ -101,15 +92,6 @@ namespace HospitalManagementSystem.View
             guna2DateTimePicker1.MinDate = DateTime.Today;
             guna2DateTimePicker1.MaxDate = new DateTime(2050, 12, 31);
             LoadTimeSlots();
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
@@ -150,31 +132,23 @@ namespace HospitalManagementSystem.View
                 PaymentForm paymentForm = new PaymentForm(doctorId, appointmentDateTime);
                 paymentForm.ShowDialog();
 
-            
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
         }
-
+        
         private void doctorSearchTxt_TextChanged(object sender, EventArgs e)
         {
             string searchValue = doctorSearchTxt.Text;
             (dataGridView2.DataSource as DataTable).DefaultView.RowFilter = string.Format("FirstName LIKE '%{0}%' OR LastName LIKE '%{0}%' OR Specialization LIKE '%{0}%'", searchValue);
-
         }
-
         private void specializaitionDropBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             string selectedSpecialization = specializaitionDropBox.SelectedItem.ToString();
             LoadDoctors(selectedSpecialization == "All" ? null : selectedSpecialization);
         }
-
-        private void guna2DateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
-

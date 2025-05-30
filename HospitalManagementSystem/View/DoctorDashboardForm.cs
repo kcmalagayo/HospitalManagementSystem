@@ -7,16 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using HospitalManagementSystem.Model;
 
 namespace HospitalManagementSystem.View
 {
     public partial class DoctorDashboardForm : Form
     {
-        public DoctorDashboardForm()
+        private int _doctorId;
+        public DoctorDashboardForm(int doctorId)
         {
             InitializeComponent();
-
-
+            _doctorId = doctorId;
         }
 
         private void OpenFormInPanel(Form form)//method to open form in panel 
@@ -63,14 +64,14 @@ namespace HospitalManagementSystem.View
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
-            DoctorForm dF = new DoctorForm();
+            DoctorForm dF = new DoctorForm(_doctorId);
             OpenFormInPanel(dF);
             pictureBox1.Hide();
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            DoctorRecordsForm dF = new DoctorRecordsForm();
+            DoctorRecordsForm dF = new DoctorRecordsForm(_doctorId);
             OpenFormInPanel(dF);
             pictureBox1.Hide();
         }

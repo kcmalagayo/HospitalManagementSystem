@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SQLite;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using HospitalManagementSystem.Data;
 
@@ -15,11 +9,14 @@ namespace HospitalManagementSystem.View
     public partial class DoctorRecordsForm : Form
     {
         private Database _db;
+        private int _doctorId;
 
-        public DoctorRecordsForm()
+        public DoctorRecordsForm(int doctorId)
         {
             InitializeComponent();
             _db = new Database();
+            _doctorId = doctorId;
+
             LoadPreviousAppointments();
 
             AppointmentSearchTxt.TextChanged += AppointmentSearchTxt_TextChanged;
@@ -32,22 +29,31 @@ namespace HospitalManagementSystem.View
 
         private void LoadPreviousAppointments(string keyword = "")
         {
-            string query = @"SELECT a.AppointmentID, a.PatientID, d.FirstName || ' ' || d.LastName AS DoctorName,
-                                      a.AppointmentDateTime, a.Status
-                             FROM Appointment a
-                             JOIN Doctor d ON a.DoctorID = d.DoctorID
-                             WHERE a.Status IN ('Completed', 'Cancelled', 'No Show')
-                               AND d.FirstName || ' ' || d.LastName LIKE @keyword";
-
+            string query = @"SELECT a.AppointmentID, 
+                        a.PatientID,
+                        p.FirstName || ' ' || p.LastName AS PatientName,
+                        d.FirstName || ' ' || d.LastName AS DoctorName,
+                        a.AppointmentDateTime,
+                        a.Status
+                 FROM Appointment a
+                 JOIN Doctor d ON a.DoctorID = d.DoctorID
+                 JOIN Patient p ON a.PatientID = p.PatientID
+                 WHERE a.DoctorID = @doctorId
+                   AND a.Status IN ('Completed', 'Cancelled', 'No Show')
+                   AND (p.FirstName || ' ' || p.LastName LIKE @keyword 
+                        OR d.FirstName || ' ' || d.LastName LIKE @keyword)";
             using (var cmd = new SQLiteCommand(query, _db.GetConnection()))
             {
+                cmd.Parameters.AddWithValue("@doctorId", _doctorId);
                 cmd.Parameters.AddWithValue("@keyword", "%" + keyword + "%");
+
                 SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
                 dataGridView1.DataSource = dt;
             }
         }
+
         private void AppointmentSearchTxt_TextChanged(object sender, EventArgs e)
         {
             LoadPreviousAppointments(AppointmentSearchTxt.Text.Trim());
@@ -56,7 +62,7 @@ namespace HospitalManagementSystem.View
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            DoctorForm doctorForm = new DoctorForm();
+            DoctorForm doctorForm = new DoctorForm(_doctorId); // Pass back the doctorId
             doctorForm.Show();
         }
 
@@ -84,7 +90,7 @@ namespace HospitalManagementSystem.View
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            // Reserved for future click actions
         }
     }
 }
