@@ -10,9 +10,11 @@ namespace HospitalManagementSystem
         public int patientId;
         public DateTime appointmentDate;
         private Data.Database database;
+        public string type;
 
-        public PaymentForm(int doctorId, int patientId, DateTime appointmentDate)
+        public PaymentForm(int doctorId, int patientId, DateTime appointmentDate, string type)
         {
+            this.type = type;
             this.doctorId = doctorId;
             this.patientId = patientId;
             this.appointmentDate = appointmentDate;
@@ -55,9 +57,34 @@ namespace HospitalManagementSystem
 
             decimal price = 500;
 
-            string paymentMethod = gcashRb.Checked ? gcashRb.Text : creditRb.Text;
+            if (type.Equals("Admin"))
+            {
+                cashRb.Visible = false;
+                
+            }else
+            {
+                cashRb.Visible = true;
+            }
 
-        
+            string paymentMethod;
+
+            if (gcashRb.Checked)
+                paymentMethod = gcashRb.Text;
+            else if (creditRb.Checked)
+                paymentMethod = creditRb.Text;
+            else if (cashRb.Checked)
+                paymentMethod = cashRb.Text;
+            else
+                paymentMethod = "";  // or some default value
+
+            if (paymentMethod.Equals(""))
+            {
+                MessageBox.Show("Please select payment method");
+                return;
+            }
+
+
+
             var conn = database.GetConnection();
 
             string query = @"INSERT INTO Appointment (PatientID, DoctorID, AppointmentDateTime, Status)
@@ -74,13 +101,17 @@ namespace HospitalManagementSystem
             }
             AuthController controller = new AuthController(database);
 
+            string appointmentType = type.Equals("Admin") ? "Walk-In" : "Online";
+
+           
+
             var transactionHistory = new TransactionHistory(
 
                 patientId,
                 doctorId,
                 price,
             paymentMethod,
-            "Online",
+            appointmentType,
             appointmentDate,
             DateTime.Now
                 );
@@ -88,8 +119,17 @@ namespace HospitalManagementSystem
 
             bool insertNotif = controller.InsertNotification(patientId, "Appointment has been successfully booked.", "Online");
 
+            if (!insertNotif)
+            {
+                MessageBox.Show("Error booking an appointment");
+                return;
+            }else
+            {
+                MessageBox.Show("Appointment booked successfully!");
+                this.Close();
+            }
 
-            MessageBox.Show("Appointment booked successfully!");
+            
         }
     }
 }

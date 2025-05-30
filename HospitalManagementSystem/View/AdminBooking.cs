@@ -16,7 +16,7 @@ namespace HospitalManagementSystem.View
     public partial class AdminBooking : Form
     {
 
-        private int? selectedPatientId = null;
+        private int selectedPatientId;
 
         private HospitalManagementSystem.Data.Database database;
         private readonly DoctorController doctorController;
@@ -34,7 +34,7 @@ namespace HospitalManagementSystem.View
             timeSlotDropDown.Font = new Font("Arial", 9F);
             timeSlotDropDown.IntegralHeight = true;
             timeSlotDropDown.ItemHeight = 40;
-            timeSlotDropDown.Location = new Point(240, 310);  // Adjust position if needed
+            timeSlotDropDown.Location = new Point(240, 400);  // Adjust position if needed
             timeSlotDropDown.Name = "timeSlotDropDown";
             timeSlotDropDown.Size = new Size(197, 33);
             //timeSlotDropDown.Anchor = AnchorStyles.Right;
@@ -74,7 +74,7 @@ namespace HospitalManagementSystem.View
                 selectedPatientId = Convert.ToInt32(row.Cells["PatientID"].Value);
 
                 string patientName = $"{row.Cells["FirstName"].Value} {row.Cells["LastName"].Value}";
-                label3.Text = $"Selected Patient: {patientName}";   
+                label3.Text = $"Selected Patient: {patientName}";
 
                 panel2.Enabled = true; // Enable doctor panel
             }
@@ -180,7 +180,7 @@ namespace HospitalManagementSystem.View
 
             try
             {
-                PaymentForm paymentForm = new PaymentForm(doctorId, 1, appointmentDateTime);
+                PaymentForm paymentForm = new PaymentForm(doctorId, selectedPatientId, appointmentDateTime, "Admin");
                 paymentForm.ShowDialog();
 
 
@@ -208,6 +208,11 @@ namespace HospitalManagementSystem.View
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void patientSearchTxt_TextChanged_1(object sender, EventArgs e)
         {
 
         }

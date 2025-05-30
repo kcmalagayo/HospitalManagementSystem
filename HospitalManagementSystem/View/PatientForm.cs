@@ -149,7 +149,7 @@ namespace HospitalManagementSystem.View
 
             try
             {
-                PaymentForm paymentForm = new PaymentForm(doctorId, patientId, appointmentDateTime);
+                PaymentForm paymentForm = new PaymentForm(doctorId, patientId, appointmentDateTime, "Normal");
                 paymentForm.ShowDialog();
 
             

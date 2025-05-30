@@ -92,7 +92,11 @@ namespace HospitalManagementSystem.View
                 }
                 AuthController controller = new AuthController(_db);
 
-                bool success = controller.InsertNotification(patientId, "Your appointment status has been changed to: " + newStatus + ".", "Online");
+                bool success = controller.InsertNotification(
+    patientId,
+    $"Your appointment (ID: {appointmentId}) status has been changed to: {newStatus}.",
+    "Online");
+
 
 
                 MessageBox.Show("Appointment status updated.", "Success");
